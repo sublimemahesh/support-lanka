@@ -8,7 +8,7 @@ include_once(dirname(__FILE__) . './auth.php');
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Admin || Manage Skills</title>
+        <title>Admin || Manage Qualification</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -34,11 +34,11 @@ include_once(dirname(__FILE__) . './auth.php');
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Manage Skills
+                                    Manage Qualification
                                 </h2>
                                 <ul class="header-dropdown">
                                     <li>
-                                        <a href="create-skill.php">
+                                        <a href="create-qualification.php">
                                             <i class="material-icons">add</i> 
                                         </a>
                                     </li>
@@ -51,8 +51,8 @@ include_once(dirname(__FILE__) . './auth.php');
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Industry</th>
-                                                    <th>Skill</th> 
+                                                    <th>Skill</th>
+                                                    <th>Qualification</th> 
                                                     <th>Option</th>
 
                                                 </tr>
@@ -60,29 +60,29 @@ include_once(dirname(__FILE__) . './auth.php');
                                             <tfoot>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Industry</th>
-                                                    <th>Skill</th> 
+                                                    <th>Skill</th>
+                                                    <th>Qualification</th> 
                                                     <th>Option</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
                                                 <?php
-                                                $SKILL = new Skill(NULL);
-                                                foreach ($SKILL->all() as $key => $industry) {
+                                                $QUALIFICATION = new Qualification(NULL);
+                                                foreach ($QUALIFICATION->all() as $key => $qualificatio) {
                                                     ?>
-                                                    <tr id="row_<?php echo $industry['id']; ?>">
-                                                        <td><?php echo $industry['sort']; ?></td> 
+                                                    <tr id="row_<?php echo $qualificatio['id']; ?>">
+                                                        <td><?php echo $qualificatio['sort']; ?></td> 
                                                         <td>
                                                             <?php
-                                                            $INDUSTRY = new Industry($industry['industry']);
-                                                            echo $INDUSTRY->name;
+                                                            $skill = new Skill($qualificatio['skill']);
+                                                            echo $skill->name;
                                                             ?>
                                                         </td>
-                                                        <td><?php echo $industry['name']; ?></td>
+                                                        <td><?php echo $qualificatio['name']; ?></td>
                                                         <td> 
-                                                            <a href="edit-skill.php?id=<?php echo $industry['id']; ?>" class="op-link"><button class="glyphicon glyphicon-pencil"></button></a>  |  
+                                                            <a href="edit-qualifications.php?id=<?php echo $qualificatio['id']; ?>" class="op-link"><button class="glyphicon glyphicon-pencil"></button></a>  |  
 
-                                                            <a href="#" class="delete-skill" data-id="<?php echo $industry['id']; ?>">
+                                                            <a href="#" class="delete-qualification" data-id="<?php echo $qualificatio['id']; ?>">
                                                                 <button class="glyphicon glyphicon-trash" data-type="cancel"></button>
                                                             </a>
 
@@ -113,7 +113,7 @@ include_once(dirname(__FILE__) . './auth.php');
         <script src="js/admin.js"></script>
         <script src="js/pages/ui/dialogs.js"></script>
         <script src="js/demo.js"></script>
-        <script src="delete/js/skill.js" type="text/javascript"></script>
+        <script src="delete/js/qualification.js" type="text/javascript"></script>
     </body>
 
 </html>
