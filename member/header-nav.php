@@ -140,8 +140,19 @@ $MEMBER = new Member($_SESSION['id']);
                 </a>
                 <ul class="sub">
                     <li><a  href="add-education.php">Add New Education</a></li>
-<!--                    <li><a  href="manage-education.php">Manage Education</a></li>
-                    <li><a  href="arrange-education.php">Arrange Education</a></li>-->
+                    <!--                    <li><a  href="manage-education.php">Manage Education</a></li>
+                                        <li><a  href="arrange-education.php">Arrange Education</a></li>-->
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-shirtsinbulk"></i>
+                    <span>Skill Details</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="add-skill-details.php">Add New Skill Details</a></li>
+                    <li><a  href="manage-skill-details.php">Manage Skill Details</a></li>
                 </ul>
             </li>
 
