@@ -38,9 +38,8 @@ if (isset($_POST['add-district'])) {
 }
 
 if (isset($_POST['edit-district'])) {
-    $DISTRICT = new District(NULL);
+    $DISTRICT = new District($_POST['id']);
 
-    $DISTRICT->id = $_POST['id'];
     $DISTRICT->name = $_POST['name'];
 
     $VALID = new Validator();

@@ -133,16 +133,17 @@ $MEMBER = new Member($_SESSION['id']);
                 </a> 
             </li>
 
-            <!--            <li class="sub-menu">
-                            <a href="javascript:;" >
-                                <i class="fa fa-taxi"></i>
-                                <span>Transport</span>
-                            </a>
-                            <ul class="sub">
-                                <li><a  href="add-new-transport.php">Add New Transport</a></li>
-                                <li><a  href="manage-transport.php">Manage Transport</a></li>
-                            </ul>
-                        </li>-->
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-graduation-cap"></i>
+                    <span>Education</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="add-education.php">Add New Education</a></li>
+<!--                    <li><a  href="manage-education.php">Manage Education</a></li>
+                    <li><a  href="arrange-education.php">Arrange Education</a></li>-->
+                </ul>
+            </li>
 
         </ul>
     </div>
