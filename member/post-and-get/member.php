@@ -141,7 +141,7 @@ if (isset($_POST['update'])) {
     $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
     $MEMBER->date_of_birthday = filter_input(INPUT_POST, 'date_of_birthday');
     $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
-    $MEMBER->driving_licence_number = filter_input(INPUT_POST, 'driving_licence_number');
+    $MEMBER->about_me = filter_input(INPUT_POST, 'about_me');
     $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
     $MEMBER->city = filter_input(INPUT_POST, 'city');
     $MEMBER->contact_number = mysql_real_escape_string($_POST['contact_number']);

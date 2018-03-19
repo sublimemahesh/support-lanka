@@ -113,11 +113,13 @@ $MEMBER = new Member($_SESSION['id']);
                                                                     <input type="text" name="date_of_birthday" class="form-control" placeholder="Please Enter Date Of Birthday" required="TRUE" value="<?php echo $MEMBER->date_of_birthday; ?>">
                                                                 </div>
                                                             </div> 
-                                                            <!--Driving Licence Number-->
+                                                            <!--About Me-->
                                                             <div class="">
-                                                                <div class="bottom-top">Driving Licence Number</div>
+                                                                <div class="bottom-top">
+                                                                    <label for="about_me">About Your Details</label>
+                                                                </div>
                                                                 <div class="formrow">
-                                                                    <input type="text" name="driving_licence_number" class="form-control" placeholder="Please Enter Driving Licence Number" required="TRUE" value="<?php echo $MEMBER->driving_licence_number; ?>">
+                                                                    <textarea type="text" id="about_me" name="about_me" class="form-control" placeholder="Please Enter About Your Details"><?php echo $MEMBER->about_me; ?></textarea>
                                                                 </div>
                                                             </div>
                                                             <!--Home Address-->
@@ -188,9 +190,6 @@ $MEMBER = new Member($_SESSION['id']);
 
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
@@ -206,14 +205,18 @@ $MEMBER = new Member($_SESSION['id']);
         <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-
         <script src="assets/js/common-scripts.js"></script>
 
+        <!--script for this page-->
         <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
 
+        <!--custom switch-->
         <script src="assets/js/bootstrap-switch.js"></script>
 
+        <!--custom tagsinput-->
         <script src="assets/js/jquery.tagsinput.js"></script>
+
+        <!--custom checkbox & radio-->
 
         <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-datepicker/js/bootstrap-datepicker.html"></script>
         <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/date.html"></script>
@@ -221,7 +224,9 @@ $MEMBER = new Member($_SESSION['id']);
 
         <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
 
+
         <script src="assets/js/form-component.js"></script>    
+
 
         <script>
             //custom select box
@@ -229,6 +234,34 @@ $MEMBER = new Member($_SESSION['id']);
             $(function () {
                 $('select.styled').customSelect();
             });
+
+        </script>
+        <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
+        <script>
+            tinymce.init({
+                selector: "#about_me",
+                // ===========================================
+                // INCLUDE THE PLUGIN
+                // ===========================================
+
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                // ===========================================
+                // PUT PLUGIN'S BUTTON on the toolbar
+                // ===========================================
+
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+                // ===========================================
+                // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
+                // ===========================================
+
+                relative_urls: false
+
+            });
+
 
         </script>
 
