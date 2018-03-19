@@ -17,23 +17,12 @@ $MEMBER = new Member(NULL)
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-
-        <!-- Bootstrap Core Css -->
         <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-        <!-- Waves Effect Css -->
         <link href="plugins/node-waves/waves.css" rel="stylesheet" />
-
-        <!-- Animation Css -->
         <link href="plugins/animate-css/animate.css" rel="stylesheet" />
-
-        <!-- JQuery DataTable Css -->
         <link href="plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
         <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
-        <!-- Custom Css -->
         <link href="css/style.css" rel="stylesheet">
-
-        <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
         <link href="css/themes/all-themes.css" rel="stylesheet" />
     </head>
 
@@ -75,6 +64,7 @@ $MEMBER = new Member(NULL)
                                                 <th>email</th>
                                                 <th>Contact Number</th> 
                                                 <th>Username</th>
+                                                <th>Status</th> 
                                                 <th>Rank</th> 
                                                 <th>Options</th>
                                             </tr>
@@ -86,6 +76,7 @@ $MEMBER = new Member(NULL)
                                                 <th>email</th>
                                                 <th>Contact Number</th> 
                                                 <th>Username</th>
+                                                <th>Status</th> 
                                                 <th>Rank</th> 
                                                 <th>Options</th>
                                             </tr>
@@ -101,6 +92,15 @@ $MEMBER = new Member(NULL)
                                                     <td><?php echo substr($member['email'], 0, 30); ?></td> 
                                                     <td><?php echo $member['contact_number']; ?></td> 
                                                     <td><?php echo substr($member['username'], 0, 30); ?></td> 
+                                                    <td>
+                                                        <?php
+                                                        if ($member['status'] == 1) {
+                                                            echo 'Active';
+                                                        } else {
+                                                            echo 'Inactive';
+                                                        }
+                                                        ?>
+                                                    </td> 
                                                     <td><?php echo $member['rank']; ?></td> 
                                                     <td> 
                                                         <a href="edit-member.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
@@ -108,11 +108,6 @@ $MEMBER = new Member(NULL)
                                                         <a href="#" class="delete-member btn btn-sm btn-danger" data-id="<?php echo $member['id']; ?>">
                                                             <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                         </a>
-                                                        |
-                                                        <a href="manage-accommodation.php?member=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-bed"></i></a>
-                                                        <a href="manage-tour-package.php?member=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-map-marker"></i></a>
-                                                        <a href="manage-transports.php?member=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-road"></i></a>
-
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -125,8 +120,6 @@ $MEMBER = new Member(NULL)
                         </div>
                     </div>
                 </div>
-                <!-- #END# Manage District -->
-
             </div>
         </section>
 

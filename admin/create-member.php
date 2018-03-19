@@ -103,19 +103,6 @@ include_once(dirname(__FILE__) . './auth.php');
                                             </div>
                                         </div>
                                     </div> 
-                                    <!--Driving Licence Number-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="driving_licence_number">Driving Licence Number</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="driving_licence_number" class="form-control" placeholder="Enter Driving Licence Number" autocomplete="off" name="driving_licence_number" required="TRUE">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
                                     <!--Home Address-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -162,6 +149,19 @@ include_once(dirname(__FILE__) . './auth.php');
                                             </div>
                                         </div>
                                     </div> 
+                                    <!--About Your Details-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="about_me">About Your Details</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <textarea id="about_me" name="about_me" class="form-control" rows="5"></textarea> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!--Profile Picture-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -229,7 +229,7 @@ include_once(dirname(__FILE__) . './auth.php');
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({
-                selector: "#description",
+                selector: "#about_me",
                 // ===========================================
                 // INCLUDE THE PLUGIN
                 // ===========================================
@@ -251,8 +251,6 @@ include_once(dirname(__FILE__) . './auth.php');
                 relative_urls: false
 
             });
-
-
         </script>
     </body>
 

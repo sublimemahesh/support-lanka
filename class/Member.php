@@ -13,7 +13,7 @@ class Member {
     public $nic_number;
     public $date_of_birthday;
     public $contact_number;
-    public $driving_licence_number;
+    public $about_me;
     public $home_address;
     public $city;
     public $profile_picture;
@@ -26,7 +26,7 @@ class Member {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`driving_licence_number`,`home_address`,`city`,`profile_picture`,`username`,`status`,`rank` FROM `member` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`status`,`rank` FROM `member` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -38,7 +38,7 @@ class Member {
             $this->nic_number = $result['nic_number'];
             $this->date_of_birthday = $result['date_of_birthday'];
             $this->contact_number = $result['contact_number'];
-            $this->driving_licence_number = $result['driving_licence_number'];
+            $this->about_me = $result['about_me'];
             $this->home_address = $result['home_address'];
             $this->city = $result['city'];
             $this->profile_picture = $result['profile_picture'];
@@ -54,13 +54,13 @@ class Member {
 
 
 
-        $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`driving_licence_number`,`home_address`,`city`,`profile_picture`,`username`,`password`,`status`,`rank`) VALUES  ('"
+        $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`password`,`status`,`rank`) VALUES  ('"
                 . $this->name . "','"
                 . $this->email . "','"
                 . $this->nic_number . "','"
                 . $this->date_of_birthday . "','"
                 . $this->contact_number . "','"
-                . $this->driving_licence_number . "','"
+                . $this->about_me . "','"
                 . $this->home_address . "','"
                 . $this->city . "','"
                 . $this->profile_picture . "','"
@@ -110,7 +110,7 @@ class Member {
             $_SESSION["nic_number"] = $member->nic_number;
             $_SESSION["date_of_birthday"] = $member->date_of_birthday;
             $_SESSION["contact_number"] = $member->contact_number;
-            $_SESSION["driving_licence_number"] = $member->driving_licence_number;
+            $_SESSION["about_me"] = $member->about_me;
             $_SESSION["home_address"] = $member->home_address;
             $_SESSION["city"] = $member->city;
             $_SESSION["profile_picture"] = $member->profile_picture;
@@ -160,7 +160,7 @@ class Member {
         unset($_SESSION["nic_number"]);
         unset($_SESSION["date_of_birthday"]);
         unset($_SESSION["contact_number"]);
-        unset($_SESSION["driving_licence_number"]);
+        unset($_SESSION["about_me"]);
         unset($_SESSION["home_address"]);
         unset($_SESSION["city"]);
         unset($_SESSION["profile_picture"]);
@@ -194,7 +194,7 @@ class Member {
                 . "`nic_number` ='" . $this->nic_number . "', "
                 . "`date_of_birthday` ='" . $this->date_of_birthday . "', "
                 . "`contact_number` ='" . $this->contact_number . "', "
-                . "`driving_licence_number` ='" . $this->driving_licence_number . "', "
+                . "`about_me` ='" . $this->about_me . "', "
                 . "`home_address` ='" . $this->home_address . "', "
                 . "`city` ='" . $this->city . "', "
                 . "`profile_picture` ='" . $this->profile_picture . "', "
