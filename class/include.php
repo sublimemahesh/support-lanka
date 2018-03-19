@@ -13,6 +13,7 @@ include_once(dirname(__FILE__) . '/District.php');
 include_once(dirname(__FILE__) . '/Industry.php');
 include_once(dirname(__FILE__) . '/Skill.php');
 include_once(dirname(__FILE__) . '/Qualification.php');
+include_once(dirname(__FILE__) . '/Education.php');
 
 function dd($data) {
     var_dump($data);

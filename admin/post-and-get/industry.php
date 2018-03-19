@@ -37,9 +37,8 @@ if (isset($_POST['add-industry'])) {
 }
 
 if (isset($_POST['edit-industry'])) {
-    $INDUSTRY = new Industry(NULL);
+    $INDUSTRY = new Industry($_POST['id']);
 
-    $INDUSTRY->id = $_POST['id'];
     $INDUSTRY->name = $_POST['name'];
 
     $VALID = new Validator();

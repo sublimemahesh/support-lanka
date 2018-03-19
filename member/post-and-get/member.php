@@ -156,7 +156,6 @@ if (isset($_POST['update'])) {
         'nic_number' => ['required' => TRUE],
         'contact_number' => ['required' => TRUE],
         'city' => ['required' => TRUE],
-        'driving_licence_number' => ['required' => TRUE],
         'username' => ['required' => TRUE]
     ]);
 
