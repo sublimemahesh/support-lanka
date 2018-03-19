@@ -23,7 +23,7 @@ $(document).ready(function () {
 
                         swal({
                             title: "Deleted!",
-                            text: "District has been deleted.",
+                            text: "Member has been deleted.",
                             type: 'success',
                             timer: 2000,
                             showConfirmButton: false

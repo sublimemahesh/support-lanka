@@ -103,19 +103,19 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
                                     </div> 
-                                    <!--Driving Licence Number-->
+                                    <!--About Your Details-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="driving_licence_number">Driving Licence Number</label>
+                                            <label for="about_me">About Your Details</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="driving_licence_number" class="form-control" placeholder="Enter Driving Licence Number" autocomplete="off" name="driving_licence_number" required="TRUE" value="<?php echo $MEMBER->driving_licence_number; ?>">
+                                                    <textarea id="about_me" name="about_me" class="form-control" rows="5" ><?php echo $MEMBER->about_me; ?></textarea> 
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <!--Home Address-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -236,7 +236,7 @@ $MEMBER = new Member($id);
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({
-                selector: "#description",
+                selector: "#about_me",
                 // ===========================================
                 // INCLUDE THE PLUGIN
                 // ===========================================
