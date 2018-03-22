@@ -148,11 +148,22 @@ $MEMBER = new Member($_SESSION['id']);
             <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-shirtsinbulk"></i>
-                    <span>Skill Details</span>
+                    <span>Your Skill</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="add-skill-details.php">Add New Skill Details</a></li>
-                    <li><a  href="manage-skill-details.php">Manage Skill Details</a></li>
+                    <li><a  href="add-skill-details.php">Add New Your Skill</a></li>
+                    <li><a  href="manage-skill-details.php">Manage Your Skill</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-etsy"></i>
+                    <span>Experience</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="add-experience.php">Add New Experience</a></li>
+                    <li><a  href="manage-experience.php">Manage Experience</a></li>
+                    <li><a  href="arrange-experience.php">Arrange Experience</a></li>
                 </ul>
             </li>
 

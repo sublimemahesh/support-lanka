@@ -13,7 +13,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Skill Detail || My Account </title>
+        <title>Experience || My Account </title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -46,70 +46,69 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-save"></i> Manage Skill Details</div>
+                                <div class="panel-heading"><i class="fa fa-save"></i> Manage Experience</div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="body">
                                             <div class="table-responsive">
                                                 <div>
+
                                                     <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                         <thead>
                                                             <tr>
                                                                 <th>ID</th>
-                                                                <th>Industry</th>
-                                                                <th>skill</th>
-                                                                <th>percentage</th>
-                                                                <th>description</th>
+                                                                <th>Skill</th>
+                                                                <th>Working Place</th>
+                                                                <th>Duration</th>
+                                                                <th>Description</th>
                                                                 <th>Option</th>
                                                             </tr>
                                                         </thead>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <th>ID</th>
+                                                                <th>Skill</th>
+                                                                <th>Working Place</th>
+                                                                <th>Duration</th> 
+                                                                <th>Description</th>
+                                                                <th>Option</th>
+                                                            </tr>
+                                                        </tfoot>
                                                         <tbody>
                                                             <?php
-                                                            $SKILLDETAILS = new SkillDetail(NULL);
-                                                            foreach ($SKILLDETAILS->all() as $key => $skill_d) {
+                                                            $EXPERIENCE = new Experience(NULL);
+                                                            foreach ($EXPERIENCE->all() as $key => $exp) {
                                                                 ?>
-                                                                <tr id="row_<?php echo $skill_d['id']; ?>">
-                                                                    <td><?php echo $skill_d['id']; ?></td> 
+                                                                <tr id="row_<?php echo $exp['id']; ?>">
+                                                                    <td><?php echo $exp['sort']; ?></td> 
                                                                     <td>
                                                                         <?php
-                                                                        $SKILL = new Skill($skill_d['skill']);
-                                                                        $INDUSTRY = new Industry($SKILL->industry);
-                                                                        echo $INDUSTRY->name;
-                                                                        ?>
-                                                                    </td>
-                                                                    <td>
-                                                                        <?php
+                                                                        $SKILL_D = new SkillDetail($exp['skill_detail']);
+                                                                        $SKILL = new Skill($SKILL_D->skill);
                                                                         echo $SKILL->name;
                                                                         ?>
-                                                                    </td> 
-                                                                    <td><?php echo $skill_d['percentage']; ?></td>
-                                                                    <td><?php echo $skill_d['description']; ?></td>
-                                                                    <td>  
-                                                                        <a href="edit-skill-detail.php?id=<?php echo $skill_d['id']; ?>">
+                                                                    </td>
+                                                                    <td><?php echo $exp['working_place']; ?></td>
+                                                                    <td><?php echo $exp['duration']; ?></td>
+                                                                    <td><?php echo $exp['description']; ?></td>
+                                                                    <td>
+                                                                        <a href="edit-experience.php?id=<?php echo $exp['id']; ?>">
                                                                             <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                                        </a> |
-                                                                        <a href="add-experience.php?skill=<?php echo $skill_d['id']; ?>">
-                                                                            <button class="btn btn-warning btn-sm all-icon fa fa-book"></button>
-                                                                        </a> |
-                                                                        <a href="#"> 
-                                                                            <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-skill-detail" data-id="<?php echo $skill_d['id']; ?>"></button>
                                                                         </a> 
+                                                                        |
+                                                                        <a href="arrange-experience.php">
+                                                                            <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
+                                                                        </a> 
+                                                                        | 
+                                                                        <a href="#"> 
+                                                                            <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-experience" data-id="<?php echo $exp['id']; ?>"></button>
+                                                                        </a>
                                                                     </td>
                                                                 </tr>
                                                                 <?php
                                                             }
                                                             ?> 
                                                         </tbody>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <th>ID</th>
-                                                                <th>Industry</th>
-                                                                <th>skill</th>
-                                                                <th>percentage</th> 
-                                                                <th>description</th>
-                                                                <th>Option</th>
-                                                            </tr>
-                                                        </tfoot> 
                                                     </table>
                                                 </div>
                                             </div>
@@ -135,7 +134,7 @@ include_once(dirname(__FILE__) . '/auth.php');
 
         <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
         <script src="assets/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-        <script src="delete/js/skill-detail.js" type="text/javascript"></script>
+        <script src="delete/js/experience.js" type="text/javascript"></script>
         <script>
             //custom select box
 
