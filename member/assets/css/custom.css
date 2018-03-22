@@ -375,3 +375,15 @@ and open the template in the editor.
     margin-bottom: 15px;
      height: 160px;
 }
+.bottom-top-btn{
+    padding-bottom: 25px;
+    padding-top: 20px; 
+}
+.task-br{
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+}
+.task-title-sp{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

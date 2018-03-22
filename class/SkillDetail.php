@@ -88,6 +88,13 @@ class SkillDetail {
         }
     }
 
+    public function arrange($key, $img) {
+        $query = "UPDATE `skill_details` SET `sort` = '" . $key . "'  WHERE id = '" . $img . "'";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        return $result;
+    }
+
     public function delete() {
 
         $query = 'DELETE FROM `skill_details` WHERE id="' . $this->id . '"';
@@ -97,25 +104,9 @@ class SkillDetail {
         return $db->readQuery($query);
     }
 
-    public function GetSkillDetailsBySkill($skill) {
+    public function GetSkillByMember($member) {
 
-        $query = "SELECT * FROM `skill_details` WHERE `skill` = '" . $skill . "' ORDER BY `sort` ASC";
-
-        $db = new Database();
-
-        $result = $db->readQuery($query);
-        $array_res = array();
-
-        while ($row = mysql_fetch_array($result)) {
-            array_push($array_res, $row);
-        }
-
-        return $array_res;
-    }
-
-    public function GetSkillDetailsById($id) {
-
-        $query = "SELECT * FROM `skill_details` WHERE `id` = '" . $id . "' ORDER BY `sort` ASC";
+        $query = "SELECT * FROM `skill_details` WHERE `member` = '" . $member . "' ORDER BY `sort` ASC";
 
         $db = new Database();
 
@@ -127,13 +118,6 @@ class SkillDetail {
         }
 
         return $array_res;
-    }
-
-    public function arrange($key, $img) {
-        $query = "UPDATE `skill_details` SET `sort` = '" . $key . "'  WHERE id = '" . $img . "'";
-        $db = new Database();
-        $result = $db->readQuery($query);
-        return $result;
     }
 
 }
