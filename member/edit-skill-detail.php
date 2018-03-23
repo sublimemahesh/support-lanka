@@ -58,31 +58,7 @@ $SKILLDETAILS = new SkillDetail($id);
                                                 <form class="form-horizontal" method="post" action="post-and-get/skill-detail.php" enctype="multipart/form-data"> 
                                                     <div class="col-md-12">
 
-                                                        <div class="">
-                                                            <div class="bottom-top">
-                                                                <label for="skill">Skill</label>
-                                                            </div>
-                                                            <div class="formrow">
-
-                                                                <select class="form-control" id="vehicle_type" name="vehicle_type">
-                                                                    <option value="<?php echo $SKILLDETAILS->skill ?>">
-                                                                        <?php
-                                                                        $IND = new Skill($SKILLDETAILS->skill);
-                                                                        echo $IND->industry;
-                                                                        ?>
-                                                                    </option>
-                                                                    <?php foreach (Industry::all() as $key => $skill_d) {
-                                                                        ?>
-                                                                        <option value="<?php echo $skill_d['id']; ?>"><?php echo $skill_d['name']; ?></option>
-                                                                        <?php
-                                                                    }
-                                                                    ?>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-
-
+<!--
                                                         <div class="">
                                                             <div class="bottom-top">
                                                                 <label for="skill">Skill</label>
@@ -104,7 +80,7 @@ $SKILLDETAILS = new SkillDetail($id);
                                                                     ?>
                                                                 </select>
                                                             </div>
-                                                        </div>
+                                                        </div>-->
 
                                                         <div class="">
                                                             <div class="bottom-top">

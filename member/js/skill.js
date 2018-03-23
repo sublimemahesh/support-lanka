@@ -1,47 +1,58 @@
 $(document).ready(function () {
-;
-    $("#skill").show();
 
 
-    $(".result").click(function () {
-
-        $("#skill").show();
-
-        var ind_id = $(this).attr('ind_id');
-
+    $('#industry').change(function () {
+        var indId = $(this).val();
         $.ajax({
             url: "post-and-get/ajax/skill.php",
             type: "POST",
-            data: {industry: ind_id,
+            data: {
+                industry: indId,
                 action: 'GETSKILLSBYINDUSTRY'
             },
             dataType: "JSON",
             success: function (jsonStr) {
 
-                var html = "";
-
-                html += "<ul class='list-group'>";
-
-                $.each(jsonStr, function (index, element) {
-
-
-                    html += "<li class='list-group-item'><a href='post-add_step3.php?category=" + cat_id + "&subCategory=" + subcat_id + "&district=" + dis_id + "&city=" + element.id + "'>" + element.name + "</a></li>";
-
-
+                var html = '<option> -- Please Select a Skill -- </option>';
+                $.each(jsonStr, function (i, data) {
+                    html += '<option value="' + data.id + '">';
+                    html += data.name;
+                    html += '</option>';
                 });
-
-                html += "</ul>";
-
-
-                $('#skill').empty();
-                $('#skill').append(html);
-
-                $('html, body').animate({
-                    scrollTop: $("#skill-bar").offset().top
-                }, 1000);
+                $('#skill-bar').empty();
+                $('#skill-bar').append(html);
             }
         });
     });
 
+    $('#skill-bar').change(function () {
+        var skillId = $(this).val();
+        var skillName = $('#skill-bar option:selected').text();
+        $.ajax({
+            url: "post-and-get/ajax/skill.php",
+            type: "POST",
+            data: {
+                skillId: skillId,
+                action: 'CHECKSKILLISEXIST'
+            },
+            dataType: "JSON",
+            success: function (JsonResult) {
+                if (JsonResult.result === true) {
 
+                    alert('You have already add ' + skillName + '  as your skill. Please select different skill to continue.');
+                    $("#skill-bar option:selected").removeAttr("selected");
+                    return false;
+
+                }
+            }
+        });
+    });
+});
+
+$(document).ajaxStart(function () {
+    $('#loading').show();
+});
+
+$(document).ajaxComplete(function () {
+    $('#loading').hide();
 });

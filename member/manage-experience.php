@@ -77,35 +77,41 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <tbody>
                                                             <?php
                                                             $EXPERIENCE = new Experience(NULL);
-                                                            foreach ($EXPERIENCE->all() as $key => $exp) {
-                                                                ?>
-                                                                <tr id="row_<?php echo $exp['id']; ?>">
-                                                                    <td><?php echo $exp['sort']; ?></td> 
-                                                                    <td>
-                                                                        <?php
-                                                                        $SKILL_D = new SkillDetail($exp['skill_detail']);
-                                                                        $SKILL = new Skill($SKILL_D->skill);
-                                                                        echo $SKILL->name;
-                                                                        ?>
-                                                                    </td>
-                                                                    <td><?php echo $exp['working_place']; ?></td>
-                                                                    <td><?php echo $exp['duration']; ?></td>
-                                                                    <td><?php echo $exp['description']; ?></td>
-                                                                    <td>
-                                                                        <a href="edit-experience.php?id=<?php echo $exp['id']; ?>">
-                                                                            <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                                        </a> 
-                                                                        |
-                                                                        <a href="arrange-experience.php">
-                                                                            <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
-                                                                        </a> 
-                                                                        | 
-                                                                        <a href="#"> 
-                                                                            <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-experience" data-id="<?php echo $exp['id']; ?>"></button>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <?php
+                                                            $SKILL_D = new SkillDetail(NULL);
+                                                            $EXPERIE = $SKILL_D->GetSkillByMember($_SESSION['id']);
+
+                                                            foreach ($EXPERIE as $EXPE) {
+                                                                foreach ($EXPERIENCE->GetExperienceBySkillDetails($EXPE['id']) as $key => $exp) {
+                                                                    ?>
+
+                                                                    <tr id="row_<?php echo $exp['id']; ?>">
+                                                                        <td><?php echo $exp['sort']; ?></td> 
+                                                                        <td>
+                                                                            <?php
+                                                                            $SKILL_D = new SkillDetail($exp['skill_detail']);
+                                                                            $SKILL = new Skill($SKILL_D->skill);
+                                                                            echo $SKILL->name;
+                                                                            ?>
+                                                                        </td>
+                                                                        <td><?php echo $exp['working_place']; ?></td>
+                                                                        <td><?php echo $exp['duration']; ?></td>
+                                                                        <td><?php echo $exp['description']; ?></td>
+                                                                        <td>
+                                                                            <a href="edit-experience.php?id=<?php echo $exp['id']; ?>">
+                                                                                <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                            </a> 
+                                                                            |
+                                                                            <a href="arrange-experience.php">
+                                                                                <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
+                                                                            </a> 
+                                                                            | 
+                                                                            <a href="#"> 
+                                                                                <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-experience" data-id="<?php echo $exp['id']; ?>"></button>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <?php
+                                                                }
                                                             }
                                                             ?> 
                                                         </tbody>

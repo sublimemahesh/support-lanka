@@ -1,8 +1,6 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . './auth.php');
-
-$EXPERIENCE = Experience::all();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,8 +46,12 @@ $EXPERIENCE = Experience::all();
                                                     <div class="task-content">
                                                         <div id="sortable" class="task-list">
                                                             <?php
-                                                            if (count($EXPERIENCE) > 0) {
-                                                                foreach ($EXPERIENCE as $key => $exp) {
+                                                            $EXPERIENCE = new Experience(NULL);
+                                                            $SKILL_D = new SkillDetail(NULL);
+                                                            $EXPERIE = $SKILL_D->GetSkillByMember($_SESSION['id']);
+
+                                                            foreach ($EXPERIE as $EXPE) {
+                                                                foreach ($EXPERIENCE->GetExperienceBySkillDetails($EXPE['id']) as $key => $exp) {
                                                                     ?>
                                                                     <div class="col-md-12 task-br">
                                                                         <div class="task-title">
@@ -74,13 +76,10 @@ $EXPERIENCE = Experience::all();
                                                                         </div>
                                                                         <br>
                                                                     </div>
-
                                                                     <?php
                                                                 }
-                                                            } else {
-                                                                ?> 
-                                                                <b>No images in the database.</b> 
-                                                            <?php } ?> 
+                                                            }
+                                                            ?> 
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-sm-12 text-center bottom-top-btn">
