@@ -16,6 +16,7 @@ include_once(dirname(__FILE__) . '/Qualification.php');
 include_once(dirname(__FILE__) . '/Education.php');
 include_once(dirname(__FILE__) . '/SkillDetail.php');
 include_once(dirname(__FILE__) . '/Experience.php');
+include_once(dirname(__FILE__) . '/Portfolio.php');
 
 
 function dd($data) {

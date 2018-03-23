@@ -140,8 +140,6 @@ $MEMBER = new Member($_SESSION['id']);
                 </a>
                 <ul class="sub">
                     <li><a  href="add-education.php">Add New Education</a></li>
-                    <!--                    <li><a  href="manage-education.php">Manage Education</a></li>
-                                        <li><a  href="arrange-education.php">Arrange Education</a></li>-->
                 </ul>
             </li>
 
@@ -155,6 +153,7 @@ $MEMBER = new Member($_SESSION['id']);
                     <li><a  href="manage-skill-details.php">Manage Your Skill</a></li>
                 </ul>
             </li>
+
             <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-etsy"></i>
@@ -162,11 +161,22 @@ $MEMBER = new Member($_SESSION['id']);
                 </a>
                 <ul class="sub">
                     <li><a  href="add-experience.php">Add New Experience</a></li>
-                    <li><a  href="manage-experience.php">Manage Experience</a></li>
+                    <li><a  href="manage-experience.php">Your Experience</a></li>
                     <li><a  href="arrange-experience.php">Arrange Experience</a></li>
                 </ul>
             </li>
 
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-product-hunt"></i>
+                    <span>Portfolio</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="add-portfolio.php">Add New Portfolio</a></li>
+                    <li><a  href="manage-portfolio.php">Manage Your Portfolio</a></li>
+                    <li><a  href="arrange-portfolio.php">Arrange Portfolio</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </aside>
