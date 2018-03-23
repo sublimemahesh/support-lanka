@@ -27,29 +27,7 @@ class Database {
 
         $result = mysql_query($query) or die(mysql_error());
         return $result;
-
-//        $qu1 = explode(" ", $query)[0];
-//
-//        if ($qu1 === 'SELECT' || $qu1 === 'select') {
-//            $result = mysql_query($query) or die(mysql_error());
-//            return $result;
-//        } else {
-//            if (!isset($_SESSION)) {
-//                session_start();
-//            }
-//
-//            if (
-//                    $_SESSION["LOGIN"] === true &&
-//                    parse_url($_SERVER['HTTP_REFERER'])["host"] == $this->domain &&
-//                    $_SESSION['TOKEN'] == 'Vr-EFV!Fn6qCCUHYF2&cFzLw_thehorizonvilla-H5Dx'
-//            ) {
-//
-//                $result = mysql_query($query) or die(mysql_error());
-//                return $result;
-//            } else {
-//                sendSecurityAlert($this->domain);
-//            }
-//        }
+ 
     }
 
 }

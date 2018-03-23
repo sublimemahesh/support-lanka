@@ -1,6 +1,7 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
+
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,6 @@ include_once(dirname(__FILE__) . '/auth.php');
 
         <title>Skill Detail || My Account </title>
 
-        <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <!--external css-->
         <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -65,8 +65,8 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         </thead>
                                                         <tbody>
                                                             <?php
-                                                            $SKILLDETAILS = new SkillDetail(NULL);
-                                                            foreach ($SKILLDETAILS->all() as $key => $skill_d) {
+                                                            $SKILLDETAILS = SkillDetail::GetSkillByMember($_SESSION['id']);
+                                                            foreach ($SKILLDETAILS as $key => $skill_d) {
                                                                 ?>
                                                                 <tr id="row_<?php echo $skill_d['id']; ?>">
                                                                     <td><?php echo $skill_d['id']; ?></td> 

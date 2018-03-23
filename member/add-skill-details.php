@@ -18,8 +18,6 @@ include_once(dirname(__FILE__) . '/auth.php');
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <!--external css-->
         <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-datepicker/css/datepicker.html" />
-        <link rel="stylesheet" type="text/css" href="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/daterangepicker.html" />
         <link href="assets/plugins/jquery-steps/jquery.steps.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
         <link href="assets/css/style.css" rel="stylesheet">
@@ -31,7 +29,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             }
         </style>
     </head> 
-    <body> 
+    <body>  
         <div class="loading" id="loading">Loading&#8230;</div>
         <section id="container" > 
             <?php
@@ -83,12 +81,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                         </div>
                                                                         <div class="formrow">
                                                                             <select class="form-control" autocomplete="off" type="text" id="skill-bar" autocomplete="off" name="skill" required="TRUE">
-                                                                                <option value=""> -- Please Select -- </option>
-                                                                                <?php foreach (Skill::all() as $key => $skil) {
-                                                                                    ?>
-                                                                                    <option value="<?php echo $skil['id']; ?>"><?php echo $skil['name']; ?></option><?php
-                                                                                }
-                                                                                ?>
+                                                                                <option value=""> -- Please Select a Industry First -- </option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -123,11 +116,8 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-
-
-                                            </form>
-
+                                                </div> 
+                                            </form> 
                                         </div>
                                     </div>
                                 </div>
@@ -147,42 +137,33 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="assets/js/bootstrap.min.js"></script>
         <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
-        <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-
-
+        <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script> 
         <!--common script for all pages-->
-        <script src="assets/js/common-scripts.js"></script>
-
+        <script src="assets/js/common-scripts.js"></script> 
         <!--script for this page-->
-        <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
-
+        <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script> 
         <!--custom switch-->
-        <script src="assets/js/bootstrap-switch.js"></script>
-
+        <script src="assets/js/bootstrap-switch.js"></script> 
         <!--custom tagsinput-->
-        <script src="assets/js/jquery.tagsinput.js"></script>
-
-        <!--custom checkbox & radio-->
-
-        <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-datepicker/js/bootstrap-datepicker.html"></script>
-        <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/date.html"></script>
-        <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/daterangepicker-2.html"></script>
+        <script src="assets/js/jquery.tagsinput.js"></script> 
+        <!--custom checkbox & radio--> 
         <script src="assets/plugins/jquery-steps/jquery.steps.js" type="text/javascript"></script>
-        <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-        <script src="js/post-transport-image.js" type="text/javascript"></script>
-        <script src="assets/js/form-component.js"></script>    
-        <a href="post-and-get/ajax/skill.php"></a>
+        <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script> 
+        <script src="assets/js/form-component.js"></script>     
+        <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
+
+        <!-- skill custom -->
+        <script src="js/skill.js"></script>
+
+
+
 
         <script>
-            //custom select box
 
             $(function () {
                 $('select.styled').customSelect();
             });
 
-        </script>
-        <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
-        <script>
             tinymce.init({
                 selector: "#description",
                 // ===========================================
@@ -206,8 +187,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                 relative_urls: false
 
             });
-
-
         </script>
 
     </body>

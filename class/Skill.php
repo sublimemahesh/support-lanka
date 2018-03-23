@@ -87,7 +87,7 @@ class Skill {
 
     public function GetSkillsByIndustry($industry) {
 
-        $query = "SELECT * FROM `skill` WHERE `industry` = '" . $industry . "' ORDER BY `sort` ASC";
+        $query = "SELECT `name`,`id` FROM `skill` WHERE `industry` = '" . $industry . "' ORDER BY `sort` ASC";
 
         $db = new Database();
 

@@ -104,6 +104,22 @@ class SkillDetail {
         return $db->readQuery($query);
     }
 
+    public function getSkillDetailsById($skill) {
+
+        $query = "SELECT * FROM `skill_details` WHERE `skill`= '" . $skill . "' ORDER BY `sort` ASC";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
     public function GetSkillByMember($member) {
 
         $query = "SELECT * FROM `skill_details` WHERE `member` = '" . $member . "' ORDER BY `sort` ASC";
@@ -118,6 +134,21 @@ class SkillDetail {
         }
 
         return $array_res;
+    }
+
+    public function CheckSkillIsExisByMember($member, $skill) {
+
+        $query = "SELECT * FROM `skill_details` WHERE `member` = '" . $member . "' AND  `skill` = '" . $skill . "'";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+
+        if (mysql_num_rows($result) > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
 
 }
