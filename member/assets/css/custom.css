@@ -31,12 +31,12 @@ and open the template in the editor.
 .uploadphotobx {
     border: 3px dashed #ddd;
     background: #eee;
-    padding: 10px 10px;
     text-align: center;
 }
 
 .formrow {
     margin-bottom: 15px;
+    padding-top: 40px;
 }
 .uploadphotobx .uploadBox input[type="file"] {
     cursor: inherit;
@@ -295,7 +295,7 @@ and open the template in the editor.
 }
 
 .uploadbox{
-    height: 230px;
+    height: 210px;
 }
 .plus-icon{
     padding-top: 60px;

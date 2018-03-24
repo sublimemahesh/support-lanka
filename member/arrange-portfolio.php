@@ -107,7 +107,6 @@ include_once(dirname(__FILE__) . './auth.php');
 
         <script src="assets/js/jquery-ui.js"></script>    
         <script src="assets/js/tasks.js" type="text/javascript"></script>
-
         <script>
 
             $(function () {
