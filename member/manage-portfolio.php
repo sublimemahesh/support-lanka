@@ -64,7 +64,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                 <th>Option</th>
                                                             </tr>
                                                         </thead>
-                                                        <tfoot>
                                                         <tbody>
                                                             <?php
                                                             $PORTFOLIO = new Portfolio(NULL);
@@ -94,20 +93,25 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                         <a href="#"> 
                                                                             <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-portfolio" data-id="<?php echo $portf['id']; ?>"></button>
                                                                         </a>
+                                                                        |
+                                                                        <a href="create-portfolio-photo.php?id=<?php echo $portf['id']; ?>">
+                                                                            <button class="btn btn-success btn-sm all-icon fa fa-photo"></button>
+                                                                        </a> 
                                                                     </td>
                                                                 </tr>
                                                                 <?php
                                                             }
                                                             ?> 
                                                         </tbody>
-                                                        <tr>
-                                                            <th>ID</th>
-                                                            <th>Skill</th>
-                                                            <th>Title</th>
-                                                            <th>Date</th> 
-                                                            <th>Description</th>
-                                                            <th>Option</th>
-                                                        </tr>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <th>ID</th>
+                                                                <th>Skill</th>
+                                                                <th>Title</th>
+                                                                <th>Date</th> 
+                                                                <th>Description</th>
+                                                                <th>Option</th>
+                                                            </tr>
                                                         </tfoot>
                                                     </table>
                                                 </div>
