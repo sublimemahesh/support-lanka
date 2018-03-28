@@ -12,26 +12,13 @@ include_once(dirname(__FILE__) . './auth.php');
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-
-        <!-- Bootstrap Core Css -->
         <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-        <!-- Waves Effect Css -->
         <link href="plugins/node-waves/waves.css" rel="stylesheet" />
-
-        <!-- Animation Css -->
         <link href="plugins/animate-css/animate.css" rel="stylesheet" />
-
-        <!-- Sweet Alert Css -->
         <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
-
-        <!-- Custom Css -->
         <link href="css/style.css" rel="stylesheet">
-
-        <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
         <link href="css/themes/all-themes.css" rel="stylesheet" />
     </head>
 
@@ -41,7 +28,6 @@ include_once(dirname(__FILE__) . './auth.php');
         ?> 
         <section class="content">
             <div class="container-fluid"> 
-                <!-- Vertical Layout -->
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
@@ -69,6 +55,19 @@ include_once(dirname(__FILE__) . './auth.php');
                                             </div>
                                         </div>
                                     </div> 
+                                    
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="image">Industry Picture</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="file" id="image" class="form-control" name="image" required="true">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div class="row clearfix">
                                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5"> 
@@ -81,8 +80,6 @@ include_once(dirname(__FILE__) . './auth.php');
                         </div>
                     </div>
                 </div>
-                <!-- #END# Vertical Layout -->
-
             </div>
         </section>
 

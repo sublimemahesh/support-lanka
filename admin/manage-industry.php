@@ -11,28 +11,16 @@ $INDUSTRY = new Industry(NULL)
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <title>Manage Industry - www.srilankatourism.travel</title>
-        <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-        <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-
-        <!-- Bootstrap Core Css -->
         <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-        <!-- Waves Effect Css -->
         <link href="plugins/node-waves/waves.css" rel="stylesheet" />
-
-        <!-- Animation Css -->
         <link href="plugins/animate-css/animate.css" rel="stylesheet" />
-
-        <!-- JQuery DataTable Css -->
         <link href="plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
         <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
-        <!-- Custom Css -->
         <link href="css/style.css" rel="stylesheet">
-
+        <link href="css/custom.css" rel="stylesheet" type="text/css"/>
         <link href="css/themes/all-themes.css" rel="stylesheet" />
     </head>
 
@@ -42,7 +30,6 @@ $INDUSTRY = new Industry(NULL)
         ?>
         <section class="content">
             <div class="container-fluid"> 
-                <!-- Manage Industry -->
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
@@ -59,42 +46,38 @@ $INDUSTRY = new Industry(NULL)
                                 </ul>
                             </div>
                             <div class="body">
+                                <!--                                <div class="table-responsive">-->
                                 <div>
-                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Name</th> 
-                                                <th>Options</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Name</th> 
-                                                <th>Options</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-                                            <?php
-                                            foreach ($INDUSTRY->all() as $key => $indu) {
-                                                ?>
-                                                <tr id="row_<?php echo $indu['id']; ?>">
-                                                    <td><?php echo $indu['sort']; ?></td> 
-                                                    <td><?php echo $indu['name']; ?></td> 
-                                                    <td> 
-                                                        <a href="edit-industry.php?id=<?php echo $indu['id']; ?>" class="op-link"><i class="glyphicon glyphicon-pencil"></i></a>  |  
+                                    <div class="row clearfix">
+                                        <?php
+                                        foreach ($INDUSTRY->all() as $key => $indu) {
+                                            ?>
+                                            <div class="col-md-4">
+                                                <div id="div_<?php echo $indu['id']; ?>">
+                                                    <div><?php echo $indu['sort']; ?></div> 
+                                                    <div><?php echo $indu['name']; ?></div> 
+                                                    <img src="../upload/industry/thumb/<?php echo $indu['image_name']; ?>">
+                                                    <div class="top-10"> 
+                                                        <a href="edit-industry.php?id=<?php echo $indu['id']; ?>" class="op-link btn btn-sm btn-info">
+                                                            <i class="glyphicon glyphicon-pencil"></i>
+                                                        </a>  |  
 
-                                                        <a href="#" class="delete-industry" data-id="<?php echo $indu['id']; ?>">
-                                                            <button class="glyphicon glyphicon-trash" data-type="cancel"></button>
+                                                        <a href="#" class="delete-industry btn btn-sm btn-danger" data-id="<?php echo $indu['id']; ?>">
+                                                            <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                         </a>
-                                                    </td>
-                                                </tr>
-                                                <?php
-                                            }
-                                            ?>   
-                                        </tbody>
-                                    </table>
+                                                        |  
+
+                                                        <a href="arrange-industry.php" class="op-link btn btn-sm btn-warning">
+                                                            <i class="glyphicon glyphicon-random" data-type="cancel"></i>
+                                                        </a>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            <?php
+                                        }
+                                        ?> 
+
+                                    </div>
                                 </div>
                             </div>
                         </div>

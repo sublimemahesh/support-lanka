@@ -9,12 +9,13 @@ class Industry {
 
     public $id;
     public $name;
+    public $image_name;
     public $sort;
 
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`name`,`sort` FROM `industry` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`name`,`image_name`,`sort` FROM `industry` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -22,6 +23,7 @@ class Industry {
 
             $this->id = $result['id'];
             $this->name = $result['name'];
+            $this->image_name = $result['image_name'];
             $this->sort = $result['sort'];
 
             return $this;
@@ -30,7 +32,10 @@ class Industry {
 
     public function create() {
 
-        $query = "INSERT INTO `industry` (`name`, `sort`) VALUES  ('" . $this->name . "', '" . $this->sort . "')";
+        $query = "INSERT INTO `industry` (`name`, `image_name`, `sort`) VALUES  ('"
+                . $this->name . "','"
+                . $this->image_name . "', '"
+                . $this->sort . "')";
 
         $db = new Database();
 
@@ -61,7 +66,11 @@ class Industry {
 
     public function update() {
 
-        $query = 'UPDATE `industry` SET `name`= "' . $this->name . '" WHERE id="' . $this->id . '"';
+        $query = "UPDATE  `industry` SET "
+                . "`name` ='" . $this->name . "', "
+                . "`image_name` ='" . $this->image_name . "', "
+                . "`sort` ='" . $this->sort . "' "
+                . "WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();
         $result = $db->readQuery($query);
