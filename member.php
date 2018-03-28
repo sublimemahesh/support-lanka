@@ -226,18 +226,27 @@ $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
                                                 </div>
                                                 <div class="progress-sec" id="skills">
                                                     <h2>Professional Skills</h2>
-                                                    <div class="progress-sec">
-                                                        <span>Adobe Photoshop</span>
-                                                        <div class="progressbar"> <div class="progress" style="width: 80%;"><span>80%</span></div> </div>
-                                                    </div>
-                                                    <div class="progress-sec">
-                                                        <span>Production In Html</span>
-                                                        <div class="progressbar"> <div class="progress" style="width: 60%;"><span>60%</span></div> </div>
-                                                    </div>
-                                                    <div class="progress-sec">
-                                                        <span>Graphic Design</span>
-                                                        <div class="progressbar"> <div class="progress" style="width: 75%;"><span>75%</span></div> </div>
-                                                    </div>
+                                                    <?php
+                                                    if (count($SKILLDETAILS) > 0) {
+                                                        foreach ($SKILLDETAILS as $key => $skill_d) {
+                                                            ?>
+                                                            <div class="progress-sec">
+                                                                <span> 
+                                                                    <?php
+                                                                    $SKILL = new Skill($skill_d['skill']);
+                                                                    echo $SKILL->name;
+                                                                    ?>
+                                                                </span>
+                                                                <div class="progressbar"> <div class="progress" style="width: <?php echo $skill_d['percentage'];?>%;"><span><?php echo $skill_d['percentage'];?>%</span></div> </div>
+                                                            </div>
+                                                            <?php
+                                                        }
+                                                    } else {
+                                                        ?> 
+                                                        <b>No Tour Package images in the database.</b> 
+                                                        <?php
+                                                    }
+                                                    ?> 
                                                 </div>
                                                 <div class="edu-history-sec" id="awards">
                                                     <h2>Awards</h2>
