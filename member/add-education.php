@@ -113,7 +113,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         </div>
                                         <div class="row clearfix">
                                             <?php
-                                            $EDUCATION = Education::all();
+                                            $EDUCATION = Education::GetEducationsByMember($_SESSION['id']);
                                             if (count($EDUCATION) > 0) {
                                                 foreach ($EDUCATION as $key => $edu) {
                                                     ?>

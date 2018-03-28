@@ -29,7 +29,7 @@ $(document).ready(function () {
                             showConfirmButton: false
                         });
 
-                        $('#row_' + id).remove();
+                        $('#div_' + id).remove();
                     }
                 }
             });

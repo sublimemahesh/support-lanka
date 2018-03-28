@@ -39,8 +39,8 @@ if (isset($_POST['upload-portfolio-photo'])) {
                 $handle1->file_new_name_ext = 'jpg';
                 $handle1->image_ratio_crop = 'C';
                 $handle1->file_new_name_body = $imgName;
-                $handle1->image_x = 209;
-                $handle1->image_y = 209;
+                $handle1->image_x = 200;
+                $handle1->image_y = 200;
 
                 $handle1->Process($folder . '/thumb');
 

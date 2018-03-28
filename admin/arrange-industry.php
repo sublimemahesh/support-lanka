@@ -58,6 +58,7 @@ $INDUSTRY = Industry::all();
                                                                 <li class="ui-state-default">
                                                                     <span class="number-class">(<?php echo $key + 1; ?>)</span>
                                                                     <div><?php echo $img["name"]; ?></div>
+                                                                    <img src="../upload/industry/thumb/<?php echo $img["image_name"]; ?>" class="img-responsive">
                                                                     <input type="hidden" name="sort[]"  value="<?php echo $img["id"]; ?>" class="sort-input"/>
 
                                                                 </li>

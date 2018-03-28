@@ -151,4 +151,20 @@ class SkillDetail {
         }
     }
 
+    public function SkilldetailsBySkillDistinct($skill) {
+
+        $query = "SELECT DISTINCT skill,member FROM `skill_details` WHERE `skill`= '" . $skill . "' ORDER BY `sort` ASC";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
 }
