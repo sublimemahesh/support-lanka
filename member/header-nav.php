@@ -177,6 +177,17 @@ $MEMBER = new Member($_SESSION['id']);
                     <li><a  href="arrange-portfolio.php">Arrange Portfolio</a></li>
                 </ul>
             </li>
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-trophy"></i>
+                    <span>Award</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="add-award.php">Add New Award</a></li>
+                    <li><a  href="manage-award.php">Manage Your Awards</a></li>
+                    <li><a  href="arrange-award.php">Arrange Awards</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </aside>
