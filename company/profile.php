@@ -13,20 +13,16 @@ $COMPANY = new Company($_SESSION['id_com']);
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>My Company Profile || Support Lanka</title>
+        <title>Company Profile || Support Lanka</title>
 
-        <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-        <!--external css-->
         <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-datepicker/css/datepicker.html" />
         <link rel="stylesheet" type="text/css" href="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/daterangepicker.html" />
 
-        <!-- Fonts -->
         <link href="http://fonts.googleapis.com/css?family=Ruda:400,700,900" type="text/css">
 
-        <!-- Custom styles for this template --> 
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/style-responsive.css" rel="stylesheet">
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
@@ -51,7 +47,6 @@ $COMPANY = new Company($_SESSION['id_com']);
                                 <?php
                             }
                             ?>
-
                             <div class="panel panel-default">
                                 <div class="panel-heading"><i class="fa fa-user"></i>   My Profile</div>
                                 <div class="panel-body">  <div class="body">
@@ -67,10 +62,18 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                         <li class="list-group-item"> <b>Address</b> : <?php echo $COMPANY->address; ?></li>
                                                         <li class="list-group-item"> <b>About Me</b> : <?php echo $COMPANY->about; ?></li>
                                                         <li class="list-group-item"> <b>Since</b> : <?php echo $COMPANY->since; ?></li>
+                                                        <li class="list-group-item"> <b>No Of Employees</b> : <?php echo $COMPANY->team_size; ?></li>
+                                                        <li class="list-group-item"> <b>Views</b> : <?php echo $COMPANY->views; ?></li>
                                                         <li class="list-group-item"> <b>City</b> :
                                                             <?php
                                                             $CITY = new City($COMPANY->city);
                                                             echo $CITY->name;
+                                                            ?>
+                                                        </li>
+                                                        <li class="list-group-item"> <b>Industry</b> :
+                                                            <?php
+                                                            $INDUSTRY = new Industry($COMPANY->industry);
+                                                            echo $INDUSTRY->name;
                                                             ?>
                                                         </li>
                                                         <!--<li class="list-group-item"> <b>Last Login</b> : </li>--> 
@@ -94,6 +97,10 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                         <input type="hidden" name="upload-logo-image" id="upload-logo-image"/>
                                                         <input type="hidden" name="company" id="company" value="<?php echo $COMPANY->id; ?>"/>
                                                     </form>
+
+                                                    <div class="company-map">
+                                                        <iframe src="<?php echo $COMPANY->map ?>" width="245" height="270" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -130,7 +137,7 @@ $COMPANY = new Company($_SESSION['id_com']);
 
         <!--custom tagsinput-->
         <script src="assets/js/jquery.tagsinput.js"></script>
-
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <!--custom checkbox & radio-->
         <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-datepicker/js/bootstrap-datepicker.html"></script>
         <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/date.html"></script>
