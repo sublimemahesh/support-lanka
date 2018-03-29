@@ -19,6 +19,7 @@ include_once(dirname(__FILE__) . '/Experience.php');
 include_once(dirname(__FILE__) . '/Portfolio.php');
 include_once(dirname(__FILE__) . '/PortfolioPhoto.php');
 include_once(dirname(__FILE__) . '/Award.php');
+include_once(dirname(__FILE__) . '/Company.php');
 
 function dd($data) {
     var_dump($data);
