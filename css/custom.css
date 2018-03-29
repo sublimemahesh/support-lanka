@@ -19,3 +19,66 @@ and open the template in the editor.
     text-align: justify;
     padding-top: 10px;
 }
+
+.account-popup1 {
+    position: relative;
+    float: left;
+    background: #ffffff;
+    z-index: 1;
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+
+    left: 50%;
+    margin-left: -230px;
+    margin-top: 140px;
+    margin-bottom: 60px;
+    text-align: center;
+    padding: 40px 60px;
+}
+
+.account-popup1 .close-popup {
+    position: absolute;
+    top: -20px;
+    width: 50px;
+    height: 50px;
+    float: none;
+    margin: 0;
+    right: -11px;
+    text-align: center;
+    line-height: 63px;
+    color: #000;
+    font-size: 29px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.model-title{
+    float: none;
+    display: inline-block;
+    border: 2px solid;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    padding: 13px 30px;
+    font-family: Open Sans;
+    font-size: 15px;
+    margin-top: 20px;
+    color: #5E63A2;
+}
+.model-title:hover {
+    border-color: #FFF;
+    background: #FFF;
+    color: #fb236a;
+}
+.model-text{
+    font-size: 24px;
+}

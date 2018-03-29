@@ -33,8 +33,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
     </head>
     <body>
 
-
-
         <div class="theme-layout" id="scrollup">
 
             <?php
@@ -60,15 +58,17 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     if ($key < 8) {
                                                         ?>
-                                                        <div class="col-lg-3 col-md-3 col-sm-6">
-                                                            <div class="p-category">
-                                                                <a href="skills.php?industry=<?php echo $industry['id'];?>" title="">
-                                                                    <i>
-                                                                        <img src="upload/industry/thumb/<?php echo $industry['image_name']; ?>" class="img-responsive img-industy">
-                                                                    </i>
-                                                                    <span><?php echo $industry['name']; ?></span>
-                                                                    <p>(22 open positions)</p>
-                                                                </a>
+                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php">
+                                                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                                                <div class="p-category">
+                                                                    <a title="">
+                                                                        <i>
+                                                                            <img src="upload/industry/thumb/<?php echo $industry['image_name']; ?>" class="img-responsive img-industy">
+                                                                        </i>
+                                                                        <span><?php echo $industry['name']; ?></span>
+                                                                        <p>(22 open positions)</p>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <?php
@@ -118,7 +118,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="heading">
-                                    <h2>Featured Jobs</h2>
+                                    <h2>Job Providers</h2>
                                     <span>Leading Employers already using job and talent.</span>
                                 </div><!-- Heading -->
                                 <div class="job-listings-sec">
@@ -439,6 +439,23 @@ include_once(dirname(__FILE__) . '/class/include.php');
                 </div>
             </div>
         </div><!-- SIGNUP POPUP -->
+
+        <div class="account-popup-area category-popup-box">
+            <div class="account-popup1">
+                <span class="close-popup"><i class="la la-close"></i></span>
+                <div class="model-text">Select Your Title</div>
+                <div>
+
+                    <a id="job-applicant" href=""> 
+                        <input class="model-title" type="submit" value="Job Applicant"/>
+                    </a>
+                    <a id="job-provider" href="">
+                        <input class="model-title" type="submit" value="Job Provider"/>
+                    </a>
+
+                </div>
+            </div>
+        </div><!-- Category Popup -->
 
         <script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/modernizr.js" type="text/javascript"></script>
