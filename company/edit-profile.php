@@ -120,7 +120,7 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                                     <input type="text" name="team_size" class="form-control" placeholder="No Of Employees" required="TRUE" value="<?php echo $COMPANY->team_size; ?>">
                                                                 </div>
                                                             </div> 
-                                                             <!--Map-->
+                                                            <!--Map-->
                                                             <div class="">
                                                                 <div class="bottom-top">Company Location</div>
                                                                 <div class="">
@@ -195,7 +195,7 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                                 <div class="bottom-top">Change Your Profile Picture</div>
                                                                 <div>
                                                                     <?php
-                                                                    if (empty($COMPANY->profile_picture)) {
+                                                                    if (empty($COMPANY->logo_image)) {
                                                                         ?>
                                                                         <img src="../upload/company/logo.png" class="img img-responsive img-thumbnail"/> 
                                                                         <?php
