@@ -52,7 +52,7 @@ if (isset($_GET['skill'])) {
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-pencil"></i> Create Experience</div>
+                                <div class="panel-heading"><i class="fa fa-pencil"></i> Create Portfolio</div>
                                 <div class="panel-body">
 
                                     <div class="userccount">
