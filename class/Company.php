@@ -390,4 +390,20 @@ class Company {
         }
     }
 
+    public function GetCompanyByCity($city) {
+
+        $query = "SELECT * FROM `company` WHERE `member` = '" . $city . "' ORDER BY `sort` ASC";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
 }

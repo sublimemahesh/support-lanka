@@ -133,17 +133,17 @@ $COMPANY = new Company($_SESSION['id_com']);
                 </a> 
             </li>
 
-<!--            <li class="sub-menu">
+            <li class="sub-menu">
                 <a href="javascript:;" >
-                    <i class="fa fa-etsy"></i>
-                    <span>Experience</span>
+                    <i class="fa fa-suitcase"></i>
+                    <span>Vacancy</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="add-experience.php">Add New Experience</a></li>
-                    <li><a  href="manage-experience.php">Your Experience</a></li>
-                    <li><a  href="arrange-experience.php">Arrange Experience</a></li>
+                    <li><a  href="add-vacancy.php">Add New Vacancy</a></li>
+                    <li><a  href="manage-vacancy.php">Your Vacancy</a></li>
+                    <li><a  href="arrange-vacancy.php">Arrange Vacancy</a></li>
                 </ul>
-            </li>-->
+            </li>
             
         </ul>
     </div>
