@@ -6,14 +6,14 @@ $id = '';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
-$MEMBER = new Member($id);
+$COMPANY = new Company($id);
 ?> 
 ﻿<!DOCTYPE html>
 <html> 
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Edit Member || Spport Lanka</title>
+        <title>Edit Company || Spport Lanka</title>
 
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -45,12 +45,12 @@ $MEMBER = new Member($id);
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Edit Member
+                                    Edit Company
                                 </h2>
 
                             </div>
                             <div class="body row">
-                                <form class="form-horizontal" method="post" action="post-and-get/member.php" enctype="multipart/form-data"> 
+                                <form class="form-horizontal" method="post" action="post-and-get/company.php" enctype="multipart/form-data"> 
                                     <!--Name-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -59,76 +59,37 @@ $MEMBER = new Member($id);
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="name" class="form-control" placeholder="Enter Member name" autocomplete="off" name="name" required="TRUE" value="<?php echo $MEMBER->name; ?>">
+                                                    <input type="text" id="name" class="form-control" placeholder="Enter Company name" autocomplete="off" name="name" required="TRUE" value="<?php echo $COMPANY->name; ?>">
                                                 </div>
                                             </div>
                                         </div>
                                     </div> 
-                                    <!--Email-->
+                                    <!--Company Register Number-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Email</label>
+                                            <label for="company_register_number">Company Register Number</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="email" id="email" class="form-control" placeholder="Enter Email" autocomplete="off" name="email" required="TRUE" value="<?php echo $MEMBER->email; ?>">
+                                                    <input type="text" id="company_register_number" class="form-control" placeholder="Enter Company Register Number" autocomplete="off" name="company_register_number" required="TRUE" value="<?php echo $COMPANY->company_register_number; ?>">
                                                 </div>
                                             </div>
                                         </div>
                                     </div> 
-                                    <!--Contact Number-->
+                                    <!--Address-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Contact Number</label>
+                                            <label for="address">Address</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="contact_number" class="form-control" placeholder="Enter contact number" autocomplete="off" name="contact_number" required="TRUE" value="<?php echo $MEMBER->contact_number; ?>">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <!--NIC Number-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="nic_number">NIC Number</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="nic_number" class="form-control" placeholder="Enter NIC number" autocomplete="off" name="nic_number" required="TRUE" value="<?php echo $MEMBER->nic_number; ?>">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <!--About Your Details-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="about_me">About Your Details</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <textarea id="about_me" name="about_me" class="form-control" rows="5" ><?php echo $MEMBER->about_me; ?></textarea> 
+                                                    <input type="text" id="address" class="form-control" placeholder="Enter Address" autocomplete="off" name="address" required="TRUE" value="<?php echo $COMPANY->address; ?>">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--Home Address-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="home_address">Home Address</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="home_address" class="form-control" placeholder="Enter Home Address" autocomplete="off" name="home_address" required="TRUE" value="<?php echo $MEMBER->home_address; ?>">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
                                     <!-- city-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -138,9 +99,9 @@ $MEMBER = new Member($id);
                                             <div class="form-group place-select">
                                                 <div class="form-line">
                                                     <select class="form-control show-tick place-select1" type="text" id="city" autocomplete="off" name="city">
-                                                        <option value="<?php echo $MEMBER->id; ?>" class="active light-c">
+                                                        <option value="<?php echo $COMPANY->id; ?>" class="active light-c">
                                                             <?php
-                                                            $CITY = new City($MEMBER->city);
+                                                            $CITY = new City($COMPANY->city);
                                                             echo $CITY->name;
                                                             ?>
                                                         </option>
@@ -154,29 +115,106 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
                                     </div>
-                                    <!--date_of_birthday-->
+                                    <!-- industry-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="date_of_birthday">Date Of Birthday</label>
+                                            <label for="industry">Industry</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group place-select">
+                                                <div class="form-line">
+                                                    <select class="form-control show-tick place-select1" type="text" id="industry" autocomplete="off" name="industry">
+                                                        <option value="<?php echo $COMPANY->id; ?>" class="active light-c">
+                                                            <?php
+                                                            $INDUSTRY = new Industry($COMPANY->industry);
+                                                            echo $INDUSTRY->name;
+                                                            ?>
+                                                        </option>
+                                                        <?php foreach (Industry::all() as $key => $ind) {
+                                                            ?>
+                                                            <option value="<?php echo $ind['id']; ?>"><?php echo $ind['name']; ?></option><?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Contact Number-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="contact_number">Contact Number</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="date" id="date_of_birthday" class="form-control" placeholder="Enter Date Of Birthday" autocomplete="off" name="date_of_birthday" required="TRUE">
+                                                    <input type="text" id="contact_number" class="form-control" placeholder="Enter Contact Number" autocomplete="off" name="contact_number" required="TRUE" value="<?php echo $COMPANY->contact_number; ?>">
                                                 </div>
                                             </div>
                                         </div>
                                     </div> 
-                                    <!--Profile Picture-->
+                                    <!--Email-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="image">Profile Picture</label>
+                                            <label for="email">Email</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="file" id="image" class="form-control" name="image" value="<?php echo $MEMBER->profile_picture; ?>">
-                                                    <img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+                                                    <input type="text" id="email" class="form-control" placeholder="Enter Email" autocomplete="off" name="email" required="TRUE" value="<?php echo $COMPANY->email; ?>">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!--Since-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="since">Since</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="since" class="form-control" placeholder="When is company start" autocomplete="off" name="since" required="TRUE" value="<?php echo $COMPANY->since; ?>">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--No Of Employees In your Company-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="team_size">No Of Employees In your Company</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="team_size" class="form-control" placeholder="No Of Employees" autocomplete="off" name="team_size" required="TRUE" value="<?php echo $COMPANY->team_size; ?>">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!--About Company-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="about">About Company</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <textarea id="about" name="about" class="form-control" rows="5"><?php echo $COMPANY->about; ?></textarea> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Logo Image-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="logo_image">Company Logo Image</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="file" id="logo_image" class="form-control" name="logo_image" value="<?php echo $COMPANY->logo_image; ?>">
+                                                    <img src="../upload/company/<?php echo $COMPANY->logo_image; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                                 </div>
                                             </div>
                                         </div>
@@ -189,7 +227,7 @@ $MEMBER = new Member($id);
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="username" class="form-control" placeholder="Enter username" autocomplete="off" name="username" required="TRUE" value="<?php echo $MEMBER->username; ?>">
+                                                    <input type="text" id="username" class="form-control" placeholder="Enter username" autocomplete="off" name="username" required="TRUE" value="<?php echo $COMPANY->username; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -198,20 +236,22 @@ $MEMBER = new Member($id);
                                     <div class="col-md-12">
                                         <div class="col-md-2"></div>  
                                         <div class="form-group">
-                                            <input class="filled-in chk-col-pink" type="checkbox" <?php
-                                            if ($MEMBER->status == 1) {
+                                            <input class="filled-in chk-col-pink" type="checkbox" 
+                                            <?php
+                                            if ($COMPANY->status == 1) {
                                                 echo 'checked';
                                             }
-                                            ?> name="active" value="1" id="rememberme" />
+                                            ?> 
+                                                   name="active" value="1" id="rememberme" />
                                             <label for="rememberme">Active</label>
 
                                         </div>
                                         <div class="row clearfix">
                                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                                <input type="hidden" id="oldImageName" value="<?php echo $MEMBER->profile_picture; ?>" name="oldImageName"/>
-                                                <input type="hidden" id="id" value="<?php echo $MEMBER->id; ?>" name="id"/>
+                                                <input type="hidden" id="image" value="<?php echo $COMPANY->logo_image; ?>" name="image"/>
+                                                <input type="hidden" id="id" value="<?php echo $COMPANY->id; ?>" name="id"/>
         <!--                                            <input type="hidden" id="authToken" value="<?php echo $_SESSION["authToken"]; ?>" name="authToken"/>-->
-                                                <button type="submit" class="btn btn-primary m-t-15 waves-effect" name="update" value="update">Save Changes</button>
+                                                <button type="submit" class="btn btn-primary m-t-15 waves-effect" name="update_company" value="update">Save Changes</button>
                                             </div>
                                         </div>
 
@@ -236,7 +276,7 @@ $MEMBER = new Member($id);
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({
-                selector: "#about_me",
+                selector: "#about",
                 // ===========================================
                 // INCLUDE THE PLUGIN
                 // ===========================================

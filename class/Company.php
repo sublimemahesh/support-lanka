@@ -26,11 +26,12 @@ class Company {
     public $resetcode;
     public $rank;
     public $status;
+    public $sort;
 
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`logo_image`,`name`,`industry`,`city`,`company_register_number`,`address`,`since`,`team_size`,`views`,`about`,`contact_number`,`email`,`map`,`username`,`resetcode`,`rank`,`status` FROM `company` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`logo_image`,`name`,`industry`,`city`,`company_register_number`,`address`,`since`,`team_size`,`views`,`about`,`contact_number`,`email`,`map`,`username`,`resetcode`,`rank`,`status`,`sort` FROM `company` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -54,6 +55,7 @@ class Company {
             $this->resetcode = $result['resetcode'];
             $this->rank = $result['rank'];
             $this->status = $result['status'];
+            $this->sort = $result['sort'];
 
             return $this;
         }
@@ -61,7 +63,26 @@ class Company {
 
     public function create() {
 
-        $query = "INSERT INTO `company` (`logo_image`,`name`,`industry`,`city`,`company_register_number`,`address`,`since`,`team_size`,`views`,`about`,`contact_number`,`email`,`map`,`username`,`password`,`resetcode`,`rank`,`status`) VALUES  ('"
+        $query = "INSERT INTO `company` ("
+                . "`logo_image`,"
+                . "`name`,"
+                . "`industry`,"
+                . "`city`,"
+                . "`company_register_number`,"
+                . "`address`,"
+                . "`since`,"
+                . "`team_size`,"
+                . "`views`,"
+                . "`about`,"
+                . "`contact_number`,"
+                . "`email`,"
+                . "`map`,"
+                . "`username`,"
+                . "`password`,"
+                . "`resetcode`,"
+                . "`rank`,"
+                . "`status`"
+                . ") VALUES  ('"
                 . $this->logo_image . "','"
                 . $this->name . "','"
                 . $this->industry . "','"
@@ -92,6 +113,13 @@ class Company {
         } else {
             return FALSE;
         }
+    }
+
+    public function arrange($key, $com) {
+        $query = "UPDATE `company` SET `sort` = '" . $key . "'  WHERE id = '" . $com . "'";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        return $result;
     }
 
     public function login($username, $password) {

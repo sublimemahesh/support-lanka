@@ -2,7 +2,7 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 
-$MEMBER = new Member(NULL)
+$COMPANY = new Company(NULL)
 ?> 
 ﻿<!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@ $MEMBER = new Member(NULL)
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Manage Member - Support Lanka</title>
+        <title>Manage Company || Support Lanka</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -43,11 +43,11 @@ $MEMBER = new Member(NULL)
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Manage Member
+                                    Manage Company
                                 </h2>
                                 <ul class="header-dropdown">
                                     <li>
-                                        <a href="create-member.php">
+                                        <a href="create-company.php">
                                             <i class="material-icons">add</i> 
                                         </a>
                                     </li>
@@ -62,50 +62,42 @@ $MEMBER = new Member(NULL)
                                                 <th>ID</th>
                                                 <th>Name</th> 
                                                 <th>email</th>
-                                                <th>Contact Number</th> 
+                                                <th>Industry</th>
+                                                <th>Register Number</th> 
                                                 <th>Username</th>
                                                 <th>Status</th> 
-                                                <th>Rank</th> 
                                                 <th>Options</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Name</th> 
-                                                <th>email</th>
-                                                <th>Contact Number</th> 
-                                                <th>Username</th>
-                                                <th>Status</th> 
-                                                <th>Rank</th> 
-                                                <th>Options</th>
-                                            </tr>
-                                        </tfoot>
                                         <tbody>
-
                                             <?php
-                                            foreach ($MEMBER->all() as $key => $member) {
+                                            foreach ($COMPANY->all() as $key => $company) {
                                                 ?>
-                                                <tr id="row_<?php echo $member['id']; ?>">
-                                                    <td><?php echo $member['id']; ?></td> 
-                                                    <td><?php echo substr($member['name'], 0, 20); ?></td> 
-                                                    <td><?php echo substr($member['email'], 0, 30); ?></td> 
-                                                    <td><?php echo $member['contact_number']; ?></td> 
-                                                    <td><?php echo substr($member['username'], 0, 30); ?></td> 
+                                                <tr id="row_<?php echo $company['id']; ?>">
+                                                    <td><?php echo $company['id']; ?></td> 
+                                                    <td><?php echo substr($company['name'], 0, 20); ?></td> 
+                                                    <td><?php echo substr($company['email'], 0, 30); ?></td>
                                                     <td>
                                                         <?php
-                                                        if ($member['status'] == 1) {
+                                                        $INDUSTRY = new Industry($company['industry']);
+                                                        echo $INDUSTRY->name;
+                                                        ?>
+                                                    </td> 
+                                                    <td><?php echo $company['company_register_number']; ?></td> 
+                                                    <td><?php echo substr($company['username'], 0, 30); ?></td> 
+                                                    <td>
+                                                        <?php
+                                                        if ($company['status'] == 1) {
                                                             echo 'Active';
                                                         } else {
                                                             echo 'Inactive';
                                                         }
                                                         ?>
                                                     </td> 
-                                                    <td><?php echo $member['rank']; ?></td> 
                                                     <td> 
-                                                        <a href="edit-member.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
+                                                        <a href="edit-company.php?id=<?php echo $company['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 
-                                                        <a href="#" class="delete-member btn btn-sm btn-danger" data-id="<?php echo $member['id']; ?>">
+                                                        <a href="#" class="delete-company btn btn-sm btn-danger" data-id="<?php echo $company['id']; ?>">
                                                             <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                         </a>
                                                     </td>
@@ -114,6 +106,18 @@ $MEMBER = new Member(NULL)
                                             }
                                             ?>   
                                         </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th> 
+                                                <th>email</th>
+                                                <th>Industry</th>
+                                                <th>Contact Number</th> 
+                                                <th>Username</th>
+                                                <th>Status</th> 
+                                                <th>Options</th>
+                                            </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
@@ -156,7 +160,7 @@ $MEMBER = new Member(NULL)
 
         <!-- Demo Js -->
         <script src="js/demo.js"></script>
-        <script src="delete/js/member.js" type="text/javascript"></script>
+        <script src="delete/js/company.js" type="text/javascript"></script>
     </body>
 
 </html> 
