@@ -58,7 +58,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     if ($key < 8) {
                                                         ?>
-                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php">
+                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">
                                                             <div class="col-lg-3 col-md-3 col-sm-6">
                                                                 <div class="p-category">
                                                                     <a title="">
@@ -445,14 +445,12 @@ include_once(dirname(__FILE__) . '/class/include.php');
                 <span class="close-popup"><i class="la la-close"></i></span>
                 <div class="model-text">Select Your Title</div>
                 <div>
-
                     <a id="job-applicant" href=""> 
                         <input class="model-title" type="submit" value="Job Applicant"/>
                     </a>
                     <a id="job-provider" href="">
                         <input class="model-title" type="submit" value="Job Provider"/>
                     </a>
-
                 </div>
             </div>
         </div><!-- Category Popup -->

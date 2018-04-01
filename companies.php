@@ -1,3 +1,8 @@
+﻿<?php
+include_once(dirname(__FILE__) . '/class/include.php');
+$id = $_GET["industry"];
+$INDUSTRY = new Industry($id);
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,8 +27,6 @@
 
     </head>
     <body>
-
-
 
         <div class="theme-layout" id="scrollup">
 
@@ -119,175 +122,46 @@
                                 </div>
                                 <div class="emply-list-sec">
                                     <div class="row" id="masonry">
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em1.jpg" alt="" /></a>
+                                        <?php
+                                        $COMPANY = new Company($id);
+                                        $COMPAN = Company::GetCompanysByIndustry($id);
+                                        foreach ($COMPAN as $com) {
+                                            ?>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="emply-list box">
+                                                    <div class="emply-list-thumb">
+                                                        <a href="company.php?company=<?php echo $com['id']; ?>">
+
+                                                            <img src="upload/industry/thumb/<?php echo $INDUSTRY->image_name; ?>" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="emply-list-info">
+                                                        <div class="emply-pstn">4 Jobs</div>
+                                                        <h3>
+                                                            <a href="#" title=""> 
+                                                                <?php
+                                                                $com['id'];
+                                                                echo $INDUSTRY->name;
+                                                                ?>
+                                                            </a>
+                                                        </h3>
+                                                        <span> 
+                                                            <h6> Since : <?php echo $com['since']; ?></h6> 
+                                                        </span>
+                                                        <h6>
+                                                            <i class="la la-map-marker"></i> 
+                                                            <?php echo $com['address']; ?>,
+                                                            <?php
+                                                            $CITY = new City($com['city']);
+                                                            echo $CITY->name;
+                                                            ?>
+                                                        </h6>
+                                                    </div>
                                                 </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">King LLC</a></h3>
-                                                    <span>Accountancy, Human</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em2.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">Telimed</a></h3>
-                                                    <span>Accounting Assistant</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em3.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">Ucess</a></h3>
-                                                    <span>Arts, Design</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em4.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">Airbnb</a></h3>
-                                                    <span>Arts, Design</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em5.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">TeraPlaner</a></h3>
-                                                    <span>Financial Services</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em6.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">King LLC</a></h3>
-                                                    <span>Accountancy</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em7.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">King LLC</a></h3>
-                                                    <span>Accountancy</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em1.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">King LLC</a></h3>
-                                                    <span>Accountancy</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em2.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">Telimed</a></h3>
-                                                    <span>Accounting Assistant</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em3.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">Ucess</a></h3>
-                                                    <span>Arts, Design</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em4.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">Airbnb</a></h3>
-                                                    <span>Arts, Design</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="emply-list box">
-                                                <div class="emply-list-thumb">
-                                                    <a href="#" title=""><img src="images/resource/em5.jpg" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn">4 Jobs</div>
-                                                    <h3><a href="#" title="">TeraPlaner</a></h3>
-                                                    <span>Financial Services</span>
-                                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                                </div>
-                                            </div><!-- Employe List -->
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="pagination">
-                                                <ul>
-                                                    <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
-                                                    <li><a href="">1</a></li>
-                                                    <li class="active"><a href="">2</a></li>
-                                                    <li><a href="">3</a></li>
-                                                    <li><span class="delimeter">...</span></li>
-                                                    <li><a href="">14</a></li>
-                                                    <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
-                                                </ul>
-                                            </div><!-- Pagination -->
-                                        </div>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
