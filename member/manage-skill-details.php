@@ -14,7 +14,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Skill Detail || My Account </title>
+        <title>Skill Detail || My Account || Support Lanka</title>
 
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <!--external css-->

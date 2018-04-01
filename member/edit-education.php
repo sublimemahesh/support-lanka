@@ -16,7 +16,7 @@ $EDUCATION = new Education($id);
         <meta name="description" content="">
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-        <title>Edit Education || My Profile</title>
+        <title>Edit Education || My Account || Support Lanka</title>
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <!--external css-->
@@ -62,7 +62,7 @@ $EDUCATION = new Education($id);
                                                             <div class="bottom-top">
                                                                 <label for="institute">Institute</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="institute" name="institute" class="form-control" placeholder="Please Enter institute" value="<?php echo $EDUCATION->institute; ?>">
                                                             </div>
                                                         </div>
@@ -71,7 +71,7 @@ $EDUCATION = new Education($id);
                                                             <div class="bottom-top">
                                                                 <label for="title">Title</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="title" name="title" class="form-control" placeholder="Please Enter title" value="<?php echo $EDUCATION->title; ?>">
                                                             </div>
                                                         </div>
@@ -80,7 +80,7 @@ $EDUCATION = new Education($id);
                                                             <div class="bottom-top">
                                                                 <label for="duration">Duration</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="duration" name="duration" class="form-control" placeholder="Please Enter Duration" value="<?php echo $EDUCATION->duration; ?>">
                                                             </div>
                                                         </div>
@@ -89,7 +89,7 @@ $EDUCATION = new Education($id);
                                                             <div class="bottom-top">
                                                                 <label for="stream">Stream</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="stream" name="stream" class="form-control" placeholder="Please Enter Stream" value="<?php echo $EDUCATION->stream; ?>">
                                                             </div>
                                                         </div>
@@ -98,7 +98,7 @@ $EDUCATION = new Education($id);
                                                             <div class="bottom-top">
                                                                 <label for="description">Description</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <textarea type="text" id="description" name="description" class="form-control" placeholder="Please Enter Description"><?php echo $EDUCATION->description; ?></textarea>
                                                             </div>
                                                         </div>

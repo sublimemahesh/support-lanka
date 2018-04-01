@@ -13,7 +13,7 @@ $COMPANY = new Company($id);
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Edit Company || Spport Lanka</title>
+        <title>Edit Company || Admin || Support Lanka</title>
 
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">

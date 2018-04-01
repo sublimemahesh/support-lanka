@@ -17,7 +17,7 @@ if (isset($_GET['skill'])) {
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Add New Portfolio || My Account</title>
+        <title>Add New Portfolio || My Account || Support Lanka</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">

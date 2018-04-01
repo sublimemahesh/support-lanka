@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Portfolio Images || My Account</title>
+        <title>Portfolio Images || My Account || Support Lanka</title>
 
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />

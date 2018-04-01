@@ -12,7 +12,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Add Your Education || My Account</title>
+        <title>Add Your Education || My Account || Support Lanka</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -45,7 +45,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-pencil"></i> Create Your Education Details</div>
+                                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> Create Your Education Details</div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="userccount">
@@ -57,7 +57,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             <div class="bottom-top">
                                                                 <label for="institute">Institute</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="institute" name="institute" class="form-control" placeholder="Please Enter institute">
                                                             </div>
                                                         </div>
@@ -66,7 +66,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             <div class="bottom-top">
                                                                 <label for="title">Title</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="title" class="form-control" placeholder="Enter title" autocomplete="off" name="title" required="TRUE">
                                                             </div>
 
@@ -76,7 +76,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             <div class="bottom-top">
                                                                 <label for="duration">Duration</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="duration" class="form-control" placeholder="Enter duration" autocomplete="off" name="duration" required="TRUE">
                                                             </div>
 
@@ -86,7 +86,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             <div class="bottom-top">
                                                                 <label for="stream">Stream</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="stream" class="form-control" placeholder="Enter stream" autocomplete="off" name="stream" required="TRUE">
                                                             </div>
 
@@ -96,7 +96,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             <div class="bottom-top">
                                                                 <label for="description">Description</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <textarea type="text" id="description" name="description" class="form-control" placeholder="Please Enter Description"></textarea>
                                                             </div>
                                                         </div>
@@ -110,37 +110,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     </div>  
                                                 </form>  
                                             </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <?php
-                                            $EDUCATION = Education::GetEducationsByMember($_SESSION['id']);
-                                            if (count($EDUCATION) > 0) {
-                                                foreach ($EDUCATION as $key => $edu) {
-                                                    ?>
-                                                    <div class="col-md-3" id="div_<?php echo $edu['id']; ?>">
-<!--                                                        <p class="maxlinetitle"><?php echo $edu['sort']; ?></p>-->
-                                                        <p class="maxlinetitle"><b>Title : </b><?php echo $edu['title']; ?></p>
-                                                        <p class="maxlinetitle"><b>Institute : </b><?php echo $edu['institute']; ?></p>
-                                                        <p class="maxlinetitle"><b>Duration : </b><?php echo $edu['duration']; ?></p>
-                                                        <div>
-                                                            <div class="" style="padding-bottom: 10px">
-                                                                <a href="edit-education.php?id=<?php echo $edu['id']; ?>">
-                                                                    <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                                </a>
-                                                                |
-                                                                <a>
-                                                                    <button class="delete-education all-icon btn btn-danger btn-md fa fa-trash-o" data-id="<?php echo $edu['id']; ?>"></button>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <?php
-                                                }
-                                            } else {
-                                                ?> 
-
-                                            <?php } ?> 
-
                                         </div>
                                     </div>
                                 </div>
