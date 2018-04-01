@@ -12,7 +12,7 @@ include_once(dirname(__FILE__) . './auth.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Experience || My Account </title>
+        <title>Experience || My Account || Support Lanka</title>
 
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />

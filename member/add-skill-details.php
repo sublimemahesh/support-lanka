@@ -12,7 +12,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Add New Skill Details || My Account</title>
+        <title>Add New Skill Details || My Account || Support Lanka</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">

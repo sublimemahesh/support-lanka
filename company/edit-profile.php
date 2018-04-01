@@ -14,7 +14,7 @@ $COMPANY = new Company($_SESSION['id_com']);
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Edit Profile - www.srilankatourism.travel</title>
+        <title>Edit Profile || Support Lanka</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">

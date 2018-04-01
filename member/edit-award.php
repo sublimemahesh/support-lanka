@@ -16,7 +16,7 @@ $AWARD = new Award($id);
         <meta name="description" content="">
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-        <title>Edit Experience || My Profile</title>
+        <title>Edit Experience || My Account || Support Lanka</title>
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <!--external css-->

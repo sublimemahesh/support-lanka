@@ -1,28 +1,24 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
-
-$id = '';
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-}
-$PORTPOLIO = new Portfolio($id);
 ?> 
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-        <title>Edit Portfolio || My Account || Support Lanka</title>
+
+        <title>Manage Your Education || My Account || Support Lanka</title>
+
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <!--external css-->
         <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-datepicker/css/datepicker.html" />
-        <link rel="stylesheet" type="text/css" href="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/daterangepicker.html" />
+        <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/style-responsive.css" rel="stylesheet">
@@ -49,97 +45,85 @@ $PORTPOLIO = new Portfolio($id);
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-pencil"></i> Edit Portfolio</div>
+                                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> Create Your Education Details</div>
                                 <div class="panel-body">
                                     <div class="body">
-                                        <div class="userccount">
-                                            <div class="formpanel"> 
-                                                <form class="form-horizontal" method="post" action="post-and-get/portfolio.php" enctype="multipart/form-data"> 
-                                                    <div class="col-md-12">
-                                                        <div class="">
-                                                            <div class="bottom-top">
-                                                                <label for="title">Title</label>
-                                                            </div>
-                                                            <div class="formrow">
-                                                                <input type="text" id="Title" name="title" class="form-control" placeholder="Please Enter Title" value="<?php echo $PORTPOLIO->title; ?>">
+                                        <div class="row clearfix" style="padding-top: 15px;">
+
+                                            <div class="col-md-3">
+                                                <a href="add-new-education.php">
+                                                    <div class="uploadbox uploadphotobx" id="uploadphotobx">
+                                                        <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
+                                                        <label class="uploadBox">Click here to Add Your Education
+
+                                                        </label>
+                                                    </div>
+                                                </a>
+                                            </div>  
+
+                                            <?php
+                                            $EDUCATION = Education::GetEducationsByMember($_SESSION['id']);
+                                            if (count($EDUCATION) > 0) {
+                                                foreach ($EDUCATION as $key => $edu) {
+                                                    ?>
+                                                    <div class="col-md-3" id="div_<?php echo $edu['id']; ?>">
+        <!--                                                        <p class="maxlinetitle"><?php echo $edu['sort']; ?></p>-->
+                                                        <p class="maxlinetitle"><b>Title : </b><?php echo $edu['title']; ?></p>
+                                                        <p class="maxlinetitle"><b>Institute : </b><?php echo $edu['institute']; ?></p>
+                                                        <p class="maxlinetitle"><b>Duration : </b><?php echo $edu['duration']; ?></p>
+                                                        <div>
+                                                            <div class="" style="padding-bottom: 10px">
+                                                                <a href="edit-education.php?id=<?php echo $edu['id']; ?>">
+                                                                    <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                </a>
+                                                                |
+                                                                <a>
+                                                                    <button class="delete-education all-icon btn btn-danger btn-md fa fa-trash-o" data-id="<?php echo $edu['id']; ?>"></button>
+                                                                </a>
                                                             </div>
                                                         </div>
-                                                        
-                                                        <div class="">
-                                                            <div class="bottom-top">
-                                                                <label for="description">Description</label>
-                                                            </div>
-                                                            <div class="formrow">
-                                                                <textarea type="text" id="description" name="description" class="form-control" placeholder="Please Enter Description"><?php echo $PORTPOLIO->description; ?></textarea>
-                                                            </div>
-                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                }
+                                            } else {
+                                                ?> 
 
-                                                        <div class="top-bott50">
-                                                            <div class="bottom-top">
-                                                                <input type="hidden" id="oldDis" value=""/>
+                                            <?php } ?> 
 
-                                                                <input type="hidden" id="member" name="member" value="<?php echo $_SESSION['id']; ?>"/>
-                                                                <input type="hidden" id="id" value="<?php echo $PORTPOLIO->id; ?>" name="id"/>
-                                                                <button name="edit-portfolio" type="submit" class="btn btn-info center-block">Change</button>
-                                                            </div>
-                                                        </div> 
-                                                    </div>  
-                                                </form>  
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div> 
-
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-
             <?php
             include './footer.php';
             ?>
         </section>
-
-        <!-- js placed at the end of the document so the pages load faster -->
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-
-
-        <!--common script for all pages-->
         <script src="assets/js/common-scripts.js"></script>
-
-        <!--script for this page-->
         <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
-
-        <!--custom switch-->
         <script src="assets/js/bootstrap-switch.js"></script>
-
-        <!--custom tagsinput-->
         <script src="assets/js/jquery.tagsinput.js"></script>
-
-        <!--custom checkbox & radio-->
-
         <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-datepicker/js/bootstrap-datepicker.html"></script>
         <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/date.html"></script>
         <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/daterangepicker-2.html"></script>
-
+        <script src="assets/plugins/jquery-steps/jquery.steps.js" type="text/javascript"></script>
         <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-
-
+        <script src="js/post-transport-image.js" type="text/javascript"></script>
         <script src="assets/js/form-component.js"></script>    
-
-
+        <script src="assets/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <script src="delete/js/education.js" type="text/javascript"></script>
         <script>
-            //custom select box
-
             $(function () {
                 $('select.styled').customSelect();
             });
-
         </script>
         <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
@@ -167,8 +151,8 @@ $PORTPOLIO = new Portfolio($id);
 
             });
 
-
         </script>
+
 
     </body>
 

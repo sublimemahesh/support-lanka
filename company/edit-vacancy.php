@@ -16,7 +16,7 @@ $VACANCY = new Vacancy($id);
         <meta name="description" content="">
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-        <title>Edit Vacancy || My Profile</title>
+        <title>Edit Vacancy || Company Profile</title>
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-datepicker/css/datepicker.html" />

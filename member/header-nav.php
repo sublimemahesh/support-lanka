@@ -134,13 +134,10 @@ $MEMBER = new Member($_SESSION['id']);
             </li>
 
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a href="manage-education.php">
                     <i class="fa fa-graduation-cap"></i>
                     <span>Education</span>
                 </a>
-                <ul class="sub">
-                    <li><a  href="add-education.php">Add New Education</a></li>
-                </ul>
             </li>
 
             <li class="sub-menu">

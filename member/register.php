@@ -11,7 +11,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Register - www.srilankatourism.travel</title>
+        <title>Register || Support Lanka</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">

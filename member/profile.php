@@ -13,7 +13,7 @@ $MEMBER = new Member($_SESSION['id']);
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>My Profile - www.srilankatourism.travel</title>
+        <title>My Profile || Support Lanka</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
