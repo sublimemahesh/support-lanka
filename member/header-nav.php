@@ -141,14 +141,10 @@ $MEMBER = new Member($_SESSION['id']);
             </li>
 
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a href="manage-skill-details.php" >
                     <i class="fa fa-shirtsinbulk"></i>
                     <span>Your Skill</span>
                 </a>
-                <ul class="sub">
-                    <li><a  href="add-skill-details.php">Add New Your Skill</a></li>
-                    <li><a  href="manage-skill-details.php">Manage Your Skill</a></li>
-                </ul>
             </li>
 
             <li class="sub-menu">
