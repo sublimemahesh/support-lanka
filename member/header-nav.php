@@ -162,15 +162,10 @@ $MEMBER = new Member($_SESSION['id']);
             </li>
             
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a href="manage-award.php" >
                     <i class="fa fa-trophy"></i>
                     <span>Award</span>
                 </a>
-                <ul class="sub">
-                    <li><a  href="add-award.php">Add New Award</a></li>
-                    <li><a  href="manage-award.php">Manage Your Awards</a></li>
-                    <li><a  href="arrange-award.php">Arrange Awards</a></li>
-                </ul>
             </li>
             
         </ul>

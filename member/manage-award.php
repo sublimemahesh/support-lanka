@@ -29,6 +29,12 @@ include_once(dirname(__FILE__) . '/auth.php');
             .img-thumbnail {
                 max-width: 50% !important;
             }
+            .uploadbox {
+                height: 193px;
+            }
+            .col-md-3{
+                height: 235px;
+            }
         </style>
     </head> 
     <body> 
@@ -46,64 +52,47 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-save"></i> Manage Award</div>
+                                <div class="panel-heading"><i class="fa fa-trophy"></i> Create Your Award</div>
                                 <div class="panel-body">
                                     <div class="body">
-                                        <div class="body">
-                                            <div class="table-responsive">
-                                                <div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-12">
+                                                <div class="col-md-3 row-pad">
+                                                    <a href="add-new-award.php">
+                                                        <div class="uploadbox uploadphotobx" id="uploadphotobx">
+                                                            <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
+                                                            <label class="uploadBox">Click here to Add Your Award
 
-                                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>ID</th>
-                                                                <th>Title</th>
-                                                                <th>Year</th>
-                                                                <th>Description</th>
-                                                                <th>Option</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <th>ID</th>
-                                                                <th>Title</th>
-                                                                <th>Year</th>
-                                                                <th>Description</th>
-                                                                <th>Option</th>
-                                                            </tr>
-                                                        </tfoot>
-                                                        <tbody>
-                                                            <?php
-                                                            $AWARD = new Award(NULL);
-
-                                                            foreach ($AWARD->GetAwardByMember($_SESSION['id']) as $key => $awa) {
-                                                                ?>
-
-                                                                <tr id="row_<?php echo $awa['id']; ?>">
-                                                                    <td><?php echo $awa['sort']; ?></td> 
-                                                                    <td><?php echo $awa['title']; ?></td>
-                                                                    <td><?php echo $awa['duration']; ?></td>
-                                                                    <td><?php echo $awa['description']; ?></td>
-                                                                    <td>
-                                                                        <a href="edit-award.php?id=<?php echo $awa['id']; ?>">
-                                                                            <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                                        </a> 
-                                                                        |
-                                                                        <a href="arrange-award.php">
-                                                                            <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
-                                                                        </a> 
-                                                                        | 
-                                                                        <a href="#"> 
-                                                                            <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-award" data-id="<?php echo $awa['id']; ?>"></button>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <?php
-                                                            }
-                                                            ?> 
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </div>  
+                                                <?php
+                                                $AWARD = new Award(NULL);
+                                                foreach ($AWARD->GetAwardByMember($_SESSION['id']) as $key => $awa) {
+                                                    ?>
+                                                    <div class="col-md-3" id="div_<?php echo $awa['id']; ?>">
+                                                        <div class="maxlinetitle"><?php echo $awa['sort']; ?></div> 
+                                                        <div class="maxlinetitle"><b>Title : </b><?php echo substr($awa['title'], 0, 20) . "" ?></div>
+                                                        <div class="maxlinetitle"><b>Duration : </b><?php echo substr($awa['duration'], 0, 20) . "" ?></div>
+                                                        <div class="maxlinetitle"><b>Description : </b><?php echo substr($awa['description'], 0, 50) . "" ?></div>
+                                                        <div>
+                                                            <a href="edit-award.php?id=<?php echo $awa['id']; ?>">
+                                                                <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                            </a> 
+                                                            |
+                                                            <a href="arrange-award.php">
+                                                                <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
+                                                            </a> 
+                                                            | 
+                                                            <a href="#"> 
+                                                                <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-award" data-id="<?php echo $awa['id']; ?>"></button>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                }
+                                                ?> 
                                             </div>
                                         </div>
                                     </div>
