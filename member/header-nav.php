@@ -148,15 +148,10 @@ $MEMBER = new Member($_SESSION['id']);
             </li>
 
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a href="manage-experience.php" >
                     <i class="fa fa-etsy"></i>
                     <span>Experience</span>
                 </a>
-                <ul class="sub">
-                    <li><a  href="add-experience.php">Add New Experience</a></li>
-                    <li><a  href="manage-experience.php">Your Experience</a></li>
-                    <li><a  href="arrange-experience.php">Arrange Experience</a></li>
-                </ul>
             </li>
 
             <li class="sub-menu">
