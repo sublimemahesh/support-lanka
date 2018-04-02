@@ -63,7 +63,7 @@ $EXPERIENCE = new Experience($id);
                                                             <div class="bottom-top">
                                                                 <label for="working_place">Working Place</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="working_place" name="working_place" class="form-control" placeholder="Please Enter Working Place" value="<?php echo $EXPERIENCE->working_place; ?>">
                                                             </div>
                                                         </div>
@@ -72,7 +72,7 @@ $EXPERIENCE = new Experience($id);
                                                             <div class="bottom-top">
                                                                 <label for="duration">Duration</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <input type="text" id="duration" name="duration" class="form-control" placeholder="Please Enter Duration" value="<?php echo $EXPERIENCE->duration; ?>">
                                                             </div>
                                                         </div>
@@ -81,7 +81,7 @@ $EXPERIENCE = new Experience($id);
                                                             <div class="bottom-top">
                                                                 <label for="description">Description</label>
                                                             </div>
-                                                            <div class="formrow">
+                                                            <div class="">
                                                                 <textarea type="text" id="description" name="description" class="form-control" placeholder="Please Enter Description"><?php echo $EXPERIENCE->description; ?></textarea>
                                                             </div>
                                                         </div>
