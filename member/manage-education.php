@@ -27,6 +27,12 @@ include_once(dirname(__FILE__) . '/auth.php');
             .img-thumbnail {
                 max-width: 50% !important;
             }
+            .uploadbox {
+                height: 206px;
+            }
+            .col-md-3{
+                padding-bottom: 20px;
+            }
         </style>
     </head> 
     <body> 
@@ -38,7 +44,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             <section id="main-content">
                 <div class="wrapper">
                     <div class="container-fluid">
-                        <div class="row  top-bott20"> 
+                        <div class="row top-bott20"> 
                             <?php
                             $vali = new Validator();
 
@@ -48,48 +54,50 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <div class="panel-heading"><i class="fa fa-graduation-cap"></i> Create Your Education Details</div>
                                 <div class="panel-body">
                                     <div class="body">
-                                        <div class="row clearfix" style="padding-top: 15px;">
+                                        <div class="row clearfix">
+                                            <div class="col-md-12">
+                                                <div class="col-md-3 row-pad">
+                                                    <a href="add-new-education.php">
+                                                        <div class="uploadbox uploadphotobx" id="uploadphotobx">
+                                                            <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
+                                                            <label class="uploadBox">Click here to Add Your Education
 
-                                            <div class="col-md-3">
-                                                <a href="add-new-education.php">
-                                                    <div class="uploadbox uploadphotobx" id="uploadphotobx">
-                                                        <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                        <label class="uploadBox">Click here to Add Your Education
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </div>  
 
-                                                        </label>
-                                                    </div>
-                                                </a>
-                                            </div>  
-
-                                            <?php
-                                            $EDUCATION = Education::GetEducationsByMember($_SESSION['id']);
-                                            if (count($EDUCATION) > 0) {
-                                                foreach ($EDUCATION as $key => $edu) {
-                                                    ?>
-                                                    <div class="col-md-3" id="div_<?php echo $edu['id']; ?>">
-        <!--                                                        <p class="maxlinetitle"><?php echo $edu['sort']; ?></p>-->
-                                                        <p class="maxlinetitle"><b>Title : </b><?php echo $edu['title']; ?></p>
-                                                        <p class="maxlinetitle"><b>Institute : </b><?php echo $edu['institute']; ?></p>
-                                                        <p class="maxlinetitle"><b>Duration : </b><?php echo $edu['duration']; ?></p>
-                                                        <div>
-                                                            <div class="" style="padding-bottom: 10px">
-                                                                <a href="edit-education.php?id=<?php echo $edu['id']; ?>">
-                                                                    <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                                </a>
-                                                                |
-                                                                <a>
-                                                                    <button class="delete-education all-icon btn btn-danger btn-md fa fa-trash-o" data-id="<?php echo $edu['id']; ?>"></button>
-                                                                </a>
+                                                <?php
+                                                $EDUCATION = Education::GetEducationsByMember($_SESSION['id']);
+                                                if (count($EDUCATION) > 0) {
+                                                    foreach ($EDUCATION as $key => $edu) {
+                                                        ?>
+                                                        <div class="col-md-3 row-pad" id="div_<?php echo $edu['id']; ?>">
+            <!--                                                        <p class="maxlinetitle"><?php echo $edu['sort']; ?></p>-->
+                                                            <div class="maxlinetitle"><b>Title : </b><?php echo $edu['title']; ?></div>
+                                                            <div class="maxlinetitle"><b>Institute : </b><?php echo $edu['institute']; ?></div>
+                                                            <div class="maxlinetitle"><b>Stream : </b><?php echo $edu['stream']; ?></div>
+                                                            <div class="maxlinetitle"><b>Duration : </b><?php echo $edu['duration']; ?></div>
+                                                            <div class="maxlinetitle"><b>Description : </b><?php echo substr($edu['description'], 0, 35) . "" ?></div>
+                                                            <div>
+                                                                <div class="" style="padding-bottom: 10px">
+                                                                    <a href="edit-education.php?id=<?php echo $edu['id']; ?>">
+                                                                        <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                    </a>
+                                                                    |
+                                                                    <a>
+                                                                        <button class="delete-education all-icon btn btn-danger btn-md fa fa-trash-o" data-id="<?php echo $edu['id']; ?>"></button>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <?php
-                                                }
-                                            } else {
-                                                ?> 
+                                                        <?php
+                                                    }
+                                                } else {
+                                                    ?> 
 
-                                            <?php } ?> 
-
+                                                <?php } ?> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

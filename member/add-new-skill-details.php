@@ -14,12 +14,9 @@ include_once(dirname(__FILE__) . '/auth.php');
 
         <title>Add New Skill Details || My Account || Support Lanka</title>
 
-        <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
-        <!--external css-->
         <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
         <link href="assets/plugins/jquery-steps/jquery.steps.css" rel="stylesheet" type="text/css"/>
-        <!-- Custom styles for this template -->
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/style-responsive.css" rel="stylesheet">
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
@@ -45,7 +42,6 @@ include_once(dirname(__FILE__) . '/auth.php');
 
                             $vali->show_message();
                             ?>
-
                             <div class="panel panel-default">
                                 <div class="panel-heading"><i class="fa fa-pencil"></i> Create Skill Details</div>
                                 <div class="panel-body">
@@ -63,7 +59,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                         <div class="bottom-top">
                                                                             <label for="industry">Industry</label>
                                                                         </div>
-                                                                        <div class="formrow">
+                                                                        <div class="">
                                                                             <select class="form-control" autocomplete="off" type="text" id="industry" autocomplete="off" name="industry" required="TRUE">
                                                                                 <option value=""> -- Please Select -- </option>
                                                                                 <?php foreach (Industry::all() as $key => $skil) {
@@ -79,7 +75,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                         <div class="bottom-top">
                                                                             <label for="skill">Skill</label>
                                                                         </div>
-                                                                        <div class="formrow">
+                                                                        <div class="">
                                                                             <select class="form-control" autocomplete="off" type="text" id="skill-bar" autocomplete="off" name="skill" required="TRUE">
                                                                                 <option value=""> -- Please Select a Industry First -- </option>
                                                                             </select>
@@ -90,7 +86,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                         <div class="bottom-top">
                                                                             <label for="percentage">Percentage</label>
                                                                         </div>
-                                                                        <div class="formrow">
+                                                                        <div class="">
                                                                             <input type="text" id="percentage" name="percentage" class="form-control" placeholder="Please Enter Your Skill Percentage">
                                                                         </div>
                                                                     </div>
@@ -99,7 +95,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                         <div class="bottom-top">
                                                                             <label for="description">Description</label>
                                                                         </div>
-                                                                        <div class="formrow">
+                                                                        <div class="">
                                                                             <textarea type="text" id="description" name="description" class="form-control" placeholder="Please Enter Description"></textarea>
                                                                         </div>
                                                                     </div>
@@ -132,31 +128,21 @@ include_once(dirname(__FILE__) . '/auth.php');
             ?>
         </section>
 
-        <!-- js placed at the end of the document so the pages load faster -->
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script> 
-        <!--common script for all pages-->
         <script src="assets/js/common-scripts.js"></script> 
-        <!--script for this page-->
         <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script> 
-        <!--custom switch-->
         <script src="assets/js/bootstrap-switch.js"></script> 
-        <!--custom tagsinput-->
         <script src="assets/js/jquery.tagsinput.js"></script> 
-        <!--custom checkbox & radio--> 
         <script src="assets/plugins/jquery-steps/jquery.steps.js" type="text/javascript"></script>
         <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script> 
         <script src="assets/js/form-component.js"></script>     
         <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
-
         <!-- skill custom -->
         <script src="js/skill.js"></script>
-
-
-
 
         <script>
 
@@ -188,7 +174,6 @@ include_once(dirname(__FILE__) . '/auth.php');
 
             });
         </script>
-
     </body>
 
 </html>

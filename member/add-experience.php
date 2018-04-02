@@ -70,7 +70,7 @@ if (isset($_GET['skill'])) {
                                                                         <div class="bottom-top">
                                                                             <label for="working_place">Skill</label>
                                                                         </div>
-                                                                        <div class="formrow">
+                                                                        <div class="">
                                                                             <select name="skil-detail" class="form-control">
                                                                                 <option value=""> -- Please select your skill -- </option>
                                                                                 <?php
@@ -92,7 +92,7 @@ if (isset($_GET['skill'])) {
                                                                         <div class="bottom-top">
                                                                             <label for="working_place">Working Place</label>
                                                                         </div>
-                                                                        <div class="formrow">
+                                                                        <div class="">
                                                                             <input type="text" id="working_place" name="working_place" class="form-control" placeholder="Please Enter Your Working Place">
                                                                         </div>
                                                                     </div>
@@ -101,7 +101,7 @@ if (isset($_GET['skill'])) {
                                                                         <div class="bottom-top">
                                                                             <label for="duration">Duration</label>
                                                                         </div>
-                                                                        <div class="formrow">
+                                                                        <div class="">
                                                                             <input type="text" id="duration" name="duration" class="form-control" placeholder="Please Enter Duration">
                                                                         </div>
                                                                     </div>
@@ -110,7 +110,7 @@ if (isset($_GET['skill'])) {
                                                                         <div class="bottom-top">
                                                                             <label for="description">Description</label>
                                                                         </div>
-                                                                        <div class="formrow">
+                                                                        <div class="">
                                                                             <textarea type="text" id="description" name="description" class="form-control" placeholder="Please Enter Description"></textarea>
                                                                         </div>
                                                                     </div>

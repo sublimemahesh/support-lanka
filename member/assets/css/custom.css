@@ -365,7 +365,7 @@ and open the template in the editor.
     background: #eee;
     padding: 10px 10px;
     text-align: center;
-   
+
 }
 
 .uploadphotobx2 i {
@@ -373,7 +373,7 @@ and open the template in the editor.
     color: #999;
     display: block;
     margin-bottom: 15px;
-     height: 160px;
+    height: 160px;
 }
 .bottom-top-btn{
     padding-bottom: 25px;
@@ -386,4 +386,11 @@ and open the template in the editor.
 .task-title-sp{
     padding-top: 10px;
     padding-bottom: 10px;
+}
+.maxlinetitle{
+    margin: 0 0 10px;
+}
+row-pad{
+    padding-bottom: 15px !important;
+    padding-top: 15px !important;
 }
