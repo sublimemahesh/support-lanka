@@ -30,6 +30,9 @@ if (isset($_GET['id'])) {
             .img-thumbnail {
                 max-width: 50% !important;
             }
+            .uploadbox {
+                height: 201px;
+            }
         </style>
     </head> 
     <body> 
@@ -48,7 +51,6 @@ if (isset($_GET['id'])) {
 
                             $vali->show_message();
                             ?>
-
                             <div class="panel panel-default">
                                 <div class="panel-heading"><i class="fa fa-save"></i> Create Portfolio Images</div>
                                 <div class="panel-body">
@@ -70,7 +72,6 @@ if (isset($_GET['id'])) {
                                                             </div>
                                                         </div>  
                                                     </form>
-
                                                     <div id="image-list">
                                                         <div id="sortable">
                                                             <?php
