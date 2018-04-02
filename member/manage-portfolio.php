@@ -29,6 +29,12 @@ include_once(dirname(__FILE__) . '/auth.php');
             .img-thumbnail {
                 max-width: 50% !important;
             }
+            .uploadbox {
+                height: 216px;
+            }
+            .col-md-3{
+                height: 235px;
+            }
         </style>
     </head> 
     <body> 
@@ -46,75 +52,58 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-save"></i> Manage Portfolio</div>
+                                <div class="panel-heading"><i class="fa fa-product-hunt"></i> Create Your Portfolio</div>
                                 <div class="panel-body">
                                     <div class="body">
-                                        <div class="body">
-                                            <div class="table-responsive">
-                                                <div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-12">
+                                                <div class="col-md-3 row-pad">
+                                                    <a href="add-new-portfolio.php">
+                                                        <div class="uploadbox uploadphotobx" id="uploadphotobx">
+                                                            <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
+                                                            <label class="uploadBox">Click here to Add Your Portfolio
 
-                                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>ID</th>
-                                                                <th>Skill</th>
-                                                                <th>Title</th>
-                                                                <th>Date</th>
-                                                                <th>Description</th>
-                                                                <th>Option</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </div>  
+                                                <?php
+                                                $PORTFOLIO = new Portfolio(NULL);
+                                                foreach ($PORTFOLIO->GetPortfolioByMember($_SESSION['id']) as $key => $portf) {
+                                                    ?>
+                                                    <div class="col-md-3 row-pad" id="div_<?php echo $portf['id']; ?>">
+                                                        <div><?php echo $portf['sort']; ?></div> 
+                                                        <div class="maxlinetitle"><b>Skill : </b>
                                                             <?php
-                                                            $PORTFOLIO = new Portfolio(NULL);
-                                                            foreach ($PORTFOLIO->GetPortfolioByMember($_SESSION['id']) as $key => $portf) {
-                                                                ?>
-                                                                <tr id="row_<?php echo $portf['id']; ?>">
-                                                                    <td><?php echo $portf['sort']; ?></td> 
-                                                                    <td>
-                                                                        <?php
-                                                                        $SKILL_D = new SkillDetail($portf['skill_detail']);
-                                                                        $SKILL = new Skill($SKILL_D->skill);
-                                                                        echo $SKILL->name;
-                                                                        ?>
-                                                                    </td>
-                                                                    <td><?php echo $portf['title']; ?></td>
-                                                                    <td><?php echo $portf['date']; ?></td>
-                                                                    <td><?php echo $portf['description']; ?></td>
-                                                                    <td>
-                                                                        <a href="edit-portfolio.php?id=<?php echo $portf['id']; ?>">
-                                                                            <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                                        </a> 
-                                                                        |
-                                                                        <a href="arrange-portfolio.php">
-                                                                            <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
-                                                                        </a> 
-                                                                        | 
-                                                                        <a href="#"> 
-                                                                            <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-portfolio" data-id="<?php echo $portf['id']; ?>"></button>
-                                                                        </a>
-                                                                        |
-                                                                        <a href="create-portfolio-photo.php?id=<?php echo $portf['id']; ?>">
-                                                                            <button class="btn btn-success btn-sm all-icon fa fa-photo"></button>
-                                                                        </a> 
-                                                                    </td>
-                                                                </tr>
-                                                                <?php
-                                                            }
-                                                            ?> 
-                                                        </tbody>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <th>ID</th>
-                                                                <th>Skill</th>
-                                                                <th>Title</th>
-                                                                <th>Date</th> 
-                                                                <th>Description</th>
-                                                                <th>Option</th>
-                                                            </tr>
-                                                        </tfoot>
-                                                    </table>
-                                                </div>
+                                                            $SKILL_D = new SkillDetail($portf['skill_detail']);
+                                                            $SKILL = new Skill($SKILL_D->skill);
+                                                            echo $SKILL->name;
+                                                            ?>
+                                                        </div>
+                                                        <div class="maxlinetitle"><b>Title : </b><?php echo $portf['title']; ?></div>
+                                                        <div class="maxlinetitle"><b>Date : </b><?php echo $portf['date']; ?></div>
+                                                        <div class="maxlinetitle"><b>Description : </b><?php echo substr($portf['description'], 0, 50) . "" ?></div>
+                                                        <div>
+                                                            <a href="edit-portfolio.php?id=<?php echo $portf['id']; ?>">
+                                                                <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                            </a> 
+                                                            |
+                                                            <a href="arrange-portfolio.php">
+                                                                <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
+                                                            </a> 
+                                                            | 
+                                                            <a href="#"> 
+                                                                <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-portfolio" data-id="<?php echo $portf['id']; ?>"></button>
+                                                            </a>
+                                                            |
+                                                            <a href="create-portfolio-photo.php?id=<?php echo $portf['id']; ?>">
+                                                                <button class="btn btn-success btn-sm all-icon fa fa-photo"></button>
+                                                            </a> 
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                }
+                                                ?> 
                                             </div>
                                         </div>
                                     </div>

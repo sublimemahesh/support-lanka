@@ -155,16 +155,12 @@ $MEMBER = new Member($_SESSION['id']);
             </li>
 
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a href="manage-portfolio.php" >
                     <i class="fa fa-product-hunt"></i>
                     <span>Portfolio</span>
                 </a>
-                <ul class="sub">
-                    <li><a  href="add-portfolio.php">Add New Portfolio</a></li>
-                    <li><a  href="manage-portfolio.php">Manage Your Portfolio</a></li>
-                    <li><a  href="arrange-portfolio.php">Arrange Portfolio</a></li>
-                </ul>
             </li>
+            
             <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-trophy"></i>
@@ -176,6 +172,7 @@ $MEMBER = new Member($_SESSION['id']);
                     <li><a  href="arrange-award.php">Arrange Awards</a></li>
                 </ul>
             </li>
+            
         </ul>
     </div>
 </aside>

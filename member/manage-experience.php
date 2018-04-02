@@ -52,7 +52,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> Create Your Experience</div>
+                                <div class="panel-heading"><i class="fa fa-etsy"></i> Create Your Experience</div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="row clearfix">
