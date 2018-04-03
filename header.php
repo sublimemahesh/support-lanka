@@ -1,6 +1,6 @@
 <div class="responsive-header">
     <div class="responsive-menubar">
-        <div class="res-logo"><a href="index.html" title=""><img src="images/resource/logo.png" alt="" /></a></div>
+        <div class="res-logo"><a href="index.html" title=""><img src="images/resource/logo11.png" alt="" /></a></div>
         <div class="menu-resaction">
             <div class="res-openmenu">
                 <img src="images/icon.png" alt="" /> Menu
@@ -24,24 +24,24 @@
         </form>
         <div class="responsivemenu">
             <ul>
-                 <li class="">
-                        <a href="index.php" title="">Home</a>
-                    </li>
-                    <li class="">
-                        <a href="index.php" title="">Employers</a>
-                    </li>
-                    <li class="">
-                        <a href="index.php" title="">Candidates</a>
-                    </li>
-                    <li class="">
-                        <a href="index.php" title="">Blog</a>
-                    </li>
-                    <li class="">
-                        <a href="index.php" title="">Job</a>
-                    </li>
-                    <li class="">
-                        <a href="index.php" title="">Pages</a>
-                    </li>
+                <li class="">
+                    <a href="index.php" title="">Home</a>
+                </li>
+                <li class="">
+                    <a href="index.php" title="">Employers</a>
+                </li>
+                <li class="">
+                    <a href="index.php" title="">Candidates</a>
+                </li>
+                <li class="">
+                    <a href="index.php" title="">Blog</a>
+                </li>
+                <li class="">
+                    <a href="index.php" title="">Job</a>
+                </li>
+                <li class="">
+                    <a href="index.php" title="">Pages</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -51,7 +51,7 @@
     <div class="menu-sec">
         <div class="container">
             <div class="logo">
-                <a href="index.html" title=""><img class="hidesticky" src="images/resource/logo.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
+                <a href="index.html" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
             </div><!-- Logo -->
             <div class="btn-extars">
                 <a href="#" title="" class="post-job-btn"><i class="la la-plus"></i>Post Jobs</a>

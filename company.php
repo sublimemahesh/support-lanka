@@ -26,6 +26,7 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
         <link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+        <link href="css/custom.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="theme-layout" id="scrollup">
