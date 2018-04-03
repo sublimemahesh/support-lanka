@@ -395,32 +395,6 @@
                 </li>
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">school</i>
-                        <span>Education</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-education.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-education.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-education.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">supervisor_account</i>
                         <span>Member</span>
                     </a>
@@ -458,6 +432,12 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li>
+                    <a href="manage-messages.php">
+                        <i class="material-icons">message</i>
+                        <span>Message Request</span>
+                    </a>
                 </li>
             </ul>
         </div>

@@ -8,7 +8,7 @@ include_once(dirname(__FILE__) . './auth.php');
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Manage City || Admin || Support Lanka</title>
+        <title>Message Request || Admin || Support Lanka</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -28,21 +28,15 @@ include_once(dirname(__FILE__) . './auth.php');
 
         <section class="content">
             <div class="container-fluid"> 
-                <!--                Manage Costomer -->
+                <!-- Manage Costomer -->
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Manage City
+                                    Manage Message Request
                                 </h2>
-                                <ul class="header-dropdown">
-                                    <li>
-                                        <a href="create-city.php">
-                                            <i class="material-icons">add</i> 
-                                        </a>
-                                    </li>
-                                </ul>
+                              
                             </div>
                             <div class="body">
                                 <div class="table-responsive">
@@ -51,41 +45,50 @@ include_once(dirname(__FILE__) . './auth.php');
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>District</th>
-                                                    <th>Name</th> 
+                                                    <th>Member</th>
+                                                    <th>Company</th> 
+                                                    <th>Name</th>
+                                                    <th>Date</th> 
+                                                    <th>Message</th> 
                                                     <th>Option</th>
-
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>District</th>
-                                                    <th>Name</th> 
+                                                    <th>Member</th>
+                                                    <th>Company</th> 
+                                                    <th>Name</th>
+                                                    <th>Date</th> 
+                                                    <th>Message</th> 
                                                     <th>Option</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
                                                 <?php
-                                                $CITY = new City(NULL);
-                                                foreach ($CITY->all() as $key => $dis) {
+                                                $MESSAGEREQUEST = new MessageRequest(NULL);
+                                                foreach ($MESSAGEREQUEST->all() as $key => $mess) {
                                                     ?>
-                                                    <tr id="row_<?php echo $dis['id']; ?>">
-                                                        <td><?php echo $dis['id']; ?></td> 
-                                                        <td>
-                                                            <?php
-                                                            $DISTRI = new District($dis['district']);
-                                                            echo $DISTRI->name;
+                                                    <tr id="row_<?php echo $mess['id']; ?>">
+                                                        <td><?php echo $mess['id']; ?></td> 
+                                                        <td><?php
+                                                            $MEMBER = new Member($mess['member']);
+                                                            echo $MEMBER->name;
                                                             ?>
                                                         </td>
-                                                        <td><?php echo $dis['name']; ?></td>
-
+                                                        <td><?php
+                                                            $COMPANY = new Company($mess['company']);
+                                                            echo $COMPANY->name;
+                                                            ?>
+                                                        </td>
+                                                        <td><?php echo $mess['title']; ?></td>
+                                                        <td><?php echo $mess['date']; ?></td>
+                                                        <td><?php echo $mess['message']; ?></td>
                                                         <td> 
-                                                            <a href="edit-city.php?id=<?php echo $dis['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-
-                                                            <a href="#" class="delete-city btn btn-sm btn-danger" data-id="<?php echo $dis['id']; ?>">
+                                                            <a href="#" class="delete-message-request btn btn-sm btn-danger" data-id="<?php echo $mess['id']; ?>">
                                                                 <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                             </a>
+
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -98,12 +101,10 @@ include_once(dirname(__FILE__) . './auth.php');
                             </div>
                         </div>
                     </div>
-                    <!--                 #END# Manage City-->
                 </div>
             </div>
         </section>
 
-        <!-- Jquery Core Js -->
         <script src="plugins/jquery/jquery.min.js"></script>
         <script src="plugins/bootstrap/js/bootstrap.js"></script> 
         <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
@@ -114,7 +115,7 @@ include_once(dirname(__FILE__) . './auth.php');
         <script src="js/admin.js"></script>
         <script src="js/pages/ui/dialogs.js"></script>
         <script src="js/demo.js"></script>
-        <script src="delete/js/city.js" type="text/javascript"></script>
+        <script src="delete/js/message-request.js" type="text/javascript"></script>
     </body>
 
 </html>

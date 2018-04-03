@@ -4,6 +4,9 @@ $id = $_GET["member"];
 $MEMBER = new Member($id);
 $SKILLDETAILS = SkillDetail::GetSkillByMember($MEMBER->id);
 $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
+
+date_default_timezone_set('Asia/Colombo');
+$td = date('Y-m-d');
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +29,7 @@ $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
         <link href="css/line-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <style>
             .forsticky.sticky .menu-sec {
@@ -78,12 +82,7 @@ $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
                                                     ?> 
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6">
-                                                <div class="action-inner">
-                                                    <a href="#" title=""><i class="la la-paper-plane"></i>Save Resume</a>
-                                                    <a href="#" title=""><i class="la la-envelope-o"></i>Contact David</a>
-                                                </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -131,8 +130,10 @@ $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
                                             ?> / 
                                             <?php echo $MEMBER->home_address ?></p></p>
                                     </div>
-                                    <div class="download-cv">
-                                        <a href="#" title="">Download CV <i class="la la-download"></i></a>
+                                    <div class="col-lg-2">
+                                        <div class="emply-btns">
+                                            <a class="followus" href="member/register.php" title=""><i class="la la-paper-plane"></i>Register</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <ul class="cand-extralink">
@@ -276,54 +277,23 @@ $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="companyies-fol-sec">
-                                                    <h2>Companies Followed By</h2>
-                                                    <div class="cmp-follow">
-                                                        <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                                                                <a href="#" title=""><img src="images/resource/em1.jpg" alt="" /><span>King LLC</span></a>
-                                                            </div>
-                                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                                                                <a href="#" title=""><img src="images/resource/em2.jpg" alt="" /><span>Telimed</span></a>
-                                                            </div>
-                                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                                                                <a href="#" title=""><img src="images/resource/em3.jpg" alt="" /><span>Ucesas</span></a>
-                                                            </div>
-                                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                                                                <a href="#" title=""><img src="images/resource/em4.jpg" alt="" /><span>TeraPlaner</span></a>
-                                                            </div>
-                                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                                                                <a href="#" title=""><img src="images/resource/em5.jpg" alt="" /><span>Cubico</span></a>
-                                                            </div>
-                                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                                                                <a href="#" title=""><img src="images/resource/em6.jpg" alt="" /><span>Airbnb</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="col-lg-4 column">
-                                            <div class="job-overview">
-                                                <h3>Job Overview</h3>
-                                                <ul>
-                                                    <li><i class="la la-money"></i><h3>Offerd Salary</h3><span>£15,000 - £20,000</span></li>
-                                                    <li><i class="la la-mars-double"></i><h3>Gender</h3><span>Female</span></li>
-                                                    <li><i class="la la-thumb-tack"></i><h3>Career Level</h3><span>Executive</span></li>
-                                                    <li><i class="la la-puzzle-piece"></i><h3>Industry</h3><span>Management</span></li>
-                                                    <li><i class="la la-shield"></i><h3>Experience</h3><span>2 Years</span></li>
-                                                    <li><i class="la la-line-chart "></i><h3>Qualification</h3><span>Bachelor Degree</span></li>
-                                                </ul>
-                                            </div><!-- Job Overview -->
-                                            <div class="quick-form-job">
-                                                <h3>Contact</h3>
-                                                <form>
-                                                    <input type="text" placeholder="Enter your Name *" />
-                                                    <input type="text" placeholder="Email Address*" />
-                                                    <input type="text" placeholder="Phone Number" />
-                                                    <textarea placeholder="Message should have more than 50 characters"></textarea>
-                                                    <button class="submit">Send Email</button>
-                                                    <span>You accepts our <a href="#" title="">Terms and Conditions</a></span>
+
+                                            <div class="quick-form-job cand-details"> 
+                                                <h2>Contact </h2>
+                                                <form class="form-horizontal"  method="post" action="post-and-get/message-request.php" enctype="multipart/form-data" id="form-message">
+                                                    <input type="text" id="title" name="title" class="form-control" placeholder="Please Enter Your Name" required="true">
+                                                    <input type="email" id="email" name="email" class="form-control" placeholder="Please Enter Your Mail" required="true">
+                                                    <input type="text" id="contact" name="contact" class="form-control" placeholder="Please Enter Your Contact" required="true"> 
+                                                    <input type="hidden" id="new-messages" name="new-messages" value="new-messages">
+                                                    <input type="hidden" id="company" name="member" value="<?php echo $id ?>">
+
+                                                    <textarea type="text" id="message" name="message" class="form-control" placeholder="Please Enter Message" required="true"></textarea>
+
+                                                    <button name="add-massage-request" type="submit" class="submit">Send Message</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -393,7 +363,8 @@ $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
         <script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/portfolio.js" type="text/javascript"></script>
-
+        <script src="css/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <script src="js/message-member.js" type="text/javascript"></script>
 
 
     </body>
