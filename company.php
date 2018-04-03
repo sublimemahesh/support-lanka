@@ -25,12 +25,12 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
         <link rel="stylesheet" type="text/css" href="css/chosen.css" />
         <link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-
+        <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="theme-layout" id="scrollup">
             <?php
-            include './header.php';
+            include_once './header.php';
             ?>
 
             <section class="overlape">
@@ -150,15 +150,18 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
                                                         <li><i class="la la-user"></i><h3>Followers</h3><span>15</span></li>
                                                     </ul>
                                                 </div><!-- Job Overview -->
-                                                <div class="quick-form-job">
-                                                    <h3>Contact Business Network</h3>
-                                                    <form>
-                                                        <input type="text" placeholder="Enter your Name *" />
-                                                        <input type="text" placeholder="Email Address*" />
-                                                        <input type="text" placeholder="Phone Number" />
-                                                        <textarea placeholder="Message should have more than 50 characters"></textarea>
-                                                        <button class="submit">Send Email</button>
-                                                        <span>You accepts our <a href="#" title="">Terms and Conditions</a></span>
+                                                <div class="quick-form-job"> 
+                                                    <h3>Contact </h3>
+                                                    <form class="form-horizontal"  method="post" action="post-and-get/message-request.php" enctype="multipart/form-data" id="form-message">
+                                                        <input type="text" id="title" name="title" class="form-control" placeholder="Please Enter Your Name" required="true">
+                                                        <input type="email" id="email" name="email" class="form-control" placeholder="Please Enter Your Mail" required="true">
+                                                        <input type="text" id="contact" name="contact" class="form-control" placeholder="Please Enter Your Contact" required="true"> 
+                                                        <input type="hidden" id="new-messages" name="new-messages" value="new-messages">
+                                                        <input type="hidden" id="company" name="company" value="<?php echo $id ?>">
+
+                                                        <textarea type="text" id="message" name="message" class="form-control" placeholder="Please Enter Message" required="true"></textarea>
+
+                                                        <button name="add-massage-request" type="submit" class="submit">Send Message</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -254,85 +257,6 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
 
         </div>
 
-        <div class="account-popup-area signin-popup-box">
-            <div class="account-popup">
-                <span class="close-popup"><i class="la la-close"></i></span>
-                <h3>User Login</h3>
-                <span>Click To Login With Demo User</span>
-                <div class="select-user">
-                    <span>Candidate</span>
-                    <span>Employer</span>
-                </div>
-                <form>
-                    <div class="cfield">
-                        <input type="text" placeholder="Username" />
-                        <i class="la la-user"></i>
-                    </div>
-                    <div class="cfield">
-                        <input type="password" placeholder="********" />
-                        <i class="la la-key"></i>
-                    </div>
-                    <p class="remember-label">
-                        <input type="checkbox" name="cb" id="cb1"><label for="cb1">Remember me</label>
-                    </p>
-                    <a href="#" title="">Forgot Password?</a>
-                    <button type="submit">Login</button>
-                </form>
-                <div class="extra-login">
-                    <span>Or</span>
-                    <div class="login-social">
-                        <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
-                        <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div><!-- LOGIN POPUP -->
-
-        <div class="account-popup-area signup-popup-box">
-            <div class="account-popup">
-                <span class="close-popup"><i class="la la-close"></i></span>
-                <h3>Sign Up</h3>
-                <div class="select-user">
-                    <span>Candidate</span>
-                    <span>Employer</span>
-                </div>
-                <form>
-                    <div class="cfield">
-                        <input type="text" placeholder="Username" />
-                        <i class="la la-user"></i>
-                    </div>
-                    <div class="cfield">
-                        <input type="password" placeholder="********" />
-                        <i class="la la-key"></i>
-                    </div>
-                    <div class="cfield">
-                        <input type="text" placeholder="Email" />
-                        <i class="la la-envelope-o"></i>
-                    </div>
-                    <div class="dropdown-field">
-                        <select data-placeholder="Please Select Specialism" class="chosen">
-                            <option>Web Development</option>
-                            <option>Web Designing</option>
-                            <option>Art & Culture</option>
-                            <option>Reading & Writing</option>
-                        </select>
-                    </div>
-                    <div class="cfield">
-                        <input type="text" placeholder="Phone Number" />
-                        <i class="la la-phone"></i>
-                    </div>
-                    <button type="submit">Signup</button>
-                </form>
-                <div class="extra-login">
-                    <span>Or</span>
-                    <div class="login-social">
-                        <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
-                        <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/modernizr.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
@@ -341,6 +265,7 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
         <script src="js/parallax.js" type="text/javascript"></script>
         <script src="js/select-chosen.js" type="text/javascript"></script>
         <script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
-
+        <script src="css/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <script src="js/message-company.js" type="text/javascript"></script>
     </body>
 </html>
