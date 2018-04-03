@@ -23,7 +23,7 @@ $INDUSTRY = new Industry($id);
         <link href="css/line-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="css/chosen.css" />
         <link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
-        <link href="../sri_lanka_cycling_tour/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="css/custom.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 
     </head>

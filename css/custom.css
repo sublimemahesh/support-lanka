@@ -7,6 +7,9 @@ and open the template in the editor.
     Created on : 26-Mar-2018, 10:54:45
     Author     : official
 */
+.stick-top.forsticky.sticky {
+    height: 89px;
+}
 .img-industy{
     width: 100px;
     display: initial;

@@ -38,6 +38,9 @@ $td = date('Y-m-d');
             p {
                 margin-bottom: 5px !important;
             }
+            .stick-top.forsticky.sticky {
+                height: 0px !important;
+            }
         </style>
     </head>
     <body>
