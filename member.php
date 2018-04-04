@@ -134,7 +134,7 @@ $td = date('Y-m-d');
                                             <?php echo $MEMBER->home_address ?></p></p>
                                     </div>
                                     <div class="col-lg-2">
-                                        <div class="emply-btns">
+                                        <div class="emply-btns" style="padding-top: 93px;">
                                             <a class="followus" href="member/register.php" title=""><i class="la la-paper-plane"></i>Register</a>
                                         </div>
                                     </div>
