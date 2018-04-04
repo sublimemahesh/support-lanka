@@ -39,7 +39,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
             include './header.php';
             include './slider.php';
             ?>
-
+<!--Industry-->
             <section id="scroll-here">
                 <div class="block">
                     <div class="container">
@@ -58,19 +58,19 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     if ($key < 8) {
                                                         ?>
-                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">
-                                                            <div class="col-lg-3 col-md-3 col-sm-6">
-                                                                <div class="p-category">
-                                                                    <a title="">
-                                                                        <i>
-                                                                            <img src="upload/industry/thumb/<?php echo $industry['image_name']; ?>" class="img-responsive img-industy">
-                                                                        </i>
-                                                                        <span><?php echo $industry['name']; ?></span>
-                                                                        <p>(22 open positions)</p>
-                                                                    </a>
-                                                                </div>
+                                                                                                                                                                                                                                                            <!--                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
+                                                        <div class="col-lg-3 col-md-3 col-sm-6">
+                                                            <div class="p-category">
+                                                                <a href="skills.php?industry=<?php echo $industry['id']; ?>" title="">
+                                                                    <i>
+                                                                        <img src="upload/industry/thumb/<?php echo $industry['image_name']; ?>" class="img-responsive img-industy">
+                                                                    </i>
+                                                                    <span><?php echo $industry['name']; ?></span>
+                                                                    <p>(22 open positions)</p>
+                                                                </a>
                                                             </div>
                                                         </div>
+                                                        <!--                                                        </div>-->
                                                         <?php
                                                     }
                                                 }
@@ -94,7 +94,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                     </div>
                 </div>
             </section>
-
+<!--login-->
             <section>
                 <div class="block double-gap-top double-gap-bottom">
                     <div data-velocity="-.1" style="background: url(images/resource/parallax1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color"></div><!-- PARALLAX BACKGROUND IMAGE -->
@@ -104,91 +104,75 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                 <div class="simple-text-block">
                                     <h3>Make a Difference with Your Online Resume!</h3>
                                     <span>Your resume in minutes with JobHunt resume assistant is ready!</span>
-                                    <a href="#" title="">Create an Account</a>
+                                    <a href="member/register.php" title="">Create an Account</a>
                                 </div>
                             </div>
                         </div>
                     </div>	
                 </div>
             </section>
-
+<!--company-->
             <section>
                 <div class="block">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="heading">
-                                    <h2>Job Providers</h2>
+                                    <h2>Company</h2>
                                     <span>Leading Employers already using job and talent.</span>
                                 </div><!-- Heading -->
                                 <div class="job-listings-sec">
-                                    <div class="job-listing">
-                                        <div class="job-title-sec">
-                                            <div class="c-logo"> <img src="images/resource/l1.png" alt="" /> </div>
-                                            <h3><a href="#" title="">Web Designer / Developer</a></h3>
-                                            <span>Massimo Artemisis</span>
+                                    <?php
+                                    $COMPANY = Company::all();
+                                    foreach ($COMPANY as $com) {
+                                        ?>
+                                        <div class="job-listing">
+                                            <div class="job-title-sec">
+                                                <div class="c-logo"> 
+                                                    <img src="upload/company/<?php echo $com['logo_image']; ?>" alt="" /> 
+                                                </div>
+                                                <h3 class="com-name"><?php echo $com['name']; ?>
+                                                    <i class="la la-map-marker">
+                                                        <?php
+                                                        $CITY = new City($com['city']);
+                                                        echo $CITY->name;
+                                                        ?> /
+                                                        <?php echo $com['address']; ?>
+                                                    </i>
+                                                </h3>
+                                                <h3>
+                                                    <a href="#" title=""> 
+                                                        <?php
+                                                        $INDUSTRY = new Industry($com['industry']);
+                                                        echo $INDUSTRY->name;
+                                                        ?> 
+                                                    </a>
+                                                </h3>
+                                                <div class="">
+                                                    <span class="fav-job"><i class="la la-star"></i></span>
+                                                    <span class="fav-job"><i class="la la-star"></i></span>
+                                                    <span class="fav-job"><i class="la la-star"></i></span>
+                                                    <span class="fav-job"><i class="la la-star"></i></span>
+                                                    <span class="fav-job"><i class="la la-star"></i></span>
+                                                </div>
+
+
+                                            </div>
+                                            <a href="company.php?company=<?php echo $com['id']; ?>"><span class="job-is ft">View Profile</span></a>
                                         </div>
-                                        <span class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <span class="job-is ft">FULL TIME</span>
-                                    </div><!-- Job -->
-                                    <div class="job-listing">
-                                        <div class="job-title-sec">
-                                            <div class="c-logo"> <img src="images/resource/l2.png" alt="" /> </div>
-                                            <h3><a href="#" title="">Marketing Director</a></h3>
-                                            <span>Tix Dog</span>
-                                        </div>
-                                        <span class="job-lctn"><i class="la la-map-marker"></i>Rennes, France</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <span class="job-is pt">PART TIME</span>
-                                    </div><!-- Job -->
-                                    <div class="job-listing">
-                                        <div class="job-title-sec">
-                                            <div class="c-logo"> <img src="images/resource/l3.png" alt="" /> </div>
-                                            <h3><a href="#" title="">C Developer (Senior) C .Net</a></h3>
-                                            <span>StarHealth</span>
-                                        </div>
-                                        <span class="job-lctn"><i class="la la-map-marker"></i>London, United Kingdom</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <span class="job-is ft">FULL TIME</span>
-                                    </div><!-- Job -->
-                                    <div class="job-listing">
-                                        <div class="job-title-sec">
-                                            <div class="c-logo"> <img src="images/resource/l4.png" alt="" /> </div>
-                                            <h3><a href="#" title="">Application Developer For Android</a></h3>
-                                            <span>Altes Bank</span>
-                                        </div>
-                                        <span class="job-lctn"><i class="la la-map-marker"></i>Istanbul, Turkey</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <span class="job-is fl">FREELANCE</span>
-                                    </div><!-- Job -->
-                                    <div class="job-listing">
-                                        <div class="job-title-sec">
-                                            <div class="c-logo"> <img src="images/resource/l5.png" alt="" /> </div>
-                                            <h3><a href="#" title="">Regional Sales Manager South east Asia</a></h3>
-                                            <span>Vincent</span>
-                                        </div>
-                                        <span class="job-lctn"><i class="la la-map-marker"></i>Ajax, Ontario</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <span class="job-is tp">TEMPORARY</span>
-                                    </div><!-- Job -->
-                                    <div class="job-listing">
-                                        <div class="job-title-sec">
-                                            <div class="c-logo"> <img src="images/resource/l6.png" alt="" /> </div>
-                                            <h3><a href="#" title="">Social Media and Public Relation Executive </a></h3>
-                                            <span>MediaLab</span>
-                                        </div>
-                                        <span class="job-lctn"><i class="la la-map-marker"></i>Ankara / Turkey</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <span class="job-is ft">FULL TIME</span>
-                                    </div><!-- Job -->
+
+                                        <?php
+                                    }
+                                    ?>
+
+
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="browse-all-cat">
-                                    <a href="#" title="">Load more listings</a>
-                                </div>
-                            </div>
+                            <!--  <div class="col-lg-12">
+                                                            <div class="browse-all-cat">
+                                                                <a href="#" title="">Load more listings</a>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                 </div>
@@ -273,81 +257,13 @@ include_once(dirname(__FILE__) . '/class/include.php');
             </section>
 
             <section>
-                <div class="block">
-                    <div data-velocity="-.1" style="background: url(images/resource/parallax3.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="heading">
-                                    <h2>Quick Career Tips</h2>
-                                    <span>Found by employers communicate directly with hiring managers and recruiters.</span>
-                                </div><!-- Heading -->
-                                <div class="blog-sec">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="my-blog">
-                                                <div class="blog-thumb">
-                                                    <a href="#" title=""><img src="images/resource/b1.jpg" alt="" /></a>
-                                                    <div class="blog-metas">
-                                                        <a href="#" title="">March 29, 2017</a>
-                                                        <a href="#" title="">0 Comments</a>
-                                                    </div>
-                                                </div>
-                                                <div class="blog-details">
-                                                    <h3><a href="#" title="">Attract More Attention Sales And Profits</a></h3>
-                                                    <p>A job is a regular activity performed in exchange becoming an employee, volunteering, </p>
-                                                    <a href="#" title="">Read More <i class="la la-long-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="my-blog">
-                                                <div class="blog-thumb">
-                                                    <a href="#" title=""><img src="images/resource/b2.jpg" alt="" /></a>
-                                                    <div class="blog-metas">
-                                                        <a href="#" title="">March 29, 2017</a>
-                                                        <a href="#" title="">0 Comments</a>
-                                                    </div>
-                                                </div>
-                                                <div class="blog-details">
-                                                    <h3><a href="#" title="">11 Tips to Help You Get New Clients</a></h3>
-                                                    <p>A job is a regular activity performed in exchange becoming an employee, volunteering, </p>
-                                                    <a href="#" title="">Read More <i class="la la-long-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="my-blog">
-                                                <div class="blog-thumb">
-                                                    <a href="#" title=""><img src="images/resource/b3.jpg" alt="" /></a>
-                                                    <div class="blog-metas">
-                                                        <a href="#" title="">March 29, 2017</a>
-                                                        <a href="#" title="">0 Comments</a>
-                                                    </div>
-                                                </div>
-                                                <div class="blog-details">
-                                                    <h3><a href="#" title="">An Overworked Newspaper Editor</a></h3>
-                                                    <p>A job is a regular activity performed in exchange becoming an employee, volunteering, </p>
-                                                    <a href="#" title="">Read More <i class="la la-long-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
                 <div class="block no-padding">
                     <div class="container fluid">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="simple-text">
                                     <h3>Gat a question?</h3>
-                                    <span>We're here to help. Check out our FAQs, send us an email or call us at 1 (800) 555-5555</span>
+                                    <span>We're here to help. Check out our FAQs, send us an email or call us at 0913124477</span>
                                 </div>
                             </div>
                         </div>
