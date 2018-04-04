@@ -82,6 +82,77 @@ class Member {
         }
     }
 
+    public function Search($keyword, $city) {
+
+        $w = array();
+        $where = '';
+
+        if (!empty($keyword)) {
+
+            $w[] = "`name` LIKE '%" . $keyword . "%' ";
+        }
+
+        if (!empty($categories)) {
+            $w[] = "`city` = '" . $city . "' ";
+        }
+
+        if (count($w)) {
+            $where = "WHERE " . implode(' AND ', $w);
+        }
+
+        $query = "SELECT * FROM `member` $where ";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
+    public function getAllByCity($city) {
+
+        $query = "SELECT * FROM `member` WHERE `city` = '" . $city . "'";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
+    public function GetMemberByCity($city) {
+
+        $query = "SELECT member.id, member.name, member.email, member.nic_number, member.date_of_birthday, member.contact_number ,member.about_me, member.home_address, member.city, member.profile_picture, member.username, member.status, member.rank "
+               
+                . " FROM `member` "
+                . "join `city` ON member.city = city.id "
+                . "join `city` ON skill_details.member = member.id "
+                . "WHERE member.id = '" . $city . "' ORDER BY  portfolio.sort  ASC";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
     public function login($username, $password) {
 
         $query = "SELECT * FROM `member` WHERE `username`= '" . $username . "' AND `password`= '" . $password . "'";

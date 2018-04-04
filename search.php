@@ -1,13 +1,33 @@
-﻿<?php
+<?php
 include_once(dirname(__FILE__) . '/class/include.php');
-$id = $_GET["skill"];
-$SKILL = new Skill($id);
+
+$MEMBER = NULL;
+
+if (isset($_GET['keyword']) && isset($_GET['city'])) {
+    $MEMBER = Member::Search($_GET['keyword'], $_GET['city']);
+} elseif (isset($_GET['city'])) {
+    $MEMBER = Member::getAllByCity($_GET['city']);
+} else {
+    $MEMBER = Member::all();
+}
+
+$CITY = City::all();
+
+$key = NULL;
+$city = NULL;
+
+if (isset($_GET['keyword'])) {
+    $key = $_GET['keyword'];
+}
+if (isset($_GET['city'])) {
+    $city = $_GET['city'];
+}
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Skill Detail Member</title>
+        <title>Members</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -25,14 +45,13 @@ $SKILL = new Skill($id);
         <link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+
     </head>
     <body>
 
         <div class="theme-layout" id="scrollup">
-
-
             <?php
-            include './header.php';
+            include_once './header.php';
             ?>
 
             <section class="overlape">
@@ -42,7 +61,7 @@ $SKILL = new Skill($id);
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3>Employees</h3>
+                                    <h3>Welcome Tera Planer</h3>
                                 </div>
                             </div>
                         </div>
@@ -54,19 +73,51 @@ $SKILL = new Skill($id);
                 <div class="block remove-bottom">
                     <div class="container">
                         <div class="row no-gape">
-                            <aside class="col-lg-3 column">
-                                <div class="widget">
-                                    <div class="search_widget_job">
-                                        <div class="field_w_search">
-                                            <input type="text" placeholder="Search Keywords" />
-                                            <i class="la la-search"></i>
-                                        </div><!-- Search Widget -->
-                                        <div class="field_w_search">
-                                            <input type="text" placeholder="All Locations" />
-                                            <i class="la la-map-marker"></i>
-                                        </div><!-- Search Widget -->
+                            <div class="emply-resume-sec job-search">
+                                <form class="searchbar row" method="get" action="search.php">
+                                    <div class="col-lg-12">
+                                        <div class="row">
+                                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                                <div class="job-field">
+                                                    <input type="text" name="keyword" class="form-control" value="<?php echo $key; ?>">
+                                                    <i class="la la-keyboard-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                                <div class="job-field">
+                                                    <select class="chosen-city" name="city">
+                                                        <option value="">-- Select a Location --</option>
+
+                                                        <?php
+                                                        foreach ($CITY as $cit) {
+                                                            if ($city == $cit['id']) {
+                                                                ?>
+                                                                <option value="<?php echo $cit['id']; ?>" selected><?php echo $cit['name']; ?></option> 
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <option value="<?php echo $cit['id']; ?>"><?php echo $cit['name']; ?></option> 
+                                                                <?php
+                                                            }
+                                                        }
+                                                        ?> 
+
+
+                                                    </select>
+                                                    <i class="la la-map-marker"></i>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                <input type="hidden" value="" name="name" id="name"/>
+                                                <button class="btn"><i class="la la-search" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
+                            </div>
+                            <aside class="col-lg-3 column">
                                 <div class="widget">
                                     <h3 class="sb-title open">Last Activity</h3>
                                     <div class="specialism_widget">
@@ -146,60 +197,43 @@ $SKILL = new Skill($id);
                                 </div>
                             </aside>
                             <div class="col-lg-9 column">
-                                <div class="emply-resume-sec">
-                                    <?php
-                                    $SKILLDETAILS = SkillDetail::SkilldetailsBySkillDistinct($id);
-                                    foreach ($SKILLDETAILS as $skill_d) {
-                                        $MEMBER = new Member($skill_d['member']);
-                                        ?>
-                                        <div class="emply-resume-list square">
-                                            <div class="emply-resume-thumb">
-                                                <a href="member.php?member=<?php echo $MEMBER->id; ?>" title="">
-                                                    <img src="upload/member/<?php echo $MEMBER->profile_picture; ?>" alt=""/> 
-                                                </a>
-                                            </div>
-                                            <div class="emply-resume-info">
-                                                <h3><a href="#" title=""> <?php echo $MEMBER->name; ?></a></h3>
-                                                <span>
-                                                    <i> <?php
-                                                        $SKILL = new Skill($skill_d['skill']);
-                                                        $INDUSTRY = new Industry($SKILL->industry);
-                                                        echo $INDUSTRY->name;
-                                                        ?> 
-                                                        / 
-                                                        <?php
-                                                        echo $SKILL->name;
-                                                        ?>
-                                                    </i> at Atract Solutions</span>
-                                                <p><i class="la la-map-marker"></i>
-                                                    <?php
-                                                    $CITY = new City($MEMBER->city);
-                                                    echo $CITY->name;
-                                                    ?>
-                                                    , 
-                                                    <?php echo $MEMBER->home_address; ?>
-                                                </p>
-                                            </div>
-                                            <div class="shortlists">
-                                                <a href="member.php?member=<?php echo $MEMBER->id; ?>" title="">Details <i class="la la-plus"></i></a>
-                                            </div>
-                                        </div>
-                                        <?php
-                                    }
-                                    ?>
 
-                                    <div class="pagination">
-                                        <ul>
-                                            <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
-                                            <li><a href="">1</a></li>
-                                            <li class="active"><a href="">2</a></li>
-                                            <li><a href="">3</a></li>
-                                            <li><span class="delimeter">...</span></li>
-                                            <li><a href="">14</a></li>
-                                            <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
-                                        </ul>
-                                    </div><!-- Pagination -->
-                                </div>
+                                <?php
+                                foreach ($MEMBER as $member) {
+                                    ?>
+                                    <div class="emply-resume-list square">
+                                        <div class="emply-resume-thumb">
+                                            <img src="upload/member/<?php echo $member['profile_picture']; ?>" alt="" />
+                                        </div>
+                                        <div class="emply-resume-info">
+                                            <h3 name="name"><a href="#"><?php echo $member['name']; ?></a></h3>
+                                            <?php
+                                            $SKILLDETAILS = SkillDetail::SkilldetailsBySkillDistinct($member['id']);
+                                            ?>
+                                            <span><i>UX / UI Designer</i> at Atract Solutions</span>
+                                            <p><i class="la la-map-marker"></i><?php
+                                                $CITY = new City($member['city']);
+                                                echo $CITY->name;
+                                                ?> / <?php echo $member['home_address']; ?></p>
+                                        </div>
+                                        <div class="shortlists">
+                                            <a href="#" title="">Shortlist <i class="la la-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                                <div class="pagination">
+                                    <ul>
+                                        <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
+                                        <li><a href="">1</a></li>
+                                        <li class="active"><a href="">2</a></li>
+                                        <li><a href="">3</a></li>
+                                        <li><span class="delimeter">...</span></li>
+                                        <li><a href="">14</a></li>
+                                        <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
+                                    </ul>
+                                </div><!-- Pagination -->
                             </div>
                         </div>
                     </div>
@@ -207,7 +241,7 @@ $SKILL = new Skill($id);
             </section>
 
             <?php
-            include './footer.php';
+            include_once './footer.php';
             ?>
 
         </div>
@@ -223,5 +257,8 @@ $SKILL = new Skill($id);
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYc537bQom7ajFpWE5sQaVyz1SQa9_tuY&sensor=true&libraries=places"></script>
         <script type="text/javascript" src="js/maps.js"></script><!-- Nice Select -->
 
+
     </body>
 </html>
+
+

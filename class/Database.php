@@ -9,9 +9,9 @@
 class Database {
 
 //    private $host = 'kelum818.ipagemysql.com';
-//    private $name = 'srilanka_tourism';
-//    private $user = 'srilankatourism';
-//    private $password = 'Tourism@srilanka';
+//    private $name = 'supportlanka';
+//    private $user = 'supportlanka';
+//    private $password = '2L{;nEUJ@2\):7r!';
     
     private $host = 'localhost';
     private $name = 'support_lanka';

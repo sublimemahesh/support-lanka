@@ -6,11 +6,12 @@
                     <div class="widget">
                         <div class="about_widget">
                             <div class="logo">
-                                <a href="index.html" title=""><img src="images/resource/logo.png" alt="" /></a>
+                                <a href="index.php" title=""><img src="images/resource/logo.png" alt="" /></a>
                             </div>
-                            <span>Collin Street West, Victor 8007, Australia.</span>
-                            <span>+1 246-345-0695</span>
-                            <span>info@jobhunt.com</span>
+                            <span>Sri Dewamitta RD, Galle.</span>
+                            <span>SRi Lanka</span>
+                            <span>+949 1312 44 77</span>
+                            <span>info@sublime.lk</span>
                             <div class="social">
                                 <a href="#" title=""><i class="fa fa-facebook"></i></a>
                                 <a href="#" title=""><i class="fa fa-twitter"></i></a>
@@ -21,31 +22,25 @@
                         </div><!-- About Widget -->
                     </div>
                 </div>
-                <div class="col-lg-4 column">
+                <div class="col-lg-3 column">
                     <div class="widget">
-                        <h3 class="footer-title">Frequently Asked Questions</h3>
+                        <h3 class="footer-title">Quick Links</h3>
                         <div class="link_widgets">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <a href="#" title="">Privacy & Seurty </a>
-                                    <a href="#" title="">Terms of Serice</a>
-                                    <a href="#" title="">Communications </a>
-                                    <a href="#" title="">Referral Terms </a>
-                                    <a href="#" title="">Lending Licnses </a>
-                                    <a href="#" title="">Disclaimers </a>	
+                                <div class="">
+                                    <a href="#" title="">Home </a>
+                                    <a href="#" title="">Members </a>
+                                    <a href="#" title="">Employers </a>
+                                    <a href="#" title="">Vacancy </a>
+                                    <a href="#" title="">About Us </a>
+                                    <a href="#" title="">Contact Us </a>	
                                 </div>
-                                <div class="col-lg-6">
-                                    <a href="#" title="">Support </a>
-                                    <a href="#" title="">How It Works </a>
-                                    <a href="#" title="">For Employers </a>
-                                    <a href="#" title="">Underwriting </a>
-                                    <a href="#" title="">Contact Us</a>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 column">
+                <div class="col-lg-3 column">
                     <div class="widget">
                         <h3 class="footer-title">Find Jobs</h3>
                         <div class="link_widgets">
@@ -74,9 +69,12 @@
         </div>
     </div>
     <div class="bottom-line">
-        <span>© 2018 Jobhunt All rights reserved. Design by Creative Layers</span>
-        <a href="#scrollup" class="scrollup" title=""><i class="la la-arrow-up"></i></a>
+        <span>@<?php echo date("Y"); ?> Sri Lanka Cycling Designed by</span>
+        <a style="color: #fff;" href="http://www.sublime.lk/">
+            <b>www.sublime.lk</b>
+        </a>
     </div>
+
 </footer>
 
 <div class="account-popup-area signin-popup-box">
