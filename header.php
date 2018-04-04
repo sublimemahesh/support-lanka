@@ -28,7 +28,7 @@
                     <a href="index.php" title="">Home</a>
                 </li>
                 <li class="">
-                    <a href="members.php" title="">Members</a>
+                    <a href="all_member.php" title="">Members</a>
                 </li>
                 <li class="">
                     <a href="index.php" title="">Employers</a>
@@ -66,7 +66,7 @@
                         <a href="index.php" title="">Home</a>
                     </li>
                     <li class="">
-                        <a href="members.php" title="">Members</a>
+                        <a href="all_member.php" title="">Members</a>
                     </li>
                     <li class="">
                         <a href="index.php" title="">Employers</a>
