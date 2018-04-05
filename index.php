@@ -39,7 +39,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
             include './header.php';
             include './slider.php';
             ?>
-<!--Industry-->
+            <!--Industry-->
             <section id="scroll-here">
                 <div class="block">
                     <div class="container">
@@ -58,7 +58,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     if ($key < 8) {
                                                         ?>
-                                                                                                                                                                                                                                                            <!--                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
+                                                                                                                                                                                                                                                                                                <!--                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
                                                         <div class="col-lg-3 col-md-3 col-sm-6">
                                                             <div class="p-category">
                                                                 <a href="skills.php?industry=<?php echo $industry['id']; ?>" title="">
@@ -94,7 +94,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                     </div>
                 </div>
             </section>
-<!--login-->
+            <!--login-->
             <section>
                 <div class="block double-gap-top double-gap-bottom">
                     <div data-velocity="-.1" style="background: url(images/resource/parallax1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color"></div><!-- PARALLAX BACKGROUND IMAGE -->
@@ -111,60 +111,56 @@ include_once(dirname(__FILE__) . '/class/include.php');
                     </div>	
                 </div>
             </section>
-<!--company-->
+            <!--company-->
             <section>
                 <div class="block">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="heading">
-                                    <h2>Company</h2>
+                                    <h2>Vacancy</h2>
                                     <span>Leading Employers already using job and talent.</span>
                                 </div><!-- Heading -->
-                                <div class="job-listings-sec">
-                                    <?php
-                                    $COMPANY = Company::all();
-                                    foreach ($COMPANY as $com) {
-                                        ?>
-                                        <div class="job-listing">
-                                            <div class="job-title-sec">
-                                                <div class="c-logo"> 
-                                                    <img src="upload/company/<?php echo $com['logo_image']; ?>" alt="" /> 
-                                                </div>
-                                                <h3 class="com-name"><?php echo $com['name']; ?>
-                                                    <i class="la la-map-marker">
-                                                        <?php
-                                                        $CITY = new City($com['city']);
-                                                        echo $CITY->name;
-                                                        ?> /
-                                                        <?php echo $com['address']; ?>
-                                                    </i>
-                                                </h3>
-                                                <h3>
-                                                    <a href="#" title=""> 
-                                                        <?php
-                                                        $INDUSTRY = new Industry($com['industry']);
-                                                        echo $INDUSTRY->name;
-                                                        ?> 
-                                                    </a>
-                                                </h3>
-                                                <div class="">
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
-                                                </div>
+                                <div class="col-md-10 col-md-offset-1 column">
 
-                                            </div>
-                                            <a href="company.php?company=<?php echo $com['id']; ?>"><span class="job-is ft">View Profile</span></a>
-                                        </div>
-
+                                    <div class="emply-list-sec style2">
                                         <?php
-                                    }
-                                    ?>
+                                        $VACANCY = Vacancy::all(NULL);
+                                        foreach ($VACANCY as $vacant) {
+                                            ?>
+                                            <div class="emply-list">
+                                                <div class="emply-list-thumb">
+                                                    <?php
+                                                    $COMPANY = new Company($vacant['company']);
+                                                    $CITY = new City($COMPANY->city)
+                                                    ?>
+                                                    <a href="#" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
+                                                </div>
+                                                <div class="emply-list-info">
+                                                    <div class="emply-pstn"><?php echo $vacant['job_type']; ?></div>
+                                                    <h3><a href="#" title=""><?php echo $vacant['title'] ?></a></h3>
+                                                    <span><?php echo $vacant['designation']; ?></span>
+                                                    <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
+                                                    <?php echo $vacant['description'] ?>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?>
 
 
+                                        <div class="pagination">
+                                            <ul>
+                                                <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
+                                                <li><a href="">1</a></li>
+                                                <li class="active"><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><span class="delimeter">...</span></li>
+                                                <li><a href="">14</a></li>
+                                                <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
+                                            </ul>
+                                        </div><!-- Pagination -->
+                                    </div>
                                 </div>
                             </div>
                             <!--  <div class="col-lg-12">

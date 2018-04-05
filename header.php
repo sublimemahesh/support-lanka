@@ -34,7 +34,7 @@
                     <a href="all_employers.php" title="">Employers</a>
                 </li>
                 <li class="">
-                    <a href="index.php" title="">Vacancy</a>
+                    <a href="vacancy.php" title="">Vacancy</a>
                 </li>
                 <li class="">
                     <a href="about_us.php" title="">About</a>
@@ -72,7 +72,7 @@
                         <a href="all_employers.php" title="">Employers</a>
                     </li>
                     <li class="">
-                        <a href="index.php" title="">Vacancy</a>
+                        <a href="vacancy.php" title="">Vacancy</a>
                     </li>
                     <li class="">
                         <a href="about_us.php" title="">About</a>
