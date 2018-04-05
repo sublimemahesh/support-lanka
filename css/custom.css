@@ -7,6 +7,10 @@ and open the template in the editor.
     Created on : 26-Mar-2018, 10:54:45
     Author     : official
 */
+.about{
+    padding-bottom: 18px;
+    text-align: center;
+}
 .mem-reg{
     vertical-align: middle;
     border: none;

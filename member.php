@@ -258,7 +258,7 @@ $td = date('Y-m-d');
                                                                     <div class="edu-hisinfo">
                                                                         <h3><?php echo $award['title']; ?></h3>
                                                                         <i><?php echo $award['duration']; ?>2</i>
-                                                                        <?php echo substr($award['description'], 0, 200) . "..." ; ?>
+                                                                        <?php echo substr($award['description'], 0, 200) . "..."; ?>
                                                                     </div>
                                                                 </div>
                                                                 <?php

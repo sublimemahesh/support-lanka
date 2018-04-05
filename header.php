@@ -37,7 +37,7 @@
                     <a href="index.php" title="">Vacancy</a>
                 </li>
                 <li class="">
-                    <a href="index.php" title="">About</a>
+                    <a href="about_us.php" title="">About</a>
                 </li>
                 <li class="">
                     <a href="index.php" title="">Contact</a>
@@ -75,7 +75,7 @@
                         <a href="index.php" title="">Vacancy</a>
                     </li>
                     <li class="">
-                        <a href="index.php" title="">About</a>
+                        <a href="about_us.php" title="">About</a>
                     </li>
                     <li class="">
                         <a href="index.php" title="">Contact</a>
