@@ -10059,6 +10059,8 @@ header.white {
     font-size: 20px;
     color: #202020;
     font-family: Open Sans;
+    padding-bottom: 34px;
+    text-align: center;
 }
 .contact-form > form {
     float: left;

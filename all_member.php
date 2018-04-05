@@ -35,7 +35,6 @@ $MEMBER = Member::all();
 
         <div class="theme-layout" id="scrollup">
 
-
             <?php
             include './header.php';
             ?>
