@@ -40,7 +40,7 @@
                     <a href="about_us.php" title="">About</a>
                 </li>
                 <li class="">
-                    <a href="index.php" title="">Contact</a>
+                    <a href="contact_us.php" title="">Contact</a>
                 </li>
             </ul>
         </div>
@@ -78,7 +78,7 @@
                         <a href="about_us.php" title="">About</a>
                     </li>
                     <li class="">
-                        <a href="index.php" title="">Contact</a>
+                        <a href="contact_us.php" title="">Contact</a>
                     </li>
                 </ul>
             </nav><!-- Menus -->
