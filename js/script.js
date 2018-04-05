@@ -67,6 +67,17 @@ $(document).on('ready', function () {
         $('.signup-popup-box').fadeOut('fast');
         $('html').removeClass('no-scroll');
     });
+    
+    
+        /* Map popup */
+    $('.seemap').on('click', function () {
+        $('.map-popup-box').fadeIn('fast');
+        $('html').addClass('no-scroll');
+    });
+    $('.close-popup').on('click', function () {
+        $('.map-popup-box').fadeOut('fast');
+        $('html').removeClass('no-scroll');
+    });
 
 
 

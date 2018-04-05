@@ -57,7 +57,7 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
                                 <div class="job-single-sec style3">
                                     <div class="job-head-wide">
                                         <div class="row">
-                                            <div class="col-lg-10">
+                                            <div class="col-lg-9">
                                                 <div class="job-single-head3 emplye">
                                                     <div class="job-thumb"> <img src="upload/company/<?php echo $COMPANY->logo_image; ?>" alt="" /></div>
                                                     <div class="job-single-info3">
@@ -79,14 +79,9 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
                                                     </div>
                                                 </div><!-- Job Head -->
                                             </div>
-                                            <div class="col-lg-2">
-                                                <div class="share-bar">
-                                                    <a href="#" title="" class="share-google"><i class="la la-google"></i></a><a href="#" title="" class="share-fb"><i class="fa fa-facebook"></i></a><a href="#" title="" class="share-twitter"><i class="fa fa-twitter"></i></a>
-                                                </div>
-                                                <div class="emply-btns">
-                                                    <a class="seemap" href="#" title=""><i class="la la-map-marker"></i> See On Map</a>
-                                                    <a class="followus" href="#" title=""><i class="la la-paper-plane"></i> Follow us</a>
-                                                </div>
+                                            <div class="col-lg-3">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31741.73380237132!2d80.215888!3d6.033559!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4768397502edf93!2sSublime+Holdings!5e0!3m2!1sen!2slk!4v1522900122322" width="700" height="180" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                              
                                             </div>
                                         </div>
                                     </div>
@@ -175,86 +170,9 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
                 </div>
             </section>
 
-            <footer>
-                <div class="block">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 column">
-                                <div class="widget">
-                                    <div class="about_widget">
-                                        <div class="logo">
-                                            <a href="index.html" title=""><img src="images/resource/logo.png" alt="" /></a>
-                                        </div>
-                                        <span>Collin Street West, Victor 8007, Australia.</span>
-                                        <span>+1 246-345-0695</span>
-                                        <span>info@jobhunt.com</span>
-                                        <div class="social">
-                                            <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                                            <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                                            <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                                            <a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                                            <a href="#" title=""><i class="fa fa-behance"></i></a>
-                                        </div>
-                                    </div><!-- About Widget -->
-                                </div>
-                            </div>
-                            <div class="col-lg-4 column">
-                                <div class="widget">
-                                    <h3 class="footer-title">Frequently Asked Questions</h3>
-                                    <div class="link_widgets">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <a href="#" title="">Privacy & Seurty </a>
-                                                <a href="#" title="">Terms of Serice</a>
-                                                <a href="#" title="">Communications </a>
-                                                <a href="#" title="">Referral Terms </a>
-                                                <a href="#" title="">Lending Licnses </a>
-                                                <a href="#" title="">Disclaimers </a>	
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <a href="#" title="">Support </a>
-                                                <a href="#" title="">How It Works </a>
-                                                <a href="#" title="">For Employers </a>
-                                                <a href="#" title="">Underwriting </a>
-                                                <a href="#" title="">Contact Us</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 column">
-                                <div class="widget">
-                                    <h3 class="footer-title">Find Jobs</h3>
-                                    <div class="link_widgets">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <a href="#" title="">US Jobs</a>	
-                                                <a href="#" title="">Canada Jobs</a>	
-                                                <a href="#" title="">UK Jobs</a>	
-                                                <a href="#" title="">Emplois en Fnce</a>	
-                                                <a href="#" title="">Jobs in Deuts</a>	
-                                                <a href="#" title="">Vacatures China</a>	
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 column">
-                                <div class="widget">
-                                    <div class="download_widget">
-                                        <a href="#" title=""><img src="images/resource/dw1.png" alt="" /></a>
-                                        <a href="#" title=""><img src="images/resource/dw2.png" alt="" /></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bottom-line">
-                    <span>© 2018 Jobhunt All rights reserved. Design by Creative Layers</span>
-                    <a href="#scrollup" class="scrollup" title=""><i class="la la-arrow-up"></i></a>
-                </div>
-            </footer>
+            <?php
+            include_once './footer.php';
+            ?>
 
         </div>
 

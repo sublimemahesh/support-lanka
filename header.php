@@ -31,7 +31,7 @@
                     <a href="all_member.php" title="">Members</a>
                 </li>
                 <li class="">
-                    <a href="index.php" title="">Employers</a>
+                    <a href="all_employers.php" title="">Employers</a>
                 </li>
                 <li class="">
                     <a href="index.php" title="">Vacancy</a>
@@ -69,7 +69,7 @@
                         <a href="all_member.php" title="">Members</a>
                     </li>
                     <li class="">
-                        <a href="index.php" title="">Employers</a>
+                        <a href="all_employers.php" title="">Employers</a>
                     </li>
                     <li class="">
                         <a href="index.php" title="">Vacancy</a>

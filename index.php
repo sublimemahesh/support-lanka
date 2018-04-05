@@ -156,7 +156,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                     <span class="fav-job"><i class="la la-star"></i></span>
                                                 </div>
 
-
                                             </div>
                                             <a href="company.php?company=<?php echo $com['id']; ?>"><span class="job-is ft">View Profile</span></a>
                                         </div>
@@ -291,7 +290,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                     </a>
                 </div>
             </div>
-        </div><!-- Category Popup -->
+        </div>
 
         <script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/modernizr.js" type="text/javascript"></script>
