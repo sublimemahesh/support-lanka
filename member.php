@@ -125,16 +125,14 @@ $td = date('Y-m-d');
                                                 ?>
                                             </i> 
                                         </span>
-                                        <p><?php echo $MEMBER->email ?></p>
-                                        <p><?php echo $MEMBER->contact_number ?></p>
                                         <p><i class="la la-map-marker"></i><?php
                                             $CITY = new City($MEMBER->city);
                                             echo $CITY->name;
                                             ?> / 
                                             <?php echo $MEMBER->home_address ?></p></p>
                                     </div>
-                                    <div class="col-lg-2">
-                                        <div class="emply-btns" style="padding-top: 93px;">
+                                    <div class="col-lg-2 mem-reg">
+                                        <div class="emply-btns">
                                             <a class="followus" href="member/register.php" title=""><i class="la la-paper-plane"></i>Register</a>
                                         </div>
                                     </div>
