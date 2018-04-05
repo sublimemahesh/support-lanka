@@ -76,7 +76,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 }
                                             } else {
                                                 ?> 
-                                                <b>No Tour Package images in the database.</b> 
+                                                <b>No Industry in the database.</b> 
                                                 <?php
                                             }
                                             ?> 
@@ -87,7 +87,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                             </div>
                             <div class="col-lg-12">
                                 <div class="browse-all-cat">
-                                    <a href="#" title="">Browse All Categories</a>
+                                    <a href="all_industry.php" title="">All Industry</a>
                                 </div>
                             </div>
                         </div>

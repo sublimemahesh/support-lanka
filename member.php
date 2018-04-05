@@ -4,7 +4,7 @@ $id = $_GET["member"];
 $MEMBER = new Member($id);
 $SKILLDETAILS = SkillDetail::GetSkillByMember($MEMBER->id);
 $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
-
+$AWARD = Award::GetAwardByMember($MEMBER->id);
 date_default_timezone_set('Asia/Colombo');
 $td = date('Y-m-d');
 ?>
@@ -68,12 +68,7 @@ $td = date('Y-m-d');
                                                         foreach ($SKILLDETAILS as $key => $skill_d) {
                                                             if ($key < 3) {
                                                                 ?>
-                                                                <a href="#" title="">
-                                                                    <?php
-                                                                    $SKILL = new Skill($skill_d['skill']);
-                                                                    echo $SKILL->name;
-                                                                    ?>
-                                                                </a>
+
                                                                 <?php
                                                             }
                                                         }
@@ -253,30 +248,28 @@ $td = date('Y-m-d');
                                                 </div>
                                                 <div class="edu-history-sec" id="awards">
                                                     <h2>Awards</h2>
-                                                    <div class="edu-history style2">
-                                                        <i></i>
-                                                        <div class="edu-hisinfo">
-                                                            <h3>Perfect Attendance Programs</h3>
-                                                            <i>2008 - 2012</i>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="edu-history style2">
-                                                        <i></i>
-                                                        <div class="edu-hisinfo">
-                                                            <h3>Top Performer Recognition</h3>
-                                                            <i>2008 - 2012</i>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="edu-history style2">
-                                                        <i></i>
-                                                        <div class="edu-hisinfo">
-                                                            <h3>King LLC</h3>
-                                                            <i>2008 - 2012</i>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                                        </div>
-                                                    </div>
+                                                    <?php
+                                                    if (count($AWARD) > 0) {
+                                                        foreach ($AWARD as $key => $award) {
+                                                            if ($key < 3) {
+                                                                ?>
+                                                                <div class="edu-history style2">
+                                                                    <i></i>
+                                                                    <div class="edu-hisinfo">
+                                                                        <h3><?php echo $award['title']; ?></h3>
+                                                                        <i><?php echo $award['duration']; ?>2</i>
+                                                                        <?php echo substr($award['description'], 0, 200) . "..." ; ?>
+                                                                    </div>
+                                                                </div>
+                                                                <?php
+                                                            }
+                                                        }
+                                                    } else {
+                                                        ?> 
+                                                        <b>No Award in this Member.</b> 
+                                                        <?php
+                                                    }
+                                                    ?> 
                                                 </div>
 
                                             </div>
@@ -297,6 +290,7 @@ $td = date('Y-m-d');
                                                     <button name="add-massage-request" type="submit" class="submit">Send Message</button>
                                                 </form>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
