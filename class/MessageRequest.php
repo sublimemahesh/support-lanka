@@ -11,6 +11,7 @@ class MessageRequest {
     public $date;
     public $company;
     public $member;
+    public $vacancy;
     public $contact;
     public $email;
     public $title;
@@ -19,7 +20,7 @@ class MessageRequest {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`date`,`company`,`member`,`contact`,`email`,`title`,`message` FROM `message_request` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`date`,`company`,`member`,`vacancy`,`contact`,`email`,`title`,`message` FROM `message_request` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -29,6 +30,7 @@ class MessageRequest {
             $this->date = $result['date'];
             $this->company = $result['company'];
             $this->member = $result['member'];
+            $this->vacancy = $result['vacancy'];
             $this->contact = $result['contact'];
             $this->email = $result['email'];
             $this->title = $result['title'];
@@ -40,10 +42,11 @@ class MessageRequest {
 
     public function create() {
 
-        $query = "INSERT INTO `message_request` (`date`, `company`, `member`, `contact`, `email`, `title`, `message`) VALUES  ('"
+        $query = "INSERT INTO `message_request` (`date`, `company`, `member`, `vacancy`, `contact`, `email`, `title`, `message`) VALUES  ('"
                 . $this->date . "','"
                 . $this->company . "', '"
                 . $this->member . "', '"
+                . $this->vacancy . "', '"
                 . $this->contact . "', '"
                 . $this->email . "', '"
                 . $this->title . "', '"
@@ -112,6 +115,54 @@ class MessageRequest {
         return $db->readQuery($query);
     }
 
+    public function getOnlyMemberMessage() {
+
+        $query = "SELECT * FROM `message_request` WHERE `member` != 0 ";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+    
+    public function getOnlyCompanyMessage() {
+
+        $query = "SELECT * FROM `message_request` WHERE `company` != 0 ";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+    
+    public function getOnlyVacancyMessage() {
+
+        $query = "SELECT * FROM `message_request` WHERE `vacancy` != 0 ";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
     public function getMessageRequestByCompany($company) {
 
         $query = "SELECT * FROM `message_request` WHERE `company`= '" . $company . "'";
@@ -131,6 +182,22 @@ class MessageRequest {
     public function GetMessageRequestByMember($member) {
 
         $query = "SELECT * FROM `message_request` WHERE `member` = '" . $member . "'";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
+    public function GetMessageRequestByVacancy($vacancy) {
+
+        $query = "SELECT * FROM `message_request` WHERE `vacancy` = '" . $vacancy . "'";
 
         $db = new Database();
 

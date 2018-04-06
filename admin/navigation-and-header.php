@@ -434,10 +434,30 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="manage-messages.php">
+                    <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">message</i>
                         <span>Message Request</span>
                     </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="manage-messages-member.php">
+                                <i class="material-icons">face</i>
+                                <span>Member</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-messages-company.php">
+                                <i class="material-icons">recent_actors</i>
+                                <span>Company</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-messages-vacancy.php">
+                                <i class="material-icons">next_week</i>
+                                <span>Vacancy</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
