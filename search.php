@@ -1,27 +1,14 @@
 <?php
 include_once(dirname(__FILE__) . '/class/include.php');
 
-$MEMBER = NULL;
 
-if (isset($_GET['keyword']) && isset($_GET['city'])) {
-    $MEMBER = Member::Search($_GET['keyword'], $_GET['city']);
-} elseif (isset($_GET['city'])) {
-    $MEMBER = Member::getAllByCity($_GET['city']);
+
+if (isset($_GET['keyword'])) {
+    $MEMBER = Search::members($_GET['keyword']);
 } else {
     $MEMBER = Member::all();
 }
 
-$CITY = City::all();
-
-$key = NULL;
-$city = NULL;
-
-if (isset($_GET['keyword'])) {
-    $key = $_GET['keyword'];
-}
-if (isset($_GET['city'])) {
-    $city = $_GET['city'];
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -77,42 +64,18 @@ if (isset($_GET['city'])) {
                                 <form class="searchbar row" method="get" action="search.php">
                                     <div class="col-lg-12">
                                         <div class="row">
-                                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                            <div class="col-lg-11 col-md-11 col-sm-10 col-xs-10">
                                                 <div class="job-field">
-                                                    <input type="text" name="keyword" class="form-control" value="<?php echo $key; ?>">
+                                                    <input type="text" name="keyword" class="form-control" value="<?php echo $_GET['keyword'] ?>">
                                                     <i class="la la-keyboard-o"></i>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                                                <div class="job-field">
-                                                    <select class="chosen-city" name="city">
-                                                        <option value="">-- Select a Location --</option>
 
-                                                        <?php
-                                                        foreach ($CITY as $cit) {
-                                                            if ($city == $cit['id']) {
-                                                                ?>
-                                                                <option value="<?php echo $cit['id']; ?>" selected><?php echo $cit['name']; ?></option> 
-                                                                <?php
-                                                            } else {
-                                                                ?>
-                                                                <option value="<?php echo $cit['id']; ?>"><?php echo $cit['name']; ?></option> 
-                                                                <?php
-                                                            }
-                                                        }
-                                                        ?> 
-
-
-                                                    </select>
-                                                    <i class="la la-map-marker"></i>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
                                                 <input type="hidden" value="" name="name" id="name"/>
                                                 <button class="btn"><i class="la la-search" aria-hidden="true"></i></button>
                                             </div>
+
                                         </div>
                                     </div>
                                 </form>
@@ -210,14 +173,40 @@ if (isset($_GET['city'])) {
                                             <?php
                                             $SKILLDETAILS = SkillDetail::SkilldetailsBySkillDistinct($member['id']);
                                             ?>
-                                            <span><i>UX / UI Designer</i> at Atract Solutions</span>
-                                            <p><i class="la la-map-marker"></i><?php
+                                            <span>
+                                                <i>
+                                                    <?php
+                                                    $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
+
+                                                    foreach ($SKILLDETAIL as $skill_d) {
+
+                                                        $SKILL = new Skill($skill_d['skill']);
+
+                                                        $INDUSTRY = new Industry($SKILL->industry);
+
+                                                        echo $INDUSTRY->name;
+                                                        ?> 
+                                                        /  
+                                                        <?php
+                                                        $SKIL = new Skill($skill_d['skill']);
+                                                        echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
+                                                    }
+                                                    ?> 
+
+                                                </i>
+                                            </span>
+                                            <p>
+                                                <i class="la la-map-marker"></i>
+                                                <?php
                                                 $CITY = new City($member['city']);
                                                 echo $CITY->name;
-                                                ?> / <?php echo $member['home_address']; ?></p>
+                                                ?> 
+                                                / 
+                                                <?php echo $member['home_address']; ?>
+                                            </p>
                                         </div>
                                         <div class="shortlists">
-                                            <a href="#" title="">Shortlist <i class="la la-plus"></i></a>
+                                            <a href="member.php?member=<?php echo $member['id']; ?>" title="">Shortlist <i class="la la-plus"></i></a>
                                         </div>
                                     </div>
                                     <?php

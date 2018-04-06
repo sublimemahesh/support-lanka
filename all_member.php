@@ -165,9 +165,9 @@ $MEMBER = Member::all();
                                                 <span>
                                                     <i>
                                                         <?php
-                                                        $SKILLDETAILS = SkillDetail::GetSkillByMember($member['id']);
+                                                        $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
 
-                                                        foreach ($SKILLDETAILS as $skill_d) {
+                                                        foreach ($SKILLDETAIL as $skill_d) {
 
                                                             $SKILL = new Skill($skill_d['skill']);
 
@@ -175,11 +175,13 @@ $MEMBER = Member::all();
 
                                                             echo $INDUSTRY->name;
                                                             ?> 
-                                                            / 
+                                                            /  
                                                             <?php
+                                                            $SKIL = new Skill($skill_d['skill']);
+                                                            echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
                                                         }
-                                                        ?>
-                                                    </i> at Atract Solutions
+                                                        ?> 
+                                                    </i>
                                                 </span>
                                                 <p><i class="la la-map-marker"></i>
                                                     <?php

@@ -22,6 +22,7 @@ include_once(dirname(__FILE__) . '/Award.php');
 include_once(dirname(__FILE__) . '/Company.php');
 include_once(dirname(__FILE__) . '/Vacancy.php');
 include_once(dirname(__FILE__) . '/MessageRequest.php');
+include_once(dirname(__FILE__) . '/Search.php');
 
 function dd($data) {
     var_dump($data);
