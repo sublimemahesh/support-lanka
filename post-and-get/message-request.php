@@ -12,6 +12,7 @@ if (isset($_POST['add-massage-request'])) {
     $MESSAGEREQUEST->date = $_POST['date'];
     $MESSAGEREQUEST->company = $_POST['company'];
     $MESSAGEREQUEST->member = $_POST['member'];
+    $MESSAGEREQUEST->vacancy = $_POST['vacancy'];
     $MESSAGEREQUEST->contact = $_POST['contact'];
     $MESSAGEREQUEST->email = $_POST['email'];
     $MESSAGEREQUEST->title = $_POST['title'];

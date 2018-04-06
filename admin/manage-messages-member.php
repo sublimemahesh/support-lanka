@@ -46,7 +46,6 @@ include_once(dirname(__FILE__) . './auth.php');
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>Member</th>
-                                                    <th>Company</th> 
                                                     <th>Name</th>
                                                     <th>Date</th> 
                                                     <th>Message</th> 
@@ -56,8 +55,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                             <tfoot>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Member</th>
-                                                    <th>Company</th> 
+                                                    <th>Member</th> 
                                                     <th>Name</th>
                                                     <th>Date</th> 
                                                     <th>Message</th> 
@@ -67,18 +65,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                             <tbody>
                                                 <?php
                                                 $MESSAGEREQUEST = new MessageRequest(NULL);
-                                                foreach ($MESSAGEREQUEST->all() as $key => $mess) {
+                                                foreach ($MESSAGEREQUEST->getOnlyMemberMessage() as $key => $mess) {
                                                     ?>
                                                     <tr id="row_<?php echo $mess['id']; ?>">
                                                         <td><?php echo $mess['id']; ?></td> 
                                                         <td><?php
                                                             $MEMBER = new Member($mess['member']);
                                                             echo $MEMBER->name;
-                                                            ?>
-                                                        </td>
-                                                        <td><?php
-                                                            $COMPANY = new Company($mess['company']);
-                                                            echo $COMPANY->name;
                                                             ?>
                                                         </td>
                                                         <td><?php echo $mess['title']; ?></td>

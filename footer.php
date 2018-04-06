@@ -77,7 +77,7 @@
 
 </footer>
 
-<div class="account-popup-area signin-popup-box">
+<!--<div class="account-popup-area signin-popup-box">
     <div class="account-popup">
         <span class="close-popup"><i class="la la-close"></i></span>
         <h3>User Login</h3>
@@ -109,9 +109,10 @@
             </div>
         </div>
     </div>
-</div><!-- LOGIN POPUP -->
+</div>-->
+<!-- LOGIN POPUP -->
 
-<div class="account-popup-area signup-popup-box">
+<!--<div class="account-popup-area signup-popup-box">
     <div class="account-popup">
         <span class="close-popup"><i class="la la-close"></i></span>
         <h3>Sign Up</h3>
@@ -154,4 +155,5 @@
             </div>
         </div>
     </div>
-</div><!-- SIGNUP POPUP -->
+</div>-->
+<!-- SIGNUP POPUP -->

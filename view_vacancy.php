@@ -2,6 +2,8 @@
 include_once(dirname(__FILE__) . '/class/include.php');
 $id = $_GET["id"];
 $VACANCY = new Vacancy($id);
+date_default_timezone_set('Asia/Colombo');
+$td = date('Y-m-d');
 ?>
 <!DOCTYPE html>
 <html>
@@ -105,34 +107,32 @@ $VACANCY = new Vacancy($id);
                                     </div>
                                     <div class="col-md-8 col-md-offset-2 commentform-sec">
                                         <h3 class="">Send A Message</h3>
-                                        <form>
+                                        <form class="form-horizontal"  method="post" action="post-and-get/message-request.php" enctype="multipart/form-data" id="form-message">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <span class="pf-title">Message</span>
+                                                    <textarea type="text" id="message" name="message" class="form-control" placeholder="Please Enter Message" required="true"></textarea>
+                                                </div>
+                                                <div class="col-md-12">
                                                     <div class="pf-field">
-                                                        <textarea></textarea>
+                                                        <input type="text" id="title" name="title" class="form-control" placeholder="Please Enter Your Name" required="true">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <span class="pf-title">Full Name</span>
                                                     <div class="pf-field">
-                                                        <input type="text" placeholder="ALi TUFAN" />
+                                                        <input type="email" id="email" name="email" class="form-control" placeholder="Please Enter Your Mail" required="true">
                                                     </div>
                                                 </div>
+
                                                 <div class="col-md-12">
-                                                    <span class="pf-title">Email</span>
                                                     <div class="pf-field">
-                                                        <input type="text" placeholder="" />
+                                                        <input type="text" id="contact" name="contact" class="form-control" placeholder="Please Enter Your Contact" required="true"> 
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <span class="pf-title">Phone</span>
-                                                    <div class="pf-field">
-                                                        <input type="text" placeholder="" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <button type="submit">Post Comment</button>
+
+                                                <div class="col-lg-12 center-block">
+                                                    <input type="hidden" id="new-messages" name="new-messages" value="new-messages">
+                                                    <input type="hidden" id="vacancy" name="vacancy" value="<?php echo $id ?>">
+                                                    <button name="add-massage-request" type="submit" class="submit">Send Message</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -210,7 +210,10 @@ $VACANCY = new Vacancy($id);
         <script src="js/parallax.js" type="text/javascript"></script>
         <script src="js/select-chosen.js" type="text/javascript"></script>
         <script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
-
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/portfolio.js" type="text/javascript"></script>
+        <script src="css/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <script src="js/message-vacancy.js" type="text/javascript"></script>
     </body>
 </html>
 
