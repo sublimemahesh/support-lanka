@@ -134,12 +134,7 @@ class Member {
 
     public function GetMemberByCity($city) {
 
-        $query = "SELECT member.id, member.name, member.email, member.nic_number, member.date_of_birthday, member.contact_number ,member.about_me, member.home_address, member.city, member.profile_picture, member.username, member.status, member.rank "
-               
-                . " FROM `member` "
-                . "join `city` ON member.city = city.id "
-                . "join `city` ON skill_details.member = member.id "
-                . "WHERE member.id = '" . $city . "' ORDER BY  portfolio.sort  ASC";
+        $query = "";
 
         $db = new Database();
 
