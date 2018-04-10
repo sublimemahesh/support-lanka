@@ -42,7 +42,7 @@ $VACANCY = Vacancy::all(NULL);
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3>Employer</h3>
+                                    <h3>Vacancy</h3>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +121,8 @@ $VACANCY = Vacancy::all(NULL);
                                                 <h3><a href="#" title=""><?php echo $vacant['title'] ?></a></h3>
                                                 <span><?php echo $vacant['designation']; ?> / <?php echo $vacant['job_type']; ?></span>
                                                 <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
-                                                <?php echo $vacant['description'] ?>
+                                                <?php echo substr($vacant['description'], 0 , 160) . "..." ?>
+                                                
                                             </div>
                                         </div>
                                     <?php }

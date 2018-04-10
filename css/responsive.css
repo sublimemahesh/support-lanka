@@ -601,7 +601,7 @@ select {
     margin-left: -47%;
 }
 .emply-resume-list {
-    width: 800px;
+/*    width: auto;*/
 }
 .emply-resume-sec {
     overflow-x: scroll;
@@ -1147,13 +1147,7 @@ select {
     padding: 0;
     margin-top: 10px;
 }
-.emply-pstn {
-    display: inline-block;
-    position: static;
-    float: left;
-    width: 100%;
-    margin: 10px 0;
-}
+
 .emply-list.box .emply-pstn {
     position: static;
 }
@@ -1200,7 +1194,7 @@ select {
     display: none;
 }
 
-.job-search-sec {
+/*.job-search-sec {
     float: left;
     width: 100%;
     position: static;
@@ -1223,7 +1217,8 @@ select {
     opacity: 0.9;
 
     margin: 0;
-}
+}*/
+
 .job-search-sec .job-search > h3 {
     line-height: 30px;
 }
@@ -1258,7 +1253,7 @@ select {
 }
 .res-logo > a img {
     float: left;
-    width: 150px;
+    width: 120px;
 }
 
 .five .res-logo > a img {

@@ -50,27 +50,27 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                     <span>Sri Lanka Supporting Evolution By Business</span>
                                 </div><!-- Heading -->
                                 <div class="cat-sec">
-                                    <div class="row no-gape">
-                                        <div class="row no-gape">
+                                    <div class="no-gape">
+                                        <div class="no-gape">
                                             <?php
                                             $INDUSTRY = Industry::all();
                                             if (count($INDUSTRY) > 0) {
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     if ($key < 8) {
                                                         ?>
-                                                                                                                                                                                                                                                                                                <!--                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
-                                                        <div class="col-lg-3 col-md-3 col-sm-6">
+                                                                                                                                                                                                 <!--  <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
+                                                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                                             <div class="p-category">
                                                                 <a href="skills.php?industry=<?php echo $industry['id']; ?>" title="">
                                                                     <i>
                                                                         <img src="upload/industry/thumb/<?php echo $industry['image_name']; ?>" class="img-responsive img-industy">
                                                                     </i>
                                                                     <span><?php echo $industry['name']; ?></span>
-                                                                    <p>(22 open positions)</p>
+                                                                    <p>(22 views)</p>
                                                                 </a>
                                                             </div>
                                                         </div>
-                                                        <!--                                                        </div>-->
+                                                        <!--  </div>-->
                                                         <?php
                                                     }
                                                 }
@@ -97,7 +97,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
             <!--login-->
             <section>
                 <div class="block double-gap-top double-gap-bottom">
-                    <div data-velocity="-.1" style="background: url(images/resource/parallax1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color"></div><!-- PARALLAX BACKGROUND IMAGE -->
+                    <div data-velocity="-.1" style="background: url(images/resource/parallax1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -126,48 +126,52 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                     <div class="emply-list-sec style2">
                                         <?php
                                         $VACANCY = Vacancy::all(NULL);
-                                        foreach ($VACANCY as $vacant) {
-                                            ?>
-                                            <div class="emply-list">
-                                                <div class="emply-list-thumb">
-                                                    <?php
-                                                    $COMPANY = new Company($vacant['company']);
-                                                    $CITY = new City($COMPANY->city)
+                                        if (count($VACANCY) > 0) {
+                                            foreach ($VACANCY as $key => $vacant) {
+                                                if ($key < 3) {
                                                     ?>
-                                                    <a href="#" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
-                                                </div>
-                                                <div class="emply-list-info">
-                                                    <div class="emply-pstn"><?php echo $vacant['job_type']; ?></div>
-                                                    <h3><a href="#" title=""><?php echo $vacant['title'] ?></a></h3>
-                                                    <span><?php echo $vacant['designation']; ?></span>
-                                                    <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
-                                                    <?php echo $vacant['description'] ?>
-                                                </div>
-                                            </div>
+
+                                                    <div class="emply-list">
+                                                        <div class="emply-list-thumb">
+                                                            <?php
+                                                            $COMPANY = new Company($vacant['company']);
+                                                            $CITY = new City($COMPANY->city)
+                                                            ?>
+                                                            <a href="#" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
+                                                        </div>
+                                                        <div class="emply-list-info">
+                                                            <div class="text-right"><?php echo $vacant['job_type']; ?></div>
+
+                                                            <h3><a href="#" title=""><?php echo $vacant['title'] ?></a></h3>
+                                                            <span><?php echo $vacant['designation']; ?></span>
+                                                            <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
+                                                            <?php echo substr($vacant['description'], 0, 160) . "..." ?>
+                                                            <div class="emply-pstn vacnt-btn">
+
+                                                                <div class="shortlists">
+                                                                    <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title="">View Details <i class="la la-plus"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                }
+                                            }
+                                        } else {
+                                            ?> 
+                                            <b>No vacancy in the database.</b> 
                                             <?php
                                         }
-                                        ?>
+                                        ?> 
 
-
-                                        <div class="pagination">
-                                            <ul>
-                                                <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
-                                                <li><a href="">1</a></li>
-                                                <li class="active"><a href="">2</a></li>
-                                                <li><a href="">3</a></li>
-                                                <li><span class="delimeter">...</span></li>
-                                                <li><a href="">14</a></li>
-                                                <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
-                                            </ul>
-                                        </div><!-- Pagination -->
+                                        <div class="col-lg-12">
+                                            <div class="browse-all-cat">
+                                                <a href="vacancy.php" title="">All Vacancy</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--  <div class="col-lg-12">
-                                                            <div class="browse-all-cat">
-                                                                <a href="#" title="">Load more listings</a>
-                                                            </div>
-                                                        </div>-->
                         </div>
                     </div>
                 </div>
@@ -175,7 +179,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
 
             <section>
                 <div class="block">
-                    <div data-velocity="-.1" style="background: url(images/resource/parallax2.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color light"></div><!-- PARALLAX BACKGROUND IMAGE -->
+                    <div data-velocity="-.1" style="background: url(images/resource/parallax2.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color light"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">

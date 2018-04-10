@@ -58,7 +58,7 @@ $MEMBER = Member::all();
                 <div class="block remove-bottom">
                     <div class="container">
                         <div class="row no-gape">
-                            <aside class="col-lg-3 column">
+                            <aside class="col-lg-3 col-md-3 column">
                                 <div class="widget">
                                     <div class="search_widget_job">
                                         <div class="field_w_search">
@@ -149,12 +149,12 @@ $MEMBER = Member::all();
                                     </div>
                                 </div>
                             </aside>
-                            <div class="col-lg-9 column">
+                            <div class="col-lg-9 col-md-9 hidden-sm hidden-xs column">
                                 <div class="emply-resume-sec">
                                     <?php
                                     foreach ($MEMBER as $member) {
                                         ?>
-                                        <div class="emply-resume-list square">
+                                        <div class="emply-resume-list square col-md-12 col-sm-12">
                                             <div class="emply-resume-thumb">
                                                 <a href="member.php?member=<?php echo $member['id']; ?>" title="">
                                                     <img src="upload/member/<?php echo $member['profile_picture']; ?>" alt=""/> 
@@ -199,7 +199,6 @@ $MEMBER = Member::all();
                                         <?php
                                     }
                                     ?>
-
                                     <div class="pagination">
                                         <ul>
                                             <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
@@ -211,6 +210,67 @@ $MEMBER = Member::all();
                                             <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
                                         </ul>
                                     </div><!-- Pagination -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="block less-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12 column">
+                                <div class="emply-list-sec">
+                                    <div class="row" id="masonry">
+                                        <?php
+                                        foreach ($MEMBER as $member) {
+                                            ?>
+                                            <div class="col-sm-6 col-xs-12 hidden-lg hidden-md">
+                                                <div class="emply-list box">
+                                                    <div class="emply-list-thumb">
+                                                        <a href="#" title=""><img class="img-responsive" src="upload/member/<?php echo $member['profile_picture']; ?>" alt="" /></a>
+                                                    </div>
+                                                    <div class="emply-list-info">
+                                                        <h3><a href="#" title=""><?php echo $member['name']; ?></a></h3>
+                                                        <span><?php
+                                                            $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
+
+                                                            foreach ($SKILLDETAIL as $skill_d) {
+
+                                                                $SKILL = new Skill($skill_d['skill']);
+
+                                                                $INDUSTRY = new Industry($SKILL->industry);
+
+                                                                echo $INDUSTRY->name;
+                                                                ?> 
+                                                                /  
+                                                                <?php
+                                                                $SKIL = new Skill($skill_d['skill']);
+                                                                echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
+                                                            }
+                                                            ?> </span>
+                                                        <h6><i class="la la-map-marker"></i> 
+                                                            <?php
+                                                            $CITY = new City($member['city']);
+                                                            echo $CITY->name;
+                                                            ?>
+                                                            , 
+                                                            <?php echo $member['home_address']; ?>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="shortlists center-block" style="padding-top: 15px;">
+                                                        <a href="member.php?member=<?php echo $member['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,9 @@
-<?php
+﻿<?php
 include_once(dirname(__FILE__) . '/class/include.php');
-$COMPANY = Company::all(NULL);
+$id = $_GET["industry"];
+$INDUSTRY = new Industry($id);
+
+$COMPANY = Company::GetCompanysByIndustry($_GET["industry"]);
 ?>
 <!DOCTYPE html>
 <html>
