@@ -79,13 +79,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                                             ?>
                                                         </td>
                                                         <td><?php echo $industry['name']; ?></td>
+
                                                         <td> 
-                                                            <a href="edit-skill.php?id=<?php echo $industry['id']; ?>" class="op-link"><button class="glyphicon glyphicon-pencil"></button></a>  |  
+                                                            <a href="edit-skill.php?id=<?php echo $industry['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 
-                                                            <a href="#" class="delete-skill" data-id="<?php echo $industry['id']; ?>">
-                                                                <button class="glyphicon glyphicon-trash" data-type="cancel"></button>
+                                                            <a href="#" class="delete-skill btn btn-sm btn-danger" data-id="<?php echo $industry['id']; ?>">
+                                                                <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                             </a>
-
                                                         </td>
                                                     </tr>
                                                     <?php

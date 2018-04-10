@@ -1067,7 +1067,7 @@ label::after {
     float: left;
     width: 100%;
     padding: 0;
-    margin-bottom: 50px;
+    margin-bottom: -12px;
 }
 .job-search > h3 {
     float: left;
@@ -1094,7 +1094,7 @@ label::after {
 .job-search form {
     float: left;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 15px;
 }
 .job-field {
     float: left;
@@ -1146,9 +1146,10 @@ label::after {
 .job-search form button {
     float: left;
     width: 100%;
-    padding: 15px 0;
-    font-size: 30px;
-    background-color: #8b91dd; height: 60px;
+    padding: 7px 0;
+    font-size: 33px;
+    background-color: #8b91dd;
+    height: 59px;
 }
 .job-search form .row {
     margin: 0 -12px;
@@ -1330,8 +1331,8 @@ label::after {
     width: 100%;
     text-align: center;
     padding-bottom: 30px;
-    border-bottom: 1px solid #e8ecec;
-    border-right: 1px solid #e8ecec;
+/*    border-bottom: 1px solid #e8ecec;
+    border-right: 1px solid #e8ecec;*/
 }
 .p-category > a i {
     float: left;

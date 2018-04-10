@@ -69,10 +69,9 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                             if (count($INDUSTRY) > 0) {
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     ?>
-                                                                                                                                                                                                                                                                                                                                          <!--                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
                                                     <div class="col-lg-3 col-md-3 col-sm-6">
                                                         <div class="p-category">
-                                                            <a href="skills.php?industry=<?php echo $industry['id']; ?>" title="">
+                                                            <a href="all_employers.php?industry=<?php echo $industry['id']; ?>" title="">
                                                                 <i>
                                                                     <img src="upload/industry/thumb/<?php echo $industry['image_name']; ?>" class="img-responsive img-industy">
                                                                 </i>
@@ -81,7 +80,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <!--                                                        </div>-->
                                                     <?php
                                                 }
                                             } else {
@@ -101,9 +99,9 @@ include_once(dirname(__FILE__) . '/class/include.php');
             </section>
 
 
-<?php
-include './footer.php';
-?>
+            <?php
+            include './footer.php';
+            ?>
 
         </div>
 

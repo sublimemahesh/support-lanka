@@ -2,6 +2,143 @@
     Created on : 26-Mar-2018, 10:54:45
     Author     : official
 */
+@media screen and (max-width: 310px){
+    .post-job-btn1 {
+        float: left !important;
+        font-family: Open Sans !important;
+        font-size: 14px !important;
+        padding: 12px 6px !important;
+        padding-top: 12px !important;
+        -webkit-border-radius: 23px !important;
+        color: #fff !important;
+        -moz-border-radius: 23px !important;
+        -ms-border-radius: 23px !important;
+        -o-border-radius: 23px !important;
+        border-radius: 23px !important;
+        letter-spacing: 0.3px !important;
+        padding-top: 10px !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .job-field input {
+        height: 40px;
+    }
+    .job-search form button {
+        height: 39px;
+        padding: 0 0;
+        font-size: 25px;
+        width: 66px;
+    }
+    .job-field i {
+        top: 8px !important;
+    }
+}
+@media screen and (max-width: 520px){
+    .job-field input {
+        height: 40px !important;
+    }
+    .job-search form button {
+        height: 39px !important;
+        padding: 0 0;
+        font-size: 25px !important;
+        width: 66px !important;
+    }
+    .responsive-menubar {
+        float: left;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .job-search form button {
+        height: 50px;
+        padding: 0 0;
+        font-size: 22px !important;
+    }
+    .job-search form .row {
+        margin: 0 14px !important;
+        padding-top: 125px !important;
+    }
+    .main-slider-sec img {
+        float: left;
+        width: 100%;
+        opacity: 0.8;
+        height: 151px;
+    }
+    .vacnt-btn {
+        padding-top: 34px !important;
+        margin-right: -45px !important;
+        text-align: center !important;
+    }
+    .emply-pstn {
+        display: inline-block !important;
+        position: static !important;
+    }
+}
+@media screen and (min-width: 520px) and (max-width: 991px){
+    .job-search form .row {
+        margin: 0 14px !important;
+        padding-top: 170px !important;
+    }
+    .responsive-menubar {
+        padding: 5px 0;
+    }
+    .menu-resaction {
+        float: right;
+        position: relative;
+        padding-top: 42px;
+    }
+}
+@media screen and (min-width: 991px)and (max-width: 1200px){
+    .job-search form .row {
+        margin: 0 14px !important;
+        padding-top: -50px !important;
+    }
+    .job-search {
+        float: left;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 54px;
+    }
+    .responsive-menubar {
+        padding: 5px 0;
+    }
+    .menu-resaction {
+        float: right;
+        position: relative;
+        padding-top: 42px;
+    }
+}
+
+.vacnt-btn{
+    padding-top: 34px;
+    margin-right: -45px;
+}
+.post-job-btn1 {
+    float: left;
+    font-family: Open Sans;
+    font-size: 14px;
+    padding: 13px 27px;
+    -webkit-border-radius: 23px;
+    color: #fff;
+    -moz-border-radius: 23px;
+    -ms-border-radius: 23px;
+    -o-border-radius: 23px;
+    border-radius: 23px;
+    letter-spacing: 0.3px;
+}
+.post-job-btn1:hover{
+    color: #91BF38 !important;
+}
+.forsticky.sticky .post-job-btn1{
+    border: 2px solid #91BF38;
+    color: #91BF38;
+}
+.btn-extars .post-job-btn1:hover {
+    background: transparent;
+    border: 2px solid #91BF38;
+    color: #FFF;
+}
+
 .img-vacnt{
     width: 110px !important;
 }
