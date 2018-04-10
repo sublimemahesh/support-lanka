@@ -1,3 +1,6 @@
+<?php
+include_once(dirname(__FILE__) . '/class/include.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -116,7 +119,7 @@
 
             <section>
                 <div class="block">
-                    <div data-velocity="-.1" style="background: url(images/resource/parallax2.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color light"></div><!-- PARALLAX BACKGROUND IMAGE -->
+                    <div data-velocity="-.1" style="background: url(images/resource/parallax2.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color light"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -125,34 +128,28 @@
                                     <span>What other people thought about the service provided by JobHunt</span>
                                 </div><!-- Heading -->
                                 <div class="reviews-sec" id="reviews-carousel">
-                                    <div class="col-lg-6">
-                                        <div class="reviews">
-                                            <img src="images/resource/r1.jpg" alt="" />
-                                            <h3>Augusta Silva <span>Web designer</span></h3>
-                                            <p>Without JobHunt i’d be homeless, they found me a job and got me sorted out quickly with everything!  Can’t quite believe the service</p>
-                                        </div><!-- Reviews -->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="reviews">
-                                            <img src="images/resource/r2.jpg" alt="" />
-                                            <h3>Ali Tufan <span>Web designer</span></h3>
-                                            <p>Without JobHunt i’d be homeless, they found me a job and got me sorted out quickly with everything!  Can’t quite believe the service</p>
-                                        </div><!-- Reviews -->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="reviews">
-                                            <img src="images/resource/r1.jpg" alt="" />
-                                            <h3>Augusta Silva <span>Web designer</span></h3>
-                                            <p>Without JobHunt i’d be homeless, they found me a job and got me sorted out quickly with everything!  Can’t quite believe the service</p>
-                                        </div><!-- Reviews -->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="reviews">
-                                            <img src="images/resource/r2.jpg" alt="" />
-                                            <h3>Ali Tufan <span>Web designer</span></h3>
-                                            <p>Without JobHunt i’d be homeless, they found me a job and got me sorted out quickly with everything!  Can’t quite believe the service</p>
-                                        </div><!-- Reviews -->
-                                    </div>
+                                    <?php
+                                    $FEEDBACK = FeedBack::all();
+                                    if (count($FEEDBACK) > 0) {
+                                        foreach ($FEEDBACK as $key => $feed) {
+                                            if ($key < 8) {
+                                                ?>
+                                                <div class="col-lg-6">
+                                                    <div class="reviews">
+                                                        <img src="upload/feedback/<?php echo $feed['image_name'] ?>" alt="" />
+                                                        <h3><?php echo $feed['name'] ?></h3>
+                                                        <p><?php echo substr($feed['comment'], 0, 200) . "..." ?></p>
+                                                    </div><!-- Reviews -->
+                                                </div>
+                                                <?php
+                                            }
+                                        }
+                                    } else {
+                                        ?> 
+                                        <b>No Comment in here.</b> 
+                                        <?php
+                                    }
+                                    ?> 
                                 </div>
                             </div>
                         </div>
