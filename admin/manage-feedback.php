@@ -1,26 +1,22 @@
-﻿<?php
+<?php
 include_once(dirname(__FILE__) . '/../class/include.php');
-include_once(dirname(__FILE__) . '/auth.php');
-
-$INDUSTRY = new Industry(NULL)
+include_once(dirname(__FILE__) . './auth.php');
 ?> 
 ﻿<!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Manage Industry || Admin || Support Lanka</title>
+        <title>Manage Feed Back || Admin || Support Lanka</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
         <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="plugins/node-waves/waves.css" rel="stylesheet" />
         <link href="plugins/animate-css/animate.css" rel="stylesheet" />
-        <link href="plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
         <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+        <link href="plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/custom.css" rel="stylesheet" type="text/css"/>
         <link href="css/themes/all-themes.css" rel="stylesheet" />
     </head>
 
@@ -30,59 +26,61 @@ $INDUSTRY = new Industry(NULL)
         ?>
         <section class="content">
             <div class="container-fluid"> 
+                <!-- Manage Brand -->
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Manage Industry
+                                    Manage Comments
                                 </h2>
                                 <ul class="header-dropdown">
                                     <li>
-                                        <a href="create-industry.php">
+                                        <a href="create-feedback.php">
                                             <i class="material-icons">add</i> 
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="body">
-                                <!--                                <div class="table-responsive">-->
                                 <div>
                                     <div class="row clearfix">
                                         <?php
-                                        foreach ($INDUSTRY->all() as $key => $indu) {
+                                        $FEEDBACK = new FeedBack(NULL);
+                                        foreach ($FEEDBACK->all() as $key => $feed_back) {
                                             ?>
-                                            <div class="col-md-4">
-                                                <div id="div_<?php echo $indu['id']; ?>">
-                                                    <div><?php echo $indu['sort']; ?></div> 
-                                                    <div><?php echo $indu['name']; ?></div> 
-                                                    <img src="../upload/industry/thumb/<?php echo $indu['image_name']; ?>">
-                                                    <div class="top-10"> 
-                                                        <a href="edit-industry.php?id=<?php echo $indu['id']; ?>" class="op-link btn btn-sm btn-info">
-                                                            <i class="glyphicon glyphicon-pencil"></i>
-                                                        </a> 
-                                                        |  
-                                                        <a href="arrange-industry.php" class="op-link btn btn-sm btn-warning">
-                                                            <i class="glyphicon glyphicon-random" data-type="cancel"></i>
-                                                        </a>
-                                                        |  
-                                                        <a href="#" class="delete-industry btn btn-sm btn-danger" data-id="<?php echo $indu['id']; ?>">
-                                                            <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
-                                                        </a>
-
-                                                    </div>
-                                                </div> 
+                                            <div class="col-md-3 col-sm-6 col-xs-12" id="div_<?php echo $feed_back['id']; ?>">
+                                                <p class="maxlinetitle"><?php echo $feed_back['sort']; ?></p>
+                                                <img class="img-responsive" src="../upload/feedback/<?php echo $feed_back["image_name"]; ?>" alt=""/>
+                                                <p class="maxlinetitle ti-top"><b>Name : </b><?php echo $feed_back['name']; ?></p>
+                                                <p class="maxlinetitle text-justify"><b>Comment : </b><?php echo substr($feed_back['comment'], 0, 50); ?></p>
+                                                <p class="maxlinetitle ti-bot"><b>Active : </b><?php echo $feed_back['is_active']; ?></p>
+                                                <div class="d">
+                                                    <a href="edit-feedback.php?id=<?php echo $feed_back['id']; ?>" class="op-link btn btn-sm btn-info">
+                                                        <i class="glyphicon glyphicon-pencil"></i>
+                                                    </a>
+                                                    |  
+                                                    <a href="arrange-feedback.php" class="op-link btn btn-sm btn-warning">
+                                                        <i class="glyphicon glyphicon-random" data-type="cancel"></i>
+                                                    </a>
+                                                    |  
+                                                    <a href="#" class="delete-comment btn btn-sm btn-danger" data-id="<?php echo $feed_back['id']; ?>">
+                                                        <i class="waves-effect glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                    </a>  
+                                                </div>
+                                                <hr>
                                             </div>
                                             <?php
                                         }
-                                        ?> 
-
+                                        ?>   
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- #END# Manage brand -->
+
             </div>
         </section>
 
@@ -113,7 +111,7 @@ $INDUSTRY = new Industry(NULL)
 
         <!-- Demo Js -->
         <script src="js/demo.js"></script>
-        <script src="delete/js/industry.js" type="text/javascript"></script>
+        <script src="delete/js/feedback.js" type="text/javascript"></script>
     </body>
 
 </html> 
