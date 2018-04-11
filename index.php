@@ -58,7 +58,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     if ($key < 8) {
                                                         ?>
-                                                                                                                                                                                                                         <!--  <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
+                                                                                                                                                                                                                                                 <!--  <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
                                                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                                             <div class="p-category">
                                                                 <a href="skills.php?industry=<?php echo $industry['id']; ?>" title="">
@@ -196,8 +196,8 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 ?>
                                                 <div class="col-lg-6">
                                                     <div class="reviews">
-                                                        <img src="upload/feedback/<?php echo $feed['image_name']?>" alt="" />
-                                                        <h3><?php echo $feed['name']?></h3>
+                                                        <img src="upload/feedback/<?php echo $feed['image_name'] ?>" alt="" />
+                                                        <h3><?php echo $feed['name'] ?></h3>
                                                         <p><?php echo substr($feed['comment'], 0, 200) . "..." ?></p>
                                                     </div><!-- Reviews -->
                                                 </div>
@@ -210,6 +210,10 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                         <?php
                                     }
                                     ?> 
+
+                                </div> 
+                                <div class="simple-text-block">
+                                    <a href="add-feedback.php" title="">Add Comment</a>
                                 </div>
                             </div>
                         </div>

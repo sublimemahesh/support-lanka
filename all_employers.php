@@ -64,7 +64,7 @@ $COMPANY = Company::GetCompanysByIndustry($_GET["industry"]);
                                             foreach ($industry as $key => $ind) {
                                                 $key++;
                                                 ?>
-                                            <a href="all_employers.php?industry=<?php echo $ind['id']; ?>">
+                                                <a href="all_employers.php?industry=<?php echo $ind['id']; ?>">
 
                                                     <div class="link-line" for="<?php echo $key; ?>"><?php echo $ind['name']; ?></div>
 
@@ -87,13 +87,26 @@ $COMPANY = Company::GetCompanysByIndustry($_GET["industry"]);
                                             </div>
                                             <div class="emply-list-info">
                                                 <div class="emply-pstn">
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
-                                                    <span class="fav-job"><i class="la la-star"></i></span>
+                                                    <?php
+                                                    for ($ran = 0; $ran <= 4; $ran++) {
+
+                                                        if ($com['rank'] > $ran) {
+                                                            ?>
+                                                            <span class="fav-job" style="color:yellow; ">
+                                                                <i class="la la-star"></i>
+                                                            </span> 
+                                                            <?php
+                                                        } else {
+                                                            ?>
+                                                            <span class="fav-job"><i class="la la-star"></i></span>
+                                                            <?php
+                                                        }
+                                                    }
+                                                    ?>
                                                 </div>
-                                                <h3><a href="#" title=""><?php echo $com['name']; ?></a></h3>
+                                                <h3>
+                                                    <a href="#" ><?php echo $com['name']; ?></a>
+                                                </h3>
                                                 <span>
                                                     <?php
                                                     $INDUSTRY = new Industry($com['industry']);

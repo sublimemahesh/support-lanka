@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 com-sm-12 com-xs-12">
                     <div class="">
-                        <ul class="main-slider-sec">
+                        <ul class="main-slider-sec hei-image">
                             <li class=""><img src="images/resource/header.jpg" alt="" /></li>
                         </ul>
                         <div class="job-search-sec">

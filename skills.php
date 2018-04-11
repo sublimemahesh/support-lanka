@@ -94,7 +94,7 @@ $INDUSTRY = new Industry($id);
 
                                             </div>
                                             <div class="shortlists" style="float: right;">
-                                                <a href="members.php?skill=<?php echo $skill['id'] ?>" title="">Shortlist <i class="la la-plus"></i></a>
+                                                <a href="members.php?skill=<?php echo $skill['id'] ?>" title="">View More <i class="la la-plus"></i></a>
                                             </div>
                                         </div>
                                         <?php

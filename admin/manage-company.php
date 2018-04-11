@@ -66,6 +66,7 @@ $COMPANY = new Company(NULL)
                                                 <th>Register Number</th> 
                                                 <th>Username</th>
                                                 <th>Status</th> 
+                                                <th>Rank</th> 
                                                 <th>Options</th>
                                             </tr>
                                         </thead>
@@ -94,6 +95,7 @@ $COMPANY = new Company(NULL)
                                                         }
                                                         ?>
                                                     </td> 
+                                                    <td><?php echo $company['rank']; ?></td> 
                                                     <td> 
                                                         <a href="edit-company.php?id=<?php echo $company['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 
@@ -115,6 +117,7 @@ $COMPANY = new Company(NULL)
                                                 <th>Contact Number</th> 
                                                 <th>Username</th>
                                                 <th>Status</th> 
+                                                 <th>Rank</th> 
                                                 <th>Options</th>
                                             </tr>
                                         </tfoot>
