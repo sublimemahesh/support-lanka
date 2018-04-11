@@ -459,9 +459,11 @@ button{
 input[type="checkbox"],
 input[type="radio"] {
     position: absolute;
-    opacity: 0;
-    z-index: -1;
-    margin: 0;
+    opacity: -0.8;
+    z-index: 2;
+    margin: 3px;
+    margin-top: 9px;
+    width: 15px;
 }
 label {
     position: relative;
@@ -1331,8 +1333,8 @@ label::after {
     width: 100%;
     text-align: center;
     padding-bottom: 30px;
-/*    border-bottom: 1px solid #e8ecec;
-    border-right: 1px solid #e8ecec;*/
+    /*    border-bottom: 1px solid #e8ecec;
+        border-right: 1px solid #e8ecec;*/
 }
 .p-category > a i {
     float: left;
@@ -9364,8 +9366,8 @@ input[type="file"] {
     width: 100%;
     margin: 0;
     font-family: Open Sans;
-    font-size: 16px;
-    color: #202020;
+    font-size: 20px;
+    color: #000;
 }
 .sidebar-links {
     float: left;

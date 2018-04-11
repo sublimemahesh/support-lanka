@@ -2,6 +2,10 @@
     Created on : 26-Mar-2018, 10:54:45
     Author     : official
 */
+.link-line {
+    padding-bottom: 15px;
+    font-size: 14px;
+}
 @media screen and (max-width: 310px){
     .post-job-btn1 {
         float: left !important;
