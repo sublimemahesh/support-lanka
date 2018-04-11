@@ -51,53 +51,33 @@ $COMPANY = Company::GetCompanysByIndustry($_GET["industry"]);
             </section>
 
             <section>
-                <div class="block no-padding">
+                <div class="block remove-bottom">
                     <div class="container">
                         <div class="row no-gape">
-                            <aside class="col-lg-4 column border-right">
+                            <aside class="col-lg-3 col-md-3 column" style="padding-bottom: 35px;">
                                 <div class="widget">
-                                    <div class="search_widget_job">
-                                        <div class="field_w_search">
-                                            <input type="text" placeholder="Search Keywords" />
-                                            <i class="la la-search"></i>
-                                        </div><!-- Search Widget -->
-                                        <div class="field_w_search">
-                                            <input type="text" placeholder="All Locations" />
-                                            <i class="la la-map-marker"></i>
-                                        </div><!-- Search Widget -->
-                                    </div>
-                                </div>
-                                <div class="widget">
-                                    <h3 class="sb-title open">Specialism</h3>
+                                    <h3 class="sb-title open">Industry</h3>
                                     <div class="specialism_widget">
                                         <div class="simple-checkbox">
-                                            <p><input type="checkbox" name="spealism" id="as"><label for="as">Accountancy (2)</label></p>
-                                            <p><input type="checkbox" name="spealism" id="asd"><label for="asd">Banking (2)</label></p>
-                                            <p><input type="checkbox" name="spealism" id="errwe"><label for="errwe">Charity & Voluntary (3)</label></p>
-                                            <p><input type="checkbox" name="spealism" id="fdg"><label for="fdg">Digital & Creative (4)</label></p>
-                                            <p><input type="checkbox" name="spealism" id="sc"><label for="sc">Estate Agency (3)</label></p>
-                                            <p><input type="checkbox" name="spealism" id="aw"><label for="aw">Graduate (2)</label></p>
-                                            <p><input type="checkbox" name="spealism" id="ui"><label for="ui">IT Contractor (7)</label></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="widget">
-                                    <h3 class="sb-title open">Team Size</h3>
-                                    <div class="specialism_widget">
-                                        <div class="simple-checkbox">
-                                            <p><input type="checkbox" name="spealism" id="t1"><label for="t1">1 - 10</label></p>
-                                            <p><input type="checkbox" name="spealism" id="t2"><label for="t2">100 - 200</label></p>
-                                            <p><input type="checkbox" name="spealism" id="t3"><label for="t3">201 - 301</label></p>
-                                            <p><input type="checkbox" name="spealism" id="t4"><label for="t4">301 - 401</label></p>
-                                            <p><input type="checkbox" name="spealism" id="t5"><label for="t5">401 - 501</label></p>
-                                            <p><input type="checkbox" name="spealism" id="t6"><label for="t6">501 - 601</label></p>
-                                            <p><input type="checkbox" name="spealism" id="t7"><label for="t7">601 - 701</label></p>
+                                            <?php
+                                            $industry = Industry::all();
+                                            foreach ($industry as $key => $ind) {
+                                                $key++;
+                                                ?>
+                                            <a href="all_employers.php?industry=<?php echo $ind['id']; ?>">
+
+                                                    <div class="link-line" for="<?php echo $key; ?>"><?php echo $ind['name']; ?></div>
+
+                                                </a>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
                             </aside>
                             <div class="col-lg-8 column">
-                                <div class="emply-list-sec" style="padding-top: 21px;">
+                                <div class="emply-list-sec">
                                     <?php
                                     foreach ($COMPANY as $com) {
                                         ?>
@@ -168,7 +148,14 @@ $COMPANY = Company::GetCompanysByIndustry($_GET["industry"]);
         <script src="js/parallax.js" type="text/javascript"></script>
         <script src="js/select-chosen.js" type="text/javascript"></script>
         <script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
-
+        <script>
+            $(':checkbox').on('change', function () {
+                var th = $(this), name = th.prop('name');
+                if (th.is(':checked')) {
+                    $(':checkbox[name="' + name + '"]').not($(this)).prop('checked', false);
+                }
+            });
+        </script>
     </body>
 </html>
 

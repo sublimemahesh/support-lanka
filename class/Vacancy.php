@@ -147,6 +147,8 @@ class Vacancy {
 
         return $array_res;
     }
+    
+    
 
     public function GetVacancyById($id) {
 

@@ -45,55 +45,53 @@ include_once(dirname(__FILE__) . './auth.php');
                                 </ul>
                             </div>
                             <div class="body">
-                                <div class="table-responsive">
-                                    <div>
-                                        <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
-                                            <thead>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th>District</th>
-                                                    <th>Name</th> 
-                                                    <th>Option</th>
+                                <div>
+                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>District</th>
+                                                <th>Name</th> 
+                                                <th>Option</th>
 
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>District</th>
+                                                <th>Name</th> 
+                                                <th>Option</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <?php
+                                            $CITY = new City(NULL);
+                                            foreach ($CITY->all() as $key => $dis) {
+                                                ?>
+                                                <tr id="row_<?php echo $dis['id']; ?>">
+                                                    <td><?php echo $dis['id']; ?></td> 
+                                                    <td>
+                                                        <?php
+                                                        $DISTRI = new District($dis['district']);
+                                                        echo $DISTRI->name;
+                                                        ?>
+                                                    </td>
+                                                    <td><?php echo $dis['name']; ?></td>
+
+                                                    <td> 
+                                                        <a href="edit-city.php?id=<?php echo $dis['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
+
+                                                        <a href="#" class="delete-city btn btn-sm btn-danger" data-id="<?php echo $dis['id']; ?>">
+                                                            <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                        </a>
+                                                    </td>
                                                 </tr>
-                                            </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th>District</th>
-                                                    <th>Name</th> 
-                                                    <th>Option</th>
-                                                </tr>
-                                            </tfoot>
-                                            <tbody>
                                                 <?php
-                                                $CITY = new City(NULL);
-                                                foreach ($CITY->all() as $key => $dis) {
-                                                    ?>
-                                                    <tr id="row_<?php echo $dis['id']; ?>">
-                                                        <td><?php echo $dis['id']; ?></td> 
-                                                        <td>
-                                                            <?php
-                                                            $DISTRI = new District($dis['district']);
-                                                            echo $DISTRI->name;
-                                                            ?>
-                                                        </td>
-                                                        <td><?php echo $dis['name']; ?></td>
-
-                                                        <td> 
-                                                            <a href="edit-city.php?id=<?php echo $dis['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-
-                                                            <a href="#" class="delete-city btn btn-sm btn-danger" data-id="<?php echo $dis['id']; ?>">
-                                                                <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                                }
-                                                ?>   
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                            }
+                                            ?>   
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

@@ -150,7 +150,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                             <label for="job_type">Job Type</label>
                                                                         </div>
                                                                         <div class="">
-                                                                            <input type="text" id="job_type" name="job_type" class="form-control" placeholder="Please Enter Job Type">
+                                                                            <input type="text" id="job_type" name="job_type" class="form-control" placeholder="Please Enter (Full Time or Part Time)">
                                                                         </div>
                                                                     </div>
                                                                     

@@ -156,7 +156,8 @@ if (isset($_POST['update'])) {
         'email' => ['required' => TRUE],
         'address' => ['required' => TRUE],
         'contact_number' => ['required' => TRUE],
-        'username' => ['required' => TRUE]
+        'username' => ['required' => TRUE],
+        'industry' => ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {

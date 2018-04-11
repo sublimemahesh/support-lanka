@@ -170,7 +170,7 @@ $SKILL = new Skill($id);
                                                         <?php
                                                         echo $SKILL->name;
                                                         ?>
-                                                    </i> at Atract Solutions</span>
+                                                    </i></span>
                                                 <p><i class="la la-map-marker"></i>
                                                     <?php
                                                     $CITY = new City($MEMBER->city);
@@ -180,14 +180,13 @@ $SKILL = new Skill($id);
                                                     <?php echo $MEMBER->home_address; ?>
                                                 </p>
                                             </div>
-                                            <div class="shortlists">
+                                            <div class="shortlists" style="float: right;">
                                                 <a href="member.php?member=<?php echo $MEMBER->id; ?>" title="">Details <i class="la la-plus"></i></a>
                                             </div>
                                         </div>
                                         <?php
                                     }
                                     ?>
-
                                     <div class="pagination">
                                         <ul>
                                             <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>

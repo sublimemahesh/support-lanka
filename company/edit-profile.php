@@ -122,7 +122,7 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                             </div> 
                                                             <!--Map-->
                                                             <div class="">
-                                                                <div class="bottom-top">Company Location</div>
+                                                                <div class="bottom-top">Company Location(MAP)</div>
                                                                 <div class="">
                                                                     <input type="text" name="map" class="form-control" placeholder="Company Location" required="TRUE" value="<?php echo $COMPANY->map; ?>">
                                                                 </div>
