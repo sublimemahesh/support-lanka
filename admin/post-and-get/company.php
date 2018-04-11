@@ -21,6 +21,7 @@ if (isset($_POST['create_company'])) {
     $COMPANY->contact_number = filter_input(INPUT_POST, 'contact_number');
     $COMPANY->map = filter_input(INPUT_POST, 'map');
     $COMPANY->username = filter_input(INPUT_POST, 'username');
+    $COMPANY->rank = filter_input(INPUT_POST, 'rank');
     $COMPANY->password = $password;
 
     $dir_dest = '../../upload/company/';
@@ -149,6 +150,7 @@ if (isset($_POST['update_company'])) {
     $COMPANY->email = mysql_real_escape_string($_POST['email']);
     $COMPANY->map = mysql_real_escape_string($_POST['map']);
     $COMPANY->username = filter_input(INPUT_POST, 'username');
+    $COMPANY->rank = filter_input(INPUT_POST, 'rank');
     $COMPANY->status = mysql_real_escape_string($_POST['active']);
 
     $VALID = new Validator();

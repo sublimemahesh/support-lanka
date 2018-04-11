@@ -59,20 +59,21 @@ $MEMBER = Member::all();
                                 <div class="widget">
                                     <h3 class="sb-title open">Industry</h3>
                                     <div class="specialism_widget">
-                                        <div class="simple-checkbox">
-                                            <?php
-                                            $industry = Industry::all();
-                                            foreach ($industry as $key => $ind) {
-                                                $key++;
-                                                ?>
-                                                <a href="all_member.php?industry=<?php echo $ind['id']; ?>">
-
-                                                    <div class="link-line" for="<?php echo $key; ?>"><?php echo $ind['name']; ?></div>
-
-                                                </a>
+                                        <div class="specialism_widget">
+                                            <div class="simple-checkbox">
                                                 <?php
-                                            }
-                                            ?>
+                                                $industry = Industry::all();
+                                                foreach ($industry as $key => $ind) {
+                                                    $key++;
+                                                    ?>
+                                                    <a href="skills.php?industry=<?php echo $ind['id']; ?>">
+
+                                                        <div class="link-line" for="<?php echo $key; ?>"><?php echo $ind['name']; ?></div>
+                                                    </a>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -89,6 +90,7 @@ $MEMBER = Member::all();
                                                 </a>
                                             </div>
                                             <div class="emply-resume-info">
+
                                                 <h3><a href="#" title=""> <?php echo $member['name']; ?></a></h3>
                                                 <span>
                                                     <i>
@@ -121,8 +123,29 @@ $MEMBER = Member::all();
                                                 </p>
                                             </div>
                                             <div class="shortlists" style="float: right;">
+                                                <div class="">
+                                                    <?php
+                                                    for ($ran = 0; $ran <= 4; $ran++) {
+
+                                                        if ($member['rank'] > $ran) {
+                                                            ?>
+                                                            <span class="fav-job" style="color:yellow; ">
+                                                                <i class="la la-star"></i>
+                                                            </span> 
+                                                            <?php
+                                                        } else {
+                                                            ?>
+                                                            <span class="fav-job"><i class="la la-star"></i></span>
+                                                            <?php
+                                                        }
+                                                    }
+                                                    ?>
+                                                </div>
+                                            </div>
+                                            <div class="shortlists" style="float: right; padding-top: 36px;">
                                                 <a href="member.php?member=<?php echo $member['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
                                             </div>
+
                                         </div>
                                         <?php
                                     }

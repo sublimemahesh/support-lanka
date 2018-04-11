@@ -194,7 +194,19 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
                                     </div> 
-
+                                    <!--rank-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="rank">Rank</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="rank" class="form-control" placeholder="Enter Rank" autocomplete="off" name="rank" required="TRUE" value="<?php echo $MEMBER->rank; ?>">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
                                     <div class="col-md-12">
                                         <div class="col-md-2"></div>  
                                         <div class="form-group">

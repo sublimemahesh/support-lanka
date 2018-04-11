@@ -66,7 +66,7 @@ $VACANCY = Vacancy::all();
                                 <div class="widget border">
                                     <h3 class="sb-title open">Industry</h3>
                                     <div class="specialism_widget">
-                                        <div class="simple-checkbox">
+<!--                                        <div class="simple-checkbox">
                                             <?php
                                             $industry = Industry::all();
                                             foreach ($industry as $key => $ind) {
@@ -79,7 +79,7 @@ $VACANCY = Vacancy::all();
                                                 <?php
                                             }
                                             ?>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
                             </aside>

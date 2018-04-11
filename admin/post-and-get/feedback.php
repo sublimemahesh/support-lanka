@@ -12,7 +12,7 @@ if (isset($_POST['create-comment'])) {
     $FEEDBACK->date_time = date("Y-m-d H:i:s");
     $FEEDBACK->name = filter_input(INPUT_POST, 'name');
     $FEEDBACK->comment = filter_input(INPUT_POST, 'comment');
-    $FEEDBACK->is_active = filter_input(INPUT_POST, '0');
+    $FEEDBACK->is_active = filter_input(INPUT_POST, 'active');
 
     $dir_dest = '../../upload/feedback/';
 

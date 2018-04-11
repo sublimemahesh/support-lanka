@@ -19,6 +19,7 @@ if (isset($_POST['create'])) {
     $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
     $MEMBER->city = filter_input(INPUT_POST, 'city');
     $MEMBER->username = filter_input(INPUT_POST, 'username');
+    $MEMBER->rank = filter_input(INPUT_POST, 'rank');
     $MEMBER->password = $password;
 
     $dir_dest = '../../upload/member/';
@@ -115,6 +116,7 @@ if (isset($_POST['update'])) {
     $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
     $MEMBER->city = filter_input(INPUT_POST, 'city');
     $MEMBER->username = filter_input(INPUT_POST, 'username');
+    $MEMBER->rank = filter_input(INPUT_POST, 'rank');
     $MEMBER->status = mysql_real_escape_string($_POST['active']);
 
     $VALID = new Validator();

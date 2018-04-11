@@ -1,6 +1,6 @@
 <div class="responsive-header">
     <div class="responsive-menubar">
-        <div class="res-logo"><a href="index.php" title=""><img src="images/resource/logo11.png" alt="" /></a></div>
+        <div class="res-logo"><img src="images/resource/logo11.png" alt="" /></div>
         <div class="menu-resaction">
             <div class="res-openmenu">
                 <img src="images/icon.png" alt="" /> Menu
@@ -48,7 +48,7 @@
     <div class="menu-sec" style="height: 50px;">
         <div class="container" style="height: 50px;">
             <div class="logo">
-                <a href="index.php" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
+                <a href="#" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
             </div><!-- Logo -->
             <div class="btn-extars">
                 <a href="company/register.php" title="" class="post-job-btn1"><i class="la la-plus"></i>Post Jobs</a>
