@@ -148,8 +148,6 @@ class Vacancy {
         return $array_res;
     }
     
-    
-
     public function GetVacancyById($id) {
 
         $query = "SELECT * FROM `vacancy` WHERE `id` = '" . $id . "' ORDER BY `sort` ASC";

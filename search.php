@@ -48,7 +48,7 @@ if (isset($_GET['keyword'])) {
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3>Welcome Tera Planer</h3>
+                                    <h3>Search <?php echo $_GET['keyword'] ?></h3>
                                 </div>
                             </div>
                         </div>

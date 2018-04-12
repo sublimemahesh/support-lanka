@@ -468,7 +468,7 @@ input[type="radio"] {
 label {
     position: relative;
     display: inline-block;
-    padding: 0 0 0 2em;
+/*    padding: 0 0 0 2em;*/
     height: 1.5em;
     line-height: 1.5;
     cursor: pointer;
@@ -482,7 +482,7 @@ label::after {
     width: 20px !important;
     height: 20px !important;
 }
-label::before {
+/*label::before {
     content: " ";
     border: 2px solid #e6e7ef;
 
@@ -492,7 +492,7 @@ label::before {
     -o-border-radius: 3px;
     border-radius: 3px;
 
-}
+}*/
 /* Checkbox */
 input[type="checkbox"] + label::after {
     content: "\2714";
@@ -1481,7 +1481,7 @@ label::after {
 .c-logo img {
     float: none;
     display: inline-block;
-    max-width: 70%;
+    max-width: 30%;
 }
 .job-title-sec h3 {
     display: table;
@@ -5847,14 +5847,13 @@ aside .widget.border:first-child {
     float: left;
     width: 100%;
     border: 2px solid #e8ecec;
-
+    padding: 15px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     border-radius: 8px;
 
-    padding: 30px;
 }
 .quick-form-job form input {
     float: left;
@@ -9107,9 +9106,9 @@ header.gradient{
     float: right;
     margin-top: 70px;
 }
-input[type="file"] {
+/*input[type="file"] {
     display: none;
-}
+}*/
 .custom-file-upload {
 }
 .custom-file-upload

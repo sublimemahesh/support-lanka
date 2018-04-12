@@ -1,7 +1,10 @@
 ﻿<?php
 include_once(dirname(__FILE__) . '/class/include.php');
 $id = $_GET["skill"];
-$SKILL = new Skill($id);
+
+$INDUSTRY = new Industry($_GET["skill"]);
+
+$SKILL = Skill::GetSkillsByIndustry($INDUSTRY->id);
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,14 +33,13 @@ $SKILL = new Skill($id);
 
         <div class="theme-layout" id="scrollup">
 
-
             <?php
             include './header.php';
             ?>
 
             <section class="overlape">
                 <div class="block no-padding">
-                    <div data-velocity="-.1" style="background: url(images/resource/mslider1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
+                    <div data-velocity="-.1" style="background: url(images/resource/mslider1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax"></div>
                     <div class="container fluid">
                         <div class="row">
                             <div class="col-lg-12">
@@ -59,18 +61,17 @@ $SKILL = new Skill($id);
                                     <h3 class="sb-title open">Skills</h3>
                                     <div class="specialism_widget">
                                         <div class="specialism_widget">
-<!--                                            <div class="simple-checkbox">
+                                            <div class="simple-checkbox">
                                                 <?php
-                                                foreach ($SKILL->GetSkillsByIndustry($industry) as $skil) {
+                                                foreach ($SKILL as $skil) {
                                                     ?>
                                                     <a href="#">
-
-                                                        <div class="link-line" for=""><?php echo $skil->name ?></div>
+                                                        <div class="link-line" for=""><?php echo $skil['name'] ?></div>
                                                     </a>
                                                     <?php
                                                 }
                                                 ?>
-                                            </div>-->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -150,7 +151,7 @@ $SKILL = new Skill($id);
         <script src="js/select-chosen.js" type="text/javascript"></script>
         <script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYc537bQom7ajFpWE5sQaVyz1SQa9_tuY&sensor=true&libraries=places"></script>
-        <script type="text/javascript" src="js/maps.js"></script><!-- Nice Select -->
+        <script type="text/javascript" src="js/maps.js"></script>
 
     </body>
 </html>

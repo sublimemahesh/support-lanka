@@ -189,7 +189,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                 </div><!-- Heading -->
                                 <div class="reviews-sec" id="reviews-carousel">
                                     <?php
-                                    $FEEDBACK = FeedBack::all();
+                                    $FEEDBACK = FeedBack::activeFeedBack();
                                     if (count($FEEDBACK) > 0) {
                                         foreach ($FEEDBACK as $key => $feed) {
                                             if ($key < 8) {

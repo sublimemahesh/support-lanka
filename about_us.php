@@ -129,7 +129,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                 </div><!-- Heading -->
                                 <div class="reviews-sec" id="reviews-carousel">
                                     <?php
-                                    $FEEDBACK = FeedBack::all();
+                                    $FEEDBACK = FeedBack::activeFeedBack();
                                     if (count($FEEDBACK) > 0) {
                                         foreach ($FEEDBACK as $key => $feed) {
                                             if ($key < 8) {
@@ -139,7 +139,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                         <img src="upload/feedback/<?php echo $feed['image_name'] ?>" alt="" />
                                                         <h3><?php echo $feed['name'] ?></h3>
                                                         <p><?php echo substr($feed['comment'], 0, 200) . "..." ?></p>
-                                                    </div><!-- Reviews -->
+                                                    </div>
                                                 </div>
                                                 <?php
                                             }
