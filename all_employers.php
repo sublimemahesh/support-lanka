@@ -113,14 +113,14 @@ $COMPANY = Company::GetCompanysByIndustry($_GET["industry"]);
                                                     echo $INDUSTRY->name;
                                                     ?>
                                                 </span>
-                                                <h6><i class="la la-map-marker"></i>
+                                                <h6>
+                                                    <i class="la la-map-marker"></i>
                                                     <?php
                                                     $CITY = new City($com['city']);
                                                     echo $CITY->name;
                                                     ?>
                                                 </h6>
-                                                <p><?php echo substr($com['about'], 0, 200) . "..." ?></p>
-                                                <div class="shortlists" style="float: right">
+                                                <div class="shortlists text-center" style="float: right; padding-top: 10px;">
                                                     <a href="company.php?company=<?php echo $com['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
                                                 </div>
                                             </div>

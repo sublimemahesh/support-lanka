@@ -1,14 +1,12 @@
 <?php
 include_once(dirname(__FILE__) . '/class/include.php');
 
-if (isset($_GET['industry'])) {
-    $id = $_GET["industry"];
+if (isset($_GET['company'])) {
+    $VACANCY = Vacancy::GetVacancyByCompany($_GET["company"]);
 } else {
-    $id = NULL;
+    $VACANCY = Vacancy::all();
 }
 
-$INDUSTRY = new Industry($id);
-$VACANCY = Vacancy::all();
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,9 +33,6 @@ $VACANCY = Vacancy::all();
 
     </head>
     <body>
-
-
-
         <div class="theme-layout" id="scrollup">
             <?php
             include_once './header.php';
@@ -64,22 +59,23 @@ $VACANCY = Vacancy::all();
                         <div class="row">
                             <aside class="col-lg-3 column margin_widget">
                                 <div class="widget border">
-                                    <h3 class="sb-title open">Industry</h3>
+                                    <h3 class="sb-title open">Company</h3>
                                     <div class="specialism_widget">
-<!--                                        <div class="simple-checkbox">
+                                        <div class="simple-checkbox">
                                             <?php
-                                            $industry = Industry::all();
-                                            foreach ($industry as $key => $ind) {
+                                            $COMPAN = Company::all();
+
+                                            foreach ($COMPAN as $key => $com) {
                                                 $key++;
                                                 ?>
-                                                <a href="vacancy.php?industry=<?php echo $ind['id']; ?>">
+                                                <a href="vacancy.php?company=<?php echo $com['id']; ?>">
 
-                                                    <div class="link-line" for="<?php echo $key; ?>"><?php echo $ind['name']; ?></div>
+                                                    <div class="link-line" for="<?php echo $key; ?>"><?php echo $com['name']; ?></div>
                                                 </a>
                                                 <?php
                                             }
                                             ?>
-                                        </div>-->
+                                        </div>
                                     </div>
                                 </div>
                             </aside>
@@ -110,7 +106,8 @@ $VACANCY = Vacancy::all();
 
                                             </div>
                                         </div>
-                                    <?php }
+                                        <?php
+                                    }
                                     ?>
 
 
@@ -124,7 +121,7 @@ $VACANCY = Vacancy::all();
                                             <li><a href="">14</a></li>
                                             <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
                                         </ul>
-                                    </div><!-- Pagination -->
+                                    </div>
                                 </div>
                             </div>
                         </div>

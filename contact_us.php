@@ -1,3 +1,6 @@
+<?php
+include_once(dirname(__FILE__) . '/class/include.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -136,7 +139,7 @@
                             </div>
                             <div class="col-lg-6 column">
                                 <div class="contact-textinfo style2">
-                                    <h3>JobHunt Office</h3>
+                                  
                                     <ul>
                                         <li><i class="la la-map-marker"></i><span>Sri Dewamitta Rd, Galle, Sri Lanka</span></li>
                                         <li><i class="la la-phone"></i><span>Call Us : +9491 312 4477</span></li>

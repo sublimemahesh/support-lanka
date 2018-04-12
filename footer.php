@@ -5,9 +5,26 @@
                 <div class="col-lg-3 column">
                     <div class="widget">
                         <div class="about_widget">
-                            <div class="logo">
-                                <a href="index.php" title=""><img src="images/resource/logo.png" alt="" /></a>
+                            <div class="footer-title">
+                                <a href="index.php" title=""><img src="images/resource/logo11.png" alt="" /></a>
                             </div>
+
+                            <div class="link_widgets">
+                                <div class="row">
+                                    <div class="center-block">
+                                        <a href="member/login.php" title="Member Registration">Join Us </a>
+                                        <a href="company/login.php" title="">Post Jobs</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- About Widget -->
+                    </div>
+                </div>
+                <div class="col-lg-3 column">
+                    <div class="widget">
+                        <div class="about_widget">
+                            <h3 class="footer-title">Contact Us</h3>
                             <span>Sri Dewamitta RD, Galle.</span>
                             <span>SRi Lanka</span>
                             <span>+949 1312 44 77</span>
@@ -28,14 +45,13 @@
                         <div class="link_widgets">
                             <div class="row">
                                 <div class="">
-                                    <a href="#" title="">Home </a>
-                                    <a href="#" title="">Members </a>
-                                    <a href="#" title="">Employers </a>
-                                    <a href="#" title="">Vacancy </a>
-                                    <a href="#" title="">About Us </a>
-                                    <a href="#" title="">Contact Us </a>	
+                                    <a href="index.php" title="">Home </a>
+                                    <a href="all_member.php" title="">Members </a>
+                                    <a href="all_employers.php" title="">Employers </a>
+                                    <a href="vacancy.php" title="">Vacancy </a>
+                                    <a href="about_us.php" title="">About Us </a>
+                                    <a href="contact_us.php" title="">Contact Us </a>	
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
@@ -46,25 +62,30 @@
                         <div class="link_widgets">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <a href="#" title="">US Jobs</a>	
-                                    <a href="#" title="">Canada Jobs</a>	
-                                    <a href="#" title="">UK Jobs</a>	
-                                    <a href="#" title="">Emplois en Fnce</a>	
-                                    <a href="#" title="">Jobs in Deuts</a>	
-                                    <a href="#" title="">Vacatures China</a>	
+
+                                    <?php
+                                    $industry = Industry::all();
+                                    if (count($industry) > 0) {
+                                        foreach ($industry as $key => $ind) {
+                                            if ($key < 6) {
+                                                ?>
+
+                                                <a href="all_employers.php?industry=<?php echo $ind['id']; ?>" title=""><?php echo $ind['name']; ?></a>	
+                                                <?php
+                                            }
+                                        }
+                                    } else {
+                                        ?> 
+                                        <b>No vacancy in the database.</b> 
+                                        <?php
+                                    }
+                                    ?> 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 column">
-                    <div class="widget">
-                        <div class="download_widget">
-                            <a href="#" title=""><img src="images/resource/dw1.png" alt="" /></a>
-                            <a href="#" title=""><img src="images/resource/dw2.png" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -77,83 +98,4 @@
 
 </footer>
 
-<!--<div class="account-popup-area signin-popup-box">
-    <div class="account-popup">
-        <span class="close-popup"><i class="la la-close"></i></span>
-        <h3>User Login</h3>
-        <span>Click To Login With Demo User</span>
-        <div class="select-user">
-            <span>Candidate</span>
-            <span>Employer</span>
-        </div>
-        <form>
-            <div class="cfield">
-                <input type="text" placeholder="Username" />
-                <i class="la la-user"></i>
-            </div>
-            <div class="cfield">
-                <input type="password" placeholder="********" />
-                <i class="la la-key"></i>
-            </div>
-            <p class="remember-label">
-                <input type="checkbox" name="cb" id="cb1"><label for="cb1">Remember me</label>
-            </p>
-            <a href="#" title="">Forgot Password?</a>
-            <button type="submit">Login</button>
-        </form>
-        <div class="extra-login">
-            <span>Or</span>
-            <div class="login-social">
-                <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
-                <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
-            </div>
-        </div>
-    </div>
-</div>-->
-<!-- LOGIN POPUP -->
 
-<!--<div class="account-popup-area signup-popup-box">
-    <div class="account-popup">
-        <span class="close-popup"><i class="la la-close"></i></span>
-        <h3>Sign Up</h3>
-        <div class="select-user">
-            <span>Candidate</span>
-            <span>Employer</span>
-        </div>
-        <form>
-            <div class="cfield">
-                <input type="text" placeholder="Username" />
-                <i class="la la-user"></i>
-            </div>
-            <div class="cfield">
-                <input type="password" placeholder="********" />
-                <i class="la la-key"></i>
-            </div>
-            <div class="cfield">
-                <input type="text" placeholder="Email" />
-                <i class="la la-envelope-o"></i>
-            </div>
-            <div class="dropdown-field">
-                <select data-placeholder="Please Select Specialism" class="chosen">
-                    <option>Web Development</option>
-                    <option>Web Designing</option>
-                    <option>Art & Culture</option>
-                    <option>Reading & Writing</option>
-                </select>
-            </div>
-            <div class="cfield">
-                <input type="text" placeholder="Phone Number" />
-                <i class="la la-phone"></i>
-            </div>
-            <button type="submit">Signup</button>
-        </form>
-        <div class="extra-login">
-            <span>Or</span>
-            <div class="login-social">
-                <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
-                <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
-            </div>
-        </div>
-    </div>
-</div>-->
-<!-- SIGNUP POPUP -->
