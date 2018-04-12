@@ -85,7 +85,6 @@ $DISTRICT = new District(NULL)
                                                 <tr id="row_<?php echo $district['id']; ?>">
                                                     <td><?php echo $district['id']; ?></td> 
                                                     <td><?php echo $district['name']; ?></td> 
-
                                                     <td> 
                                                         <a href="edit-district.php?id=<?php echo $district['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 
@@ -93,7 +92,6 @@ $DISTRICT = new District(NULL)
                                                             <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                         </a>
                                                     </td>
-
                                                 </tr>
                                                 <?php
                                             }
