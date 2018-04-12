@@ -76,12 +76,19 @@ class District {
 
     public function delete() {
 
-        $query = 'DELETE FROM `district` WHERE id="' . $this->id . '"';
+
+        $CITY = new City(NULL);
+
+        $result = $CITY->deleteCitiesByDistrict();
+
+        if ($result) {
+            $query = 'DELETE FROM `district` WHERE id="' . $this->id . '"';
+        }
 
         $db = new Database();
 
         return $db->readQuery($query);
+        dd($query);
     }
-
 
 }

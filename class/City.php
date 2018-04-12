@@ -102,4 +102,15 @@ class City {
         return $array_res;
     }
 
+    public function deleteCitiesByDistrict($district) {
+
+        $query = "DELETE FROM `city` WHERE `district`= '" . $district . "'";
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+
+        return $result;
+       
+    }
+
 }
