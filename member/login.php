@@ -41,7 +41,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             <?php
                         }
                         ?>
-                        <input type="text" class="form-control" name="username" placeholder="User ID" autofocus>
+                        <input type="email" class="form-control" name="email" placeholder="Email" autofocus>
                         <br>
 
                         <input type="password" class="form-control" name="password" placeholder="Password">
@@ -64,7 +64,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             Don't have an account yet?<br/>
                             <label class="checkbox">
                                 <a href="register.php"> Create an account</a>
-                              
+
                             </label>
                         </div>
 

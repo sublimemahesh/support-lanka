@@ -9,9 +9,9 @@ if (isset($_POST['register'])) {
 
 
     $pw = md5($_POST['password']);
-    $cpw = md5($_POST['confirm_password']);
+    $cpw = md5($_POST['password']);
     $email = $_POST['email'];
-    $cemail = $_POST['cnfemail'];
+    $cemail = $_POST['email'];
 
 
     if ($cpw == $pw) {
@@ -21,7 +21,6 @@ if (isset($_POST['register'])) {
             $COMPANY->name = filter_input(INPUT_POST, 'name');
             $COMPANY->email = $email;
             $COMPANY->contact_number = filter_input(INPUT_POST, 'contact_number');
-            $COMPANY->username = filter_input(INPUT_POST, 'username');
             $COMPANY->password = $cpw;
 
 
@@ -29,7 +28,6 @@ if (isset($_POST['register'])) {
                 'name' => ['required' => TRUE],
                 'email' => ['required' => TRUE],
                 'contact_number' => ['required' => TRUE],
-                'username' => ['required' => TRUE],
                 'password' => ['required' => TRUE]
             ]);
 
@@ -64,12 +62,12 @@ if (isset($_POST['login'])) {
 
     $COMPANY = new Company(NULL);
 
-    $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
     $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
 
 
 
-    if ($COMPANY->login($username, $password)) {
+    if ($COMPANY->login($email, $password)) {
         header('Location: ../profile.php?message=5');
         exit();
     } else {
@@ -147,7 +145,6 @@ if (isset($_POST['update'])) {
     $COMPANY->contact_number = filter_input(INPUT_POST, 'contact_number');
     $COMPANY->email = mysql_real_escape_string($_POST['email']);
     $COMPANY->map = mysql_real_escape_string($_POST['map']);
-    $COMPANY->username = filter_input(INPUT_POST, 'username');
 
     $VALID = new Validator();
 
@@ -156,7 +153,6 @@ if (isset($_POST['update'])) {
         'email' => ['required' => TRUE],
         'address' => ['required' => TRUE],
         'contact_number' => ['required' => TRUE],
-        'username' => ['required' => TRUE],
         'industry' => ['required' => TRUE]
     ]);
 

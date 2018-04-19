@@ -122,9 +122,9 @@ class Company {
         return $result;
     }
 
-    public function login($username, $password) {
+    public function login($email, $password) {
 
-        $query = "SELECT * FROM `company` WHERE `username`= '" . $username . "' AND `password`= '" . $password . "'";
+        $query = "SELECT * FROM `company` WHERE `email`= '" . $email . "' AND `password`= '" . $password . "'";
 
         $db = new Database();
 
@@ -252,7 +252,6 @@ class Company {
                 . "`contact_number` ='" . $this->contact_number . "', "
                 . "`email` ='" . $this->email . "', "
                 . "`map` ='" . $this->map . "', "
-                . "`username` ='" . $this->username . "', "
                 . "`resetcode` ='" . $this->resetcode . "', "
                 . "`rank` ='" . $this->rank . "', "
                 . "`status` ='" . $this->status . "' "
@@ -316,7 +315,7 @@ class Company {
 
     public function checkEmail($email) {
 
-        $query = "SELECT `email`,`username` FROM `company` WHERE `email`= '" . $email . "'";
+        $query = "SELECT `email` FROM `company` WHERE `email`= '" . $email . "'";
 
         $db = new Database();
 
@@ -348,17 +347,16 @@ class Company {
         }
     }
 
-    public function SelectForgetMember($email) {
+    public function SelectForgetCompany($email) {
 
         if ($email) {
 
-            $query = "SELECT `email`,`username`,`resetcode` FROM `company` WHERE `email`= '" . $email . "'";
+            $query = "SELECT `email`,`resetcode` FROM `company` WHERE `email`= '" . $email . "'";
 
             $db = new Database();
 
             $result = mysql_fetch_array($db->readQuery($query));
 
-            $this->username = $result['username'];
             $this->email = $result['email'];
             $this->resetcode = $result['resetcode'];
 

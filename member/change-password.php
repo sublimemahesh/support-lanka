@@ -65,9 +65,9 @@ $MEMBER = new Member($_SESSION['id']);
                                                 <form method="post" action="post-and-get/change-password.php">
                                                     <div class="col-md-12">
                                                         <div class="">
-                                                            <div class="bottom-top">User name</div>
+                                                            <div class="bottom-top">Email</div>
                                                             <div class="formrow">
-                                                                <input type="text" name="username" class="form-control" placeholder="Please Enter Your Full Name"  value="<?php echo $MEMBER->username; ?>" disabled="true">
+                                                                <input type="text" name="email" class="form-control" value="<?php echo $MEMBER->email; ?>" disabled="true">
                                                             </div>
                                                         </div>
 

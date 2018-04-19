@@ -14,9 +14,8 @@ if (empty($email)) {
 if ($COMPANY->checkEmail($email)) {
 
     if ($COMPANY->GenarateCode($email)) {
-        $res = $COMPANY->SelectForgetMember($email);
+        $res = $COMPANY->SelectForgetCompany($email);
 
-        $username = $COMPANY->username;
         $email = $COMPANY->email;
         $resetcode = $COMPANY->resetcode;
 
@@ -41,7 +40,6 @@ if ($COMPANY->checkEmail($email)) {
 
         $html .= "<tr><td colspan='3' style='font-size: 14px; padding: 5px 25px 10px 25px; color: #666; background-color: #fff; line-height: 25px;'><b>Password Reset Code: </b> " . $resetcode . "</td></tr>";
 
-        $html .= "<tr><td colspan='3' style='font-size: 14px; padding: 0 25px 10px 25px; color: #666; background-color: #fff; '><b>Username: </b> " . $username . "</td></tr>";
 
         $html .= "<tr><td colspan='3' style='font-size: 14px; background-color: #FAFAFA; padding: 25px; color: #333; font-weight: 300; text-align: justify; '>Thank you</td></tr>";
 

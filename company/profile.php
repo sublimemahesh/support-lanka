@@ -55,7 +55,6 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                 <div class="col-sm-9 col-md-9">
                                                     <ul class="list-group">
                                                         <li class="list-group-item"><b>Name</b> : <?php echo $COMPANY->name; ?></li> 
-                                                        <li class="list-group-item"><b>User Name</b> : <?php echo $COMPANY->username; ?></li> 
                                                         <li class="list-group-item"><b>Email</b> : <?php echo $COMPANY->email; ?></li>
                                                         <li class="list-group-item"><b>Contact No</b> : <?php echo $COMPANY->contact_number; ?></li>
                                                         <li class="list-group-item"> <b>Company Register Number</b> : <?php echo $COMPANY->company_register_number; ?></li>

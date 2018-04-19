@@ -78,13 +78,7 @@ $MEMBER = new Member($_SESSION['id']);
                                                                     <input type="text" name="name" class="form-control" placeholder="Please Enter Your Full Name"  value="<?php echo $MEMBER->name; ?>" required="TRUE">
                                                                 </div>
                                                             </div>
-                                                            <!--User Name-->
-                                                            <div class="">
-                                                                <div class="bottom-top">User Name</div>
-                                                                <div class="formrow">
-                                                                    <input type="text" name="username" class="form-control" placeholder="Please Enter Your User Name" required="TRUE" value="<?php echo $MEMBER->username; ?>">
-                                                                </div>
-                                                            </div>
+                                                           
                                                             <!--Email-->
                                                             <div class="">
                                                                 <div class="bottom-top">Email</div>
@@ -110,7 +104,7 @@ $MEMBER = new Member($_SESSION['id']);
                                                             <div class="">
                                                                 <div class="bottom-top">Date Of Birthday</div>
                                                                 <div class="formrow">
-                                                                    <input type="text" name="date_of_birthday" class="form-control" placeholder="Please Enter Date Of Birthday" required="TRUE" value="<?php echo $MEMBER->date_of_birthday; ?>">
+                                                                    <input style="padding: 0px 12px;" type="date" name="date_of_birthday" class="form-control" placeholder="Please Enter Date Of Birthday" required="TRUE" value="<?php echo $MEMBER->date_of_birthday; ?>">
                                                                 </div>
                                                             </div> 
                                                             <!--About Me-->

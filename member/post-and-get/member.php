@@ -9,9 +9,9 @@ if (isset($_POST['register'])) {
 
 
     $pw = md5($_POST['password']);
-    $cpw = md5($_POST['confirm_password']);
+    $cpw = md5($_POST['password']);
     $email = $_POST['email'];
-    $cemail = $_POST['cnfemail'];
+    $cemail = $_POST['email'];
 
 
     if ($cpw == $pw) {
@@ -21,7 +21,6 @@ if (isset($_POST['register'])) {
             $MEMBER->name = filter_input(INPUT_POST, 'name');
             $MEMBER->email = $email;
             $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
-            $MEMBER->username = filter_input(INPUT_POST, 'username');
             $MEMBER->password = $cpw;
 
 
@@ -29,7 +28,6 @@ if (isset($_POST['register'])) {
                 'name' => ['required' => TRUE],
                 'email' => ['required' => TRUE],
                 'contact_number' => ['required' => TRUE],
-                'username' => ['required' => TRUE],
                 'password' => ['required' => TRUE]
             ]);
 
@@ -64,12 +62,12 @@ if (isset($_POST['login'])) {
 
     $MEMBER = new Member(NULL);
 
-    $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
     $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
 
 
 
-    if ($MEMBER->login($username, $password)) {
+    if ($MEMBER->login($email, $password)) {
         header('Location: ../profile.php?message=5');
         exit();
     } else {
@@ -145,7 +143,6 @@ if (isset($_POST['update'])) {
     $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
     $MEMBER->city = filter_input(INPUT_POST, 'city');
     $MEMBER->contact_number = mysql_real_escape_string($_POST['contact_number']);
-    $MEMBER->username = mysql_real_escape_string($_POST['username']);
 
 
     $VALID = new Validator();
@@ -155,8 +152,7 @@ if (isset($_POST['update'])) {
         'email' => ['required' => TRUE],
         'nic_number' => ['required' => TRUE],
         'contact_number' => ['required' => TRUE],
-        'city' => ['required' => TRUE],
-        'username' => ['required' => TRUE]
+        'city' => ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
