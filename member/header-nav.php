@@ -122,12 +122,6 @@ $MEMBER = new Member($_SESSION['id']);
 
             <li class="sub-menu">
                 <a href="./" >
-                    <i class="fa fa-tachometer"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li class="sub-menu">
-                <a href="profile.php" >
                     <i class="fa fa-user-circle"></i>
                     <span>Your Profile</span>
                 </a> 
