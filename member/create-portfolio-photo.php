@@ -60,7 +60,7 @@ if (isset($_GET['id'])) {
                                                 <div class="row clearfix">
                                                     <form class="form-horizontal" method="post" id="form-new-portfolio-photo" enctype="multipart/form-data"> 
                                                         <div class="col-md-3">
-                                                            <div class="formrow">
+                                                            <div class="formrow" style="padding-top: 40px;">
                                                                 <div class="uploadbox uploadphotobx" id="uploadphotobx">
                                                                     <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
                                                                     <label class="uploadBox">Click here to Upload photo

@@ -66,7 +66,7 @@ if (isset($_GET['skill'])) {
                                                             <div class="row clearfix">
                                                                 <div class="panel-body">
 
-                                                                    <div class="form-group">
+                                                                    <div class="">
                                                                         <div class="bottom-top">
                                                                             <label for="working_place">Skill</label>
                                                                         </div>
@@ -88,7 +88,7 @@ if (isset($_GET['skill'])) {
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="form-group">
+                                                                    <div class="">
                                                                         <div class="bottom-top">
                                                                             <label for="working_place">Working Place</label>
                                                                         </div>
@@ -96,8 +96,8 @@ if (isset($_GET['skill'])) {
                                                                             <input type="text" id="working_place" name="working_place" class="form-control" placeholder="Please Enter Your Working Place">
                                                                         </div>
                                                                     </div>
-
-                                                                    <div class="form-group">
+                                                                    
+                                                                    <div class="">
                                                                         <div class="bottom-top">
                                                                             <label for="duration">Duration</label>
                                                                         </div>
@@ -106,7 +106,7 @@ if (isset($_GET['skill'])) {
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="form-group">
+                                                                    <div class="">
                                                                         <div class="bottom-top">
                                                                             <label for="description">Description</label>
                                                                         </div>

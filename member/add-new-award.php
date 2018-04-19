@@ -62,7 +62,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             <div class="row clearfix">
                                                                 <div class="panel-body">
 
-                                                                    <div class="form-group">
+                                                                    <div>
                                                                         <div class="bottom-top">
                                                                             <label for="title">Title</label>
                                                                         </div>
@@ -71,7 +71,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="form-group">
+                                                                    <div>
                                                                         <div class="bottom-top">
                                                                             <label for="duration">Duration</label>
                                                                         </div>
@@ -80,7 +80,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="form-group">
+                                                                    <div>
                                                                         <div class="bottom-top">
                                                                             <label for="description">Description</label>
                                                                         </div>

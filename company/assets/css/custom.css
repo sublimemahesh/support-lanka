@@ -2,6 +2,12 @@
     Created on : 16-Feb-2018, 11:07:02
     Author     : official
 */
+.top-2{
+    padding-top: 2px;
+}
+.pad-3{
+    padding-bottom: 3px;
+}
 .top-bott20{
     padding-bottom: 20px;
     padding-top: 20px;

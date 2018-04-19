@@ -59,7 +59,7 @@ $AWARD = new Award($id);
                                                     <div class="col-md-12">
 
 
-                                                        <div class="form-group">
+                                                        <div>
                                                             <div class="bottom-top">
                                                                 <label for="title">Title</label>
                                                             </div>
@@ -68,7 +68,7 @@ $AWARD = new Award($id);
                                                             </div>
                                                         </div>
 
-                                                        <div class="form-group">
+                                                        <div>
                                                             <div class="bottom-top">
                                                                 <label for="duration">Duration</label>
                                                             </div>
@@ -77,7 +77,7 @@ $AWARD = new Award($id);
                                                             </div>
                                                         </div>
 
-                                                        <div class="form-group">
+                                                        <div>
                                                             <div class="bottom-top">
                                                                 <label for="description">Description</label>
                                                             </div>
