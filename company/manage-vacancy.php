@@ -60,15 +60,15 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     ?>
                                                     <div class="col-md-3">
                                                         <div id="div_<?php echo $vacan['id']; ?>">
-                                                            <div><?php echo $vacan['sort']; ?></div>
-                                                            <div><b>Title : </b><?php echo $vacan['title']; ?></div>
-                                                            <div><b>Designation : </b><?php echo $vacan['designation']; ?></div>
-                                                            <div><b>Salary : </b><?php echo $vacan['salary']; ?></div>
-                                                            <div><b>Maximum Age : </b><?php echo $vacan['age']; ?></div>
-                                                            <div><b>Gender : </b><?php echo $vacan['gender']; ?></div>
-                                                            <div><b>Deadline : </b><?php echo $vacan['deadline']; ?></div>
-                                                            <div><b>Job Type : </b><?php echo $vacan['job_type']; ?></div>
-                                                            <div>
+                                                            <div class="pad-3"><?php echo $vacan['sort']; ?></div>
+                                                            <div class="pad-3"><b>Title : </b><?php echo $vacan['title']; ?></div>
+                                                            <div class="pad-3"><b>Designation : </b><?php echo $vacan['designation']; ?></div>
+                                                            <div class="pad-3"><b>Salary : </b><?php echo $vacan['salary']; ?></div>
+                                                            <div class="pad-3"><b>Maximum Age : </b><?php echo $vacan['age']; ?></div>
+                                                            <div class="pad-3"><b>Gender : </b><?php echo $vacan['gender']; ?></div>
+                                                            <div class="pad-3"><b>Deadline : </b><?php echo $vacan['deadline']; ?></div>
+                                                            <div class="pad-3"><b>Job Type : </b><?php echo $vacan['job_type']; ?></div>
+                                                            <div class="top-2">
                                                                 <a href="edit-vacancy.php?id=<?php echo $vacan['id']; ?>">
                                                                     <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
                                                                 </a> 

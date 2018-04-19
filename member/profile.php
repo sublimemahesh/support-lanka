@@ -63,7 +63,7 @@ $MEMBER = new Member($_SESSION['id']);
                                                         <li class="list-group-item"><b>Email</b> : <?php echo $MEMBER->email; ?></li>
                                                         <li class="list-group-item"><b>Contact Number</b> : <?php echo $MEMBER->contact_number; ?></li>
                                                         <li class="list-group-item"> <b>Date Of Birthday</b> : <?php echo $MEMBER->date_of_birthday; ?></li>
-                                                        <li class="list-group-item"> <b>About Me</b> : <?php echo $MEMBER->about_me; ?></li>
+                                                        <li class="list-group-item text-justify"> <b>About Me</b> : <?php echo $MEMBER->about_me; ?></li>
                                                         <li class="list-group-item"> <b>Home Address</b> : <?php echo $MEMBER->home_address; ?></li>
                                                         <li class="list-group-item"> <b>City</b> :
                                                             <?php

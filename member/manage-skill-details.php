@@ -86,7 +86,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <div class="maxlinetitle"><b>Working Percentage : </b><?php echo $skill_d['percentage']; ?></div>
                                                     <div class="maxlinetitle"><b>Description : </b><?php echo substr($skill_d['description'], 0, 60) . "" ?></div>
                                                     <div>  
-                                                        <a href="add-experience.php?skill=<?php echo $skill_d['id']; ?>">
+                                                        <a href="add-new-experience.php?skill=<?php echo $skill_d['id']; ?>">
                                                             <button class="btn btn-warning btn-sm all-icon fa fa-plus-circle"></button>
                                                         </a> |
                                                         <a href="edit-skill-detail.php?id=<?php echo $skill_d['id']; ?>">
