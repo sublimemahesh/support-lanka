@@ -49,24 +49,13 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     <?php
                                 }
                                 ?>
-                                <p>Enter your details</p>
                                 <div>
-                                    <input type="text" name="name" placeholder="Full Name" autocomplete="off" class="form-control placeholder-no-fix">
-                                </div>
-                                <br>
-
-                                <div>
-                                    <input type="text" name="username" placeholder="User Name" autocomplete="off" class="form-control placeholder-no-fix">
+                                    <input type="text" name="name" placeholder="Enter Your Name" autocomplete="off" class="form-control placeholder-no-fix">
                                 </div>
                                 <br>
 
                                 <div>
                                     <input type="email" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-                                </div>
-                                <br>
-
-                                <div>
-                                    <input type="email" name="cnfemail" placeholder="Confirm Email" autocomplete="off" class="form-control placeholder-no-fix">
                                 </div>
                                 <br>
 
@@ -77,11 +66,6 @@ include_once(dirname(__FILE__) . '/../class/include.php');
 
                                 <div>
                                     <input type="password" name="password" placeholder="Enter Password" autocomplete="off" class="form-control placeholder-no-fix">
-                                </div>
-                                <br>
-
-                                <div>
-                                    <input type="password" name="confirm_password" placeholder="Confirm Password" autocomplete="off" class="form-control placeholder-no-fix">
                                 </div>
                                 <br>
 

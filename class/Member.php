@@ -148,9 +148,9 @@ class Member {
         return $array_res;
     }
 
-    public function login($username, $password) {
+    public function login($email, $password) {
 
-        $query = "SELECT * FROM `member` WHERE `username`= '" . $username . "' AND `password`= '" . $password . "'";
+        $query = "SELECT * FROM `member` WHERE `email`= '" . $email . "' AND `password`= '" . $password . "'";
 
         $db = new Database();
 

@@ -28,7 +28,11 @@ $COMPANY = new Company($_SESSION['id_com']);
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
         <style>
             .img-thumbnail {
-                max-width: 50% !important;
+                max-width: 80% !important;
+            }
+            .input[type="file"] {
+                display: initial !important;
+                padding-top: 5px !important;
             }
         </style>
     </head>
@@ -70,19 +74,12 @@ $COMPANY = new Company($_SESSION['id_com']);
                                             <div class="formpanel"> 
                                                 <form method="post" action="post-and-get/company.php" enctype="multipart/form-data">
                                                     <div class="col-md-12 top-bott50">
-                                                        <div class="col-md-8">
+                                                        <div class="col-md-9">
                                                             <!--Full Name-->
                                                             <div class="">
                                                                 <div class="bottom-top">Full Name</div>
                                                                 <div class="">
                                                                     <input type="text" name="name" class="form-control" placeholder="Please Enter Your Full Name"  value="<?php echo $COMPANY->name; ?>" required="TRUE">
-                                                                </div>
-                                                            </div>
-                                                            <!--User Name-->
-                                                            <div class="">
-                                                                <div class="bottom-top">User Name</div>
-                                                                <div class="">
-                                                                    <input type="text" name="username" class="form-control" placeholder="Please Enter Your User Name" required="TRUE" value="<?php echo $COMPANY->username; ?>">
                                                                 </div>
                                                             </div>
                                                             <!--Email-->
@@ -124,7 +121,7 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                             <div class="">
                                                                 <div class="bottom-top">Company Location(MAP)</div>
                                                                 <div class="">
-                                                                    <input type="text" name="map" class="form-control" placeholder="Company Location" required="TRUE" value="<?php echo $COMPANY->map; ?>">
+                                                                    <input type="text" name="map" class="form-control" placeholder="Company Location" value="<?php echo $COMPANY->map; ?>">
                                                                 </div>
                                                             </div> 
 <!--                                                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15870.908119536647!2d80.205695!3d6.032151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4768397502edf93!2sSublime+Holdings!5e0!3m2!1sen!2slk!4v1522306176522" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
@@ -190,9 +187,9 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                             </div>
 
                                                         </div> 
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-3">
                                                             <div>
-                                                                <div class="bottom-top">Change Your Profile Picture</div>
+                                                                <div class="bottom-top">Change Company Logo</div>
                                                                 <div>
                                                                     <?php
                                                                     if (empty($COMPANY->logo_image)) {
@@ -206,7 +203,7 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                                     }
                                                                     ?>
                                                                 </div>
-                                                                <input type="file" id="logo_image" class="" name="logo_image">
+                                                                <input type="file" id="logo_image" name="logo_image">
                                                                 <input type="hidden" name="logo_image_name" value="<?php echo $COMPANY->logo_image; ?>"/> 
                                                             </div>
                                                         </div>

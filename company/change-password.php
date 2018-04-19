@@ -67,7 +67,7 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                         <div class="">
                                                             <div class="bottom-top">User name</div>
                                                             <div class="">
-                                                                <input type="text" name="username" class="form-control" placeholder="Please Enter User name"  value="<?php echo $COMPANY->username; ?>" disabled="true">
+                                                                <input type="email" name="email" class="form-control" value="<?php echo $COMPANY->email; ?>" disabled="true">
                                                             </div>
                                                         </div>
 
