@@ -199,6 +199,10 @@ section{
 .row.no-gape > div{
     padding: 0;
 }
+
+.padding_style{
+    padding:10px;
+}
 .container.fluid{ max-width: 100%; width: 100%; }
 .block .container{padding:0}
 .container{padding:0}
@@ -468,7 +472,7 @@ input[type="radio"] {
 label {
     position: relative;
     display: inline-block;
-/*    padding: 0 0 0 2em;*/
+    /*    padding: 0 0 0 2em;*/
     height: 1.5em;
     line-height: 1.5;
     cursor: pointer;

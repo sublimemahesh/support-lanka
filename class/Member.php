@@ -51,9 +51,7 @@ class Member {
     }
 
     public function create() {
-
-
-
+ 
         $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`password`,`status`,`rank`) VALUES  ('"
                 . $this->name . "','"
                 . $this->email . "','"
@@ -412,6 +410,7 @@ class Member {
         }
     }
 
+    
     public function ChangeProPic($member, $file) {
 
         $query = "UPDATE  `member` SET "
@@ -428,5 +427,7 @@ class Member {
             return FALSE;
         }
     }
+    
+    
 
 }

@@ -30,7 +30,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
             <div class="container">
 
                 <!-- Modal login-->
-                <form class="form-horizontal form-login"  method="post" action="post-and-get/member.php" enctype="multipart/form-data"> 
+                <form class="form-horizontal form-login" id="register" method="post"> 
 
                     <div class="">
                         <div class="modal-content">
@@ -50,49 +50,43 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                 }
                                 ?>
                                 <div>
-                                    <input type="text" name="name" placeholder="Enter Your Name" autocomplete="off" class="form-control placeholder-no-fix">
+                                    <input type="text" name="name" id="name" placeholder="Enter Your Name" autocomplete="off" class="form-control placeholder-no-fix">
                                 </div>
                                 <br>
 
                                 <div>
-                                    <input type="email" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+                                    <input type="text" name="email" id="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
                                 </div>
                                 <br>
 
                                 <div>
-                                    <input type="text" name="contact_number" placeholder="Contact Number" autocomplete="off" class="form-control placeholder-no-fix">
+                                    <input type="text" name="contact_number" id="contact_number" placeholder="Contact Number" autocomplete="off" class="form-control placeholder-no-fix">
                                 </div>
-                                <br>
-
+                                <br> 
                                 <div>
-                                    <input type="password" name="password" placeholder="Enter Password" autocomplete="off" class="form-control placeholder-no-fix">
+                                    <input type="password" name="password" id="password" placeholder="Enter Password" autocomplete="off" class="form-control placeholder-no-fix">
                                 </div>
-                                <br>
-
-                                <div class="formrow">
-                                    <input type="checkbox" value="agree text c" name="cagree">
-                                    Remember Me
-                                </div>
-
                             </div>
-                            <div class="modal-footer">
-                                <input class="btn btn-theme" type="submit" value="Register" name="register">
+                            <div class="pull-left text-danger" id="message" style="padding:10px;"></div>
+                            <div class="pull-right padding_style" style="padding:10px;"> 
+                                <div class="btn btn-theme" id="btnSubmit">Register Now</div>
+                                <input type="hidden" name="save" value="save"/>
                             </div>
+                            <span class="clearfix"></span>
                         </div>
-                    </div>
-
+                    </div> 
                 </form>
             </div>
         </div>
 
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-
+        <script src="js/register.js" type="text/javascript"></script>
         <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
         <script>
             $.backstretch("assets/img/login-bg.jpg", {speed: 500});
-        </script>
 
+        </script>
 
     </body>
 
