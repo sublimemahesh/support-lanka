@@ -12,7 +12,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Login - Logging - Support Lanka  </title>
+        <title>Register - Support - Lanka</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -25,55 +25,79 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
 
     </head>
-
     <body class="bgc-color">
         <div class="header-base">
             <div class="container">
+                <div class="col-md-6 col-sm-6">
+                    <img class="memeber-hed-logo logo-res new-p-top" src="../images/logo1.png" alt=""/>
+                    <img  Class="logo-res-2 new-logo-p-2" src="../images/logo.png" alt=""/>
+                </div>
                 <div class="col-md-6">
-                    <img class="memeber-hed-logo" src="../images/logo1.png" alt=""/>
-                    <img   src="../images/logo.png" alt=""/>
+                    <form  action="post-and-get/member.php" method="POST">
+                        <?php
+                        if (isset($_GET['message'])) {
+                            $message = new Message($_GET['message']);
+                            ?>
+                            <div class="alert alert-<?php echo $message->status; ?>"><?php echo $message->description; ?></div>
+
+                            <?php
+                        }
+                        ?>
+                        <div class="col-md-5">
+                            <div class="member-reg-login-container">
+                                <div class="new-p-bottom">Email <br/></div>
+                                <div>
+                                    <input class="member-log-txtbox" placeholder="Email" name="email" type="email"><br>
+                                    <div class="new-p-top btn-keep"> <input type="checkbox">keep me logged in</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="member-reg-login-container">
+                                <div class="new-p-bottom">Password<br></div>
+                                <div>
+                                    <input class="member-log-txtbox" placeholder="password" name="password" type="password"><br>
+                                    <div Class="new-p-top">    <a href="forgot-password.php" class="color">Forgot password?</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="member-login-btn-container new-p-btn btn-res">
+                                <input class="btn btn-sm member-login-btn "  name="login" value="Login"type="submit">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <div class="member-log-body-2">
-            <div class="container">
-                <div class="col-md-12 row-marging">
-                    <form class="form-login" action="post-and-get/member.php" method="POST">
-                        <h2 class="form-login-heading">sign in now</h2>
-                        <div class="login-wrap">
-                            <?php
-                            if (isset($_GET['message'])) {
-                                $message = new Message($_GET['message']);
-                                ?>
-                                <div class="alert alert-<?php echo $message->status; ?>"><?php echo $message->description; ?></div>
-
-                                <?php
-                            }
-                            ?>
-                            <input type="email" class="form-control" name="email" placeholder="Email" autofocus>
-                            <br>
-                            <input type="password" class="form-control" name="password" placeholder="Password">
-                            <label class="checkbox">
-                                <span class="pull-right">
-                                    <a href="forgot-password.php"> Forgot Password?</a>
-                                </span>
-                            </label>
-                            <button class="btn btn-theme btn-block" name="login" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
-                            <hr>
-                            <div class="login-social-link centered">
-                                <p>or you can sign in via your social network</p>
-                                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-                                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+        <div class="member-log-body">
+            <div class="container-fluid">
+                <div class="col-md-6 col-sm-12 p-row">
+                    <div class="intro1 ">Srilanka Tourism helps you to publish your business <br>
+                    </div>
+                    <img class="member-img"src="../images/background.jpg" alt=""/>
+                </div>
+                <div class="col-md-6 col-sm-12 ">
+                    <div class="margin-l-20">
+                        <form id="register" method="post"> 
+                            <input name="name" id="name" placeholder="Enter Your Name" class="inputbox" type="text">
+                            <input name="email" id="email" placeholder="Email" class="inputbox" type="text">
+                            <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">
+                            <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
+                            <div class="policy-container">
+                                By clicking Create an account, you agree to our Terms and that you have read our Data Policy
                             </div>
-                            <div class="registration">
-                                Don't have an account yet?<br/>
-                                <label class="checkbox">
-                                    <a href="register.php"> Create an account</a>
-                                </label>
+                            <div class="buttn-bottom">
+                                <div class="pull-left text-danger btn-padding" id="message" ></div>
+                                <div class=" padding_style btn-padding" >
+                                    <div class="buttonreg buttn-type " id="btnSubmit">Register Now</div>
+                                    <input type="hidden" name="save" value="save"/>
+                                </div>
                             </div>
-                        </div>
-                    </form>	  
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

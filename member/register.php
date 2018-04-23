@@ -28,9 +28,9 @@ include_once(dirname(__FILE__) . '/../class/include.php');
     <body class="bgc-color">
         <div class="header-base">
             <div class="container">
-                <div class="col-md-6">
-                    <img class="memeber-hed-logo" src="../images/logo1.png" alt=""/>
-                    <img   src="../images/logo.png" alt=""/>
+                <div class="col-md-6 col-sm-6">
+                    <img class="memeber-hed-logo logo-res new-p-top" src="../images/logo1.png" alt=""/>
+                    <img  Class="logo-res-2 new-logo-p-2" src="../images/logo.png" alt=""/>
                 </div>
                 <div class="col-md-6">
                     <form  action="post-and-get/member.php" method="POST">
@@ -45,24 +45,26 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                         ?>
                         <div class="col-md-5">
                             <div class="member-reg-login-container">
-                                <div class="">Email <br>
+                                <div class="new-p-bottom">Email <br/></div>
+                                <div>
                                     <input class="member-log-txtbox" placeholder="Email" name="email" type="email"><br>
-                                    <input type="checkbox">keep me logged in
+                                    <div class="new-p-top"> <input type="checkbox">keep me logged in</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-5">
                             <div class="member-reg-login-container">
-                                <div class="">Password<br>
+                                <div class="new-p-bottom">Password<br></div>
+                                <div>
                                     <input class="member-log-txtbox" placeholder="password" name="password" type="password"><br>
-                                    <a href="forgot-password.php" class="color">Forgot password?</a>
+                                    <div Class="new-p-top">    <a href="forgot-password.php" class="color">Forgot password?</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="member-login-btn-container ">
-                                <input class="btn btn-sm member-login-btn"  name="login" value="Login"type="submit">
+                            <div class="member-login-btn-container new-p-btn btn-res">
+                                <input class="btn btn-sm member-login-btn "  name="login" value="Login"type="submit">
                             </div>
                         </div>
                     </form>

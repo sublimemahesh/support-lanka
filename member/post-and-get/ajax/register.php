@@ -53,6 +53,7 @@ if ($_POST['save']) {
             $MEMBER->create();
 
             if ($MEMBER->id) {
+                $MEMBER->login($MEMBER->email,$MEMBER->password);
                 $response['status'] = 'success';
                 echo json_encode($response);
                 exit();
