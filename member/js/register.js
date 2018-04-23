@@ -14,7 +14,7 @@ jQuery(document).ready(function () {
                     $('#message').text(result.message);
                     return false;
                 } else if (result.status === 'success') {
-                    window.location.replace("login.php");
+                    window.location.replace("test.php");
                 }
             }
         });

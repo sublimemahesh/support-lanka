@@ -1,3 +1,4 @@
+
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 ?>
@@ -11,7 +12,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Forgot Password || My Account || Support Lanka</title>
+        <title>Register - www.srilankatourism.travel</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -21,6 +22,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <!-- Custom styles for this template -->
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/style-responsive.css" rel="stylesheet">
+        <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
 
     </head>
 
@@ -31,48 +33,47 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                     <img class="memeber-hed-logo" src="../images/logo1.png" alt=""/>
                     <img   src="../images/logo.png" alt=""/>
                 </div>
+                <div class="col-md-6">
+
+                </div>
             </div>
         </div>
 
         <div class="member-log-body-2">
             <div class="container">
                 <div class="col-md-12 row-new-margin">
-                    <form id="sign_in" class="form-login" action="post-and-get/change-password.php" method="POST">
+
+                    <form class="form-login" action="post-and-get/reset-password.php" method="POST">
                         <!-- Modal1 -->
+
                         <div class="">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title">Please check your email</h4>
+                                    <a href="login.php"><button type="button" class="close" >&times;</button></a>
+                                    <h4 class="modal-title">Forgot Password ?</h4>
                                 </div>
-                                <div class="modal-body">
-                                    <?php
-                                    if (isset($_GET['message'])) {
+                                <?php
+                                if (isset($_GET['message'])) {
 
-                                        $MESSAGE = New Message($_GET['message']);
-                                        ?>
-                                        <div class="alert alert-<?php echo $MESSAGE->status; ?>" role = "alert">
-                                            <?php echo $MESSAGE->description; ?>
-                                        </div>
-                                        <?php
-                                    }
+                                    $MESSAGE = New Message($_GET['message']);
                                     ?>
-                                    <input type="text" name="code" placeholder="Password Reset code" autocomplete="off" class="form-control placeholder-no-fix"> 
-                                    <br>
-                                    <div>
-                                        <input type="password" name="password" placeholder="New Password" autocomplete="off" class="form-control placeholder-no-fix">
+                                    <div class="alert alert-<?php echo $MESSAGE->status; ?>" role = "alert">
+                                        <?php echo $MESSAGE->description; ?>
                                     </div>
-                                    <br>
-                                    <div>
-                                        <input type="password" name="confirmpassword" placeholder="Confirm Password" autocomplete="off" class="form-control placeholder-no-fix">
-                                    </div>
-                                    <br>
+                                    <?php
+                                }
+                                ?>
+                                <div class="modal-body">
+                                    <p>Enter your e-mail address below to reset your password.</p>
+                                    <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+
                                 </div>
                                 <div class="modal-footer">
-                                    <button class="btn btn-theme" name="PasswordReset" type="submit">SIGN IN</button>
+                                    <button class="btn btn-theme" type="submit">Send Email</button>
                                 </div>
                             </div>
                         </div>
-                    </form>	  	 
+                    </form>	  
                 </div>
             </div>
         </div>
@@ -86,5 +87,9 @@ include_once(dirname(__FILE__) . '/../class/include.php');
     </body>
 
 </html>
+
+
+
+
 
 
