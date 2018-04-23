@@ -1,3 +1,4 @@
+
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 ?>
@@ -11,7 +12,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Register || Support Lanka</title>
+        <title>Register - Support - Lanka</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -21,75 +22,96 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <!-- Custom styles for this template -->
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/style-responsive.css" rel="stylesheet">
+        <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
 
     </head>
-
-    <body>
-
-        <div id="login-page">
+    <body class="bgc-color">
+        <div class="header-base">
             <div class="container">
+                <div class="col-md-6">
+                    <img class="memeber-hed-logo" src="../images/logo1.png" alt=""/>
+                    <img   src="../images/logo.png" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <form  action="post-and-get/member.php" method="POST">
+                        <?php
+                        if (isset($_GET['message'])) {
+                            $message = new Message($_GET['message']);
+                            ?>
+                            <div class="alert alert-<?php echo $message->status; ?>"><?php echo $message->description; ?></div>
 
-                <!-- Modal login-->
-                <form class="form-horizontal form-login" id="register" method="post"> 
-
-                    <div class="">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <a href="login.php"><button type="button" class="close">&times;</button></a>
-                                <h4 class="modal-title">Create Account</h4>
-                            </div>
-                            <div class="modal-body">
-                                <?php
-                                if (isset($_GET['message'])) {
-                                    $message = new Message($_GET['message']);
-                                    ?>
-                                    <div class="alert alert-<?php echo $message->status; ?>"><?php echo $message->description; ?></div>
-
-                                    <?php
-                                }
-                                ?>
-                                <div>
-                                    <input type="text" name="name" id="name" placeholder="Enter Your Name" autocomplete="off" class="form-control placeholder-no-fix">
-                                </div>
-                                <br>
-
-                                <div>
-                                    <input type="text" name="email" id="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-                                </div>
-                                <br>
-
-                                <div>
-                                    <input type="text" name="contact_number" id="contact_number" placeholder="Contact Number" autocomplete="off" class="form-control placeholder-no-fix">
-                                </div>
-                                <br> 
-                                <div>
-                                    <input type="password" name="password" id="password" placeholder="Enter Password" autocomplete="off" class="form-control placeholder-no-fix">
+                            <?php
+                        }
+                        ?>
+                        <div class="col-md-5">
+                            <div class="member-reg-login-container">
+                                <div class="">Email <br>
+                                    <input class="member-log-txtbox" placeholder="Email" name="email" type="email"><br>
+                                    <input type="checkbox">keep me logged in
                                 </div>
                             </div>
-                            <div class="pull-left text-danger" id="message" style="padding:10px;"></div>
-                            <div class="pull-right padding_style" style="padding:10px;"> 
-                                <div class="btn btn-theme" id="btnSubmit">Register Now</div>
-                                <input type="hidden" name="save" value="save"/>
-                            </div>
-                            <span class="clearfix"></span>
                         </div>
-                    </div> 
-                </form>
+
+                        <div class="col-md-5">
+                            <div class="member-reg-login-container">
+                                <div class="">Password<br>
+                                    <input class="member-log-txtbox" placeholder="password" name="password" type="password"><br>
+                                    <a href="forgot-password.php" class="color">Forgot password?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="member-login-btn-container ">
+                                <input class="btn btn-sm member-login-btn"  name="login" value="Login"type="submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="member-log-body">
+            <div class="container">
+                <div class="col-md-6">
+                    <div class="intro1">Srilanka Tourism helps you to publish your business<br>
+                    </div>
+                    <img class="member-img"src="../images/background.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <div class="margin-l-20">
+                        <form id="register" method="post"> 
+                            <input name="name" id="name" placeholder="Enter Your Name" class="inputbox" type="text">
+                            <input name="email" id="email" placeholder="Email" class="inputbox" type="text">
+                            <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">
+                            <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
+                            <div class="policy-container">
+                                By clicking Create an account, you agree to our Terms and that you have read our Data Policy
+                            </div>
+                            <div class="buttn-bottom">
+                                <div class="pull-left text-danger btn-padding" id="message" ></div>
+                                <div class="pull-right padding_style btn-padding" >
+                                    <div class="buttonreg buttn-type " id="btnSubmit">Register Now</div>
+                                    <input type="hidden" name="save" value="save"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-        <script src="js/register.js" type="text/javascript"></script>
         <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
-        <script>
-            $.backstretch("assets/img/login-bg.jpg", {speed: 500});
-
-        </script>
-
+        <script src="js/register.js" type="text/javascript"></script>
+        <script src="js/add-member.js" type="text/javascript"></script>
+        <script src="assets/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
     </body>
 
 </html>
+
+
+
+
 
 
