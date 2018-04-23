@@ -2,7 +2,7 @@
     <div class="block">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 column">
+                <div class="col-lg-3 col-sm-3 column">
                     <div class="widget">
                         <div class="about_widget">
                             <div class="footer-title">
@@ -21,7 +21,7 @@
                         </div><!-- About Widget -->
                     </div>
                 </div>
-                <div class="col-lg-3 column">
+                <div class="col-lg-3 col-sm-3 column">
                     <div class="widget">
                         <div class="about_widget">
                             <h3 class="footer-title">Contact Us</h3>
@@ -39,7 +39,7 @@
                         </div><!-- About Widget -->
                     </div>
                 </div>
-                <div class="col-lg-3 column">
+                <div class="col-lg-3 col-sm-3 column">
                     <div class="widget">
                         <h3 class="footer-title">Quick Links</h3>
                         <div class="link_widgets">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 column">
+                <div class="col-lg-3 col-sm-3 column">
                     <div class="widget">
                         <h3 class="footer-title">Find Jobs</h3>
                         <div class="link_widgets">

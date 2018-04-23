@@ -2369,6 +2369,9 @@ img#profil_pic1 {
     padding-top: 30px;
 }
 
+.p-left{
+    padding-left: 50px;
+}
 .header-base{
     width:100%;
     top:0;
@@ -2401,11 +2404,11 @@ img#profil_pic1 {
 }
 .member-log-body{
     position: absolute;
-    width: 100%;
-    margin-top: 80px;
-}
+
+    margin-top: 50px;
+}   
 .inputbox {
-    width: 100%;
+    width: 90%;
     height: 40px;
     border-radius: 5px 5px 5px 5px;
     background: white;
@@ -2437,7 +2440,9 @@ img#profil_pic1 {
     margin-bottom: 30px;
 }
 .margin-l-20{
-    margin-left:20px;
+    margin-left:0px;
+    margin-right: 0px;
+    margin-top: 30px;
 }
 .intro1{
     left: 178px;
@@ -2445,8 +2450,7 @@ img#profil_pic1 {
     font-family: verdana;
     font-size: 20px;
     color: #142170;
-    height: 75px;
-    width: 550px;
+    height: 50px;
 }
 .member-img{
     width: 90%;
@@ -2471,6 +2475,7 @@ img#profil_pic1 {
 }
 .btn-padding{
     padding: 10px;
+    float: right;
 }
 .bgc-color{
     background-color: #d7d7d7;
@@ -2490,12 +2495,71 @@ img#profil_pic1 {
 .color{
     color:white;
 }
-@media (min-width: 320px) and (max-width: 640px) {
+.new-p-bottom{
+    padding-bottom: 5px;
+}
+.new-p-top{
+    padding-top: 5px;
+}
+.new-p-btn{
+    padding-top: 35px;
+}
+.new-logo-p-2{
+    padding-top: 8px;
+}
+.p-row{
+    padding-left: 50px;
+
+}
+.p-row2{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+@media (min-width: 280px) and (max-width: 640px) {
     .member-login-btn-container {
         padding-top: 0px !important;
     }
     .member-img {
-        margin-left: 55px !important;
-        width: 60% !important;
+        margin-left: -22px !important;
+        width: 100% !important;
+        margin-top: 50px;
+    }
+    .logo-res{
+        margin-left: 80px;
+    }
+    .logo-res-2{
+        padding-left: 40px;
+    }
+    .btn-res{
+        margin-left: 80px;
+    }
+    .btn-padding{
+        padding: 0px;
+        padding-bottom: 20px;
+    }
+    .btn-keep{
+        display: none;
+    }
+}
+@media (min-width: 480px) and (max-width: 1000px) {
+
+    .new-p-btn{
+        padding-top: 0px;
+        padding-bottom: 10px;
+        float: right;
+    }
+    .member-img {
+        margin-left: 43px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 480px) {
+    .member-img{
+        margin-left: 155px;
+    }
+    .logo-res-2{
+        padding-left: 110px;
     }
 }
