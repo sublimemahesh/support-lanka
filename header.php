@@ -1,12 +1,14 @@
 <div class="responsive-header">
-    <div class="responsive-menubar">
-        <div class="res-logo"><img src="images/resource/logo11.png" alt="" /></div>
-        <div class="menu-resaction">
-            <div class="res-openmenu">
-                <img src="images/icon.png" alt="" /> Menu
-            </div>
-            <div class="res-closemenu">
-                <img src="images/icon2.png" alt="" /> Close
+    <div class="row">
+        <div class="col-md-12">
+            <div class="res-logo col-md-9"><img src="images/resource/logo11.png" alt="" /></div>
+            <div class="menu-resaction col-md-3">
+                <div class="res-openmenu">
+                    <i class="la la-list nav-icon"></i>
+                </div>
+                <div class="res-closemenu">
+                    <img src="images/icon2.png" alt="" />
+                </div>
             </div>
         </div>
     </div>

@@ -100,8 +100,6 @@ $MEMBER = new Member($_SESSION['id']);
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>

@@ -66,7 +66,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                                         <img src="upload/industry/thumb/<?php echo $industry['image_name']; ?>" class="img-responsive img-industy">
                                                                     </i>
                                                                     <span><?php echo $industry['name']; ?></span>
-                                                                    <p>(22 views)</p>
+                                                                 
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -103,7 +103,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
                             <div class="col-lg-12">
                                 <div class="simple-text-block">
                                     <h3>Make a Difference with Your Online Resume!</h3>
-                                    <span>Your resume in minutes with JobHunt resume assistant is ready!</span>
                                     <a href="member/register.php" title="">Create an Account</a>
                                 </div>
                             </div>
@@ -120,7 +119,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                 <div class="heading">
                                     <h2>Vacancy</h2>
                                     <span>Leading Employers already using job and talent.</span>
-                                </div><!-- Heading -->
+                                </div>
                                 <div class="col-md-10 col-md-offset-1 column">
 
                                     <div class="emply-list-sec style2">
@@ -140,12 +139,12 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                             <a href="#" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
                                                         </div>
                                                         <div class="emply-list-info">
-                                                            <div class="text-right"><?php echo $vacant['job_type']; ?></div>
-
-                                                            <h3><a href="#" title=""><?php echo $vacant['title'] ?></a></h3>
+                                                            <div class="text-right text-c"><?php echo $vacant['job_type']; ?></div>
+                                                            <h3><a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>"><?php echo $vacant['title'] ?></a></h3>
                                                             <span><?php echo $vacant['designation']; ?></span>
+                                                            <h3><a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>"><?php echo $vacant['salary'];?></a></h3>
                                                             <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
-                                                            <?php echo substr($vacant['description'], 0, 160) . "..." ?>
+                                                            
                                                             <div class="emply-pstn vacnt-btn">
 
                                                                 <div class="shortlists">
@@ -199,7 +198,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                         <img src="upload/feedback/<?php echo $feed['image_name'] ?>" alt="" />
                                                         <h3><?php echo $feed['name'] ?></h3>
                                                         <p><?php echo substr($feed['comment'], 0, 200) . "..." ?></p>
-                                                    </div><!-- Reviews -->
+                                                    </div>
                                                 </div>
                                                 <?php
                                             }
@@ -271,7 +270,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
             <?php
             include './footer.php';
             ?>
-
         </div>
 
 
