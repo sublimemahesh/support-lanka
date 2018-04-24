@@ -126,7 +126,7 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
                                                                 }
                                                             } else {
                                                                 ?> 
-                                                                <b>No Tour Package images in the database.</b> 
+                                                                <b>No Company Details in the database.</b> 
                                                                 <?php
                                                             }
                                                             ?> 
