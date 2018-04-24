@@ -1,4 +1,3 @@
-
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 ?>
@@ -75,7 +74,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <div class="member-log-body">
             <div class="container">
                 <div class="col-md-6">
-                    <div class="intro1">Srilanka Tourism helps you to publish your business<br>
+                    <div class="intro1">Helps you to publish your Skills<br>
                     </div>
                     <img class="member-img"src="../images/background.jpg" alt=""/>
                 </div>
@@ -111,9 +110,3 @@ include_once(dirname(__FILE__) . '/../class/include.php');
     </body>
 
 </html>
-
-
-
-
-
-

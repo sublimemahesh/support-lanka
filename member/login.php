@@ -75,7 +75,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <div class="member-log-body">
             <div class="container-fluid">
                 <div class="col-md-6 col-sm-12 p-row">
-                    <div class="intro1 ">Srilanka Tourism helps you to publish your business <br>
+                    <div class="intro1 ">Helps you to publish your Skills <br>
                     </div>
                     <img class="member-img"src="../images/background.jpg" alt=""/>
                 </div>

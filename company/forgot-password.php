@@ -1,6 +1,5 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +11,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Forgot Password || My Company || Support Lanka</title>
+        <title> Forgot Password - Support Lanka</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -22,66 +21,69 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <!-- Custom styles for this template -->
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/style-responsive.css" rel="stylesheet">
+        <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
 
     </head>
 
-    <body>
-
-        <div id="login-page">
+    <body class="bgc-color">
+        <div class="header-base">
             <div class="container">
+                <div class="col-md-6">
+                    <img class="memeber-hed-logo" src="../images/logo1.png" alt=""/>
+                    <img   src="../images/logo.png" alt=""/>
+                </div>
+            </div>
+        </div>
 
-                <form class="form-login" action="post-and-get/reset-password.php" method="POST">
-                    <!-- Modal1 -->
-
-                    <div class="">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <a href="login.php"><button type="button" class="close" >&times;</button></a>
-                                <h4 class="modal-title">Forgot Password ?</h4>
-                            </div>
-                            <?php
-                            if (isset($_GET['message'])) {
-
-                                $MESSAGE = New Message($_GET['message']);
-                                ?>
-                                <div class="alert alert-<?php echo $MESSAGE->status; ?>" role = "alert">
-                                    <?php echo $MESSAGE->description; ?>
+        <div class="member-log-body-2">
+            <div class="container">
+                <div class="col-md-12 row-new-margin">
+                    <form class="form-login" action="post-and-get/reset-password.php" method="POST">
+                        <!-- Modal1 -->
+                        <div class="">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a href="login.php"><button type="button" class="close" >&times;</button></a>
+                                    <h4 class="modal-title">Forgot Password ?</h4>
                                 </div>
                                 <?php
-                            }
-                            ?>
-                            <div class="modal-body">
-                                <p>Enter your e-mail address below to reset your password.</p>
-                                <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+                                if (isset($_GET['message'])) {
 
-                            </div>
-                            <div class="modal-footer">
-                               
-                                <button class="btn btn-theme" type="submit">Send Email</button>
+                                    $MESSAGE = New Message($_GET['message']);
+                                    ?>
+                                    <div class="alert alert-<?php echo $MESSAGE->status; ?>" role = "alert">
+                                        <?php echo $MESSAGE->description; ?>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                                <div class="modal-body">
+                                    <p>Enter your e-mail address below to reset your password.</p>
+                                    <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-theme" type="submit">Send Email</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- modal1 -->
-
-
-                </form>	  	
-
+                    </form>	  
+                </div>
             </div>
         </div>
 
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-
         <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
-        <script>
-            $.backstretch("assets/img/login-bg.jpg", {speed: 500});
-        </script>
-
-
+        <script src="js/register.js" type="text/javascript"></script>
+        <script src="js/add-member.js" type="text/javascript"></script>
+        <script src="assets/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
     </body>
 
 </html>
+
+
+
+
 
 
