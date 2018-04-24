@@ -1,4 +1,3 @@
-
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 ?>
@@ -39,7 +38,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <div class="member-log-body-2">
             <div class="container">
                 <div class="col-md-12 row-marging">
-                    <form class="form-login" action="post-and-get/member.php" method="POST">
+                    <form class="form-login" action="post-and-get/company.php" method="POST">
                         <h2 class="form-login-heading">sign in now</h2>
                         <div class="login-wrap">
                             <?php

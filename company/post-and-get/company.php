@@ -2,62 +2,6 @@
 
 include_once(dirname(__FILE__) . '/../../class/include.php');
 
-
-if (isset($_POST['register'])) {
-    $COMPANY = new Company(NULL);
-    $VALID = new Validator();
-
-
-    $pw = md5($_POST['password']);
-    $cpw = md5($_POST['password']);
-    $email = $_POST['email'];
-    $cemail = $_POST['email'];
-
-
-    if ($cpw == $pw) {
-
-        if ($email == $cemail) {
-
-            $COMPANY->name = filter_input(INPUT_POST, 'name');
-            $COMPANY->email = $email;
-            $COMPANY->contact_number = filter_input(INPUT_POST, 'contact_number');
-            $COMPANY->password = $cpw;
-
-
-            $VALID->check($COMPANY, [
-                'name' => ['required' => TRUE],
-                'email' => ['required' => TRUE],
-                'contact_number' => ['required' => TRUE],
-                'password' => ['required' => TRUE]
-            ]);
-
-            if ($VALID->passed()) {
-                $COMPANY->create();
-
-                if (!isset($_SESSION)) {
-                    session_start();
-                }
-                $VALID->addError("Your data was saved successfully", 'success');
-                $_SESSION['ERRORS'] = $VALID->errors();
-
-                header('Location: ' . $_SERVER['HTTP_REFERER']);
-            } else {
-
-                if (!isset($_SESSION)) {
-                    session_start();
-                }
-
-                $_SESSION['ERRORS'] = $VALID->errors();
-            }
-            header('location: ../profile.php?message=10');
-        } else {
-            header('Location: ../register.php?message=19');
-        }
-    } else {
-        header('Location: ../register.php?message=17');
-    }
-}
-
 if (isset($_POST['login'])) {
 
     $COMPANY = new Company(NULL);
@@ -65,13 +9,11 @@ if (isset($_POST['login'])) {
     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
     $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
 
-
-
     if ($COMPANY->login($email, $password)) {
         header('Location: ../profile.php?message=5');
         exit();
     } else {
-        header('Location: ../login.php?message=7');
+        header('Location: ../login_1.php?message=7');
         exit();
     }
 }

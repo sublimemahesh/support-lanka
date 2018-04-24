@@ -42,7 +42,7 @@ a, a:hover, a:focus {
 
 /* Bootstrap Modifications */
 .modal-header {
-    background: #68dff0;
+    background: #003162;
 }
 
 .modal-title {
@@ -90,8 +90,8 @@ a, a:hover, a:focus {
 
 .btn-theme {
     color: #fff;
-    background-color: #68dff0;
-    border-color: #48bcb4;
+    background-color: #003162;
+    border-color: #003162;
 }
 .btn-theme:hover,
 .btn-theme:focus,
@@ -99,8 +99,8 @@ a, a:hover, a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
     color: #fff;
-    background-color: #48bcb4;
-    border-color: #48bcb4;
+    background-color: #003162b3;
+    border-color: #003162b3;
 }
 
 .btn-theme02 {
@@ -1929,7 +1929,7 @@ label {
 /*LOGIN CONFIGURATION PAGE*/
 .form-login {
     max-width: 330px;
-    margin: 100px auto 0;
+    margin: 0px auto 0;
     background: #fff;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -1939,7 +1939,7 @@ label {
     margin: 0;
     padding: 25px 20px;
     text-align: center;
-    background: #68dff0;
+    background: #003162;
     border-radius: 5px 5px 0 0;
     -webkit-border-radius: 5px 5px 0 0;
     color: #fff;
@@ -2320,4 +2320,199 @@ img#profil_pic1 {
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.p-left{
+    padding-left: 50px;
+}
+.header-base{
+    width:100%;
+    top:0;
+    left:0;
+    color:white;
+    z-index:7;
+    font-family:verdana;
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    background-color: #003162;
+}
+.member-reg-login-container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.member-login-btn-container{
+    padding-top: 27px;
+}
+.member-login-btn{
+    background-color: #2066aa;
+    color: #fff;
+}
+.member-login-btn:hover{
+    background-color: #1e7eda;
+    color: #fff;
+}
+.member-login-btn:focus{
+    background-color: #2066aa;
+    color: #fff;
+}
+.member-log-body{
+    position: absolute;
+
+    margin-top: 50px;
+}
+.inputbox {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px;
+    background: white;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+}
+.buttonreg {
+    width: 250px;
+    height: 40px;
+    left: 750px;
+    top: 625px;
+    background: green;
+    font-family: verdana;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    cursor: pointer;
+    outline: none;
+}
+.policy-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.margin-l-20{
+    margin-left:0px;
+    margin-right: 0px;
+    margin-top: 30px;
+}
+.intro1{
+    left: 178px;
+    top: 20px;
+    font-family: verdana;
+    font-size: 20px;
+    color: #142170;
+    height: 50px;
+}
+.member-img{
+    width: 90%;
+    border-radius: 6px;
+}
+.memeber-hed-logo{
+    width: 90px;
+    margin:5px;
+}
+.member-log-txtbox{
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+
+}
+.buttn-bottom{
+    padding-bottom: 10px;
+}
+.buttn-type{
+    padding-top:5px; 
+    padding-left: 52px;
+}
+.btn-padding{
+    padding: 10px;
+    float: right;
+}
+.bgc-color{
+    background-color: #d7d7d7;
+}
+.member-log-body-2{
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
+}
+.row-marging{
+    margin-bottom: 20px;
+}
+
+.row-new-margin{
+    margin-top: 50px;
+}
+.color{
+    color:white;
+}
+
+.new-p-bottom{
+    padding-bottom: 5px;
+}
+.new-p-top{
+    padding-top: 5px;
+}
+.new-p-btn{
+    padding-top: 35px;
+}
+.new-logo-p-2{
+    padding-top: 8px;
+}
+.p-row{
+    padding-left: 50px;
+
+}
+.p-row2{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+@media (min-width: 280px) and (max-width: 640px) {
+    .member-login-btn-container {
+        padding-top: 0px !important;
+    }
+    .member-img {
+        margin-left: -22px !important;
+        width: 100% !important;
+        margin-top: 50px;
+    }
+    .logo-res{
+        margin-left: 80px;
+    }
+    .logo-res-2{
+        padding-left: 40px;
+    }
+    .btn-res{
+        margin-left: 80px;
+    }
+    .btn-padding{
+        padding: 0px;
+        padding-bottom: 20px;
+    }
+    .btn-keep{
+        display: none;
+    }
+}
+@media (min-width: 480px) and (max-width: 1000px) {
+
+    .new-p-btn{
+        padding-top: 0px;
+        padding-bottom: 10px;
+        float: right;
+    }
+    .member-img {
+        margin-left: 43px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 480px) {
+    .member-img{
+        margin-left: 155px;
+    }
+    .logo-res-2{
+        padding-left: 110px;
+    }
 }
