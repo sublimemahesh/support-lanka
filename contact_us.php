@@ -43,7 +43,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3>Contact Us</h3>
+                                    <h3 id="txt-bottom">Contact Us</h3>
                                 </div>
                             </div>
                         </div>
@@ -68,8 +68,8 @@ include_once(dirname(__FILE__) . '/class/include.php');
             <section>
                 <div class="block">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 column">
+                        <div class="row" id="contact-input">
+                            <div class="col-lg-6 column " >
                                 <div class="contact-form">
                                     <h3>Send Your message</h3>
                                     <div class="row">
@@ -137,7 +137,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 column">
+                            <div class="col-lg-6 column marging-top">
                                 <div class="contact-textinfo style2">
                                   
                                     <ul>

@@ -268,8 +268,13 @@ iframe{
     width:100%;
     border:0;
 }
+
+.marging-top{
+    padding-top: 85px;
+    padding-left: 35px;
+}
 i{font-style:italic}
-{/*! float:left; *//*! height:auto */}
+/*{! float:left; ! height:auto }*/
 :-webkit-input-placeholder{opacity:1}
 :-moz-placeholder{opacity:1}
 :-ms-input-placeholder{opacity:1}
@@ -626,8 +631,9 @@ label::after {
 }
 .logo {
     float: left;
-    margin: 3px 0;
+    margin: -22px 0;
     position: relative;
+    padding-left: 5px;
 }
 .logo a {
     float: left;
@@ -1431,6 +1437,40 @@ label::after {
     font-weight: bold;
     margin: 0;
     margin-bottom: 20px;
+}
+.text-color{
+    float: left;
+    width: 100%;
+    font-family: Quicksand;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.sticky1{
+    float: left;
+    font-family: Open Sans;
+    font-size: 14px;
+    padding: 13px 27px;
+    -webkit-border-radius: 23px;
+    color: #fff;
+    -moz-border-radius: 23px;
+    -ms-border-radius: 23px;
+    -o-border-radius: 23px;
+    border-radius: 23px;
+    letter-spacing: 0.3px;
+}
+.btn2{
+    border: 2px solid #91BF38;
+    color: #91BF38;
+    padding: 10px;
+}
+#bttn{
+    border-color: white;
+    color: black;
+    background-color: #fff6;
 }
 .simple-text-block span {
     float: left;
@@ -4557,7 +4597,7 @@ section.overlape {
     font-size: 30px;
     text-align: center;
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 .search_widget_job {
     float: left;
@@ -11000,14 +11040,16 @@ footer.ft .scrollup {
     display: none;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 8px;
 }
+
 .forsticky.sticky .logo a img.showsticky {
     display: block;
 }
 .forsticky.sticky .logo a img.hidesticky {
     opacity: 0;
 }
+
 *:focus {outline:0;}
 .top-company-sec button.slick-arrow:hover {
     background: #91BF38;
@@ -11307,7 +11349,7 @@ footer.ft .scrollup {
     background: #0b1b46;
     padding: 0 30px;
     overflow-y: scroll;
-    height: 620px;
+    height: 535px;
 }
 .responsive-opensec .btn-extars {
     float: left;
@@ -11575,4 +11617,10 @@ header.style4 .account-btns > li a,
     -ms-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
+}
+.member-with{
+    width: 67%;
+}
+#footer-logo-width{
+    width: 70%;
 }

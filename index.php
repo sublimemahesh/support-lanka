@@ -32,16 +32,15 @@ include_once(dirname(__FILE__) . '/class/include.php');
         </style>
     </head>
     <body>
-
         <div class="theme-layout" id="scrollup">
-
             <?php
             include './header.php';
             include './slider.php';
             ?>
+
             <!--Industry-->
             <section id="scroll-here">
-                <div class="block">
+                <div class="block pad-new-top">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -57,8 +56,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                             if (count($INDUSTRY) > 0) {
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     if ($key < 8) {
-                                                        ?>
-                                                                                                                                                                                                                                                 <!--  <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
+                                                        ?>                                                                                                                                                                                                                                                                                                                                                                       <!--  <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
                                                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                                             <div class="p-category">
                                                                 <a href="skills.php?industry=<?php echo $industry['id']; ?>" title="">
@@ -66,7 +64,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                                         <img src="upload/industry/thumb/<?php echo $industry['image_name']; ?>" class="img-responsive img-industy">
                                                                     </i>
                                                                     <span><?php echo $industry['name']; ?></span>
-                                                                 
+
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -80,7 +78,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 <?php
                                             }
                                             ?> 
-
                                         </div>
                                     </div>
                                 </div>
@@ -97,13 +94,18 @@ include_once(dirname(__FILE__) . '/class/include.php');
             <!--login-->
             <section>
                 <div class="block double-gap-top double-gap-bottom">
-                    <div data-velocity="-.1" style="background: url(images/resource/parallax1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color"></div>
+                    <div data-velocity="-.1" style="background: url(images/resource/background_image.jpg)  ;" class="parallax scrolly-invisible layer color"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
+                                <center>
+                                    <img src="images/logo11.png" alt=""/>
+                                </center>
                                 <div class="simple-text-block">
-                                    <h3>Make a Difference with Your Online Resume!</h3>
-                                    <a href="member/register.php" title="">Create an Account</a>
+                                    <h3>Make a Difference Your Life With Us.!</h3>
+                                    <h4 class="text-color"><b>Sharing Your Life With Us.</b> </h4>
+                                    <h5 class="text-color"><b>Support Lanka.</b> </h5>
+                                    <a href="member/register.php" title="" id="bttn">Create an Account</a>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +114,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
             </section>
             <!--company-->
             <section>
-                <div class="block">
+                <div class="block pad-new-top">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -120,8 +122,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                     <h2>Vacancy</h2>
                                     <span>Leading Employers already using job and talent.</span>
                                 </div>
-                                <div class="col-md-10 col-md-offset-1 column">
-
+                                <div class="col-md-10 col-md-offset-1 column pad-bottom">
                                     <div class="emply-list-sec style2">
                                         <?php
                                         $VACANCY = Vacancy::all(NULL);
@@ -129,7 +130,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                             foreach ($VACANCY as $key => $vacant) {
                                                 if ($key < 3) {
                                                     ?>
-
                                                     <div class="emply-list">
                                                         <div class="emply-list-thumb">
                                                             <?php
@@ -139,18 +139,16 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                             <a href="#" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
                                                         </div>
                                                         <div class="emply-list-info">
-                                                            <div class="text-right text-c"><?php echo $vacant['job_type']; ?></div>
-                                                            <h3><a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>"><?php echo $vacant['title'] ?></a></h3>
-                                                            <span><?php echo $vacant['designation']; ?></span>
-                                                            <h3><a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>"><?php echo $vacant['salary'];?></a></h3>
-                                                            <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
-                                                            
-                                                            <div class="emply-pstn vacnt-btn">
+                                                            <div class="emply-pstn">
 
-                                                                <div class="shortlists">
+                                                                <div class="shortlists" id="btn-view"style="float: right;">
                                                                     <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title="">View Details <i class="la la-plus"></i></a>
                                                                 </div>
                                                             </div>
+                                                            <h3><a href="#" title=""><?php echo $vacant['title'] ?></a></h3>
+                                                            <span><?php echo $vacant['designation']; ?> / <?php echo $vacant['job_type']; ?></span>
+                                                            <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
+                                                            <?php echo substr($vacant['description'], 0, 160) . "..." ?>
                                                         </div>
                                                     </div>
                                                     <?php
@@ -162,7 +160,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                             <?php
                                         }
                                         ?> 
-
                                         <div class="col-lg-12">
                                             <div class="browse-all-cat">
                                                 <a href="vacancy.php" title="">All Vacancy</a>
@@ -209,9 +206,8 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                         <?php
                                     }
                                     ?> 
-
                                 </div> 
-                                <div class="simple-text-block">
+                                <div class="simple-text-block ">
                                     <a href="add-feedback.php" title="">Add Comment</a>
                                 </div>
                             </div>
@@ -221,7 +217,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
             </section>
 
             <section>
-                <div class="block">
+                <div class="block pad-new-top">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -257,7 +253,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                     <div class="container fluid">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="simple-text">
+                                <div class="simple-text pad-new-top-min">
                                     <h3>Gat a question?</h3>
                                     <span>We're here to help. Check out our FAQs, send us an email or call us at 0913124477</span>
                                 </div>
@@ -266,7 +262,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
                     </div>
                 </div>
             </section>
-
             <?php
             include './footer.php';
             ?>
