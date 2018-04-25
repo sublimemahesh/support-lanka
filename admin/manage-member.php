@@ -63,26 +63,12 @@ $MEMBER = new Member(NULL)
                                                 <th>Name</th> 
                                                 <th>email</th>
                                                 <th>Contact Number</th> 
-                                                <th>Username</th>
                                                 <th>Status</th> 
                                                 <th>Rank</th> 
                                                 <th>Options</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Name</th> 
-                                                <th>email</th>
-                                                <th>Contact Number</th> 
-                                                <th>Username</th>
-                                                <th>Status</th> 
-                                                <th>Rank</th> 
-                                                <th>Options</th>
-                                            </tr>
-                                        </tfoot>
                                         <tbody>
-
                                             <?php
                                             foreach ($MEMBER->all() as $key => $member) {
                                                 ?>
@@ -91,7 +77,6 @@ $MEMBER = new Member(NULL)
                                                     <td><?php echo substr($member['name'], 0, 20); ?></td> 
                                                     <td><?php echo substr($member['email'], 0, 30); ?></td> 
                                                     <td><?php echo $member['contact_number']; ?></td> 
-                                                    <td><?php echo substr($member['username'], 0, 30); ?></td> 
                                                     <td>
                                                         <?php
                                                         if ($member['status'] == 1) {
@@ -114,6 +99,17 @@ $MEMBER = new Member(NULL)
                                             }
                                             ?>   
                                         </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th> 
+                                                <th>email</th>
+                                                <th>Contact Number</th> 
+                                                <th>Status</th> 
+                                                <th>Rank</th> 
+                                                <th>Options</th>
+                                            </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
@@ -152,7 +148,7 @@ $MEMBER = new Member(NULL)
         <script src="plugins/sweetalert/sweetalert.min.js"></script>
         <!-- Custom Js -->
         <script src="js/admin.js"></script>
-        <script src="js/pages/tables/jquery-datatable.js"></script>
+<!--        <script src="js/pages/tables/jquery-datatable.js"></script>-->
 
         <!-- Demo Js -->
         <script src="js/demo.js"></script>

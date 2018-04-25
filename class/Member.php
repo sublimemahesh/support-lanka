@@ -146,6 +146,20 @@ class Member {
         return $array_res;
     }
 
+    public function activeMember() {
+
+        $query = "SELECT * FROM `member` WHERE status = '1'";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
     public function login($email, $password) {
 
         $query = "SELECT * FROM `member` WHERE `email`= '" . $email . "' AND `password`= '" . $password . "'";
@@ -283,7 +297,7 @@ class Member {
         $SKILL_DETAILS = new SkillDetail(NULL);
         $EDUCATION = new Education(NULL);
         $AWARD = new Award(NULL);
-        
+
         $result = $SKILL_DETAILS->deleteSkilldetailsByMember($this->id);
         $result = $EDUCATION->deleteEducationsByMember($this->id);
         $result = $AWARD->deleteAwardsByMember($this->id);

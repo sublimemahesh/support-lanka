@@ -47,7 +47,6 @@ $MEMBER = new Member($id);
                                 <h2>
                                     Edit Member
                                 </h2>
-
                             </div>
                             <div class="body row">
                                 <form class="form-horizontal" method="post" action="post-and-get/member.php" enctype="multipart/form-data"> 
@@ -181,19 +180,7 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
                                     </div>
-                                    <!--Username-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Username</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="username" class="form-control" placeholder="Enter username" autocomplete="off" name="username" required="TRUE" value="<?php echo $MEMBER->username; ?>">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
+
                                     <!--rank-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -216,13 +203,11 @@ $MEMBER = new Member($id);
                                             }
                                             ?> name="active" value="1" id="rememberme" />
                                             <label for="rememberme">Active</label>
-
                                         </div>
                                         <div class="row clearfix">
                                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
                                                 <input type="hidden" id="oldImageName" value="<?php echo $MEMBER->profile_picture; ?>" name="oldImageName"/>
                                                 <input type="hidden" id="id" value="<?php echo $MEMBER->id; ?>" name="id"/>
-        <!--                                            <input type="hidden" id="authToken" value="<?php echo $_SESSION["authToken"]; ?>" name="authToken"/>-->
                                                 <button type="submit" class="btn btn-primary m-t-15 waves-effect" name="update" value="update">Save Changes</button>
                                             </div>
                                         </div>
@@ -270,8 +255,6 @@ $MEMBER = new Member($id);
                 relative_urls: false
 
             });
-
-
         </script>
     </body>
 

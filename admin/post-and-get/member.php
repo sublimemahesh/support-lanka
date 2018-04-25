@@ -19,6 +19,7 @@ if (isset($_POST['create'])) {
     $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
     $MEMBER->city = filter_input(INPUT_POST, 'city');
     $MEMBER->username = filter_input(INPUT_POST, 'username');
+    $MEMBER->status = filter_input(INPUT_POST, 'status');
     $MEMBER->rank = filter_input(INPUT_POST, 'rank');
     $MEMBER->password = $password;
 
@@ -52,7 +53,6 @@ if (isset($_POST['create'])) {
         'nic_number' => ['required' => TRUE],
         'contact_number' => ['required' => TRUE],
         'about_me' => ['required' => TRUE],
-        'username' => ['required' => TRUE],
         'password' => ['required' => TRUE],
         'profile_picture' => ['required' => TRUE]
     ]);
@@ -126,8 +126,7 @@ if (isset($_POST['update'])) {
         'email' => ['required' => TRUE],
         'nic_number' => ['required' => TRUE],
         'contact_number' => ['required' => TRUE],
-        'about_me' => ['required' => TRUE],
-        'username' => ['required' => TRUE]
+        'about_me' => ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {

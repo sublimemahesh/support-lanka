@@ -176,7 +176,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                         </div>
                                     </div>
                                     <!--Username-->
-                                    <div class="row clearfix">
+<!--                                    <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="name">Username</label>
                                         </div>
@@ -187,7 +187,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div> -->
                                     <!--Password-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -205,6 +205,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                     <div class="row clearfix">
                                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5"> 
                                             <input type="hidden" id="rank" name="rank" value="0">
+                                            <input type="hidden" value="1" name="status" />
                                             <input type="submit" name="create" class="btn btn-primary m-t-15 waves-effect" value="Add Member"/>
                                         </div>
                                     </div>

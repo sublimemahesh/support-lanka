@@ -64,7 +64,6 @@ $COMPANY = new Company(NULL)
                                                 <th>email</th>
                                                 <th>Industry</th>
                                                 <th>Register Number</th> 
-                                                <th>Username</th>
                                                 <th>Status</th> 
                                                 <th>Rank</th> 
                                                 <th>Options</th>
@@ -85,7 +84,6 @@ $COMPANY = new Company(NULL)
                                                         ?>
                                                     </td> 
                                                     <td><?php echo $company['company_register_number']; ?></td> 
-                                                    <td><?php echo substr($company['username'], 0, 30); ?></td> 
                                                     <td>
                                                         <?php
                                                         if ($company['status'] == 1) {
@@ -115,7 +113,6 @@ $COMPANY = new Company(NULL)
                                                 <th>email</th>
                                                 <th>Industry</th>
                                                 <th>Contact Number</th> 
-                                                <th>Username</th>
                                                 <th>Status</th> 
                                                  <th>Rank</th> 
                                                 <th>Options</th>
@@ -159,7 +156,7 @@ $COMPANY = new Company(NULL)
         <script src="plugins/sweetalert/sweetalert.min.js"></script>
         <!-- Custom Js -->
         <script src="js/admin.js"></script>
-        <script src="js/pages/tables/jquery-datatable.js"></script>
+<!--        <script src="js/pages/tables/jquery-datatable.js"></script>-->
 
         <!-- Demo Js -->
         <script src="js/demo.js"></script>
