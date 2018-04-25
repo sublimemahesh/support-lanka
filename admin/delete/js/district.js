@@ -29,8 +29,7 @@ $(document).ready(function () {
                             showConfirmButton: false
                         });
 
-                        $('#row_' + id).remove();
-
+                         $('#row_' + id).remove();
                     }
                 }
             });

@@ -77,7 +77,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                 <label for="duration">Duration</label>
                                                             </div>
                                                             <div class="">
-                                                                <input type="text" id="duration" class="form-control" placeholder="Enter duration" autocomplete="off" name="duration" required="TRUE">
+                                                                <input type="text" id="duration" class="form-control" placeholder="Enter duration" autocomplete="off" name="duration">
                                                             </div>
 
                                                         </div>
@@ -87,7 +87,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                 <label for="stream">Stream</label>
                                                             </div>
                                                             <div class="">
-                                                                <input type="text" id="stream" class="form-control" placeholder="Enter stream" autocomplete="off" name="stream" required="TRUE">
+                                                                <input type="text" id="stream" class="form-control" placeholder="Enter stream" autocomplete="off" name="stream">
                                                             </div>
 
                                                         </div>

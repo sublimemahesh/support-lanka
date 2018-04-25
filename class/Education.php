@@ -121,4 +121,14 @@ class Education {
         return $array_res;
     }
 
+    public function deleteEducationsByMember($member) {
+
+        $query = "DELETE FROM `education` WHERE `member`= '" . $member . "'";
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+
+        return $result;
+    }
+
 }

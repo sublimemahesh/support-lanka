@@ -269,12 +269,19 @@ class Company {
     }
 
     public function delete() {
+        
+        $VACANCY = new Vacancy(NULL);
 
-        $query = 'DELETE FROM `company` WHERE id="' . $this->id . '"';
+        $result = $VACANCY->deleteVacancyByCompany($this->id);
+
+        if ($result) {
+            $query = 'DELETE FROM `company` WHERE id="' . $this->id . '"';
+        }
 
         $db = new Database();
 
         return $db->readQuery($query);
+//        dd($query);
     }
 
     public function checkOldPass($id, $password) {

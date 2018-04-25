@@ -167,4 +167,14 @@ class SkillDetail {
         return $array_res;
     }
 
+    public function deleteSkilldetailsByMember($member) {
+
+        $query = "DELETE FROM `skill_details` WHERE `member`= '" . $member . "'";
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+
+        return $result;
+    }
+
 }

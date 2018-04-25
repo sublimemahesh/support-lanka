@@ -124,4 +124,14 @@ class Skill {
         return $result;
     }
 
+    public function deleteSkillsByIndustry($industry) {
+
+        $query = "DELETE FROM `skill` WHERE `industry`= '" . $industry . "'";
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+
+        return $result;
+    }
+
 }

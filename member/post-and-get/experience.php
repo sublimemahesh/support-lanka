@@ -18,6 +18,7 @@ if (isset($_POST['add-experience'])) {
     $VALID->check($EXPERIENCE, [
         'description' => ['required' => TRUE],
         'duration' => ['required' => TRUE],
+        'working_place' => ['required' => TRUE],
     ]);
 
     if ($VALID->passed()) {

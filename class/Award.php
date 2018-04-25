@@ -137,4 +137,14 @@ class Award {
         return $array_res;
     }
 
+    public function deleteAwardsByMember($member) {
+
+        $query = "DELETE FROM `award` WHERE `member`= '" . $member . "'";
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+
+        return $result;
+    }
+
 }

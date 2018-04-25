@@ -79,14 +79,14 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                             <div class="">
                                                                 <div class="bottom-top">Full Name</div>
                                                                 <div class="">
-                                                                    <input type="text" name="name" class="form-control" placeholder="Please Enter Your Full Name"  value="<?php echo $COMPANY->name; ?>" required="TRUE">
+                                                                    <input type="text" name="name" class="form-control" placeholder="Please Enter Your Full Name"  value="<?php echo $COMPANY->name; ?>">
                                                                 </div>
                                                             </div>
                                                             <!--Email-->
                                                             <div class="">
                                                                 <div class="bottom-top">Email</div>
                                                                 <div class="">
-                                                                    <input type="email" name="email" class="form-control" placeholder="Please Enter Your Email" required="TRUE" value="<?php echo $COMPANY->email; ?>">
+                                                                    <input type="email" name="email" class="form-control" placeholder="Please Enter Your Email" value="<?php echo $COMPANY->email; ?>">
                                                                 </div>
                                                             </div>
                                                             <!--Contact No-->

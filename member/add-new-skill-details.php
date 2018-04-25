@@ -24,6 +24,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             .img-thumbnail {
                 max-width: 50% !important;
             }
+            
         </style>
     </head> 
     <body>  
@@ -108,7 +109,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                             </div>
                                                         </div>
                                                     </div>

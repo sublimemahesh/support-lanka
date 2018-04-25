@@ -73,43 +73,43 @@ $MEMBER = new Member($_SESSION['id']);
                                                         <div class="col-md-8">
                                                             <!--Full Name-->
                                                             <div class="">
-                                                                <div class="bottom-top">Full Name</div>
+                                                                <div>Full Name</div>
                                                                 <div class="formrow">
-                                                                    <input type="text" name="name" class="form-control" placeholder="Please Enter Your Full Name"  value="<?php echo $MEMBER->name; ?>" required="TRUE">
+                                                                    <input type="text" name="name" class="form-control" placeholder="Please Enter Your Full Name"  value="<?php echo $MEMBER->name; ?>">
                                                                 </div>
                                                             </div>
                                                            
                                                             <!--Email-->
                                                             <div class="">
-                                                                <div class="bottom-top">Email</div>
+                                                                <div>Email</div>
                                                                 <div class="formrow">
-                                                                    <input type="email" name="email" class="form-control" placeholder="Please Enter Your Email" required="TRUE" value="<?php echo $MEMBER->email; ?>">
+                                                                    <input type="email" name="email" class="form-control" placeholder="Please Enter Your Email" value="<?php echo $MEMBER->email; ?>">
                                                                 </div>
                                                             </div>
                                                             <!--Contact No-->
                                                             <div class="">
-                                                                <div class="bottom-top">Contact No</div>
+                                                                <div>Contact No</div>
                                                                 <div class="formrow">
-                                                                    <input type="text" name="contact_number" class="form-control" placeholder="Please Enter Your Contact Number" required="TRUE" value="<?php echo $MEMBER->contact_number; ?>">
+                                                                    <input type="text" name="contact_number" class="form-control" placeholder="Please Enter Your Contact Number" value="<?php echo $MEMBER->contact_number; ?>">
                                                                 </div>
                                                             </div> 
                                                             <!--NIC Number-->
                                                             <div class="">
-                                                                <div class="bottom-top">NIC Number</div>
+                                                                <div>NIC Number</div>
                                                                 <div class="formrow">
-                                                                    <input type="text" name="nic_number" class="form-control" placeholder="Please Enter Your NIC Number" required="TRUE" value="<?php echo $MEMBER->nic_number; ?>">
+                                                                    <input type="text" name="nic_number" class="form-control" placeholder="Please Enter Your NIC Number" value="<?php echo $MEMBER->nic_number; ?>">
                                                                 </div>
                                                             </div> 
                                                             <!--Date Of Birthday-->
                                                             <div class="">
-                                                                <div class="bottom-top">Date Of Birthday</div>
+                                                                <div>Date Of Birthday</div>
                                                                 <div class="formrow">
                                                                     <input style="padding: 0px 12px;" type="date" name="date_of_birthday" class="form-control" placeholder="Please Enter Date Of Birthday" required="TRUE" value="<?php echo $MEMBER->date_of_birthday; ?>">
                                                                 </div>
                                                             </div> 
                                                             <!--About Me-->
                                                             <div class="">
-                                                                <div class="bottom-top">
+                                                                <div>
                                                                     <label for="about_me">About Your Details</label>
                                                                 </div>
                                                                 <div class="formrow">
@@ -118,14 +118,14 @@ $MEMBER = new Member($_SESSION['id']);
                                                             </div>
                                                             <!--Home Address-->
                                                             <div class="">
-                                                                <div class="bottom-top">Home Address</div>
+                                                                <div>Home Address</div>
                                                                 <div class="formrow">
                                                                     <input type="text" name="home_address" class="form-control" placeholder="Please Enter Home Address" required="TRUE" value="<?php echo $MEMBER->home_address; ?>">
                                                                 </div>
                                                             </div>
                                                             <!--City-->
                                                             <div class="">
-                                                                <div class="bottom-top">
+                                                                <div>
                                                                     <label for="city">City</label>
                                                                 </div>
                                                                 <div class="formrow">
