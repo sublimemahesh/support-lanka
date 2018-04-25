@@ -209,7 +209,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                         </div>
                                     </div>
                                     <!--Username-->
-                                    <div class="row clearfix">
+<!--                                    <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="name">Username</label>
                                         </div>
@@ -220,7 +220,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div> -->
                                     <!--Password-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">

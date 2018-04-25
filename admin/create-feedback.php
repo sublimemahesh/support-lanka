@@ -26,7 +26,6 @@ include_once(dirname(__FILE__) . './auth.php');
         <?php
         include './navigation-and-header.php';
         ?>
-
         <section class="content">
             <div class="container-fluid">  
                 <?php
@@ -51,7 +50,6 @@ include_once(dirname(__FILE__) . './auth.php');
                             <div class="body">
                                 <form class="form-horizontal"  method="post" action="post-and-get/feedback.php" enctype="multipart/form-data"> 
                                     <div class="row clearfix">
-
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="name">Name</label>
                                         </div>
@@ -96,8 +94,6 @@ include_once(dirname(__FILE__) . './auth.php');
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
 

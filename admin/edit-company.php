@@ -47,7 +47,6 @@ $COMPANY = new Company($id);
                                 <h2>
                                     Edit Company
                                 </h2>
-
                             </div>
                             <div class="body row">
                                 <form class="form-horizontal" method="post" action="post-and-get/company.php" enctype="multipart/form-data"> 
@@ -219,19 +218,7 @@ $COMPANY = new Company($id);
                                             </div>
                                         </div>
                                     </div>
-                                    <!--Username-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Username</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="username" class="form-control" placeholder="Enter username" autocomplete="off" name="username" required="TRUE" value="<?php echo $COMPANY->username; ?>">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
+                                   
                                      <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="rank">Rank</label>
@@ -262,7 +249,7 @@ $COMPANY = new Company($id);
                                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
                                                 <input type="hidden" id="image" value="<?php echo $COMPANY->logo_image; ?>" name="image"/>
                                                 <input type="hidden" id="id" value="<?php echo $COMPANY->id; ?>" name="id"/>
-        <!--                                            <input type="hidden" id="authToken" value="<?php echo $_SESSION["authToken"]; ?>" name="authToken"/>-->
+
                                                 <button type="submit" class="btn btn-primary m-t-15 waves-effect" name="update_company" value="update">Save Changes</button>
                                             </div>
                                         </div>
@@ -310,8 +297,6 @@ $COMPANY = new Company($id);
                 relative_urls: false
 
             });
-
-
         </script>
     </body>
 

@@ -53,7 +53,6 @@ if (isset($_POST['create_company'])) {
         'email' => ['required' => TRUE],
         'address' => ['required' => TRUE],
         'contact_number' => ['required' => TRUE],
-        'username' => ['required' => TRUE],
         'password' => ['required' => TRUE],
         'logo_image' => ['required' => TRUE]
     ]);
@@ -159,8 +158,7 @@ if (isset($_POST['update_company'])) {
         'name' => ['required' => TRUE],
         'email' => ['required' => TRUE],
         'address' => ['required' => TRUE],
-        'contact_number' => ['required' => TRUE],
-        'username' => ['required' => TRUE]
+        'contact_number' => ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
