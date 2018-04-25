@@ -126,15 +126,10 @@ $COMPANY = new Company($_SESSION['id_com']);
             </li>
 
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a href="manage-vacancy.php" >
                     <i class="fa fa-suitcase"></i>
                     <span>Vacancy</span>
                 </a>
-                <ul class="sub">
-                    <li><a  href="add-vacancy.php">Add New Vacancy</a></li>
-                    <li><a  href="manage-vacancy.php">Your Vacancy</a></li>
-                    <li><a  href="arrange-vacancy.php">Arrange Vacancy</a></li>
-                </ul>
             </li>
             
         </ul>

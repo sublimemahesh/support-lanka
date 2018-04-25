@@ -147,7 +147,7 @@ class Vacancy {
 
         return $array_res;
     }
-    
+
     public function GetVacancyById($id) {
 
         $query = "SELECT * FROM `vacancy` WHERE `id` = '" . $id . "' ORDER BY `sort` ASC";
@@ -162,6 +162,16 @@ class Vacancy {
         }
 
         return $array_res;
+    }
+
+    public function deleteVacancyByCompany($company) {
+
+        $query = "DELETE FROM `vacancy` WHERE `company`= '" . $company . "'";
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+
+        return $result;
     }
 
 }

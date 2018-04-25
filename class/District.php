@@ -79,7 +79,7 @@ class District {
 
         $CITY = new City(NULL);
 
-        $result = $CITY->deleteCitiesByDistrict();
+        $result = $CITY->deleteCitiesByDistrict($this->id);
 
         if ($result) {
             $query = 'DELETE FROM `district` WHERE id="' . $this->id . '"';
@@ -88,7 +88,7 @@ class District {
         $db = new Database();
 
         return $db->readQuery($query);
-        dd($query);
+//        dd($query);
     }
 
 }

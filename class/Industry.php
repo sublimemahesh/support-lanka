@@ -84,11 +84,18 @@ class Industry {
 
     public function delete() {
 
-        $query = 'DELETE FROM `industry` WHERE id="' . $this->id . '"';
+        $SKILL = new Skill(NULL);
+
+        $result = $SKILL->deleteSkillsByIndustry($this->id);
+
+        if ($result) {
+            $query = 'DELETE FROM `industry` WHERE id="' . $this->id . '"';
+        }
 
         $db = new Database();
 
         return $db->readQuery($query);
+//        dd($query);
     }
 
     public function GetIndustryById($id) {

@@ -51,7 +51,7 @@ class Member {
     }
 
     public function create() {
- 
+
         $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`password`,`status`,`rank`) VALUES  ('"
                 . $this->name . "','"
                 . $this->email . "','"
@@ -280,11 +280,22 @@ class Member {
 
     public function delete() {
 
-        $query = 'DELETE FROM `member` WHERE id="' . $this->id . '"';
+        $SKILL_DETAILS = new SkillDetail(NULL);
+        $EDUCATION = new Education(NULL);
+        $AWARD = new Award(NULL);
+        
+        $result = $SKILL_DETAILS->deleteSkilldetailsByMember($this->id);
+        $result = $EDUCATION->deleteEducationsByMember($this->id);
+        $result = $AWARD->deleteAwardsByMember($this->id);
+
+        if ($result) {
+            $query = 'DELETE FROM `member` WHERE id="' . $this->id . '"';
+        }
 
         $db = new Database();
 
         return $db->readQuery($query);
+//        dd($query);
     }
 
     public function checkOldPass($id, $password) {
@@ -410,7 +421,6 @@ class Member {
         }
     }
 
-    
     public function ChangeProPic($member, $file) {
 
         $query = "UPDATE  `member` SET "
@@ -427,7 +437,5 @@ class Member {
             return FALSE;
         }
     }
-    
-    
 
 }

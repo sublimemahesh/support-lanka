@@ -30,8 +30,9 @@ include_once(dirname(__FILE__) . '/auth.php');
             .uploadbox {
                 height: 206px;
             }
-            .col-md-3{
+            .col-md-3 {
                 padding-bottom: 20px;
+                height: 230px;
             }
         </style>
     </head> 

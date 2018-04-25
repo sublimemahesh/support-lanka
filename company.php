@@ -69,7 +69,7 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
                                                             echo $CITY->name;
                                                             ?>
                                                         </span>
-                                                        <span class="job-is ft">Full time
+                                                        <span class="job-is ft"><?php echo $COMPANY->company_register_number; ?>
                                                         </span>
                                                         <ul class="tags-jobs">
                                                             <li><i class="la la-file-text"></i> Applications 1</li>
@@ -80,10 +80,10 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
                                                 </div><!-- Job Head -->
                                             </div>
                                             <div class="col-lg-3">
-                                                    <iframe src="<?php echo $COMPANY->map; ?>" width="700" height="180" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                              
-<!--                                                    https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31741.73380237132!2d80.215888!3d6.033559!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4768397502edf93!2sSublime+Holdings!5e0!3m2!1sen!2slk!4v1522900122322
-                                                    -->
+                                                <iframe src="<?php echo $COMPANY->map; ?>" width="700" height="180" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                                                <!--                                                    https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31741.73380237132!2d80.215888!3d6.033559!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4768397502edf93!2sSublime+Holdings!5e0!3m2!1sen!2slk!4v1522900122322
+                                                -->
                                             </div>
                                         </div>
                                     </div>

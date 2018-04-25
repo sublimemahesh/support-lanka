@@ -29,10 +29,11 @@ include_once(dirname(__FILE__) . '/auth.php');
                 max-width: 50% !important;
             }
             .uploadbox {
-                height: 204px;
+                height: 194px !important;
             }
-            .col-md-3{
+             .col-md-3 {
                 padding-bottom: 20px;
+                height: 230px;
             }
         </style>
     </head> 
