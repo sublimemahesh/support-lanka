@@ -1,7 +1,9 @@
 <div class="responsive-header">
     <div class="row">
         <div class="col-md-12">
-            <div class="res-logo col-md-9"><img src="images/resource/logo11.png" alt="" /></div>
+            <div class="res-logo col-md-9">
+                <img src="images/resource/logo11.png" alt="" />
+            </div>
             <div class="menu-resaction col-md-3">
                 <div class="res-openmenu">
                     <i class="la la-list nav-icon"></i>
@@ -13,7 +15,7 @@
         </div>
     </div>
     <div class="responsive-opensec">
-        <div class="btn-extars">
+        <div class="btn-extars ">
             <a href="company/register.php" title="" class="post-job-btn1"><i class="la la-plus"></i>Post Jobs</a>
             <ul class="account-btns">
                 <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Sign Up</a></li>
@@ -53,7 +55,7 @@
                 <a href="#" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
             </div><!-- Logo -->
             <div class="btn-extars">
-                <a href="company/register.php" title="" class="post-job-btn1"><i class="la la-plus"></i>Post Jobs</a>
+                <a href="company/register.php" title="" class="sticky1 btn2"><i class="la la-plus"></i>Post Jobs</a>
                 <ul class="account-btns">
                     <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Sign Up</a></li>
                     <li class=""><a href="member/login.php" title=""><i class="la la-external-link-square"></i> Login</a></li>

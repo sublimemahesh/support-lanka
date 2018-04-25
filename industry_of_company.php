@@ -45,7 +45,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3>Select Your Industry</h3>
+                                    <h3 id="txt-bottom">Select Your Industry</h3>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
             </section>
             <!--Industry-->
             <section id="scroll-here">
-                <div class="block">
+                <div class="block new-pad-bottom">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">

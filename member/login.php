@@ -91,7 +91,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             </div>
                             <div class="buttn-bottom">
                                 <div class="pull-left text-danger btn-padding" id="message" ></div>
-                                <div class=" padding_style btn-padding" >
+                                <div class=" padding_style btn-padding btn-new-padding" >
                                     <div class="buttonreg buttn-type " id="btnSubmit">Register Now</div>
                                     <input type="hidden" name="save" value="save"/>
                                 </div>

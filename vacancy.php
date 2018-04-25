@@ -45,7 +45,7 @@ if (isset($_GET['company'])) {
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3>Vacancy</h3>
+                                    <h3 id="txt-bottom">Vacancy</h3>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ if (isset($_GET['company'])) {
                                             <div class="emply-list-info">
                                                 <div class="emply-pstn">
 
-                                                    <div class="shortlists" style="float: right;">
+                                                    <div class="shortlists" id="btn-view"style="float: right;">
                                                         <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title="">View Details <i class="la la-plus"></i></a>
                                                     </div>
                                                 </div>

@@ -2477,6 +2477,9 @@ img#profil_pic1 {
     padding: 10px;
     float: right;
 }
+.btn-new-padding{
+    padding-right: 62px;   
+}
 .bgc-color{
     background-color: #d7d7d7;
 }
