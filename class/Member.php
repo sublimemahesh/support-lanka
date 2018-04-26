@@ -19,6 +19,7 @@ class Member {
     public $profile_picture;
     public $username;
     public $password;
+    public $privacy;
     public $resetcode;
     public $rank;
     public $status;
@@ -26,7 +27,7 @@ class Member {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`status`,`rank` FROM `member` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`privacy`,`status`,`rank` FROM `member` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -43,6 +44,7 @@ class Member {
             $this->city = $result['city'];
             $this->profile_picture = $result['profile_picture'];
             $this->username = $result['username'];
+            $this->public = $result['privacy'];
             $this->rank = $result['rank'];
             $this->status = $result['status'];
 
@@ -52,7 +54,7 @@ class Member {
 
     public function create() {
 
-        $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`password`,`status`,`rank`) VALUES  ('"
+        $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`password`,`privacy`,`status`,`rank`) VALUES  ('"
                 . $this->name . "','"
                 . $this->email . "','"
                 . $this->nic_number . "','"
@@ -64,6 +66,7 @@ class Member {
                 . $this->profile_picture . "','"
                 . $this->username . "','"
                 . $this->password . "','"
+                . $this->privacy . "','"
                 . $this->status . "','"
                 . $this->rank . "')";
 

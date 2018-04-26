@@ -48,12 +48,13 @@ if ($_POST['save']) {
             $MEMBER->name = filter_input(INPUT_POST, 'name');
             $MEMBER->email = filter_input(INPUT_POST, 'email');
             $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
+            $MEMBER->privacy = filter_input(INPUT_POST, 'public');
             $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
 
             $MEMBER->create();
-
+ 
             if ($MEMBER->id) {
-                $MEMBER->login($MEMBER->email,$MEMBER->password);
+                $MEMBER->login($MEMBER->email, $MEMBER->password);
                 $response['status'] = 'success';
                 echo json_encode($response);
                 exit();

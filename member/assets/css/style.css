@@ -2412,7 +2412,7 @@ img#profil_pic1 {
     height: 40px;
     border-radius: 5px 5px 5px 5px;
     background: white;
-    padding: 12px;
+    padding: 0px 0px 0px 15px;
     font-size: 18px;
     margin-top: 15px;
     border-width: 1px;

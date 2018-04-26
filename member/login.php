@@ -1,4 +1,3 @@
-
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 ?>
@@ -74,8 +73,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
 
         <div class="member-log-body">
             <div class="container-fluid">
-                <div class="col-md-6 col-sm-12 p-row">
-                    <div class="intro1 ">Helps you to publish your Skills <br>
+                <div class="col-md-6">
+                    <div class="intro1 text-center">Helps you to publish your Skills<br>
                     </div>
                     <img class="member-img"src="../images/background.jpg" alt=""/>
                 </div>
@@ -86,9 +85,14 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             <input name="email" id="email" placeholder="Email" class="inputbox" type="text">
                             <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">
                             <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
-                            <div class="policy-container">
-                                By clicking Create an account, you agree to our Terms and that you have read our Data Policy
+                            <div style="padding-top:10px;">
+                                <select name="public" class="inputbox" id="public">
+                                    <option> - Please Select Your Account Type - </option>
+                                    <option value="1"> Public </option>
+                                    <option value="0"> Private </option>     
+                                </select>
                             </div>
+
                             <div class="buttn-bottom">
                                 <div class="pull-left text-danger btn-padding" id="message" ></div>
                                 <div class=" padding_style btn-padding btn-new-padding" >
@@ -111,9 +115,3 @@ include_once(dirname(__FILE__) . '/../class/include.php');
     </body>
 
 </html>
-
-
-
-
-
-
