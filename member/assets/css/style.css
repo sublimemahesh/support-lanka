@@ -2474,8 +2474,13 @@ img#profil_pic1 {
     padding-left: 52px;
 }
 .btn-padding{
-    padding: 10px;
+    padding: 3px;
     float: right;
+    padding-top: 20px;
+}
+
+.re-padding{
+   padding-top: 10px;
 }
 .btn-new-padding{
     padding-right: 62px;   
@@ -2540,6 +2545,7 @@ img#profil_pic1 {
     .btn-padding{
         padding: 0px;
         padding-bottom: 20px;
+        padding-right: 10px;
     }
     .btn-keep{
         display: none;

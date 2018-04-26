@@ -266,9 +266,10 @@ class Member {
 
         return $array_res;
     }
-        public function all1($pageLimit, $setLimit) {
 
-        $query = "SELECT * FROM `member` LIMIT " . $pageLimit . " , " . $setLimit . " ";
+    public function all1($pageLimit, $setLimit) {
+
+        $query = "SELECT * FROM `member` where `privacy`= '1' LIMIT " . $pageLimit . " , " . $setLimit . " ";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
