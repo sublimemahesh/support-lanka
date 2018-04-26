@@ -82,9 +82,15 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                     <div class="margin-l-20">
                         <form id="register" method="post"> 
                             <input name="name" id="name" placeholder="Enter Your Name" class="inputbox" type="text">
+
                             <input name="email" id="email" placeholder="Email" class="inputbox" type="text">
+
                             <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">
                             <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
+                            <input type="hidden" name="status" value="1"/>
+
+                            <input type="hidden" name="logo_image" value="logo.png"/>
+
                             <div class="policy-container">
                                 By clicking Create an account, you agree to our Terms and that you have read our Data Policy
                             </div>

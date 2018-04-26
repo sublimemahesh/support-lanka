@@ -50,7 +50,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                 </ul>
                             </div>
                             <div class="body">
-                                <form class="form-horizontal" id="email-validation" method="post"  enctype="multipart/form-data"> 
+                                <form class="form-horizontal" id="member-data" method="post"  enctype="multipart/form-data"> 
                                     <!--name-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -67,7 +67,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                     <!--Email-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Email</label>
+                                            <label for="email">Email</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
@@ -98,7 +98,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="nic_number" class="form-control" placeholder="Enter NIC number" autocomplete="off" name="nic_number" 
+                                                    <input type="text" id="nic_number" class="form-control" placeholder="Enter NIC number" autocomplete="off" name="nic_number"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -175,6 +175,26 @@ include_once(dirname(__FILE__) . './auth.php');
                                             </div>
                                         </div>
                                     </div>
+                                    <!--Rank-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="rank">Rank</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group place-select">
+                                                <div class="form-line">
+                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
+                                                        <option value="0"> -- Please Select -- </option> 
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!--Password-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -187,62 +207,63 @@ include_once(dirname(__FILE__) . './auth.php');
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> 
-                                   
+                                    </div>  
+                                    <!--Password-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5"> 
-                                            <input type="hidden" id="rank" name="rank" value="0">
-                                            <div class="btn btn-primary m-t-15 waves-effect" id="btnSubmit" />Add member</div>
-                                            <input type="hidden" name="save" value="save"/>
-                                             <div class=" text-danger btn-padding" id="message" ></div>
-                                        </div>
-                                    </div>
-                                    <hr/>
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">  
 
+                                        </div>  
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <input type="hidden" name="status" value="1"/>
+                                            <div class="btn btn-primary m-t-15 waves-effect  pull-left" id="btnSubmit">Add member</div>
+                                            
+                                            <input type="hidden" name="save" value="save"/>
+                                            <div class=" text-danger btn-padding pull-left error-mess" id="message" ></div> 
+                                        </div>
+                                    </div> 
+                                </form> 
                             </div>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Jquery Core Js -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.js"></script> 
-    <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
-    <script src="plugins/node-waves/waves.js"></script>
-    <script src="plugins/jquery-spinner/js/jquery.spinner.js"></script>
-    <script src="js/admin.js"></script>
-    <script src="js/demo.js"></script>
-    <script src="tinymce/js/tinymce/tinymce.min.js"></script>
-    <script src="js/create-member.js" type="text/javascript"></script>
-    <script>
-        tinymce.init({
-            selector: "#about_me",
-            // ===========================================
-            // INCLUDE THE PLUGIN
-            // ===========================================
+        <!-- Jquery Core Js -->
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <script src="plugins/bootstrap/js/bootstrap.js"></script> 
+        <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+        <script src="plugins/node-waves/waves.js"></script>
+        <script src="plugins/jquery-spinner/js/jquery.spinner.js"></script>
+        <script src="js/admin.js"></script>
+        <script src="js/demo.js"></script>
+        <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+        <script src="js/create-member.js" type="text/javascript"></script>
+        <script>
+            tinymce.init({
+                selector: "#about_me",
+                // ===========================================
+                // INCLUDE THE PLUGIN
+                // ===========================================
 
-            plugins: [
-                "advlist autolink lists link image charmap print preview anchor",
-                "searchreplace visualblocks code fullscreen",
-                "insertdatetime media table contextmenu paste"
-            ],
-            // ===========================================
-            // PUT PLUGIN'S BUTTON on the toolbar
-            // ===========================================
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                // ===========================================
+                // PUT PLUGIN'S BUTTON on the toolbar
+                // ===========================================
 
-            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-            // ===========================================
-            // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-            // ===========================================
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+                // ===========================================
+                // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
+                // ===========================================
 
-            relative_urls: false
+                relative_urls: false
 
-        });
-    </script>
-</body>
+            });
+        </script>
+    </body>
 
 </html>

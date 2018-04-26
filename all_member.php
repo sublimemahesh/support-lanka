@@ -164,10 +164,8 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                     }
                                     ?>
 
-
                                     <?php Member::showPagination($setLimit, $page); ?>
-                                    
-                                    
+
                                 </div>
 
                             </div>
