@@ -46,6 +46,8 @@ if ($_POST['save']) {
 
             $COMPANY->name = filter_input(INPUT_POST, 'name');
             $COMPANY->email = filter_input(INPUT_POST, 'email');
+            $COMPANY->logo_image = filter_input(INPUT_POST, 'logo_image');
+            $COMPANY->status = filter_input(INPUT_POST, 'status');
             $COMPANY->contact_number = filter_input(INPUT_POST, 'contact_number');
             $COMPANY->password = md5(filter_input(INPUT_POST, 'password'));
 

@@ -161,7 +161,7 @@ $MEMBER = new Member($id);
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="date" id="date_of_birthday" class="form-control" placeholder="Enter Date Of Birthday" autocomplete="off" name="date_of_birthday" required="TRUE">
+                                                    <input type="date" id="date_of_birthday" class="form-control" value="<?php echo $MEMBER->date_of_birthday; ?>" autocomplete="off" name="date_of_birthday" required="TRUE">
                                                 </div>
                                             </div>
                                         </div>
@@ -180,20 +180,26 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!--rank-->
+                                    <!--Rank-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="rank">Rank</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
+                                            <div class="form-group place-select">
                                                 <div class="form-line">
-                                                    <input type="text" id="rank" class="form-control" placeholder="Enter Rank" autocomplete="off" name="rank" required="TRUE" value="<?php echo $MEMBER->rank; ?>">
+                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
+                                                        <option value="<?php echo $MEMBER->rank; ?>"><?php echo $MEMBER->rank; ?></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <div class="col-md-12">
                                         <div class="col-md-2"></div>  
                                         <div class="form-group">
@@ -211,13 +217,11 @@ $MEMBER = new Member($id);
                                                 <button type="submit" class="btn btn-primary m-t-15 waves-effect" name="update" value="update">Save Changes</button>
                                             </div>
                                         </div>
-
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-
                 </div>
         </section>
 

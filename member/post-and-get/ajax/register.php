@@ -1,4 +1,3 @@
-
 <?php
 
 include_once(dirname(__FILE__) . '/../../../class/include.php');
@@ -47,6 +46,8 @@ if ($_POST['save']) {
 
             $MEMBER->name = filter_input(INPUT_POST, 'name');
             $MEMBER->email = filter_input(INPUT_POST, 'email');
+            $MEMBER->profile_picture = filter_input(INPUT_POST, 'profile_picture');
+            $MEMBER->status = filter_input(INPUT_POST, 'status');
             $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
             $MEMBER->privacy = filter_input(INPUT_POST, 'public');
             $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));

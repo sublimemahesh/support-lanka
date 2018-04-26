@@ -8118,3 +8118,10 @@ html.ie11 .bs-searchbox .form-control {
 #CDSWIDSSP{
     width:100% !important;
 }
+.error-mess{
+    background: white;
+    padding: 4px 35px 3px 10px;
+    margin: 16px 4px 13px 11px;
+    border: 1px solid;
+    display: none;
+}

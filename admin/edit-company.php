@@ -218,19 +218,26 @@ $COMPANY = new Company($id);
                                             </div>
                                         </div>
                                     </div>
-                                   
-                                     <div class="row clearfix">
+                                    <!--Rank-->
+                                    <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="rank">Rank</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
+                                            <div class="form-group place-select">
                                                 <div class="form-line">
-                                                    <input type="text" id="rank" class="form-control" placeholder="Enter Rank in Company" autocomplete="off" name="rank" required="TRUE" value="<?php echo $COMPANY->rank; ?>">
+                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
+                                                        <option value="<?php echo $COMPANY->rank; ?>"><?php echo $COMPANY->rank; ?></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
 
                                     <div class="col-md-12">
                                         <div class="col-md-2"></div>  

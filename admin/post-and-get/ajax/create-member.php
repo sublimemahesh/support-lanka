@@ -4,6 +4,7 @@
 include_once(dirname(__FILE__) . '/../../../class/include.php');
 
 if ($_POST['save']) {
+     
     header('Content-Type: application/json; charset=UTF8');
     $response = array();
 
@@ -69,11 +70,36 @@ if ($_POST['save']) {
             $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
             $MEMBER->about_me = filter_input(INPUT_POST, 'about_me');
             $MEMBER->city = filter_input(INPUT_POST, 'city');
+            $MEMBER->rank = filter_input(INPUT_POST, 'rank');
+            $MEMBER->status = filter_input(INPUT_POST, 'status');
             $MEMBER->date_of_birthday = filter_input(INPUT_POST, 'date_of_birthday');
             $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
             $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
             $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
+ 
+            $dir_dest = '../../../upload/member/';
 
+            $handle = new Upload($_FILES['image']);
+
+            $imgName = null;
+
+            if ($handle->uploaded) {
+                $handle->image_resize = true;
+                $handle->file_new_name_ext = 'jpg';
+                $handle->image_ratio_crop = 'C';
+                $handle->file_new_name_body = Helper::randamId();
+                $handle->image_x = 250;
+                $handle->image_y = 250;
+
+                $handle->Process($dir_dest);
+
+                if ($handle->processed) {
+                    $info = getimagesize($handle->file_dst_pathname);
+                    $imgName = $handle->file_dst_name;
+                }
+            }
+
+            $MEMBER->profile_picture = $imgName;
             $MEMBER->create();
 
             if ($MEMBER->id) {
