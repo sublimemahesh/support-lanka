@@ -87,6 +87,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
 
                             <div style="padding-top:10px;">
+                            <div class="re-padding">
                                 <select name="public" class="inputbox" id="public">
                                     <option> - Please Select Your Account Type - </option>
                                     <option value="1"> Public </option>

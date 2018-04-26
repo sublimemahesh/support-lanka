@@ -69,7 +69,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                     <div class="container">
                         <div class="row no-gape">
                             <aside class="col-lg-3 col-md-3 column">
-                                <div class="widget">
+                                <div class="widget border">
                                     <h3 class="sb-title open">Industry</h3>
                                     <div class="specialism_widget">
                                         <div class="specialism_widget">
@@ -95,6 +95,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                 <div class="emply-resume-sec">
                                     <?php
                                     foreach ($MEMBER as $member) {
+                                        
                                         ?>
                                         <div class="emply-resume-list square col-md-12 col-sm-12">
                                             <div class="emply-resume-thumb">
