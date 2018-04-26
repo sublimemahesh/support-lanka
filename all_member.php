@@ -2,8 +2,21 @@
 include_once(dirname(__FILE__) . '/class/include.php');
 $industry = NULL;
 
+
+if (isset($_GET["page"])) {
+    $page = (int) $_GET["page"];
+} else {
+    $page = 1;
+}
+
+$setLimit = 2;
+
+$pageLimit = ($page * $setLimit) - $setLimit;
+
+
+
 $SKILL = Skill::GetSkillsByIndustry($industry);
-$MEMBER = Member::all();
+$MEMBER = Member::all1($pageLimit, $setLimit);
 ?>
 <!DOCTYPE html>
 <html>
@@ -150,17 +163,11 @@ $MEMBER = Member::all();
                                         <?php
                                     }
                                     ?>
-                                    <div class="pagination">
-                                        <ul>
-                                            <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
-                                            <li><a href="">1</a></li>
-                                            <li class="active"><a href="">2</a></li>
-                                            <li><a href="">3</a></li>
-                                            <li><span class="delimeter">...</span></li>
-                                            <li><a href="">14</a></li>
-                                            <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
-                                        </ul>
-                                    </div><!-- Pagination -->
+
+
+                                    <?php Member::showPagination($setLimit, $page); ?>
+                                    
+                                    
                                 </div>
 
                             </div>

@@ -28,7 +28,11 @@ $td = date('Y-m-d');
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
         <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-
+        <style>
+            .emply-list.box {
+                height: 307px;
+            }
+        </style>
     </head>
     <body>
 
@@ -152,7 +156,7 @@ $td = date('Y-m-d');
                                 <div class="emply-list-sec">
                                     <div class="row" id="masonry">
                                         <?php
-                                        $VACANT = Vacancy::all(NULL);
+                                        $VACANT = Vacancy::all(0, 5);
                                         if (count($VACANT) > 0) {
                                             foreach ($VACANT as $key => $vacant) {
                                                 if ($key < 4) {

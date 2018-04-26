@@ -1,7 +1,27 @@
 ﻿<?php
 include_once(dirname(__FILE__) . '/class/include.php');
-$id = $_GET["industry"];
-$INDUSTRY = new Industry($id);
+
+if (isset($_GET["page"])) {
+    $page = (int) $_GET["page"];
+} else {
+    $page = 1;
+}
+
+$setLimit = 2;
+
+$pageLimit = ($page * $setLimit) - $setLimit;
+$industryGet = NULL;
+if (isset($_GET['industry'])) {
+    $industryGet = $_GET['industry'];
+}
+
+$INDUSTRY = new Industry($industryGet);
+
+if (!empty($industryGet)) {
+    $SKILLS = Skill::GetSkillsByIndustry1($_GET["industry"], $pageLimit, $setLimit);
+} else {
+    $SKILLS = Skill::all1($pageLimit, $setLimit);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -76,7 +96,6 @@ $INDUSTRY = new Industry($id);
                             <div class="col-lg-9 column">
                                 <div class="emply-resume-sec">
                                     <?php
-                                    $SKILLS = Skill::GetSkillsByIndustry($id);
                                     foreach ($SKILLS as $skill) {
                                         ?>
                                         <div class="emply-resume-list square">
@@ -100,17 +119,9 @@ $INDUSTRY = new Industry($id);
                                         <?php
                                     }
                                     ?>
-                                    <div class="pagination">
-                                        <ul>
-                                            <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
-                                            <li><a href="">1</a></li>
-                                            <li class="active"><a href="">2</a></li>
-                                            <li><a href="">3</a></li>
-                                            <li><span class="delimeter">...</span></li>
-                                            <li><a href="">14</a></li>
-                                            <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
-                                        </ul>
-                                    </div><!-- Pagination -->
+                                    <?php
+                                    Skill::showPagination($setLimit, $page, $industryGet);
+                                    ?>
                                 </div>
                             </div>
                         </div>

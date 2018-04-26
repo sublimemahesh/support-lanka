@@ -2,7 +2,7 @@
 include_once(dirname(__FILE__) . '/class/include.php');
 $id = $_GET["company"];
 $COMPANY = new Company($id);
-$VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
+$VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id,0,100);
 ?>
 <!DOCTYPE html>
 <html>
@@ -104,7 +104,7 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
                                                                     ?>
                                                                     <div class="job-listing wtabs noimg">
                                                                         <div class="job-title-sec">
-                                                                            <h3><a href="#" title=""><?php echo $vacant['title']; ?> / <?php echo $vacant['designation']; ?></a></h3>
+                                                                            <h3><?php echo $vacant['title']; ?> / <?php echo $vacant['designation']; ?></h3>
                                                                             <span>Closing Date : <?php echo $vacant['deadline']; ?></span>
                                                                             <div class="job-lctn">
                                                                                 <i class="la la-map-marker">
@@ -117,9 +117,9 @@ $VACANCY = Vacancy::GetVacancyByCompany($COMPANY->id);
                                                                             </div>
                                                                         </div>
                                                                         <div class="job-style-bx">
-                                                                            <span class="job-is ft"><?php echo $vacant['job_type']; ?></span>
-                                                                            <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                                                            <i>5 months ago</i>
+                                                                            <a href="view_vacancy.php?id=<?php echo $vacant['id']; ?>"><span class="job-is ft">grer</span></a>
+                                                                           
+                                                                            <i><?php echo $vacant['job_type']; ?></i>
                                                                         </div>
                                                                     </div>
                                                                     <?php

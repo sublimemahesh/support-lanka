@@ -2,6 +2,7 @@
     Created on : 26-Mar-2018, 10:54:45
     Author     : official
 */
+
 @media screen and (min-width: 992px){
     .hei-image{
         height: 632px;
@@ -23,7 +24,7 @@
     .res-closemenu {
         margin-top: -116px;
     }
-    
+
 }
 
 @media screen and (min-width: 389px) and (max-width: 519px){
@@ -343,3 +344,55 @@
 .col-sm-12, .col-md-12, .col-lg-12 {
     color: #2E3780;
 }
+ul.setPaginate li.setPage{
+    padding:15px 10px;
+    font-size:14px;
+}
+
+ul.setPaginate{
+    font:12px 'Tahoma';
+    list-style-type:none;   
+} 
+.setPaginate{
+    text-align: center;
+    padding-top: 80px;
+    margin-top: 100px;
+}
+ul.setPaginate li.dot{padding: 3px 0;}
+
+ul.setPaginate li{
+    float:left;
+    margin:0px;
+    padding:0px;
+    margin-left:5px;
+}
+
+ul.setPaginate li a
+{
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #cccccc;
+    color: #999999;
+    display: inline-block;
+    font: 15px/25px Arial,Helvetica,sans-serif;
+    margin: 5px 3px 0 0;
+    padding: 0 5px;
+    text-align: center;
+    text-decoration: none;
+}   
+
+ul.setPaginate li a:hover,
+ul.setPaginate li a.current_page
+{
+    background: none repeat scroll 0 0 #0d92e1;
+    border: 1px solid #000000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul.setPaginate li a{
+    color:black;
+    display:block;
+    text-decoration:none;
+    padding:5px 8px;
+    text-decoration: none;
+} 
