@@ -1,10 +1,25 @@
 <?php
 include_once(dirname(__FILE__) . '/class/include.php');
 
-if (isset($_GET['company'])) {
-    $VACANCY = Vacancy::GetVacancyByCompany($_GET["company"]);
+
+if (isset($_GET["page"])) {
+    $page = (int) $_GET["page"];
 } else {
-    $VACANCY = Vacancy::all();
+    $page = 1;
+}
+
+$setLimit = 3;
+
+$pageLimit = ($page * $setLimit) - $setLimit;
+$companyGet = NULL;
+if (isset($_GET['company'])) {
+    $companyGet = $_GET['company'];
+}
+
+if (!empty($companyGet)) {
+    $VACANCY = Vacancy::GetVacancyByCompany1($companyGet, $pageLimit, $setLimit);
+} else {
+    $VACANCY = Vacancy::all1($pageLimit, $setLimit);
 }
 
 ?>
@@ -66,7 +81,7 @@ if (isset($_GET['company'])) {
                                             $COMPAN = Company::all();
 
                                             foreach ($COMPAN as $key => $com) {
-                                                $key++;
+                                                
                                                 ?>
                                                 <a href="vacancy.php?company=<?php echo $com['id']; ?>">
 
@@ -110,18 +125,8 @@ if (isset($_GET['company'])) {
                                     }
                                     ?>
 
-
-                                    <div class="pagination">
-                                        <ul>
-                                            <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
-                                            <li><a href="">1</a></li>
-                                            <li class="active"><a href="">2</a></li>
-                                            <li><a href="">3</a></li>
-                                            <li><span class="delimeter">...</span></li>
-                                            <li><a href="">14</a></li>
-                                            <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
-                                        </ul>
-                                    </div>
+                                     <?php Vacancy::showPagination($setLimit, $page, $companyGet); ?>
+                                    
                                 </div>
                             </div>
                         </div>

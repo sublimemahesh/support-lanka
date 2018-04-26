@@ -125,7 +125,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                 <div class="col-md-10 col-md-offset-1 column pad-bottom">
                                     <div class="emply-list-sec style2">
                                         <?php
-                                        $VACANCY = Vacancy::all(NULL);
+                                        $VACANCY = Vacancy::all(0,5);
                                         if (count($VACANCY) > 0) {
                                             foreach ($VACANCY as $key => $vacant) {
                                                 if ($key < 3) {

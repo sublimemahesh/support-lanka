@@ -1,7 +1,7 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
-?> 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +32,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             .col-md-3 {
                 padding-bottom: 20px !important;
                 height: 280px !important;
-                
+
             }
             .uploadbox {
                 height: 260px;
@@ -42,9 +42,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                 padding-top: 25px;
             }
         </style>
-    </head> 
-    <body> 
-        <section id="container" > 
+    </head>
+    <body>
+        <section id="container" >
             <?php
             include './header-nav.php';
             ?>
@@ -52,7 +52,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             <section id="main-content">
                 <div class="wrapper">
                     <div class="container-fluid">
-                        <div class="row  top-bott20"> 
+                        <div class="row  top-bott20">
                             <?php
                             $vali = new Validator();
                             $vali->show_message();
@@ -71,7 +71,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         </label>
                                                     </div>
                                                 </a>
-                                            </div>  
+                                            </div> 
 
                                             <?php
                                             $VACANCY = new Vacancy(NULL);
@@ -91,13 +91,13 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <div class="top-2">
                                                             <a href="edit-vacancy.php?id=<?php echo $vacan['id']; ?>">
                                                                 <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                            </a> 
+                                                            </a>
                                                             |
                                                             <a href="arrange-vacancy.php">
                                                                 <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
-                                                            </a> 
-                                                            | 
-                                                            <a href="#"> 
+                                                            </a>
+                                                            |
+                                                            <a href="#">
                                                                 <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-vacancy" data-id="<?php echo $vacan['id']; ?>"></button>
                                                             </a>
                                                         </div>
@@ -105,7 +105,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 </div>
                                                 <?php
                                             }
-                                            ?> 
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
