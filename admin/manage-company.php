@@ -61,7 +61,7 @@ $COMPANY = new Company(NULL)
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Name</th> 
-                                                <th>email</th>
+                                                <th>Email</th>
                                                 <th>Industry</th>
                                                 <th>Register Number</th> 
                                                 <th>Status</th> 
@@ -110,7 +110,7 @@ $COMPANY = new Company(NULL)
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Name</th> 
-                                                <th>email</th>
+                                                <th>Email</th>
                                                 <th>Industry</th>
                                                 <th>Contact Number</th> 
                                                 <th>Status</th> 

@@ -122,7 +122,7 @@ $COMPANY = new Company($id);
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group place-select">
                                                 <div class="form-line">
-                                                    <select class="form-control show-tick place-select1" type="text" id="industry" autocomplete="off" name="industry">
+                                                    <select class="form-control show-tick place-select1" type="text" id="industry" autocomplete="off" name="industry" required="TRUE">
                                                         <option value="<?php echo $COMPANY->id; ?>" class="active light-c">
                                                             <?php
                                                             $INDUSTRY = new Industry($COMPANY->industry);
@@ -250,7 +250,6 @@ $COMPANY = new Company($id);
                                             ?> 
                                                    name="active" value="1" id="rememberme" />
                                             <label for="rememberme">Active</label>
-
                                         </div>
                                         <div class="row clearfix">
                                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">

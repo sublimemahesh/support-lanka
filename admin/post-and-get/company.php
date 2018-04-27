@@ -20,6 +20,7 @@ if (isset($_POST['create_company'])) {
     $COMPANY->about = filter_input(INPUT_POST, 'about');
     $COMPANY->contact_number = filter_input(INPUT_POST, 'contact_number');
     $COMPANY->map = filter_input(INPUT_POST, 'map');
+    $COMPANY->status = filter_input(INPUT_POST, 'status');
     $COMPANY->username = filter_input(INPUT_POST, 'username');
     $COMPANY->rank = filter_input(INPUT_POST, 'rank');
     $COMPANY->password = $password;
@@ -51,7 +52,8 @@ if (isset($_POST['create_company'])) {
     $VALID->check($COMPANY, [
         'name' => ['required' => TRUE],
         'email' => ['required' => TRUE],
-        'address' => ['required' => TRUE],
+        'industry' => ['required' => TRUE],
+        'city' => ['required' => TRUE],
         'contact_number' => ['required' => TRUE],
         'password' => ['required' => TRUE],
         'logo_image' => ['required' => TRUE]
@@ -158,6 +160,8 @@ if (isset($_POST['update_company'])) {
         'name' => ['required' => TRUE],
         'email' => ['required' => TRUE],
         'address' => ['required' => TRUE],
+        'industry' => ['required' => TRUE],
+        'city' => ['required' => TRUE],
         'contact_number' => ['required' => TRUE]
     ]);
 

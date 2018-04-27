@@ -237,6 +237,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                             <div class="form-group">
                                                 <div class="form-line">
                                                     <input type="password" id="password" class="form-control" placeholder="Enter password" autocomplete="off" name="password" required="TRUE">
+                                                    <input type="hidden" value="1" name="status">
                                                 </div>
                                             </div>
                                         </div>
