@@ -52,13 +52,12 @@
     <div class="menu-sec" style="height: 50px;">
         <div class="container" style="height: 50px;">
             <div class="logo">
-                <a href="#" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
+                <a href="index.php" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
             </div><!-- Logo -->
-            <div class="btn-extars">
-                <a href="company/register.php" title="" class="sticky1 btn2"><i class="la la-plus"></i>Post Jobs</a>
+            <div class="btn-extars btn-extars-padding " >
                 <ul class="account-btns">
-                    <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Sign Up</a></li>
-                    <li class=""><a href="member/login.php" title=""><i class="la la-external-link-square"></i> Login</a></li>
+                    <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Sign up or Registration </a></li>
+                    <li class=""><a href="company/register.php" title=""><i class="la la-external-link-square"></i>Post Jobs</a></li>
                 </ul>
             </div><!-- Btn Extras -->
             <nav>

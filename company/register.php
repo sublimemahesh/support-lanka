@@ -28,8 +28,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <div class="header-base">
             <div class="container">
                 <div class="col-md-6 col-sm-6">
-                    <img class="memeber-hed-logo logo-res new-p-top" src="../images/logo1.png" alt=""/>
-                    <img  Class="logo-res-2 new-logo-p-2" src="../images/logo.png" alt=""/>
+                    <a href="../index.php" ><img class="memeber-hed-logo logo-res new-p-top" src="../images/logo1.png" alt=""/>
+                        <img  Class="logo-res-2 new-logo-p-2" src="../images/logo.png" alt=""/></a>
                 </div>
                 <div class="col-md-6">
                     <form  action="post-and-get/company.php" method="POST">
@@ -72,9 +72,9 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         </div>
 
         <div class="member-log-body">
-            <div class="container">
-                <div class="col-md-6">
-                    <div class="intro1">Helps you to publish your business<br>
+            <div class="container-fluid">
+                <div class="col-md-6 padd-new" >
+                    <div class="intro1 text-center">Helps you to publish your business<br>
                     </div>
                     <img class="member-img"src="../images/background.jpg" alt=""/>
                 </div>
@@ -96,7 +96,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             </div>
                             <div class="buttn-bottom">
                                 <div class="pull-left text-danger btn-padding" id="message" ></div>
-                                <div class="pull-right padding_style btn-padding" >
+                                <div class="pull-right padding_style btn-padding " id="btn-padding" >
                                     <div class="buttonreg buttn-type " id="btnSubmit">Register Now</div>
                                     <input type="hidden" name="save" value="save"/>
                                 </div>

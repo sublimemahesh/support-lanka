@@ -28,8 +28,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <div class="header-base">
             <div class="container">
                 <div class="col-md-6 col-sm-6">
-                    <img class="memeber-hed-logo logo-res new-p-top" src="../images/logo1.png" alt=""/>
-                    <img  Class="logo-res-2 new-logo-p-2" src="../images/logo.png" alt=""/>
+                    <a href="../index.php" ><img class="memeber-hed-logo logo-res new-p-top" src="../images/logo1.png" alt=""/>
+                        <img  Class="logo-res-2 new-logo-p-2" src="../images/logo.png" alt=""/></a>
                 </div>
                 <div class="col-md-6">
                     <form  action="post-and-get/company.php" method="POST">
@@ -38,6 +38,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             $message = new Message($_GET['message']);
                             ?>
                             <div class="alert alert-<?php echo $message->status; ?>"><?php echo $message->description; ?></div>
+
                             <?php
                         }
                         ?>
@@ -46,7 +47,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                 <div class="new-p-bottom">Email <br/></div>
                                 <div>
                                     <input class="member-log-txtbox" placeholder="Email" name="email" type="email"><br>
-                                    <div class="new-p-top btn-keep"> <input type="checkbox">keep me logged in</div>
+                                    <div class="new-p-top"> <input type="checkbox">keep me logged in</div>
                                 </div>
                             </div>
                         </div>
@@ -72,12 +73,12 @@ include_once(dirname(__FILE__) . '/../class/include.php');
 
         <div class="member-log-body">
             <div class="container-fluid">
-                <div class="col-md-6 col-sm-12 p-row">
-                    <div class="intro1 ">Helps you to publish your business <br>
+                <div class="col-md-6 padd-new" >
+                    <div class="intro1 text-center">Helps you to publish your business<br>
                     </div>
                     <img class="member-img"src="../images/background.jpg" alt=""/>
                 </div>
-                <div class="col-md-6 col-sm-12 ">
+                <div class="col-md-6">
                     <div class="margin-l-20">
                         <form id="register" method="post"> 
                             <input name="name" id="name" placeholder="Enter Your Name" class="inputbox" type="text">
@@ -95,7 +96,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             </div>
                             <div class="buttn-bottom">
                                 <div class="pull-left text-danger btn-padding" id="message" ></div>
-                                <div class=" padding_style btn-padding" >
+                                <div class="pull-right padding_style btn-padding " id="btn-padding" >
                                     <div class="buttonreg buttn-type " id="btnSubmit">Register Now</div>
                                     <input type="hidden" name="save" value="save"/>
                                 </div>
@@ -115,9 +116,3 @@ include_once(dirname(__FILE__) . '/../class/include.php');
     </body>
 
 </html>
-
-
-
-
-
-
