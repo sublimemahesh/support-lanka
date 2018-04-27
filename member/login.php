@@ -28,8 +28,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <div class="header-base">
             <div class="container">
                 <div class="col-md-6 col-sm-6">
-                    <img class="memeber-hed-logo logo-res new-p-top" src="../images/logo1.png" alt=""/>
-                    <img  Class="logo-res-2 new-logo-p-2" src="../images/logo.png" alt=""/>
+                    <a href="../index.php"> <img class="memeber-hed-logo logo-res new-p-top" src="../images/logo1.png" alt=""/>
+                        <img  Class="logo-res-2 new-logo-p-2" src="../images/logo.png" alt=""/></a>
                 </div>
                 <div class="col-md-6">
                     <form  action="post-and-get/member.php" method="POST">
@@ -82,30 +82,27 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                     <div class="margin-l-20">
                         <form id="register" method="post"> 
                             <input name="name" id="name" placeholder="Enter Your Name" class="inputbox" type="text">
-                            
                             <input name="email" id="email" placeholder="Email" class="inputbox" type="text">
-                            
                             <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">
                             <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
-<<<<<<< HEAD
-                            <div style="padding-top:10px;">
+                            <div>
                                 <select name="public" class="inputbox" id="public">
                                     <option> - Please Select Your Account Type - </option>
                                     <option value="1"> Public </option>
                                     <option value="0"> Private </option>
                                 </select>
-=======
-                            <input type="hidden" name="status" value="1"/>
-                            <input type="hidden" name="profile_picture" value="member.png"/>
+                                
+                                <input type="hidden" name="status" value="1"/>
+                                <input type="hidden" name="profile_picture" value="member.png"/>
 
-                            <div class="buttn-bottom">
-                                <div class="pull-left text-danger btn-padding" id="message" ></div>
-                                <div class=" padding_style btn-padding btn-new-padding" >
-                                    <input type="hidden" name="profile_picture" value="member.png"/>
-                                    <div class="buttonreg buttn-type " id="btnSubmit">Register Now</div>
-                                    <input type="hidden" name="save" value="save"/>
+                                <div class="buttn-bottom">
+                                    <div class="pull-left text-danger btn-padding" id="message" ></div>
+                                    <div class=" padding_style btn-padding btn-new-padding" >
+                                        <input type="hidden" name="profile_picture" value="member.png"/>
+                                        <div class="buttonreg buttn-type " id="btnSubmit">Register Now</div>
+                                        <input type="hidden" name="save" value="save"/>
+                                    </div>
                                 </div>
-                            </div>
                         </form>
                     </div>
                 </div>

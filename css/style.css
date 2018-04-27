@@ -110,6 +110,15 @@ body{
     position:relative;
 
 }
+.btn-extars-padding{
+    padding-top: 5px;
+}
+
+#new-p-element{
+    float: right; 
+    padding-top: 36px;
+    width: 8%;
+}
 button,a,input[type="submit"], input[type="button"]{
     cursor: pointer;
 }

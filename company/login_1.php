@@ -29,8 +29,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <div class="header-base">
             <div class="container">
                 <div class="col-md-6">
-                    <img class="memeber-hed-logo" src="../images/logo1.png" alt=""/>
-                    <img   src="../images/logo.png" alt=""/>
+                    <a href="../index.php"> <img class="memeber-hed-logo" src="../images/logo1.png" alt=""/>
+                        <img   src="../images/logo.png" alt=""/></a>
                 </div>
             </div>
         </div>

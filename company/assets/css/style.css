@@ -118,6 +118,12 @@ a, a:hover, a:focus {
     border-color: #967adc;
 }
 
+#btn-padding{
+    padding-right: 62px;
+}
+.padd-new{
+    padding-left: 70px;
+}
 .btn-theme03 {
     color: #fff;
     background-color: #48cfad;
