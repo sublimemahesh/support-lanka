@@ -75,7 +75,7 @@
         background: transparent !important ;
     }
     #sidebar > ul > li > ul.sub > li > a:hover {
-        
+
     }
 
 
@@ -200,7 +200,7 @@
     /*--*/
 
     /*.chart-position {*/
-        /*margin-top: 0px;*/
+    /*margin-top: 0px;*/
     /*}*/
 
     .stepy-titles li {
@@ -244,8 +244,8 @@
     }
 
     .chart-position {
-       margin-top: 0px;
-     }
+        margin-top: 0px;
+    }
 
     .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
         background-color: #ccc;
@@ -293,3 +293,58 @@
 
 
 
+
+@media (min-width: 280px) and (max-width: 640px) {
+    .member-login-btn-container {
+        padding-top: 0px !important;
+    }
+    .member-img {
+        margin-left: -22px !important;
+        width: 100% !important;
+        margin-top: 50px;
+    }
+    .logo-res{
+        margin-left: 80px;
+    }
+    .logo-res-2{
+        padding-left: 40px;
+    }
+    .btn-res{
+        margin-left: 80px;
+    }
+    .btn-padding{
+        padding: 0px;
+        padding-bottom: 20px;
+        padding-right: 10px;
+    }
+    .btn-keep{
+        display: none;
+    }
+    .lo-register{
+        width: 46%;
+    }
+    .M-new{
+        margin-left: 0px;
+    }
+}
+@media (min-width: 480px) and (max-width: 1000px) {
+
+    .new-p-btn{
+        padding-top: 0px;
+        padding-bottom: 10px;
+        float: right;
+    }
+    .member-img {
+        margin-left: 43px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 480px) {
+    .member-img{
+        margin-left: 155px;
+    }
+    .logo-res-2{
+        padding-left: 110px;
+    }
+}
