@@ -75,7 +75,7 @@
         background: transparent !important ;
     }
     #sidebar > ul > li > ul.sub > li > a:hover {
-        
+
     }
 
 
@@ -200,7 +200,7 @@
     /*--*/
 
     /*.chart-position {*/
-        /*margin-top: 0px;*/
+    /*margin-top: 0px;*/
     /*}*/
 
     .stepy-titles li {
@@ -244,8 +244,8 @@
     }
 
     .chart-position {
-       margin-top: 0px;
-     }
+        margin-top: 0px;
+    }
 
     .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
         background-color: #ccc;
@@ -286,6 +286,30 @@
     .cmt-form {
         display: inline-block;
         width: 75%;
+    }
+
+}
+
+@media (min-width: 280px) and (max-width: 640px) {
+
+    .btn-keep{
+        display: none;
+    }
+    .lo-register{
+        width: 46%;
+    }
+    .M-new{
+        margin-left: 0px;
+    }
+    .buttn-type{
+        padding-left: 28px;
+        width: 200px;
+    }
+    #new-btn-padding{
+        padding-right: 50px;
+    }
+    .buttonreg{
+        width: 168px;
     }
 
 }
