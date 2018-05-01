@@ -1,4 +1,4 @@
-<?php
+    <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 ?>
 <!DOCTYPE html>
@@ -67,6 +67,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     <div>
                                         <input type="hidden" name="status" value="1"/>
                                         <input type="hidden" name="profile_picture" value="member.png"/>
+                                        <div Class="new-p-top ">  
+                                            <a href="forgot-password.php" class="color">Forgot password?</a></div>
                                         <div class="buttn-bottom"  >
                                             <div class="pull-left text-danger btn-padding" id="message" ></div>
                                             <div class=" padding_style btn-padding btn-new-padding" >
@@ -93,8 +95,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                         </select>
                                         <input type="hidden" name="status" value="1"/>
                                         <input type="hidden" name="profile_picture" value="member.png"/>
-                                        <div class="buttn-bottom"  >
-                                            <div class="pull-left text-danger btn-padding" id="message" ></div>
+                                        <div class="buttn-bottom res-btn"  >
+                                            <div class="pull-left text-danger btn-padding" id="message1" ></div>
                                             <div class=" padding_style btn-padding btn-new-padding" >
                                                 <div class="buttonreg buttn-type " id="btnSubmit">Register Now</div>
                                                 <input type="hidden" name="save" value="save"/>

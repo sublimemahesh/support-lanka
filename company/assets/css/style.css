@@ -40,6 +40,45 @@ a, a:hover, a:focus {
     height: 100%;
 }
 
+.nav-tabs-active{
+    background: #fff;
+    border: none;
+    color: #fff;
+}
+.lo-register{
+    width:25% ;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFF;
+    margin-right: 5px;
+    border-radius:0px;
+    background-color: #fff;
+}
+.color-b{
+    color: black;
+}
+.m-padding{
+    margin-bottom: 10px;   
+}
+
+.lo-register a hover{
+
+}
+
+.M-new{
+    margin-left: 28%;
+}
+.nav-tabs > li.active > a:focus{
+    background-color: #42AEEC;
+    color: black;
+    border:0px;
+}
+#btn-new-padding-b{
+    padding-right: 62px;   
+}
 /* Bootstrap Modifications */
 .modal-header {
     background: #003162;
@@ -2426,14 +2465,19 @@ img#profil_pic1 {
 }
 .buttn-bottom{
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 .buttn-type{
     padding-top:5px; 
     padding-left: 52px;
 }
 .btn-padding{
-    padding: 10px;
+    padding: 3px;
     float: right;
+    padding-top: 20px;
+}
+#new-btn-padding{
+    padding-right: 62px;
 }
 .bgc-color{
     background-color: #d7d7d7;

@@ -326,6 +326,13 @@
     .M-new{
         margin-left: 0px;
     }
+    .buttonreg{
+        width: 215px;
+    }
+    .res-btn{
+        padding-top: 20px;
+        margin-right: 22px;
+    }
 }
 @media (min-width: 480px) and (max-width: 1000px) {
 

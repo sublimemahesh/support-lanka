@@ -11,7 +11,7 @@ jQuery(document).ready(function () {
             data: datastring,
             success: function (result) {
                 if (result.status === 'error') {
-                    $('#message').text(result.message);
+                    $('#message1').text(result.message);
                     return false;
                 } else if (result.status === 'success') {
                     window.location.replace("profile.php");
