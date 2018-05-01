@@ -56,7 +56,7 @@
             </div><!-- Logo -->
             <div class="btn-extars btn-extars-padding " >
                 <ul class="account-btns">
-                    <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Sign up or Registration </a></li>
+                    <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Login or Register</a></li>
                     <li class=""><a href="company/register.php" title=""><i class="la la-external-link-square"></i>Post Jobs</a></li>
                 </ul>
             </div><!-- Btn Extras -->

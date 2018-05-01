@@ -16,11 +16,12 @@ class MessageRequest {
     public $email;
     public $title;
     public $message;
+    public $read;
 
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`date`,`company`,`member`,`vacancy`,`contact`,`email`,`title`,`message` FROM `message_request` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`date`,`company`,`member`,`vacancy`,`contact`,`email`,`title`,`message`,`read` FROM `message_request` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -35,6 +36,7 @@ class MessageRequest {
             $this->email = $result['email'];
             $this->title = $result['title'];
             $this->message = $result['message'];
+            $this->read = $result['read'];
 
             return $this;
         }
@@ -42,7 +44,7 @@ class MessageRequest {
 
     public function create() {
 
-        $query = "INSERT INTO `message_request` (`date`, `company`, `member`, `vacancy`, `contact`, `email`, `title`, `message`) VALUES  ('"
+        $query = "INSERT INTO `message_request` (`date`, `company`, `member`, `vacancy`, `contact`, `email`, `title`, `message`,`read`) VALUES  ('"
                 . $this->date . "','"
                 . $this->company . "', '"
                 . $this->member . "', '"
@@ -50,7 +52,9 @@ class MessageRequest {
                 . $this->contact . "', '"
                 . $this->email . "', '"
                 . $this->title . "', '"
-                . $this->message . "')";
+                . $this->message . "')"
+                . $this->read . "')";
+                
 
         $db = new Database();
 

@@ -36,7 +36,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                 <h2>
                                     Manage Message Request
                                 </h2>
-                              
+
                             </div>
                             <div class="body">
                                 <div class="table-responsive">
@@ -48,20 +48,12 @@ include_once(dirname(__FILE__) . './auth.php');
                                                     <th>Member</th>
                                                     <th>Name</th>
                                                     <th>Date</th> 
-                                                    <th>Message</th> 
+                                                    <th>Contact</th> 
+                                                    <th>Email</th> 
+                                                    <th>Status</th>
                                                     <th>Option</th>
                                                 </tr>
                                             </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th>Member</th> 
-                                                    <th>Name</th>
-                                                    <th>Date</th> 
-                                                    <th>Message</th> 
-                                                    <th>Option</th>
-                                                </tr>
-                                            </tfoot>
                                             <tbody>
                                                 <?php
                                                 $MESSAGEREQUEST = new MessageRequest(NULL);
@@ -76,7 +68,23 @@ include_once(dirname(__FILE__) . './auth.php');
                                                         </td>
                                                         <td><?php echo $mess['title']; ?></td>
                                                         <td><?php echo $mess['date']; ?></td>
-                                                        <td><?php echo $mess['message']; ?></td>
+                                                        <td><?php echo $mess['contact']; ?></td>
+                                                        <td><?php echo $mess['email']; ?></td>
+                                                        <td>  
+                                                            <?php
+                                                            if ($MESSAGEREQUEST->read == 1) {
+                                                                ?>
+                                                            <a href="manage-messages-view-member.php?id=<?php echo $mess['id'];?>" style="color:black;">  <i class="material-icons" value="1">drafts</i></a>
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                 <a href="manage-messages-view-member.php?id=<?php echo $mess['id'];?> "style="color:black;"> <i class="material-icons">markunread</i></a> 
+                                                                <?php
+                                                            }
+                                                            ?>
+
+
+                                                        </td>
                                                         <td> 
                                                             <a href="#" class="delete-message-request btn btn-sm btn-danger" data-id="<?php echo $mess['id']; ?>">
                                                                 <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
@@ -88,6 +96,18 @@ include_once(dirname(__FILE__) . './auth.php');
                                                 }
                                                 ?>   
                                             </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Member</th> 
+                                                    <th>Name</th>
+                                                    <th>Date</th> 
+                                                    <th>Contact</th> 
+                                                    <th>email</th> 
+                                                    <th>Option</th>
+                                                    <th>Read</th>
+                                                </tr>
+                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
