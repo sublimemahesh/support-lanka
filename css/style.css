@@ -117,7 +117,7 @@ body{
 #new-p-element{
     float: right; 
     padding-top: 36px;
-    width: 3%;
+    width: 6%;
 }
 button,a,input[type="submit"], input[type="button"]{
     cursor: pointer;

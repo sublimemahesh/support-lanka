@@ -22,6 +22,8 @@ if (!empty($industryGet)) {
 } else {
     $SKILLS = Skill::all1($pageLimit, $setLimit);
 }
+
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,7 +62,7 @@ if (!empty($industryGet)) {
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3>Skills</h3>
+                                    <h3><?php echo $INDUSTRY->name ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +111,7 @@ if (!empty($industryGet)) {
 
                                             </div>
                                             <div class="row">
-                                                <div class="shortlists f-right" >
+                                                <div class="shortlists f-right "  id="shortlists">
                                                     <a href="members.php?skill=<?php echo $skill['id'] ?>" title="">View More <i class="la la-plus"></i></a>
                                                 </div>
                                             </div>

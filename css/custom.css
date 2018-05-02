@@ -406,6 +406,31 @@ ul.setPaginate li a{
         padding-top: 15px;
         padding-left: 40px;
     }
+    .emply-resume-info{
+        padding-left: 0px;
+    }
+    #shortlists > a{
+        loat: left;
+        font-family: Open Sans;
+        font-size: 14px;
+        color: #8b91dd;
+        border: 2px solid #8b91dd;
+        width: 120px;
+        height: 40px;
+        padding-left: 17px;
+        text-align: left;
+        line-height: 35px;
+        padding-right: 13px;
+        -webkit-border-radius: 21px;
+        -moz-border-radius: 21px;
+        -ms-border-radius: 21px;
+        -o-border-radius: 21px;
+        border-radius: 21px;
+        cursor: pointer;
+    }
+    .block-p{
+        padding: 20px 0;
+    }
 }
 
 @media screen and (min-width: 375px)and (max-width: 667px){
@@ -419,8 +444,40 @@ ul.setPaginate li a{
 
         margin-top: 0px;
     }
-    shortlists-p{
+    .shortlists-p{
         padding-top: 15px;
         padding-left: 50px;
+    }
+    .emply-resume-info{
+        padding-left: 0px;
+    }
+    #shortlists > a{
+        loat: left;
+        font-family: Open Sans;
+        font-size: 14px;
+        color: #8b91dd;
+        border: 2px solid #8b91dd;
+        width: 120px;
+        height: 40px;
+        padding-left: 17px;
+        text-align: left;
+        line-height: 35px;
+        padding-right: 13px;
+        -webkit-border-radius: 21px;
+        -moz-border-radius: 21px;
+        -ms-border-radius: 21px;
+        -o-border-radius: 21px;
+        border-radius: 21px;
+        cursor: pointer;
+    }
+    .block-p{
+        padding: 20px 0;
+    }
+    #footer-title-res{
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+    .top-p{
+        padding-top: 40px;
     }
 }
