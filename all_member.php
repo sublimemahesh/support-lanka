@@ -218,7 +218,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                                             <?php echo $member['home_address']; ?>
                                                         </h6>
                                                     </div>
-                                                    <div class="shortlists center-block" style="padding-top: 15px;">
+                                                    <div class="shortlists shortlists-p center-block" style="padding-top: 15px;">
                                                         <a href="member.php?member=<?php echo $member['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
                                                     </div>
                                                 </div>

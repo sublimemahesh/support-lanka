@@ -8125,3 +8125,6 @@ html.ie11 .bs-searchbox .form-control {
     border: 1px solid;
     display: none;
 }
+.img-width{
+    width: 60%;
+}

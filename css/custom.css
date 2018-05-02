@@ -19,10 +19,10 @@
 
     }
     .res-openmenu{
-        margin-top: -120px;
+        margin-top: 0px;
     }
     .res-closemenu {
-        margin-top: -116px;
+        margin-top: 0px;
     }
 
 }
@@ -396,3 +396,31 @@ ul.setPaginate li a{
     padding:5px 8px;
     text-decoration: none;
 } 
+
+@media screen and (min-width: 320px)and (max-width: 568px){
+    .menu-resaction{
+
+        margin-top: -114px;
+    }
+    .shortlists-p {
+        padding-top: 15px;
+        padding-left: 40px;
+    }
+}
+
+@media screen and (min-width: 375px)and (max-width: 667px){
+    .menu-resaction{
+
+        margin-top: 0px;
+    }
+}
+@media screen and (min-width: 360px)and (max-width: 640px){
+    .menu-resaction{
+
+        margin-top: 0px;
+    }
+    shortlists-p{
+        padding-top: 15px;
+        padding-left: 50px;
+    }
+}
