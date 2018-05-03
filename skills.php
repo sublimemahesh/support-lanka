@@ -7,7 +7,7 @@ if (isset($_GET["page"])) {
     $page = 1;
 }
 
-$setLimit = 2;
+$setLimit = 15;
 
 $pageLimit = ($page * $setLimit) - $setLimit;
 $industryGet = NULL;
@@ -22,6 +22,8 @@ if (!empty($industryGet)) {
 } else {
     $SKILLS = Skill::all1($pageLimit, $setLimit);
 }
+
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,7 +62,7 @@ if (!empty($industryGet)) {
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3>Skills</h3>
+                                    <h3><?php echo $INDUSTRY->name ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -72,8 +74,8 @@ if (!empty($industryGet)) {
                 <div class="block remove-bottom">
                     <div class="container">
                         <div class="row no-gape">
-                            <aside class="col-lg-3 col-md-3 column" style="padding-bottom: 35px;">
-                                <div class="widget">
+                            <aside class="col-lg-3 col-md-3  hidden-md hidden-xs column" style="padding-bottom: 35px;">
+                                <div class="widget border">
                                     <h3 class="sb-title open">Industry</h3>
                                     <div class="specialism_widget">
                                         <div class="simple-checkbox">
@@ -93,16 +95,12 @@ if (!empty($industryGet)) {
                                     </div>
                                 </div>
                             </aside>
-                            <div class="col-lg-9 column">
+                            <div class="col-lg-9 col-md-12 column">
                                 <div class="emply-resume-sec">
                                     <?php
                                     foreach ($SKILLS as $skill) {
                                         ?>
                                         <div class="emply-resume-list square">
-                                            <div class="emply-resume-thumb">
-
-                                                <img src="upload/industry/thumb/<?php echo $INDUSTRY->image_name; ?>" alt="" />
-                                            </div>
                                             <div class="emply-resume-info">
                                                 <h3><a href="#" title=""><?php echo $skill['name']; ?></a></h3>
                                                 <span><i><?php
@@ -112,8 +110,10 @@ if (!empty($industryGet)) {
                                                         / <?php echo $skill['name']; ?></i></span>
 
                                             </div>
-                                            <div class="shortlists" style="float: right;">
-                                                <a href="members.php?skill=<?php echo $skill['id'] ?>" title="">View More <i class="la la-plus"></i></a>
+                                            <div class="row">
+                                                <div class="shortlists f-right "  id="shortlists">
+                                                    <a href="members.php?skill=<?php echo $skill['id'] ?>" title="">View More <i class="la la-plus"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                         <?php

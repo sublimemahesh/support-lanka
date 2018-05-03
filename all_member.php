@@ -68,7 +68,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                 <div class="block remove-bottom">
                     <div class="container">
                         <div class="row no-gape">
-                            <aside class="col-lg-3 col-md-3 column">
+                            <aside class="col-lg-3 col-md-3 hidden-md hidden-xs column">
                                 <div class="widget border">
                                     <h3 class="sb-title open">Industry</h3>
                                     <div class="specialism_widget">
@@ -176,11 +176,11 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
             </section>
 
             <section>
-                <div class="block less-top">
+                <div class="block less-top block-p">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 col-xs-12 column">
-                                <div class="emply-list-sec">
+                                <div class="emply-list-sec ">
                                     <div class="row" id="masonry">
                                         <?php
                                         foreach ($MEMBER as $member) {
@@ -218,7 +218,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                                             <?php echo $member['home_address']; ?>
                                                         </h6>
                                                     </div>
-                                                    <div class="shortlists center-block" style="padding-top: 15px;">
+                                                    <div class="shortlists shortlists-p center-block" style="padding-top: 15px;">
                                                         <a href="member.php?member=<?php echo $member['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
                                                     </div>
                                                 </div>
