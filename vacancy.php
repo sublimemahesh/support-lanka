@@ -72,7 +72,7 @@ if (!empty($companyGet)) {
                 <div class="block less-top">
                     <div class="container">
                         <div class="row">
-                            <aside class="col-lg-3 column margin_widget">
+                            <aside class="col-lg-3 hidden-md hidden-sm hidden-xs column margin_widget">
                                 <div class="widget border">
                                     <h3 class="sb-title open">Company</h3>
                                     <div class="specialism_widget">

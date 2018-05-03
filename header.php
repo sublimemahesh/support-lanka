@@ -16,10 +16,9 @@
     </div>
     <div class="responsive-opensec">
         <div class="btn-extars ">
-            <a href="company/register.php" title="" class="post-job-btn1"><i class="la la-plus"></i>Post Jobs</a>
             <ul class="account-btns">
-                <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Sign Up</a></li>
-                <li class=""><a href="member/login.php" title=""><i class="la la-external-link-square"></i> Login</a></li>
+                <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Login or Register</a></li>
+                <li class=""><a href="company/register.php" title=""><i class="la la-external-link-square"></i>Post Jobs</a></li>
             </ul>
         </div><!-- Btn Extras -->
 

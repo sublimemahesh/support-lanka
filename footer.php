@@ -1,5 +1,5 @@
 <footer>
-    <div class="block">
+    <div class="block block-p">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-xs-6 col-sm-3 ">
@@ -24,7 +24,7 @@
                 <div class="col-lg-3 col-xs-6  col-sm-3 ">
                     <div class="widget">
                         <div class="about_widget">
-                            <h3 class="footer-title">Contact Us</h3>
+                            <h3 class="footer-title " id="footer-title-res">Contact Us</h3>
                             <span>Sri Dewamitta RD, Galle.</span>
                             <span>SRi Lanka</span>
                             <span>+949 1312 44 77</span>
