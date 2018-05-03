@@ -99,18 +99,18 @@ $td = date('Y-m-d');
                                         </li>
                                     </ul>
                                     <h2><?php echo $COMPANY->name; ?> / <?php echo $VACANCY->designation; ?> / <?php echo $VACANCY->title; ?></h2>
-                                    <div> <?php echo $VACANCY->description; ?></div>
+                                    <div class="text-justify"> <?php echo $VACANCY->description; ?></div>
                                     <div class="tags-share">
                                         <div class="tags_widget">
                                             <span>Company</span>
                                             <a href="company.php?company=<?php echo $COMPANY->id ?>" title=""><?php echo $COMPANY->name ?></a>
                                         </div>
-                                        <div class="share-bar">
+                                        <div class="share-bar res-new-p">
                                             <a href="#" title="" class="share-fb"><i class="fa fa-facebook"></i></a><a href="#" title="" class="share-twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="share-google"><i class="la la-google"></i></a><span>Share</span>
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-md-offset-2 commentform-sec">
-                                        <h3 class="">Send A Message</h3>
+                                        <h3 class=" text-center">Send A Message</h3>
                                         <form class="form-horizontal"  method="post" action="post-and-get/message-request.php" enctype="multipart/form-data" id="form-message">
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -136,7 +136,7 @@ $td = date('Y-m-d');
                                                 <div class="col-lg-12 center-block">
                                                     <input type="hidden" id="new-messages" name="new-messages" value="new-messages">
                                                     <input type="hidden" id="vacancy" name="vacancy" value="<?php echo $id ?>">
-                                                    <button name="add-massage-request" type="submit" class="submit">Send Message</button>
+                                                    <button name="add-massage-request" type="submit" class="submit res-new-p">Send Message</button>
                                                 </div>
                                             </div>
                                         </form>
