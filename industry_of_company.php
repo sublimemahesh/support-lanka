@@ -37,8 +37,8 @@ include_once(dirname(__FILE__) . '/class/include.php');
             <?php
             include_once './header.php';
             ?>
-
-            <section class="overlape">
+            <div >
+            <section class="overlape   ">
                 <div class="block no-padding">
                     <div data-velocity="-.1" style="background: url(images/resource/mslider1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
                     <div class="container fluid">
@@ -53,7 +53,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                 </div>
             </section>
             <!--Industry-->
-            <section id="scroll-here">
+            <section id="scroll-here" class="new-p-bottom">
                 <div class="block new-pad-bottom">
                     <div class="container">
                         <div class="row">

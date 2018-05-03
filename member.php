@@ -127,7 +127,7 @@ $td = date('Y-m-d');
                                             <?php echo $MEMBER->home_address ?></p></p>
                                     </div>
                                     <div class="col-lg-2 mem-reg">
-                                        <div class="emply-btns">
+                                        <div class="emply-btns res-new-p">
                                             <a class="followus" href="member/register.php" title=""><i class="la la-paper-plane"></i>Register</a>
                                         </div>
                                     </div>

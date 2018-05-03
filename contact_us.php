@@ -130,16 +130,18 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>  
-                                            <button type="submit" id="btnSubmit" class="cp-btn-style1">SEND YOUR MESSAGE</button>
-                                            <div id="dismessage" align="center"></div>
+                                            </div> 
+                                            <div class="res-new-r">
+                                                <button type="submit" id="btnSubmit" class="cp-btn-style1">SEND YOUR MESSAGE</button>
+                                                <div id="dismessage" align="center"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 column marging-top">
                                 <div class="contact-textinfo style2">
-                                  
+
                                     <ul>
                                         <li><i class="la la-map-marker"></i><span>Sri Dewamitta Rd, Galle, Sri Lanka</span></li>
                                         <li><i class="la la-phone"></i><span>Call Us : +9491 312 4477</span></li>

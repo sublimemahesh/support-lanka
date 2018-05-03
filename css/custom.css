@@ -480,4 +480,13 @@ ul.setPaginate li a{
     .top-p{
         padding-top: 40px;
     }
+    .new-p-bottom{
+        padding-bottom: 20px;
+    }
+    .res-new-p{
+        padding-left: 30%;
+    }
+    .res-new-r{
+        padding-right: 15px;
+    }
 }
