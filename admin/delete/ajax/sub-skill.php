@@ -5,7 +5,7 @@ include_once(dirname(__FILE__) . '/../../auth.php');
 
 
 if ($_POST['option'] == 'delete') {
-    $SUB_SKILL = new Sub_skill($_POST['id']);
+    $SUB_SKILL = new SubSkill($_POST['id']);
 
     $result = $SUB_SKILL->delete();
 

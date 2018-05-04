@@ -31,7 +31,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             .uploadbox {
                 height: 194px !important;
             }
-             .col-md-3 {
+            .col-md-3 {
                 padding-bottom: 20px;
                 height: 230px;
             }
@@ -71,11 +71,11 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             foreach ($SKILLDETAILS as $key => $skill_d) {
                                                 ?>
                                                 <div class="col-md-3" id="div_<?php echo $skill_d['id']; ?>">
-<!--                                                    <div class="maxlinetitle"><?php echo $skill_d['sort']; ?></div> -->
+    <!--                                                    <div class="maxlinetitle"><?php echo $skill_d['sort']; ?></div> -->
                                                     <div class="maxlinetitle"><b>Industry : </b>
                                                         <?php
                                                         $SKILL = new Skill($skill_d['skill']);
-                                                        $SUB_SKILL= new Sub_skill($skill_d['sub_skill']);
+                                                        $SUB_SKILL = new SubSkill($skill_d['sub_skill']);
                                                         $INDUSTRY = new Industry($SKILL->industry);
                                                         echo $INDUSTRY->name;
                                                         ?>

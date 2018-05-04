@@ -32,6 +32,11 @@ if ($_POST['save']) {
         $response['message'] = "Please enter the password.";
         echo json_encode($response);
         exit();
+    } else if (empty($_POST['privacy'])) {
+        $response['status'] = 'error';
+        $response['message'] = "Please enter the account type.";
+        echo json_encode($response);
+        exit();
     } else {
         $MEMBER = new Member(NULL);
         $result = $MEMBER->checkEmail($_POST['email']);

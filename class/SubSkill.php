@@ -6,7 +6,7 @@
  * @author sublime holdings
  * @web www.sublime.lk
  */
-class Sub_skill {
+class SubSkill {
 
     public $id;
     public $skill;

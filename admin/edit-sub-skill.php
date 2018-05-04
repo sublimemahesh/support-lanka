@@ -6,9 +6,9 @@ $id = '';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
-$SUB_SKILL = new Sub_skill($id);
+$SUB_SKILL = new SubSkill($id);
 ?> 
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html> 
     <head>
         <meta charset="UTF-8">
@@ -29,7 +29,7 @@ $SUB_SKILL = new Sub_skill($id);
 
     <body class="theme-red">
         <?php
-        include '/navigation-and-header.php';
+        include './navigation-and-header.php';
         ?>
 
         <section class="content">
