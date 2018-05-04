@@ -5,7 +5,7 @@ include_once(dirname(__FILE__) . '/../auth.php');
 
 if (isset($_POST['add-sub-skill'])) {
 
-    $SUB_SKILL = new Sub_skill(NULL);
+    $SUB_SKILL = new SubSkill(NULL);
     $VALID = new Validator();
 
     $SUB_SKILL->skill = $_POST['skill'];
@@ -41,7 +41,7 @@ if (isset($_POST['add-sub-skill'])) {
 
 if (isset($_POST['edit-sub-skill'])) {
     
-    $SUB_SKILL = new Sub_skill($_POST['id']);
+    $SUB_SKILL = new SubSkill($_POST['id']);
  
     $VALID = new Validator();
 

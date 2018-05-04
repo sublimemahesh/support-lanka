@@ -6,9 +6,9 @@ $id = '';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
-$SUB_SKILL = new skill($id);
+$SKILL = new Skill($id);
 ?> 
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html> 
     <head>
         <meta charset="UTF-8">
@@ -17,7 +17,7 @@ $SUB_SKILL = new skill($id);
 
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
         <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="plugins/node-waves/waves.css" rel="stylesheet" />
@@ -29,7 +29,7 @@ $SUB_SKILL = new skill($id);
 
     <body class="theme-red">
         <?php
-        include '/navigation-and-header.php';
+        include './navigation-and-header.php';
         ?>
 
         <section class="content">
@@ -63,21 +63,8 @@ $SUB_SKILL = new skill($id);
                                             <label for="name">Skill</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <select class="form-control show-tick place-select1" type="text" id="industry" autocomplete="off" name="industry" disabled="true">
-                                                    <option value="<?php $SUB_SKILL->id ?>" class="active light-c">
-                                                        <?php
-                                                        $SKI = new Skill($SUB_SKILL->id);
-                                                        echo $SKI->name;
-                                                        ?>
-                                                    </option>
-                                                    <?php foreach (Skill::all() as $key => $SKI) {
-                                                        ?>
-                                                        <option value="<?php echo $SKI['id']; ?>"><?php echo $SKI['name']; ?></option>
-                                                        <?php
-                                                    }
-                                                    ?>
-                                                </select>
+                                            <div class="form-group"> 
+                                                <input type="text" value="<?php echo $SKILL->name; ?>" disabled="TRUE" class="form-control"/>
                                             </div>
                                         </div>
                                     </div>
@@ -96,7 +83,7 @@ $SUB_SKILL = new skill($id);
 
                                     <div class="row clearfix">
                                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5"> 
-                                            <input type="hidden" id="skill" value="<?php echo $SUB_SKILL->id; ?>" name="skill"/>
+                                            <input type="hidden" id="skill" value="<?php echo $SKILL->id; ?>" name="skill"/>
                                             <input type="submit" name="add-sub-skill" class="btn btn-primary m-t-15 waves-effect" value="Add sub Skill"/>
                                         </div>
                                     </div>
@@ -107,38 +94,35 @@ $SUB_SKILL = new skill($id);
                             <div class="body">
                                 <div class="header">
                                     <h2 class="text-center">
-                                        sub skills
-                                    </h2>
+                                        Sub Skills
+                                    </h2> 
+                                </div> 
+                                <div class="row clearfix">
+                                    <?php
+                                    foreach (SubSkill::getSkillDetails($id) as $key => $sub_skill) {
+                                        ?>
+                                        <div class="col-md-4" id="div_<?php echo $sub_skill['id']; ?>">
 
-                                </div
-                                <div>
-                                    <div class="row clearfix">
-                                        <?php
-                                        foreach (Sub_skill::getSkillDetails($id) as $key => $sub_skill) {
-                                            ?>
-                                            <div class="col-md-4" id="div_<?php echo $sub_skill['id']; ?>">
-                                                <div>
-                                                    <div><?php echo $sub_skill['name']; ?></div> 
+                                            <div><?php echo $sub_skill['name']; ?></div> 
 
-                                                    <div class="top-10"> 
-                                                        <a href="edit-sub-skill.php?id=<?php echo $sub_skill['id']; ?>" class="op-link btn btn-sm btn-info">
-                                                            <i class="glyphicon glyphicon-pencil"></i>
-                                                        </a> 
+                                            <div class="top-10"> 
+                                                <a href="edit-sub-skill.php?id=<?php echo $sub_skill['id']; ?>" class="op-link btn btn-sm btn-info">
+                                                    <i class="glyphicon glyphicon-pencil"></i>
+                                                </a> 
 
-                                                        |  
-                                                        <a href="#" class="delete-sub-skill btn btn-sm btn-danger" data-id="<?php echo $sub_skill['id']; ?>">
-                                                            <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
-                                                        </a>
+                                                |  
+                                                <a href="#" class="delete-sub-skill btn btn-sm btn-danger" data-id="<?php echo $sub_skill['id']; ?>">
+                                                    <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                </a>
 
-                                                    </div>
-                                                </div> 
                                             </div>
-                                            <?php
-                                        }
-                                        ?> 
+                                        </div>
+                                        <?php
+                                    }
+                                    ?> 
 
-                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

@@ -109,7 +109,7 @@ $SKILL = new Skill($SKILLDETAILS->skill);
                                                                 <select class="form-control" id="name" name="sub_skill">
                                                                     <option value="" > -- Please Select -- </option>
                                                                     <?php
-                                                                    $SubSkill = new Sub_skill(NULL);
+                                                                    $SubSkill = new SubSkill(NULL);
                                                                     $sub_skills = $SubSkill->GetSubSkillsBySkill($SKILLDETAILS->skill);
                                                                     foreach ($sub_skills as $sub_skill) {
                                                                         if ($sub_skill['id'] == $SKILLDETAILS->sub_skill) {
