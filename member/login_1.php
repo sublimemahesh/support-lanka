@@ -40,7 +40,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
             <div class="container">
                 <div class="col-md-12 row-marging">
                     <form class="form-login" action="post-and-get/member.php" method="POST">
-                        <h2 class="form-login-heading">sign in now</h2>
+                        <h2 class="form-login-heading">log in now</h2>
                         <div class="login-wrap">
                             <?php
                             if (isset($_GET['message'])) {
@@ -59,7 +59,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     <a href="forgot-password.php"> Forgot Password?</a>
                                 </span>
                             </label>
-                            <button class="btn btn-theme btn-block" name="login" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+                            <button class="btn btn-theme btn-block" name="login" type="submit"><i class="fa fa-lock"></i> LOG IN</button>
                             <hr>
                             <div class="login-social-link centered">
                                 <p>or you can sign in via your social network</p>
