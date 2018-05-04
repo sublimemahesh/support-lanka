@@ -9,9 +9,9 @@ $MEMBER = new Member($_SESSION['id']);
         <div class="fa fa-bars"></div>
     </div>
     <!--logo start-->
-    <a href="index.php" class="logo"><b>Member Dashboard</b></a>
+    <a href="index.php" class="logo " id="new-font"> <b>Member Dashboard</b></a>
     <!--logo end-->
-    <div class="pull-right top-menu nav notify-row">
+    <div class="pull-right top-menu nav notify-row new-notify-row">
         <ul class="nav top-menu">
             <li id="header_inbox_bar" class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="index.php">

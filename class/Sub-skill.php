@@ -1,15 +1,10 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of sub-skill
+ * Description of Product
  *
- * @author win7
+ * @author sublime holdings
+ * @web www.sublime.lk
  */
 class Sub_skill {
 
@@ -101,6 +96,22 @@ class Sub_skill {
         while ($row = mysql_fetch_array($result)) {
             array_push($array_res, $row);
         }
+        return $array_res;
+    }
+
+    public function GetSubSkillsBySkill($skill) {
+
+        $query = "SELECT `name`,`id` FROM `sub_skill` WHERE `skill` = '" . $skill . "' ORDER BY `sort` ASC";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
         return $array_res;
     }
 

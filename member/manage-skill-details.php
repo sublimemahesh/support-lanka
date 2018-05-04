@@ -75,6 +75,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <div class="maxlinetitle"><b>Industry : </b>
                                                         <?php
                                                         $SKILL = new Skill($skill_d['skill']);
+                                                        $SUB_SKILL= new Sub_skill($skill_d['sub_skill']);
                                                         $INDUSTRY = new Industry($SKILL->industry);
                                                         echo $INDUSTRY->name;
                                                         ?>
@@ -82,6 +83,11 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <div class="maxlinetitle"><b>Skill : </b>
                                                         <?php
                                                         echo $SKILL->name;
+                                                        ?>
+                                                    </div> 
+                                                    <div class="maxlinetitle"><b>Sub Skill : </b>
+                                                        <?php
+                                                        echo $SUB_SKILL->name;
                                                         ?>
                                                     </div> 
                                                     <div class="maxlinetitle"><b>Working Percentage : </b><?php echo $skill_d['percentage']; ?></div>
