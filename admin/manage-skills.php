@@ -82,10 +82,13 @@ include_once(dirname(__FILE__) . './auth.php');
 
                                                         <td> 
                                                             <a href="edit-skill.php?id=<?php echo $industry['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-
+                                                            <a href="create-subskill.php?id=<?php echo $industry['id']; ?>" class=" btn btn-sm btn-primary">
+                                                                <i class="glyphicon glyphicon-folder-open" ></i>
+                                                            </a>
                                                             <a href="#" class="delete-skill btn btn-sm btn-danger" data-id="<?php echo $industry['id']; ?>">
                                                                 <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                             </a>
+
                                                         </td>
                                                     </tr>
                                                     <?php

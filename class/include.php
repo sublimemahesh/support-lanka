@@ -24,6 +24,8 @@ include_once(dirname(__FILE__) . '/Vacancy.php');
 include_once(dirname(__FILE__) . '/MessageRequest.php');
 include_once(dirname(__FILE__) . '/Search.php');
 include_once(dirname(__FILE__) . '/FeedBack.php');
+include_once(dirname(__FILE__) . '/Sub-skill.php');
+
 
 function dd($data) {
     var_dump($data);
