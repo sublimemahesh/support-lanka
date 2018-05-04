@@ -232,10 +232,6 @@
 
 @media (max-width: 480px) {
 
-    .notify-row, .search, .dont-show , .inbox-head .sr-input, .inbox-head .sr-btn{
-        display: none;
-    }
-
     #top_menu .nav > li, ul.top-menu > li {
         float: right;
     }
@@ -332,6 +328,16 @@
     .res-btn{
         padding-top: 20px;
         margin-right: 22px;
+    }
+
+    .new-notify-row{
+        margin-top: 15px;
+        margin-left: 0px;
+
+
+    }
+    #new-font{
+        font-size: 16px;
     }
 }
 @media (min-width: 480px) and (max-width: 1000px) {

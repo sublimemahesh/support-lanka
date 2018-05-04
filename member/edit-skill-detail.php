@@ -7,6 +7,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
 $SKILLDETAILS = new SkillDetail($id);
+$SKILL = new Skill($SKILLDETAILS->skill);
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,14 +59,33 @@ $SKILLDETAILS = new SkillDetail($id);
                                                 <form class="form-horizontal" method="post" action="post-and-get/skill-detail.php" enctype="multipart/form-data"> 
                                                     <div class="col-md-12">
 
-<!--
+                                                        <div class="">
+                                                            <div class="bottom-top">
+                                                                <label for="Industry">Industry</label>
+                                                            </div>
+                                                            <div class="">
+                                                                <select class="form-control show-tick place-select1" type="text" id="industry" autocomplete="off" name="industry" disabled="true">
+                                                                    <option value="<?php $SKILLDETAILS->skill ?>" class="active light-c">
+                                                                        <?php
+                                                                        $INDU = new Industry($SKILL->industry);
+                                                                        echo $INDU->name;
+                                                                        ?>
+                                                                    </option>
+                                                                    <?php foreach (Industry::all() as $key => $indu) {
+                                                                        ?>
+                                                                        <option value="<?php echo $indu['id']; ?>"><?php echo $indu['name']; ?></option>
+                                                                        <?php
+                                                                    }
+                                                                    ?>
+                                                                </select>
+                                                            </div>
+                                                        </div>
                                                         <div class="">
                                                             <div class="bottom-top">
                                                                 <label for="skill">Skill</label>
                                                             </div>
                                                             <div class="">
-
-                                                                <select class="form-control" id="vehicle_type" name="vehicle_type">
+                                                                <select class="form-control show-tick place-select1" type="text" id="Skill" autocomplete="off" name="Skill" disabled="true">
                                                                     <option value="<?php echo $SKILLDETAILS->skill ?>">
                                                                         <?php
                                                                         $SKILL = new Skill($SKILLDETAILS->skill);
@@ -80,18 +100,45 @@ $SKILLDETAILS = new SkillDetail($id);
                                                                     ?>
                                                                 </select>
                                                             </div>
-                                                        </div>-->
-
+                                                        </div> 
+                                                        <div class="">
+                                                            <div class="bottom-top">
+                                                                <label for="sub skill">Sub Skill</label>
+                                                            </div>
+                                                            <div class="">
+                                                                <select class="form-control" id="name" name="sub_skill">
+                                                                    <option value="" > -- Please Select -- </option>
+                                                                    <?php
+                                                                    $SubSkill = new Sub_skill(NULL);
+                                                                    $sub_skills = $SubSkill->GetSubSkillsBySkill($SKILLDETAILS->skill);
+                                                                    foreach ($sub_skills as $sub_skill) {
+                                                                        if ($sub_skill['id'] == $SKILLDETAILS->sub_skill) {
+                                                                            ?>
+                                                                            <option value="<?php echo $sub_skill['id']; ?>" selected>
+                                                                                <?php echo $sub_skill['name']; ?>
+                                                                            </option>
+                                                                            <?php
+                                                                        } else {
+                                                                            ?>
+                                                                            <option value="<?php echo $sub_skill['id']; ?>">
+                                                                                <?php echo $sub_skill['name']; ?>
+                                                                            </option>
+                                                                            <?php
+                                                                        }
+                                                                    }
+                                                                    ?>  
+                                                                </select>
+                                                            </div>
+                                                        </div>
                                                         <div class="">
                                                             <div class="bottom-top">
                                                                 <label for="percentage">Percentage</label>
                                                             </div>
                                                             <div class="">
+
                                                                 <input type="text" id="percentage" name="percentage" class="form-control" placeholder="Please Enter Duration" value="<?php echo $SKILLDETAILS->percentage; ?>">
                                                             </div>
                                                         </div>
-
-
                                                         <div class="">
                                                             <div class="bottom-top">
                                                                 <label for="description">Description</label>

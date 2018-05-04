@@ -11,6 +11,7 @@ if (isset($_POST['add-skill-details'])) {
 
     $SKILLDETAILS->member = $_POST['member'];
     $SKILLDETAILS->skill = $_POST['skill'];
+    $SKILLDETAILS->sub_skill = $_POST['sub_skill'];
     $SKILLDETAILS->percentage = $_POST['percentage'];
     $SKILLDETAILS->description = $_POST['description'];
 
@@ -46,6 +47,7 @@ if (isset($_POST['edit-skill-details'])) {
     $SKILLDETAILS = New SkillDetail($_POST['id']);
     $VALID = new Validator();
 
+    $SKILLDETAILS->sub_skill = $_POST['sub_skill'];
     $SKILLDETAILS->percentage = $_POST['percentage'];
     $SKILLDETAILS->description = $_POST['description'];
 

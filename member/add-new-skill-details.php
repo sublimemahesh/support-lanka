@@ -82,6 +82,16 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                             </select>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="">
+                                                                        <div class="bottom-top">
+                                                                            <label for="sub-skill-bar">Sub Skill</label>
+                                                                        </div>
+                                                                        <div class="">
+                                                                            <select class="form-control" autocomplete="off" type="text" id="sub-skill-bar" autocomplete="off" name="sub_skill" required="TRUE">
+                                                                                <option value=""> -- Please Select a Skill First -- </option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
 
                                                                     <div class="">
                                                                         <div class="bottom-top">
@@ -143,7 +153,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
         <!-- skill custom -->
         <script src="js/skill.js"></script>
-
+        <script src="js/sub-skill.js" ></script>
         <script>
 
             $(function () {

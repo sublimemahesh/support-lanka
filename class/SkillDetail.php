@@ -10,6 +10,7 @@ class SkillDetail {
     public $id;
     public $member;
     public $skill;
+    public $sub_skill;
     public $percentage;
     public $description;
     public $sort;
@@ -17,7 +18,7 @@ class SkillDetail {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`member`,`skill`,`percentage`,`description`,`sort` FROM `skill_details` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`member`,`skill`,`sub_skill`,`percentage`,`description`,`sort` FROM `skill_details` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -26,6 +27,7 @@ class SkillDetail {
             $this->id = $result['id'];
             $this->member = $result['member'];
             $this->skill = $result['skill'];
+            $this->sub_skill = $result['sub_skill'];
             $this->percentage = $result['percentage'];
             $this->description = $result['description'];
             $this->sort = $result['sort'];
@@ -36,9 +38,10 @@ class SkillDetail {
 
     public function create() {
 
-        $query = "INSERT INTO `skill_details` (`member`, `skill`, `percentage`, `description`, `sort`) VALUES  ('"
+        $query = "INSERT INTO `skill_details` (`member`, `skill`,`sub_skill`, `percentage`, `description`, `sort`) VALUES  ('"
                 . $this->member . "','"
                 . $this->skill . "', '"
+                . $this->sub_skill . "', '"
                 . $this->percentage . "', '"
                 . $this->description . "', '"
                 . $this->sort . "')";
@@ -74,6 +77,7 @@ class SkillDetail {
 
         $query = "UPDATE  `skill_details` SET "
                 . "`percentage` ='" . $this->percentage . "', "
+                . "`sub_skill` ='" . $this->sub_skill . "', "
                 . "`description` ='" . $this->description . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 
@@ -139,6 +143,21 @@ class SkillDetail {
     public function CheckSkillIsExisByMember($member, $skill) {
 
         $query = "SELECT * FROM `skill_details` WHERE `member` = '" . $member . "' AND  `skill` = '" . $skill . "'";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+
+        if (mysql_num_rows($result) > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+    public function CheckSubSkillIsExisByMember($member, $Subskill) {
+
+        $query = "SELECT * FROM `skill_details` WHERE `member` = '" . $member . "' AND  `skill` = '" . $Subskill . "'";
 
         $db = new Database();
 
