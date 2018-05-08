@@ -57,7 +57,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                                 <span class="fa fa-user-circle"></span>
                                             </div>
                                             <div class="info">
-                                                <h4 class="text-center">Edit  Profile</h4>
+                                                <h4 class="text-center">Edit My Profile</h4>
 
                                             </div>
                                         </div>

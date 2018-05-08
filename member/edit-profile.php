@@ -63,7 +63,7 @@ $MEMBER = new Member($_SESSION['id']);
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-pencil"></i> Change Your Details</div>
+                                <div class="panel-heading"><i class="fa fa-pencil"></i> Change My Details</div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="userccount">
