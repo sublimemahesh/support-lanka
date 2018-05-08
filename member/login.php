@@ -70,7 +70,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                         <div class="buttn-bottom"  >
                                             <div class="pull-left text-danger btn-padding" id="message" ></div>
                                             <div Class="new-p-top ">  
-                                                <a href="forgot-password.php" class="color">Forgot password?</a>
+                                                <a href="forgot-password.php" class="color-b">Forgot password?</a>
                                             </div>
                                             <div class=" padding_style btn-padding btn-new-padding" >
                                                 <button class="buttonreg" name="login">LOG IN</button>
@@ -89,7 +89,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">
                                     <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
                                     <div >
-                                        <select name="public" class="inputbox" id="public">
+                                        <select name="privacy" class="inputbox" id="public">
                                             <option> - Please Select Your Account Type - </option>
                                             <option value="1"> Public </option>
                                             <option value="0"> Private </option>
