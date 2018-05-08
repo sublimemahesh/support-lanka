@@ -54,11 +54,11 @@ if ($_POST['save']) {
             $MEMBER->profile_picture = filter_input(INPUT_POST, 'profile_picture');
             $MEMBER->status = filter_input(INPUT_POST, 'status');
             $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
-            $MEMBER->privacy = filter_input(INPUT_POST, 'public');
+            $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
             $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
 
             $MEMBER->create();
- 
+
             if ($MEMBER->id) {
                 $MEMBER->login($MEMBER->email, $MEMBER->password);
                 $response['status'] = 'success';
