@@ -30,7 +30,7 @@ if (isset($_POST['add-experience'])) {
         $VALID->addError("Your data was saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        header("location: ../manage-experience.php");
     } else {
 
         if (!isset($_SESSION)) {
@@ -82,7 +82,7 @@ if (isset($_POST['save-changes'])) {
 
     foreach ($_POST['sort'] as $key => $exp) {
         $key = $key + 1;
-   
+
         $EXPERIENCE = Experience::arrange($key, $exp);
 
         header('Location: ' . $_SERVER['HTTP_REFERER']);

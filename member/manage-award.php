@@ -88,7 +88,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                     </a>
                                                                     |
                                                                     <a>
-                                                                        <button class="delete-award all-icon btn btn-danger btn-md fa fa-trash-o" data-id="<?php echo $edu['id']; ?>"></button>
+                                                                        <button class="delete-award all-icon btn btn-danger btn-md fa fa-trash-o" data-id="<?php echo $awa['id']; ?>"></button>
                                                                     </a>
                                                                 </div>
                                                             </div>
