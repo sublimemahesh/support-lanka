@@ -9,7 +9,7 @@ $MEMBER = new Member($_SESSION['id']);
         <div class="fa fa-bars"></div>
     </div>
     <!--logo start-->
-    <a href="index-profile.php" class="logo " id="new-font"> <b> Dashboard</b></a>
+    <a href="index.php" class="logo " id="new-font"> <b> Dashboard</b></a>
     <!--logo end-->
     <div class="pull-right top-menu nav notify-row new-notify-row">
         <ul class="nav top-menu">
@@ -83,7 +83,7 @@ $MEMBER = new Member($_SESSION['id']);
                     <span class="badge bg-theme"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="./">Home</a></li>
+                    <li><a href="profile.php">Home</a></li>
                     <li><a href="edit-profile.php">Edit Profile</a></li>
                     <li><a href="change-password.php">Change Password</a></li>
                     <li class="divider"></li>
@@ -109,11 +109,11 @@ $MEMBER = new Member($_SESSION['id']);
             <?php
             if (empty($MEMBER->profile_picture)) {
                 ?> 
-                <p class="centered"><a href="./"><img src="../upload/member/member.png" class="img-circle" width="60"></a></p>
+            <p class="centered"><a href="profile.php"><img src="../upload/member/member.png" class="img-circle" width="60"></a></p>
                 <?php
             } else {
                 ?>
-                <p class="centered"><a href="./"><img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>" id="profil_pic1" class="img-circle" width="60"></a></p>
+                <p class="centered"><a href="profile.php"><img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>" id="profil_pic1" class="img-circle" width="60"></a></p>
                 <?php
             }
             ?>
