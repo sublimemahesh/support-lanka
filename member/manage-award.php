@@ -94,25 +94,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             </div>
                                                         </div>
                                                     </div>
-<!--                                                    <div class="col-md-3" id="div_<?php echo $awa['id']; ?>">
-                                                        <div class="maxlinetitle"><?php echo $awa['sort']; ?></div> 
-                                                        <div class="maxlinetitle"><b>Title : </b><?php echo substr($awa['title'], 0, 20) . "" ?></div>
-                                                        <div class="maxlinetitle"><b>Duration : </b><?php echo substr($awa['duration'], 0, 20) . "" ?></div>
-                                                        <div class="maxlinetitle"><b>Description : </b><?php echo substr($awa['description'], 0, 50) . "" ?></div>
-                                                        <div>
-                                                            <a href="edit-award.php?id=<?php echo $awa['id']; ?>">
-                                                                <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                            </a> 
-                                                            |
-                                                            <a href="arrange-award.php">
-                                                                <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
-                                                            </a> 
-                                                            | 
-                                                            <a href="#"> 
-                                                                <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-award" data-id="<?php echo $awa['id']; ?>"></button>
-                                                            </a>
-                                                        </div>
-                                                    </div>-->
                                                     <?php
                                                 }
                                                 ?> 

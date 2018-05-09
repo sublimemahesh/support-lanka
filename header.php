@@ -1,12 +1,8 @@
-
-
-
-
 <div class="responsive-header">
     <div class="row">
         <div class="col-md-12">
             <div class="res-logo col-md-9">
-                <img src="images/resource/logo11.png" alt="" />
+                <img src="images/resource/logo11.png" alt=""  class="img-new"/>
             </div>
             <div class="menu-resaction col-md-3">
                 <div class="res-openmenu">
@@ -15,17 +11,19 @@
                 <div class="res-closemenu">
                     <img src="images/icon2.png" alt="" />
                 </div>
+
+            </div>
+            <div class="new-btn-p">
+                <a href="member/login.php"> <button type="button" class="btn btn-danger">Register Or Login</button></a>
+<!--                <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn2" ><i class="la la-user"></i>Login or Register</a>-->
             </div>
         </div>
     </div>
     <div class="responsive-opensec">
         <div class="btn-extars ">
-            
-            <a href="company/register.php" title="" class="post-job-btn1"><i class="la la-plus"></i>Post Vacancy</a>
-<ul class="account-btns">
 
-                <li class=""><a href="member/login.php" title=""><i class="la la-external-link-square"></i> Login or Register</a></li>
-            </ul>
+            <a href="company/register.php" title="" id="post-job-btn1"class=" sticky1 btn2"><i class="la la-plus"></i>Post Vacancy</a>
+            
         </div><!-- Btn Extras -->
 
         <div class="responsivemenu">
@@ -60,8 +58,9 @@
                 <a href="#" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
             </div><!-- Logo -->
             <div class="btn-extars"> 
-                <ul class="account-btns">
-                    <li class=""><a href="member/login.php" title=""><i class="la la-external-link-square"></i> Login or Register</a></li>
+                <ul class="account-btn">
+
+                    <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn2" style="padding-right: 20px;"><i class="la la-user"></i>Login or Register</a>
                 </ul>
                 <a href="company/register.php" title="" id="post-job-btn1"class=" sticky1 btn2"><i class="la la-plus"></i>Post Vacancy</a>
 
