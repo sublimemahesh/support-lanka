@@ -73,7 +73,7 @@ if (isset($_POST['edit-education'])) {
         $VALID->addError("Your changes saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+         header("location: ../manage-education.php");
     } else {
 
         if (!isset($_SESSION)) {

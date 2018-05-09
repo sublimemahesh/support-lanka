@@ -64,7 +64,7 @@ if (isset($_POST['edit-skill-details'])) {
         $VALID->addError("Your changes saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+         header("location: ../manage-skill-details.php");
     } else {
 
         if (!isset($_SESSION)) {

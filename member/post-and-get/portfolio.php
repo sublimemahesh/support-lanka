@@ -62,7 +62,7 @@ if (isset($_POST['edit-portfolio'])) {
         $VALID->addError("Your changes saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+          header("location: ../manage-portfolio.php");
     } else {
 
         if (!isset($_SESSION)) {

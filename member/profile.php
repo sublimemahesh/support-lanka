@@ -93,6 +93,9 @@ $MEMBER = new Member($_SESSION['id']);
                                                         <input type="hidden" name="upload-profile-image" id="upload-profile-image"/>
                                                         <input type="hidden" name="member" id="member" value="<?php echo $MEMBER->id; ?>"/>
                                                     </form>
+                                                        <div  style="margin-top: 5px; ">
+                                                            <a href="edit-profile.php">  <button type="button" class="btn btn-primary" style="border-radius: 6px;">Edit Profile</button></a>
+                                                        </div>
                                                 </div>
 
                                             </div>
