@@ -32,8 +32,8 @@ if (isset($_POST['add-education'])) {
         }
         $VALID->addError("Your data was saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
-
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        
+        header("location: ../manage-education.php");
     } else {
 
         if (!isset($_SESSION)) {

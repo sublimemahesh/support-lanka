@@ -30,7 +30,7 @@ if (isset($_POST['add-award'])) {
         $VALID->addError("Your data was saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+          header("location: ../manage-award.php");
     } else {
 
         if (!isset($_SESSION)) {
