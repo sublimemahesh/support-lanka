@@ -52,16 +52,16 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-trophy"></i> Create Your Award</div>
+                                <div class="panel-heading"><i class="fa fa-trophy"></i> Add MY award</div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="row clearfix">
                                             <div class="col-md-12">
                                                 <div class="col-md-3 row-pad">
                                                     <a href="add-new-award.php">
-                                                        <div class="uploadbox uploadphotobx" id="uploadphotobx">
+                                                        <div class="uploadbox uploadphotobx" id="uploadphotobx" style="height: 206px;">
                                                             <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                            <label class="uploadBox">Click here to Add Your Award
+                                                            <label class="uploadBox">Click Here To Add My Award
 
                                                             </label>
                                                         </div>
@@ -71,7 +71,30 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 $AWARD = new Award(NULL);
                                                 foreach ($AWARD->GetAwardByMember($_SESSION['id']) as $key => $awa) {
                                                     ?>
-                                                    <div class="col-md-3" id="div_<?php echo $awa['id']; ?>">
+                                                    <div class="col-xs-12 col-sm-6 col-md-6 col-md-3" id="div_<?php echo $awa['id']; ?>">
+                                                        <div class="box2 text-center">
+                                                            <div class="" style="height: 35px;">
+                                                                <b><?php echo substr($awa['title'], 0, 20) . "" ?></b>
+                                                            </div>
+                                                            <div class="info">
+                                                                <h5 class="text-justify"><b>Duration</b> : <?php echo substr($awa['duration'], 0, 20) . "" ?></h5>
+                                                                <div style="height: 75px;">
+                                                                    <h6 class="text-justify"> <?php echo substr($awa['description'], 0, 180); "" ?>...</h6>
+                                               
+                                                                </div>
+                                                                <div class=" text-right" style="padding-top: 4px;">
+                                                                    <a href="edit-award.php?id=<?php echo $awa['id']; ?>">
+                                                                        <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                    </a>
+                                                                    |
+                                                                    <a>
+                                                                        <button class="delete-award all-icon btn btn-danger btn-md fa fa-trash-o" data-id="<?php echo $edu['id']; ?>"></button>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+<!--                                                    <div class="col-md-3" id="div_<?php echo $awa['id']; ?>">
                                                         <div class="maxlinetitle"><?php echo $awa['sort']; ?></div> 
                                                         <div class="maxlinetitle"><b>Title : </b><?php echo substr($awa['title'], 0, 20) . "" ?></div>
                                                         <div class="maxlinetitle"><b>Duration : </b><?php echo substr($awa['duration'], 0, 20) . "" ?></div>
@@ -89,7 +112,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                 <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-award" data-id="<?php echo $awa['id']; ?>"></button>
                                                             </a>
                                                         </div>
-                                                    </div>
+                                                    </div>-->
                                                     <?php
                                                 }
                                                 ?> 

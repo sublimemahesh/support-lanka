@@ -2,7 +2,9 @@ $(document).ready(function () {
 
 
     $('#skill-bar').change(function () {
+       
         var skillId = $(this).val();
+        
         $.ajax({
             url: "post-and-get/ajax/sub-skill.php",
             type: "POST",

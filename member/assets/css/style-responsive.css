@@ -338,6 +338,7 @@
     }
     #new-font{
         font-size: 16px;
+        padding-top: 5px;
     }
 }
 @media (min-width: 480px) and (max-width: 1000px) {

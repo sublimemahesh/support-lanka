@@ -87,7 +87,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                             <label for="sub-skill-bar">Sub Skill</label>
                                                                         </div>
                                                                         <div class="">
-                                                                            <select class="form-control" autocomplete="off" type="text" id="sub-skill-bar" autocomplete="off" name="sub_skill" required="TRUE">
+                                                                            <select class="form-control" autocomplete="off" type="text" id="sub-skill-bar" autocomplete="off" name="sub_skill" >
                                                                                 <option value=""> -- Please Select a Skill First -- </option>
                                                                             </select>
                                                                         </div>

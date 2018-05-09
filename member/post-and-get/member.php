@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
 
     if ($MEMBER->login($email, $password)) {
-        header('Location: ../profile.php?message=5');
+        header('Location: ../index-profile.php?message=5');
         exit();
     } else {
         header('Location: ../login_1.php?message=7');

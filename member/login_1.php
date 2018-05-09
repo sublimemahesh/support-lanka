@@ -29,10 +29,10 @@ include_once(dirname(__FILE__) . '/../class/include.php');
     <body class="bgc-color">
         <div class="header-base">
             <div class="container">
-                <div class="col-md-6">
+                <a href="../index.php">  <div class="col-md-6">
                     <img class="memeber-hed-logo" src="../images/logo1.png" alt=""/>
                     <img   src="../images/logo.png" alt=""/>
-                </div>
+                    </div></a>
             </div>
         </div>
 

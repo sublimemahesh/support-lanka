@@ -29,7 +29,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                 max-width: 50% !important;
             }
             .uploadbox {
-                height: 194px !important;
+                height: 206px !important;
             }
             .col-md-3 {
                 padding-bottom: 20px;
@@ -52,15 +52,15 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-shirtsinbulk"></i> Create Your Skill Details</div>
+                                <div class="panel-heading"><i class="fa fa-shirtsinbulk"></i> Add My Skill Details</div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="row clearfix" style="padding-top: 15px;">
                                             <div class="col-md-3">
                                                 <a href="add-new-skill-details.php">
-                                                    <div class="uploadbox uploadphotobx" id="uploadphotobx">
+                                                    <div class="uploadbox uploadphotobx" id="uploadphotobx" >
                                                         <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                        <label class="uploadBox">Click here to Add Your Skill
+                                                        <label class="uploadBox">Click Here To Add MY Skill
 
                                                         </label>
                                                     </div>
@@ -70,41 +70,44 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             $SKILLDETAILS = SkillDetail::GetSkillByMember($_SESSION['id']);
                                             foreach ($SKILLDETAILS as $key => $skill_d) {
                                                 ?>
-                                                <div class="col-md-3" id="div_<?php echo $skill_d['id']; ?>">
-    <!--                                                    <div class="maxlinetitle"><?php echo $skill_d['sort']; ?></div> -->
-                                                    <div class="maxlinetitle"><b>Industry : </b>
-                                                        <?php
-                                                        $SKILL = new Skill($skill_d['skill']);
-                                                        $SUB_SKILL = new SubSkill($skill_d['sub_skill']);
-                                                        $INDUSTRY = new Industry($SKILL->industry);
-                                                        echo $INDUSTRY->name;
-                                                        ?>
-                                                    </div>
-                                                    <div class="maxlinetitle"><b>Skill : </b>
-                                                        <?php
-                                                        echo $SKILL->name;
-                                                        ?>
-                                                    </div> 
-                                                    <div class="maxlinetitle"><b>Sub Skill : </b>
-                                                        <?php
-                                                        echo $SUB_SKILL->name;
-                                                        ?>
-                                                    </div> 
-                                                    <div class="maxlinetitle"><b>Working Percentage : </b><?php echo $skill_d['percentage']; ?></div>
-                                                    <div class="maxlinetitle"><b>Description : </b><?php echo substr($skill_d['description'], 0, 60) . "" ?></div>
-                                                    <div>  
-                                                        <a href="add-new-experience.php?skill=<?php echo $skill_d['id']; ?>">
-                                                            <button class="btn btn-warning btn-sm all-icon fa fa-plus-circle"></button>
-                                                        </a> |
-                                                        <a href="edit-skill-detail.php?id=<?php echo $skill_d['id']; ?>">
-                                                            <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                        </a> |
-                                                        <a href="#"> 
-                                                            <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-skill-detail" data-id="<?php echo $skill_d['id']; ?>"></button>
-                                                        </a> 
+                                                <div class="col-xs-12 col-sm-6 col-md-6 col-md-3" id="div_<?php echo $skill_d['id']; ?>">
+                                                    <div class="box2 text-center">
+                                                        <div class="" style="height: 25px;" >
+                                                            <b><?php
+                                                                $SKILL = new Skill($skill_d['skill']);
+                                                                $SUB_SKILL = new SubSkill($skill_d['sub_skill']);
+                                                                $INDUSTRY = new Industry($SKILL->industry);
+                                                                echo $INDUSTRY->name;
+                                                                ?></b>
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="text-justify" style="height: 25px;"><b>Skill</b> :<?php
+                                                                echo $SKILL->name;
+                                                                ?>
+                                                            </h5>
+                                                            <h5 class="text-justify" style="height: 25px;"><b>Sub Skill</b> :<?php
+                                                                echo $SUB_SKILL->name;
+                                                                ?>
+                                                            </h5>
+                                                            <div style="height: 50px;">
+                                                                <h6 class="text-justify"> <?php echo substr($skill_d['description'], 0, 100) . "" ?>...</h6>
+
+                                                            </div>
+
+                                                            <div class=" text-right" style="padding-top: 4px;">
+                                                                <a href="add-new-experience.php?skill=<?php echo $skill_d['id']; ?>">
+                                                                    <button class="btn btn-warning btn-sm all-icon fa fa-plus-circle"></button>
+                                                                </a> |
+                                                                <a href="edit-skill-detail.php?id=<?php echo $skill_d['id']; ?>">
+                                                                    <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                </a> |
+                                                                <a href="#"> 
+                                                                    <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-skill-detail" data-id="<?php echo $skill_d['id']; ?>"></button>
+                                                                </a> 
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-
                                                 <?php
                                             }
                                             ?> 

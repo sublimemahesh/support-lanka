@@ -52,7 +52,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> Create Your Education Details</div>
+                                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> Add My Education Details</div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="row clearfix">
@@ -61,7 +61,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <a href="add-new-education.php">
                                                         <div class="uploadbox uploadphotobx" id="uploadphotobx">
                                                             <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                            <label class="uploadBox">Click here to Add Your Education
+                                                            <label class="uploadBox">Click Here To Add My Education
 
                                                             </label>
                                                         </div>
@@ -73,25 +73,29 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 if (count($EDUCATION) > 0) {
                                                     foreach ($EDUCATION as $key => $edu) {
                                                         ?>
-                                                        <div class="col-md-3 row-pad" id="div_<?php echo $edu['id']; ?>">
-            <!--                                                        <p class="maxlinetitle"><?php echo $edu['sort']; ?></p>-->
-                                                            <div class="maxlinetitle"><b>Title : </b><?php echo $edu['title']; ?></div>
-                                                            <div class="maxlinetitle"><b>Institute : </b><?php echo $edu['institute']; ?></div>
-                                                            <div class="maxlinetitle"><b>Stream : </b><?php echo $edu['stream']; ?></div>
-                                                            <div class="maxlinetitle"><b>Duration : </b><?php echo $edu['duration']; ?></div>
-                                                            <div class="maxlinetitle"><b>Description : </b><?php echo substr($edu['description'], 0, 35) . "" ?></div>
-                                                            <div>
-                                                                <div class="" style="padding-bottom: 10px">
-                                                                    <a href="edit-education.php?id=<?php echo $edu['id']; ?>">
-                                                                        <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                                    </a>
-                                                                    |
-                                                                    <a>
-                                                                        <button class="delete-education all-icon btn btn-danger btn-md fa fa-trash-o" data-id="<?php echo $edu['id']; ?>"></button>
-                                                                    </a>
+                                                        <div class="col-xs-12 col-sm-6 col-md-6 col-md-3" id="div_<?php echo $edu['id']; ?>">
+                                                            <div class="box2 text-center">
+                                                                <div class="" style="height: 35px;">
+                                                                    <b><?php echo $edu['title']; ?></b>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <h5 class="text-justify"><b>Institute</b> : <?php echo $edu['institute']; ?></h5>
+                                                                    <div style="height: 75px;">
+                                                                        <h6 class="text-justify"> <?php echo substr($edu['description'],0,150); "" ?>...</h6>
+                                                                    </div>
+                                                                    <div class=" text-right" style="padding-top: 4px;">
+                                                                        <a href="edit-education.php?id=<?php echo $edu['id']; ?>">
+                                                                            <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                        </a>
+                                                                        |
+                                                                        <a>
+                                                                            <button class="delete-education all-icon btn btn-danger btn-md fa fa-trash-o" data-id="<?php echo $edu['id']; ?>"></button>
+                                                                        </a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        
                                                         <?php
                                                     }
                                                 } else {
