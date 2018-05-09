@@ -45,7 +45,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> Create Your Education Details</div>
+                                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> Create New Education </div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="userccount">

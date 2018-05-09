@@ -71,9 +71,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                         <input type="hidden" name="status" value="1"/>
                                         <input type="hidden" name="profile_picture" value="member.png"/>
                                         <div Class="new-p-top ">  
-                                            <a href="forgot-password.php" class="color-b">Forgot password?</a></div>
-                                            <div class="buttn-bottom" id="res-btn"  >
-                                            <div class="pull-left text-danger btn-padding" id="message" ></div>
+                                            <a href="forgot-password.php" class="color-b font-size-newf">Forgot password?</a></div>
+                                        <div class="buttn-bottom-Log" id="res-btn"  >
                                             <div class=" padding_style btn-padding btn-new-padding" id="new-btn-padding" >
                                                 <button class="buttonreg" name="login">LOG IN</button>
                                                 <input type="hidden" name="save" value="save"/>

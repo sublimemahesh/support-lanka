@@ -1,3 +1,7 @@
+
+
+
+
 <div class="responsive-header">
     <div class="row">
         <div class="col-md-12">
@@ -16,9 +20,11 @@
     </div>
     <div class="responsive-opensec">
         <div class="btn-extars ">
-            <ul class="account-btns">
-                <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Login or Register</a></li>
-                <li class=""><a href="company/register.php" title=""><i class="la la-external-link-square"></i>Post Jobs</a></li>
+            
+            <a href="company/register.php" title="" class="post-job-btn1"><i class="la la-plus"></i>Post Vacancy</a>
+<ul class="account-btns">
+
+                <li class=""><a href="member/login.php" title=""><i class="la la-external-link-square"></i> Login or Register</a></li>
             </ul>
         </div><!-- Btn Extras -->
 
@@ -51,13 +57,14 @@
     <div class="menu-sec" style="height: 50px;">
         <div class="container" style="height: 50px;">
             <div class="logo">
-                <a href="index.php" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
+                <a href="#" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
             </div><!-- Logo -->
-            <div class="btn-extars btn-extars-padding " >
+            <div class="btn-extars"> 
                 <ul class="account-btns">
-                    <li class=""><a href="member/register.php" title=""><i class="la la-key"></i> Login or Register</a></li>
-                    <li class=""><a href="company/register.php" title=""><i class="la la-external-link-square"></i>Post Jobs</a></li>
+                    <li class=""><a href="member/login.php" title=""><i class="la la-external-link-square"></i> Login or Register</a></li>
                 </ul>
+                <a href="company/register.php" title="" id="post-job-btn1"class=" sticky1 btn2"><i class="la la-plus"></i>Post Vacancy</a>
+
             </div><!-- Btn Extras -->
             <nav>
                 <ul>

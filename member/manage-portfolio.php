@@ -52,7 +52,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-product-hunt"></i> Create Your Portfolio</div>
+                                <div class="panel-heading"><i class="fa fa-product-hunt"></i> Add My Portfolio</div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="row clearfix">
@@ -61,7 +61,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <a href="add-new-portfolio.php">
                                                         <div class="uploadbox uploadphotobx" id="uploadphotobx">
                                                             <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                            <label class="uploadBox">Click here to Add Your Portfolio
+                                                            <label class="uploadBox">Click Here To Add My Portfolio
 
                                                             </label>
                                                         </div>
@@ -71,34 +71,42 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 $PORTFOLIO = new Portfolio(NULL);
                                                 foreach ($PORTFOLIO->GetPortfolioByMember($_SESSION['id']) as $key => $portf) {
                                                     ?>
-                                                    <div class="col-md-3 row-pad" id="div_<?php echo $portf['id']; ?>">
-                                                        <div><?php echo $portf['sort']; ?></div> 
-                                                        <div class="maxlinetitle"><b>Skill : </b>
-                                                            <?php
-                                                            $SKILL_D = new SkillDetail($portf['skill_detail']);
-                                                            $SKILL = new Skill($SKILL_D->skill);
-                                                            echo $SKILL->name;
-                                                            ?>
-                                                        </div>
-                                                        <div class="maxlinetitle"><b>Title : </b><?php echo $portf['title']; ?></div>
-                                                        <div class="maxlinetitle"><b>Date : </b><?php echo $portf['date']; ?></div>
-                                                        <div class="maxlinetitle"><b>Description : </b><?php echo substr($portf['description'], 0, 50) . "" ?></div>
-                                                        <div>
-                                                            <a href="edit-portfolio.php?id=<?php echo $portf['id']; ?>">
-                                                                <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                            </a> 
-                                                            |
-                                                            <a href="arrange-portfolio.php">
-                                                                <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
-                                                            </a> 
-                                                            | 
-                                                            <a href="#"> 
-                                                                <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-portfolio" data-id="<?php echo $portf['id']; ?>"></button>
-                                                            </a>
-                                                            |
-                                                            <a href="create-portfolio-photo.php?id=<?php echo $portf['id']; ?>">
-                                                                <button class="btn btn-success btn-sm all-icon fa fa-photo"></button>
-                                                            </a> 
+
+
+                                                    <div class="col-xs-12 col-sm-6 col-md-6 col-md-3" id="div_<?php echo $portf['id']; ?>">
+                                                        <div class="box3 text-center">
+                                                            <div class="" style="height: 30px;">
+                                                                <b><?php
+                                                                    $SKILL_D = new SkillDetail($portf['skill_detail']);
+                                                                    $SKILL = new Skill($SKILL_D->skill);
+                                                                    echo $SKILL->name;
+                                                                    ?></b>
+                                                            </div>
+                                                            <div class="info">
+                                                                <h5 class="text-justify" style="height: 40px;"><b>Portfolio</b> :<?php echo $portf['title']; ?></h5>
+                                                                <h5 class="text-justify"><b>Date</b>:<?php echo $portf['date']; ?></h5>
+                                                                <div style="height: 50px;">
+                                                                    <h6 class="text-justify"> <?php echo substr($portf['description'], 0, 100) . "" ?>...</h6>
+                                                                </div>
+
+                                                                <div class=" text-right" style="padding-top: 4px;">
+                                                                    <a href="edit-portfolio.php?id=<?php echo $portf['id']; ?>">
+                                                                        <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                    </a> 
+                                                                    |
+                                                                    <a href="arrange-portfolio.php">
+                                                                        <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
+                                                                    </a> 
+                                                                    | 
+                                                                    <a href="#"> 
+                                                                        <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-portfolio" data-id="<?php echo $portf['id']; ?>"></button>
+                                                                    </a>
+                                                                    |
+                                                                    <a href="create-portfolio-photo.php?id=<?php echo $portf['id']; ?>">
+                                                                        <button class="btn btn-success btn-sm all-icon fa fa-photo"></button>
+                                                                    </a> 
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <?php

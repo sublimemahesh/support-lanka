@@ -17,6 +17,24 @@ body {padding-top:50px;}
     margin-top: 60px;
     padding-bottom: 15px;
 }
+.box2 {
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px 15px;
+    height: 208px;
+    display: block;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+.box3 {
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px 15px;
+    height: 218px;
+    display: block;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
 .box-icon {
     background-color: #4267b2;
     border-radius: 50%;
@@ -86,6 +104,9 @@ body {padding-top:50px;}
 }
 .color-b{
     color: black;
+}
+.font-size-newf{
+    font-size: 20px;
 }
 .m-padding{
     margin-bottom: 10px;   
@@ -2569,6 +2590,10 @@ img#profil_pic1 {
     padding: 3px;
     float: right;
     padding-top: 20px;
+}
+.btn-padding1{
+    padding: 3px;
+    float: right;
 }
 
 .re-padding{

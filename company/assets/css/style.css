@@ -68,6 +68,10 @@ a, a:hover, a:focus {
 
 }
 
+.font-size-newf{
+    font-size: 20px;
+}
+
 .M-new{
     margin-left: 28%;
 }
@@ -2467,6 +2471,10 @@ img#profil_pic1 {
     padding-bottom: 10px;
     padding-top: 10px;
 }
+.buttn-bottom-Log{
+    padding-bottom: 10px;
+    padding-top: 0px;
+}
 .buttn-type{
     padding-top:5px; 
     padding-left: 52px;
@@ -2474,7 +2482,7 @@ img#profil_pic1 {
 .btn-padding{
     padding: 3px;
     float: right;
-    padding-top: 20px;
+    padding-top: 0px;
 }
 #new-btn-padding{
     padding-right: 62px;
