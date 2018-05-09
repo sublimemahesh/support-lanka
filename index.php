@@ -57,7 +57,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     if ($key < 8) {
                                                         ?>                                                                                                                                                                                                                                                                                                                                                                       <!--  <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
-                                                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
                                                             <div class="p-category">
                                                                 <a href="skills.php?industry=<?php echo $industry['id']; ?>" title="">
                                                                     <i>

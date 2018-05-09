@@ -682,6 +682,16 @@ label::after {
     padding-top: 11px;
     padding-right: 20px;
 }
+.account-btn {
+    float: left;
+    margin: 0;
+    margin-left: 0px;
+    margin-left: 0px;
+    margin-left: -9px;
+
+    padding-right: 0px;
+    padding-right: 20px;
+}
 .account-btns > li {
     float: left;
     margin: 0;
@@ -1477,8 +1487,8 @@ label::after {
     letter-spacing: 0.3px;
 }
 .btn2{
-    border: 2px solid #91BF38;
-    color: #91BF38;
+    border: 2px solid #f57d08;
+    color: #f57d08;
     padding: 10px;
 }
 #bttn{
@@ -11640,4 +11650,13 @@ header.style4 .account-btns > li a,
 }
 #footer-logo-width{
     width: 70%;
+}
+.new-btn-p{
+    float: right;
+    margin-top: -32px;
+    margin-bottom: 10px;
+}
+.img-new{
+    width: 88%;  
+    margin-left: -25px;
 }
