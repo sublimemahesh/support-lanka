@@ -14,8 +14,7 @@
 
             </div>
             <div class="new-btn-p">
-                <a href="member/login.php"> <button type="button" class="btn btn-danger">Register Or Login</button></a>
-<!--                <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn2" ><i class="la la-user"></i>Login or Register</a>-->
+                <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn2" ><i class="la la-user"></i>Login Or Register</a>
             </div>
         </div>
     </div>
@@ -23,7 +22,7 @@
         <div class="btn-extars ">
 
             <a href="company/register.php" title="" id="post-job-btn1"class=" sticky1 btn2"><i class="la la-plus"></i>Post Vacancy</a>
-            
+
         </div><!-- Btn Extras -->
 
         <div class="responsivemenu">
@@ -52,15 +51,15 @@
 </div>
 
 <header class="stick-top forsticky">
-    <div class="menu-sec" style="height: 50px;">
-        <div class="container" style="height: 50px;">
+    <div class="menu-sec new-height">
+        <div class="container new-height " >
             <div class="logo">
                 <a href="#" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
             </div><!-- Logo -->
             <div class="btn-extars"> 
                 <ul class="account-btn">
 
-                    <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn2" style="padding-right: 20px;"><i class="la la-user"></i>Login or Register</a>
+                    <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn2" style="padding-right: 20px;"><i class="la la-user"></i>Login Or Register</a>
                 </ul>
                 <a href="company/register.php" title="" id="post-job-btn1"class=" sticky1 btn2"><i class="la la-plus"></i>Post Vacancy</a>
 

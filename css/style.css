@@ -1487,9 +1487,12 @@ label::after {
     letter-spacing: 0.3px;
 }
 .btn2{
-    border: 2px solid #f57d08;
-    color: #f57d08;
+    border: 2px solid #00b3e6;
+    color: #00b3e6;
     padding: 10px;
+}
+.new-height{
+    height: 50px;
 }
 #bttn{
     border-color: white;
