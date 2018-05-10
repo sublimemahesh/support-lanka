@@ -27,14 +27,14 @@ if ($_POST['save']) {
         $response['message'] = "Please enter your contact number.";
         echo json_encode($response);
         exit();
+    } else if (empty($_POST['privacy'])) {
+        $response['status'] = 'error';
+        $response['message'] = "Please enter your contact number.";
+        echo json_encode($response);
+        exit();
     } else if (empty($_POST['password'])) {
         $response['status'] = 'error';
         $response['message'] = "Please enter the password.";
-        echo json_encode($response);
-        exit();
-    } else if (empty($_POST['privacy'])) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter the account type.";
         echo json_encode($response);
         exit();
     } else {

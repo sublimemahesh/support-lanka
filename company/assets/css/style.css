@@ -59,6 +59,10 @@ a, a:hover, a:focus {
 }
 .color-b{
     color: black;
+
+}
+.font-size-newf{
+    font-size: 20px;
 }
 .m-padding{
     margin-bottom: 10px;   
@@ -505,7 +509,9 @@ a.logo span {
     color: #68dff0;
 }
 
-
+.p-top{
+    padding-top: 3px;
+}
 /*notification*/
 #top_menu .nav > li, ul.top-menu > li {
     float: left;
@@ -514,7 +520,7 @@ a.logo span {
 .notify-row {
     float: left;
     margin-top: 15px;
-    margin-left: 92px;
+
 }
 
 .notify-row .notification span.label {
@@ -2469,7 +2475,8 @@ img#profil_pic1 {
 }
 .buttn-bottom{
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 0px;
+    padding-right: 58px;
 }
 .buttn-bottom-Log{
     padding-bottom: 10px;
@@ -2548,6 +2555,8 @@ img#profil_pic1 {
     .btn-padding{
         padding: 0px;
         padding-bottom: 20px;
+        padding-top: 12px;
+        padding-right: 10px;
     }
     .btn-keep{
         display: none;

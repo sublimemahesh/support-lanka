@@ -8,7 +8,7 @@ $COMPANY = new Company($_SESSION['id_com']);
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
     </div>
-    <a href="index.php" class="logo"><b>Company Dashboard</b></a>
+    <a href="index.php" class="logo p-top"><b> Dashboard</b></a>
     <div class="pull-right top-menu nav notify-row">
         <ul class="nav top-menu">
             <li id="header_inbox_bar" class="dropdown">
