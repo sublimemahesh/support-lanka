@@ -56,7 +56,7 @@ $INDUSTRY = new Industry(NULL)
                                                 <div id="div_<?php echo $indu['id']; ?>">
                                                     <div><?php echo $indu['sort']; ?></div> 
                                                     <div><?php echo $indu['name']; ?></div> 
-                                                    <img src="../upload/industry/thumb/<?php echo $indu['image_name']; ?>">
+                                                    <a href="create-skill.php?id=<?php echo $indu['id'];?>"><img src="../upload/industry/thumb/<?php echo $indu['image_name']; ?>" width="48%"> </a>
                                                     <div class="top-10"> 
                                                         <a href="edit-industry.php?id=<?php echo $indu['id']; ?>" class="op-link btn btn-sm btn-info">
                                                             <i class="glyphicon glyphicon-pencil"></i>
@@ -68,6 +68,10 @@ $INDUSTRY = new Industry(NULL)
                                                         |  
                                                         <a href="#" class="delete-industry btn btn-sm btn-danger" data-id="<?php echo $indu['id']; ?>">
                                                             <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                        </a>
+                                                        |  
+                                                        <a href="create-skill.php?id=<?php echo $indu['id'];?>" class="op-link btn btn-sm btn-success">
+                                                            <i class="glyphicon glyphicon-open" data-type="cancel"></i>
                                                         </a>
 
                                                     </div>

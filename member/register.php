@@ -87,8 +87,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">
                                     <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
                                     <div >
-                                        <select name="public" class="inputbox" id="privacy">
-                                            <option> - Please Select Your Account Type - </option>
+                                        <select name="privacy" class="inputbox" id="privacy">
+                                            <option placeholder="- Please Select Your Account Type - "> </option>
                                             <option value="1" > Public </option>
                                             <option value="0"> Private </option>
                                         </select>

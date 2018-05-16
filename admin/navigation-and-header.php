@@ -265,12 +265,6 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a href="create-skill.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="manage-skills.php">
                                 <i class="material-icons">list</i>
                                 <span>Manage</span>
@@ -284,32 +278,7 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                         </li>
                     </ul>
                 </li>
-                <!--                <li>
-                                    <a href="javascript:void(0);" class="menu-toggle">
-                                        <i class="material-icons">stars</i>
-                                        <span>Qualification</span>
-                                    </a>
-                                    <ul class="ml-menu">
-                                        <li>
-                                            <a href="create-qualification.php">
-                                                <i class="material-icons">add</i>
-                                                <span>Add New</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="manage-qualifications.php">
-                                                <i class="material-icons">list</i>
-                                                <span>Manage</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="arrange-qualifications.php">
-                                                <i class="material-icons">compare_arrows</i>
-                                                <span>Arrange</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>-->
+               
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">supervisor_account</i>

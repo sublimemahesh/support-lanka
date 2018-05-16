@@ -1,6 +1,7 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . './auth.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +56,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                             </div>
                                         </div>
                                     </div> 
-                                    
+
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="image">Industry Picture</label>
