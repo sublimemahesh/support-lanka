@@ -95,7 +95,7 @@ if (!empty($companyGet)) {
                                 </div>
                             </aside>
                             <div class="col-lg-9 column">
-                                <div class="emply-list-sec style2">
+                                <div class="emply-list-sec style2 row-padding-new">
                                     <?php
                                     foreach ($VACANCY as $vacant) {
                                         ?>

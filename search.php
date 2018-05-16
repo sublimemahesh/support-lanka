@@ -2,12 +2,23 @@
 include_once(dirname(__FILE__) . '/class/include.php');
 
 
+if (isset($_GET["page"])) {
+    $page = (int) $_GET["page"];
+} else {
+    $page = 1;
+}
+$setLimit = 10;
+$pageLimit = ($page * $setLimit) - $setLimit;
+
+
 if ($_GET['keyword'] !== '') {
-    $COMPANY = Search::company($_GET['keyword']);
-    $MEMBER = Search::members($_GET['keyword']);
+    $COMPANY = Search::company($_GET['keyword'],$pageLimit, $setLimit);
+
+    $MEMBER = Search::members($_GET['keyword'],$pageLimit, $setLimit);
 } else {
     $MEMBER = Member::all();
     $COMPANY = Company::all();
+    $INDUSTRY = Industry::all();
 }
 ?>
 <!DOCTYPE html>
@@ -95,7 +106,7 @@ if ($_GET['keyword'] !== '') {
                                         <li><a class="current" data-tab="fjobs">Members</a></li>
                                         <li><a data-tab="rjobs">Employers</a></li>
                                     </ul>
-                                    <div id="fjobs" class="tab-content current">
+                                  <div id="fjobs" class="tab-content current">
                                         <div class="job-listings-tabs">
                                             <div class="row">
                                                 <?php
@@ -156,11 +167,13 @@ if ($_GET['keyword'] !== '') {
                                             </div>
                                         </div>
                                     </div>
+                                   
                                     <div id="rjobs" class="tab-content">
                                         <div class="job-listings-tabs">
                                             <div class="row">
                                                 <?php
                                                 foreach ($COMPANY as $company) {
+                                                    
                                                     ?>
                                                     <div class="col-lg-6">
                                                         <div class="job-listing wtabs">
@@ -169,12 +182,14 @@ if ($_GET['keyword'] !== '') {
                                                                     <img src="upload/company/<?php echo $company['logo_image']; ?>" alt="" /> 
                                                                 </div>
                                                                 <h3>
-                                                                    <a href="#" title="">
-                                                                        <?php echo $company['name']; ?>
+                                                                    <a href="#" title="" style="color:black;">
+                                                                        <?php echo $company['name']; 
+                                                                        ?>
+                                                                        
                                                                     </a>
                                                                 </h3>
                                                                 <span>
-                                                                    <?php
+                                                                   <?php
                                                                     $INDUSTRY = new Industry($company['industry']);
                                                                     echo $INDUSTRY->name;
                                                                     ?>
@@ -187,7 +202,7 @@ if ($_GET['keyword'] !== '') {
                                                                     ?>
                                                                 </div>
                                                                 <div class="emply-pstn">
-                                                                    <?php
+                                                                   <?php
                                                                     for ($ran = 0; $ran <= 4; $ran++) {
 
                                                                         if ($company['rank'] > $ran) {
@@ -220,16 +235,9 @@ if ($_GET['keyword'] !== '') {
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="pagination">
-                                        <ul>
-                                            <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
-                                            <li><a href="">1</a></li>
-                                            <li class="active"><a href="">2</a></li>
-                                            <li><a href="">3</a></li>
-                                            <li><span class="delimeter">...</span></li>
-                                            <li><a href="">14</a></li>
-                                            <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
-                                        </ul>
+                                         
                                     </div>
                                 </div>
                             </div>
@@ -238,70 +246,7 @@ if ($_GET['keyword'] !== '') {
                 </div>
             </section>
 
-    <!--            <section>
-                    <div class="block remove-bottom">
-                        <div class="container">
-                            <div class="row no-gape">
-
-                                <div class="col-lg-9 column">
-
-            <?php
-            foreach ($MEMBER as $member) {
-                ?>
-                                                                                                                                                                <div class="emply-resume-list square">
-                                                                                                                                                                    <div class="emply-resume-thumb">
-                                                                                                                                                                        <img src="upload/member/<?php echo $member['profile_picture']; ?>" alt="" />
-                                                                                                                                                                    </div>
-                                                                                                                                                                    <div class="emply-resume-info">
-                                                                                                                                                                        <h3 name="name"><a href="#"><?php echo $member['name']; ?></a></h3>
-                <?php
-                $SKILLDETAILS = SkillDetail::SkilldetailsBySkillDistinct($member['id']);
-                ?>
-                                                                                                                                                                        <span>
-                                                                                                                                                                            <i>
-                <?php
-                $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
-
-                foreach ($SKILLDETAIL as $skill_d) {
-
-                    $SKILL = new Skill($skill_d['skill']);
-
-                    $INDUSTRY = new Industry($SKILL->industry);
-
-                    echo $INDUSTRY->name;
-                    ?> 
-                                                                                                                                                                                                                                                                                                            /  
-                    <?php
-                    $SKIL = new Skill($skill_d['skill']);
-                    echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
-                }
-                ?> 
-
-                                                                                                                                                                            </i>
-                                                                                                                                                                        </span>
-                                                                                                                                                                        <p>
-                                                                                                                                                                            <i class="la la-map-marker"></i>
-                <?php
-                $CITY = new City($member['city']);
-                echo $CITY->name;
-                ?> 
-                                                                                                                                                                            / 
-                <?php echo $member['home_address']; ?>
-                                                                                                                                                                        </p>
-                                                                                                                                                                    </div>
-                                                                                                                                                                    <div class="shortlists">
-                                                                                                                                                                        <a href="member.php?member=<?php echo $member['id']; ?>" title="">Shortlist <i class="la la-plus"></i></a>
-                                                                                                                                                                    </div>
-                                                                                                                                                                </div>
-                <?php
-            }
-            ?>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>-->
+ 
 
             <?php
             include_once './footer.php';

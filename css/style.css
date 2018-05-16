@@ -11656,10 +11656,15 @@ header.style4 .account-btns > li a,
 }
 .new-btn-p{
     float: right;
-    margin-top: -32px;
-    margin-bottom: 10px;
+    margin-top: -49px;
+    margin-bottom: 15px;
 }
 .img-new{
     width: 88%;  
-    margin-left: -25px;
+    margin-left: -37px;
+    padding-top: 9px;
+}
+
+.row-padding-new{
+    padding-top: 28px;
 }

@@ -1,19 +1,47 @@
 <?php
 
 class Search {
-//member,city
-    public function members($keyword) {
 
-        $query = "SELECT DISTINCT `member`.*
-            FROM  
-            `member` member, 
-            `skill` skill, 
-            `skill_details` skill_details,
-            `city` city
-            WHERE  
-            ((city.id = member.city AND city.name = '" . $keyword . "' OR 
-             member.id = skill_details.member AND member.name = '" . $keyword . "')OR
-            skill.id = skill_details.skill AND skill.name = '" . $keyword . "' )";
+//member,city
+    public function members($keyword, $pageLimit, $setLimit) {
+
+        $query = "SELECT * FROM `member` WHERE `name` LIKE '%" . $keyword . "%' OR "
+                . "`id` in (SELECT `member` FROM `skill_details` WHERE `skill` in(SELECT `id` FROM `skill` WHERE `name` LIKE '%" . $keyword . "%' OR"
+                . " `city` in (SELECT `id` FROM `city` WHERE `name` LIKE '%" . $keyword . "%')))LIMIT " . $pageLimit . " , " . $setLimit . " ";
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+        return $array_res;
+    }
+
+//company,city
+    public function company($keyword, $pageLimit, $setLimit) {
+
+        $query ="SELECT * FROM `company` WHERE `name` LIKE '%" . $keyword . "%'";
+       
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+        return $array_res;
+    }
+
+    public function industry($keyword) {
+
+        $query = "SELECT DISTINCT `industry`.* 
+                FROM 
+                `industry` industry,
+                `skill` skill
+                WHERE (industry.id = skill.industry OR skill.name='" . $keyword . "')";
 
         $db = new Database();
 
@@ -25,28 +53,87 @@ class Search {
         }
         return $array_res;
     }
-    
-//company,city
-    public function company($keyword) {
 
-        $query = "SELECT DISTINCT `company`.*
-            FROM  
-            `company` company, 
-            `vacancy` vacancy, 
-            `city` city
-            WHERE 
-            (city.id = company.city AND city.name = '" . $keyword . "' OR
-            company.id = vacancy.company AND company.name = '" . $keyword . "' )";
+    public function showPaginationCompany($per_page, $page) {
 
-        $db = new Database();
+        $page_url = "?";
+        $query = "SELECT COUNT(*) as totalCount FROM `company` ";
+        $rec = mysql_fetch_array(mysql_query($query));
+        $total = $rec['totalCount'];
+        $adjacents = "2";
 
-        $result = $db->readQuery($query);
-        $array_res = array();
+        $page = ($page == 0 ? 1 : $page);
+        $start = ($page - 1) * $per_page;
 
-        while ($row = mysql_fetch_array($result)) {
-            array_push($array_res, $row);
+        $prev = $page - 1;
+        $next = $page + 1;
+        $setLastpage = ceil($total / $per_page);
+        $lpm1 = $setLastpage - 1;
+
+        $setPaginate = "";
+        if ($setLastpage > 1) {
+            $setPaginate .= "<ul class='setPaginate'>";
+            $setPaginate .= "<li class='setPage'>Page $page of $setLastpage</li>";
+            if ($setLastpage < 7 + ($adjacents * 2)) {
+                for ($counter = 1; $counter <= $setLastpage; $counter++) {
+                    if ($counter == $page)
+                        $setPaginate .= "<li><a class='current_page'>$counter</a></li>";
+                    else
+                        $setPaginate .= "<li><a href='{$page_url}page=$counter'>$counter</a></li>";
+                }
+            }
+            elseif ($setLastpage > 5 + ($adjacents * 2)) {
+                if ($page < 1 + ($adjacents * 2)) {
+                    for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++) {
+                        if ($counter == $page)
+                            $setPaginate .= "<li><a class='current_page'>$counter</a></li>";
+                        else
+                            $setPaginate .= "<li><a href='{$page_url}page=$counter'>$counter</a></li>";
+                    }
+                    $setPaginate .= "<li class='dot'>...</li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=$lpm1'>$lpm1</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=$setLastpage'>$setLastpage</a></li>";
+                }
+                elseif ($setLastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2)) {
+                    $setPaginate .= "<li><a href='{$page_url}page=1'>1</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=2'>2</a></li>";
+                    $setPaginate .= "<li class='dot'>...</li>";
+                    for ($counter = $page - $adjacents; $counter <= $page + $adjacents; $counter++) {
+                        if ($counter == $page)
+                            $setPaginate .= "<li><a class='current_page'>$counter</a></li>";
+                        else
+                            $setPaginate .= "<li><a href='{$page_url}page=$counter'>$counter</a></li>";
+                    }
+                    $setPaginate .= "<li class='dot'>..</li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=$lpm1'>$lpm1</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=$setLastpage'>$setLastpage</a></li>";
+                }
+                else {
+                    $setPaginate .= "<li><a href='{$page_url}page=1'>1</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=2'>2</a></li>";
+                    $setPaginate .= "<li class='dot'>..</li>";
+                    for ($counter = $setLastpage - (2 + ($adjacents * 2)); $counter <= $setLastpage; $counter++) {
+                        if ($counter == $page)
+                            $setPaginate .= "<li><a class='current_page'>$counter</a></li>";
+                        else
+                            $setPaginate .= "<li><a href='{$page_url}page=$counter'>$counter</a></li>";
+                    }
+                }
+            }
+
+            if ($page < $counter - 1) {
+                $setPaginate .= "<li><a href='{$page_url}page=$next'>Next</a></li>";
+                $setPaginate .= "<li><a href='{$page_url}page=$setLastpage'>Last</a></li>";
+            } else {
+                $setPaginate .= "<li><a class='current_page'>Next</a></li>";
+                $setPaginate .= "<li><a class='current_page'>Last</a></li>";
+            }
+
+            $setPaginate .= "</ul>\n";
         }
-        return $array_res;
+
+
+        echo $setPaginate;
     }
 
 }

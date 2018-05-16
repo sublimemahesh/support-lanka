@@ -35,7 +35,7 @@ include_once(dirname(__FILE__) . '/auth.php');
 
             }
             .uploadbox {
-                height: 260px;
+                height: 225px;
                 padding-top: 15px;
             }
             .panel-body{
@@ -58,7 +58,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-save"></i> Manage Experience</div>
+                                <div class="panel-heading"><i class="fa fa-save"></i> Manage Vacancy</div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="table-responsive">
@@ -66,7 +66,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 <a href="add-vacancy.php">
                                                     <div class="uploadbox uploadphotobx" id="uploadphotobx">
                                                         <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                        <label class="uploadBox">Click here to Add Your Education
+                                                        <label class="uploadBox">Click Here To Add Your Vacancy
 
                                                         </label>
                                                     </div>
@@ -78,28 +78,39 @@ include_once(dirname(__FILE__) . '/auth.php');
 
                                             foreach ($VACANCY->GetVacancyByCompany($_SESSION['id_com']) as $key => $vacan) {
                                                 ?>
-                                                <div class="col-md-3">
-                                                    <div id="div_<?php echo $vacan['id']; ?>">
-                                                        <div class="pad-3"><?php echo $vacan['sort']; ?></div>
-                                                        <div class="pad-3"><b>Title : </b><?php echo $vacan['title']; ?></div>
-                                                        <div class="pad-3"><b>Designation : </b><?php echo $vacan['designation']; ?></div>
-                                                        <div class="pad-3"><b>Salary : </b><?php echo $vacan['salary']; ?></div>
-                                                        <div class="pad-3"><b>Maximum Age : </b><?php echo $vacan['age']; ?></div>
-                                                        <div class="pad-3"><b>Gender : </b><?php echo $vacan['gender']; ?></div>
-                                                        <div class="pad-3"><b>Deadline : </b><?php echo $vacan['deadline']; ?></div>
-                                                        <div class="pad-3"><b>Job Type : </b><?php echo $vacan['job_type']; ?></div>
-                                                        <div class="top-2">
-                                                            <a href="edit-vacancy.php?id=<?php echo $vacan['id']; ?>">
-                                                                <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
-                                                            </a>
-                                                            |
-                                                            <a href="arrange-vacancy.php">
-                                                                <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
-                                                            </a>
-                                                            |
-                                                            <a href="#">
-                                                                <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-vacancy" data-id="<?php echo $vacan['id']; ?>"></button>
-                                                            </a>
+                                                
+                                                <div class="col-xs-12 col-sm-6 col-md-6 col-md-3" id="div_<?php echo $vacan['id']; ?>">
+                                                    <div class="box2 text-center">
+                                                        <div class="" style="height: 35px;">
+                                                            <b><?php echo $vacan['title']; ?></b>
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="text-justify"><b>Designation</b> :<?php echo $vacan['designation']; ?></h5>
+                                                            <div class="" style="height: 25px;">
+                                                                <h5 class="text-justify"><b>Job Type</b> :<?php echo $vacan['job_type']; ?></h5>
+                                                            </div>
+                                                            <div class="" style="height: 15px;">
+                                                                <h5 class="text-justify"><b>Maximum Age : </b> <?php echo $vacan['age']; ?></h5>
+                                                            </div>
+                                                            <div class="" style="height: 15px;">
+                                                                <h5 class="text-justify"><b>Gender : </b> <?php echo $vacan['gender']; ?></h5>
+                                                            </div>
+                                                            <div class="" style="height: 15px;">
+                                                                <h5 class="text-justify"><b>Deadline : </b> <?php echo $vacan['deadline']; ?></h5>
+                                                            </div>
+                                                            <div class=" text-right" style="padding-top: 4px;">
+                                                                <a href="edit-vacancy.php?id=<?php echo $vacan['id']; ?>">
+                                                                    <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                </a>
+                                                                |
+                                                                <a href="arrange-vacancy.php">
+                                                                    <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
+                                                                </a>
+                                                                |
+                                                                <a href="#">
+                                                                    <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-vacancy" data-id="<?php echo $vacan['id']; ?>"></button>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -1,16 +1,20 @@
 <div class="responsive-header">
     <div class="row">
         <div class="col-md-12">
-            <div class="res-logo col-md-9">
-                <img src="images/resource/logo11.png" alt=""  class="img-new"/>
-            </div>
+            <a href="index.php">
+                <div class="res-logo col-md-9">
+                    <img src="images/resource/logo11.png" alt=""  class="img-new"/>
+                </div>
+            </a>
+
             <div class="menu-resaction col-md-3">
                 <div class="res-openmenu">
                     <i class="la la-list nav-icon"></i>
                 </div>
-                <div class="res-closemenu">
+                <a href="index.php"> <div class="res-closemenu">
                     <img src="images/icon2.png" alt="" />
                 </div>
+                </a>
 
             </div>
             <div class="new-btn-p">
@@ -54,7 +58,7 @@
     <div class="menu-sec new-height">
         <div class="container new-height " >
             <div class="logo">
-                <a href="#" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
+                <a href="index.php" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
             </div><!-- Logo -->
             <div class="btn-extars"> 
                 <ul class="account-btn">
