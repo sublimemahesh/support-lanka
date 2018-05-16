@@ -96,7 +96,9 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                         <input type="hidden" name="upload-logo-image" id="upload-logo-image"/>
                                                         <input type="hidden" name="company" id="company" value="<?php echo $COMPANY->id; ?>"/>
                                                     </form>
-
+                                                    <div  style="margin-top: 5px; ">
+                                                        <a href="edit-profile.php">  <button type="button" class="btn btn-primary" style="border-radius: 6px;">Edit Company Profile</button></a>
+                                                    </div>
                                                     <div class="company-map">
                                                         <iframe src="<?php echo $COMPANY->map ?>" width="245" height="270" frameborder="0" style="border:0" allowfullscreen></iframe>
                                                     </div>

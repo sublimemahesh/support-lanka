@@ -108,8 +108,6 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>

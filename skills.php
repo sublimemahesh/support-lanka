@@ -96,7 +96,7 @@ if (!empty($industryGet)) {
                                 </div>
                             </aside>
                             <div class="col-lg-9 col-md-12 column">
-                                <div class="emply-resume-sec">
+                                <div class="emply-resume-sec row-padding-new">
                                     <?php
                                     foreach ($SKILLS as $skill) {
                                         ?>
@@ -112,7 +112,7 @@ if (!empty($industryGet)) {
                                             </div>
                                             <div class="row">
                                                 <div class="shortlists f-right "  id="shortlists">
-                                                    <a href="members.php?skill=<?php echo $skill['id'] ?>" title="">View More <i class="la la-plus"></i></a>
+                                                    <a href="members.php?skill=<?php echo $skill['id'] ?>&industry=<?php echo $industryGet; ?>" title="">View More <i class="la la-plus"></i></a>
                                                 </div>
                                             </div>
                                         </div>

@@ -9,7 +9,7 @@ if (isset($_GET["page"])) {
     $page = 1;
 }
 
-$setLimit = 2;
+$setLimit = 5;
 
 $pageLimit = ($page * $setLimit) - $setLimit;
 
@@ -92,10 +92,9 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                 </div>
                             </aside>
                             <div class="col-lg-9 col-md-9 hidden-sm hidden-xs column">
-                                <div class="emply-resume-sec">
+                                <div class="emply-resume-sec row-padding-new">
                                     <?php
                                     foreach ($MEMBER as $member) {
-                                        
                                         ?>
                                         <div class="emply-resume-list square col-md-12 col-sm-12">
                                             <div class="emply-resume-thumb">
@@ -103,8 +102,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                                     <img src="upload/member/<?php echo $member['profile_picture']; ?>" alt=""/> 
                                                 </a>
                                             </div>
-                                            <div class="emply-resume-info">
-
+                                            <div class="emply-resume-info ">
                                                 <h3><a href="#" title=""> <?php echo $member['name']; ?></a></h3>
                                                 <span>
                                                     <i>
@@ -164,11 +162,8 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                         <?php
                                     }
                                     ?>
-
-                                    <?php Member::showPagination($setLimit, $page); ?>
-
                                 </div>
-
+                                <?php Member::showPagination($setLimit, $page); ?>
                             </div>
                         </div>
                     </div>
@@ -179,7 +174,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                 <div class="block less-top block-p">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-12 col-xs-12 column">
+                            <div class="col-sm-12 col-xs-12 hidden-lg hidden-md column">
                                 <div class="emply-list-sec ">
                                     <div class="row" id="masonry">
                                         <?php
@@ -222,11 +217,11 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                                         <a href="member.php?member=<?php echo $member['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
                                                     </div>
                                                 </div>
-
                                             </div>
                                             <?php
                                         }
                                         ?>
+                                        <?php Member::showPagination($setLimit, $page); ?>
                                     </div>
                                 </div>
                             </div>

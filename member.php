@@ -74,7 +74,7 @@ $td = date('Y-m-d');
                                                         }
                                                     } else {
                                                         ?> 
-                                                        <b>No Tour Package images in the database.</b> 
+                                                        <b>No Skills Details in the database.</b> 
                                                         <?php
                                                     }
                                                     ?> 
@@ -241,7 +241,7 @@ $td = date('Y-m-d');
                                                         }
                                                     } else {
                                                         ?> 
-                                                        <b>No Tour Package images in the database.</b> 
+                                                        <b>No Skill Details in the database.</b> 
                                                         <?php
                                                     }
                                                     ?> 

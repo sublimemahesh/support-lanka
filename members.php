@@ -1,10 +1,23 @@
 ﻿<?php
 include_once(dirname(__FILE__) . '/class/include.php');
 $id = $_GET["skill"];
+$industry = $_GET["industry"];
 
-$INDUSTRY = new Industry($_GET["skill"]);
+$skill = $_GET["skill"];
+$INDUSTRY = new Industry($skill);
 
 $SKILL = Skill::GetSkillsByIndustry($INDUSTRY->id);
+
+if (isset($_GET["page"])) {
+    $page = (int) $_GET["page"];
+} else {
+    $page = 1;
+}
+
+$setLimit = 1;
+
+$pageLimit = ($page * $setLimit) - $setLimit;
+$MEMBER = Member::all1($pageLimit, $setLimit);
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,7 +57,10 @@ $SKILL = Skill::GetSkillsByIndustry($INDUSTRY->id);
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3>Employees</h3>
+                                    <h3>
+                                       Employee
+                                    </h3>
+
                                 </div>
                             </div>
                         </div>
@@ -56,17 +72,20 @@ $SKILL = Skill::GetSkillsByIndustry($INDUSTRY->id);
                 <div class="block remove-bottom">
                     <div class="container">
                         <div class="row no-gape">
-                            <aside class="col-lg-3 col-md-3 column">
-                                <div class="widget">
+                            <aside class="col-lg-3 col-md-3 hidden-sm hidden-xs column" >
+                                <div class="widget border" >
                                     <h3 class="sb-title open">Skills</h3>
                                     <div class="specialism_widget">
                                         <div class="specialism_widget">
                                             <div class="simple-checkbox">
                                                 <?php
-                                                foreach ($SKILL as $skil) {
+                                                $SKILLS = Skill::GetSkillsByIndustry($industry);
+                                                foreach ($SKILLS as $skil) {
                                                     ?>
-                                                    <a href="#">
-                                                        <div class="link-line" for=""><?php echo $skil['name'] ?></div>
+                                                    <a href="members.php?skill=<?php echo $skil['id'] ?>&industry=<?php echo $industry ?>">
+                                                        <div class="link-line" for="">
+                                                            <?php echo $skil['name'] ?>
+                                                        </div>
                                                     </a>
                                                     <?php
                                                 }
@@ -77,7 +96,7 @@ $SKILL = Skill::GetSkillsByIndustry($INDUSTRY->id);
                                 </div>
                             </aside>
                             <div class="col-lg-9 column">
-                                <div class="emply-resume-sec">
+                                <div class="emply-resume-sec row-padding-new">
                                     <?php
                                     $SKILLDETAILS = SkillDetail::SkilldetailsBySkillDistinct($id);
                                     foreach ($SKILLDETAILS as $skill_d) {
@@ -118,17 +137,7 @@ $SKILL = Skill::GetSkillsByIndustry($INDUSTRY->id);
                                         <?php
                                     }
                                     ?>
-                                    <div class="pagination">
-                                        <ul>
-                                            <li class="prev"><a href=""><i class="la la-long-arrow-left"></i> Prev</a></li>
-                                            <li><a href="">1</a></li>
-                                            <li class="active"><a href="">2</a></li>
-                                            <li><a href="">3</a></li>
-                                            <li><span class="delimeter">...</span></li>
-                                            <li><a href="">14</a></li>
-                                            <li class="next"><a href="">Next <i class="la la-long-arrow-right"></i></a></li>
-                                        </ul>
-                                    </div><!-- Pagination -->
+                                    <?php Member::showPaginationSkill($setLimit, $page, $skill); ?><!-- Pagination -->
                                 </div>
                             </div>
                         </div>

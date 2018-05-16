@@ -40,7 +40,8 @@ if (isset($_POST['add-vacancy'])) {
         $VALID->addError("Your data was saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        
+        header("location: ../manage-vacancy.php");
     } else {
 
         if (!isset($_SESSION)) {
@@ -86,7 +87,7 @@ if (isset($_POST['edit-vacancy'])) {
         $VALID->addError("Your changes saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        header("location: ../manage-vacancy.php");
     } else {
 
         if (!isset($_SESSION)) {
