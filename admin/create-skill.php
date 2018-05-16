@@ -1,7 +1,17 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . './auth.php');
+
+
+$id = '';
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+$INDUSTRY = new Industry($id);
 ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -20,7 +30,7 @@ include_once(dirname(__FILE__) . './auth.php');
         <link href="css/style.css" rel="stylesheet">
         <link href="css/themes/all-themes.css" rel="stylesheet" />
         <!-- Bootstrap Spinner Css -->
-        <link href="plugins/jquery-spinner/css/bootstrap-spinner.css" rel="stylesheet">
+        <link href="plugins/jquery-spinner/css/bootstrap-spinner.css" rel="stylesheet"> 
     </head>
 
     <body class="theme-red">
@@ -58,14 +68,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group place-select">
                                                 <div class="form-line">
-                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="industry" autocomplete="off" name="industry" required="TRUE">
-                                                        <option value=""> -- Please Select -- </option>
-                                                        <?php foreach (Industry::all() as $key => $industry) {
-                                                            ?>
-                                                            <option value="<?php echo $industry['id']; ?>"><?php echo $industry['name']; ?></option><?php
-                                                        }
-                                                        ?>
-                                                    </select>
+                                                    <input type="text" value="<?php echo $INDUSTRY->name; ?>" disabled="TRUE" class="form-control" name="industry"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -86,6 +89,7 @@ include_once(dirname(__FILE__) . './auth.php');
 
                                     <div class="row clearfix">
                                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5"> 
+                                            <input type="hidden" value="<?php echo $INDUSTRY->id; ?>" name="industry"/>
                                             <input type="submit" name="add-skill" class="btn btn-primary m-t-15 waves-effect" value="Add Skill"/>
                                         </div>
                                     </div>
@@ -95,20 +99,96 @@ include_once(dirname(__FILE__) . './auth.php');
                         </div>
                     </div>
                 </div>
+
+                <div class="row clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="header">
+                                <h2>
+                                    Manage Skills
+                                </h2>
+                                <ul class="header-dropdown">
+                                    <li>
+                                        <a href="create-skill.php">
+                                            <i class="material-icons">add</i> 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body">
+                                <div class="table-responsive">
+                                    <div>
+                                        <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Industry</th>
+                                                    <th>Skill</th> 
+                                                    <th>Option</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Industry</th>
+                                                    <th>Skill</th> 
+                                                    <th>Option</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <?php
+                                                $SKILL_OBJ = new Skill(NULL);
+                                                $SKILL = $SKILL_OBJ->GetSkillsByIndustry($INDUSTRY->id);
+
+
+                                                foreach ($SKILL as $skill) {
+                                                    ?>
+                                                    <tr id="row_<?php echo $skill['id']; ?>">
+                                                        <td><?php echo $INDUSTRY->id ?></td> 
+                                                        <td><?php echo $INDUSTRY->name ?></td>
+                                                        <td><?php echo $skill['name'] ?></td>
+
+                                                        <td> 
+                                                            <a href="edit-skill.php?id=<?php echo $skill['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
+                                                            <a href="create-subskill.php?id=<?php echo $skill['id']; ?>" class=" btn btn-sm btn-primary">
+                                                                <i class="glyphicon glyphicon-folder-open" ></i>
+                                                            </a>
+                                                            <a href="#" class="delete-skill btn btn-sm btn-danger" data-id="<?php echo $skill['id']; ?>">
+                                                                <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                            </a>
+
+                                                        </td
+                                                    </tr>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Jquery Core Js -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.js"></script> 
-    <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
-    <script src="plugins/node-waves/waves.js"></script>
-    <script src="plugins/jquery-spinner/js/jquery.spinner.js"></script>
-    <script src="js/admin.js"></script>
-    <script src="js/demo.js"></script>
+        <!-- Jquery Core Js -->
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <script src="plugins/bootstrap/js/bootstrap.js"></script> 
+        <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+        <script src="plugins/node-waves/waves.js"></script>
+        <script src="plugins/jquery-spinner/js/jquery.spinner.js"></script>
+        <script src="js/admin.js"></script>
+        <script src="js/demo.js"></script>
+
+        <script src="plugins/sweetalert/sweetalert.min.js"></script>
+        <script src="js/pages/ui/dialogs.js"></script>
+        <script src="delete/js/skill.js" type="text/javascript"></script>
 
 
-</body>
+    </body>
 
 </html>
