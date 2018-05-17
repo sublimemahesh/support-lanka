@@ -65,7 +65,8 @@ $MEMBER = new Member(NULL)
                                                 <th>Contact Number</th> 
                                                 <th>Status</th> 
                                                 <th>Rank</th> 
-                                                <th>Options</th>
+                                                <th> Skill</th>
+                                                 <th>Options</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -87,6 +88,9 @@ $MEMBER = new Member(NULL)
                                                         ?>
                                                     </td> 
                                                     <td><?php echo $member['rank']; ?></td> 
+                                                    <td>  
+                                                        <a href="member-skills.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-warning"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                                    </td>
                                                     <td> 
                                                         <a href="edit-member.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 
