@@ -88,7 +88,7 @@ class City {
 
     public function GetCitiesByDistrict($district) {
 
-        $query = "SELECT * FROM `city` WHERE `district` = '" . $district . "' ORDER BY `sort` ASC";
+        $query = "SELECT * FROM `city` WHERE `district` = '" . $district . "'";
 
         $db = new Database();
 
@@ -110,7 +110,13 @@ class City {
         $result = $db->readQuery($query);
 
         return $result;
-       
+    }
+
+    public function arrange($key, $img) {
+        $query = "UPDATE `city` SET `sort` = '" . $key . "'  WHERE id = '" . $img . "'";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        return $result;
     }
 
 }

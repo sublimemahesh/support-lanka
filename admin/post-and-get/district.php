@@ -68,3 +68,14 @@ if (isset($_POST['edit-district'])) {
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 }
+
+if (isset($_POST['save-arrange'])) {
+
+    foreach ($_POST['sort'] as $key => $img) {
+        $key = $key + 1;
+
+        $DISTRICT = District::arrange($key, $img);
+
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+}

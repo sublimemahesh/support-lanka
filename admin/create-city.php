@@ -1,6 +1,12 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
-include_once(dirname(__FILE__) . './auth.php');
+include_once(dirname(__FILE__) . '/auth.php');
+
+$id = '';
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+$DISTRICT = new District($id)
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,7 +49,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                 <h2>Create City</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
-                                        <a href="manage-city.php">
+                                        <a href="manage-district.php">
                                             <i class="material-icons">list</i> 
                                         </a>
                                     </li>
@@ -52,50 +58,87 @@ include_once(dirname(__FILE__) . './auth.php');
                             <div class="body">
                                 <form class="form-horizontal"  method="post" action="post-and-get/city.php" enctype="multipart/form-data"> 
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                             <label for="district">District</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
-                                                <div class="form-line">
-                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="type" autocomplete="off" name="district" required="TRUE">
-                                                        <option value=""> -- Please Select -- </option>
-                                                        <?php foreach (District::all() as $key => $district) {
-                                                            ?>
-                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option><?php
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Name</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="name" class="form-control" placeholder="Enter Product name" autocomplete="off" name="name" >
+                                                    <input type="text" id="name" class="form-control" value="<?php echo $DISTRICT->name ?>" autocomplete="off" name="name" disabled="true">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="name">Name</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="name" class="form-control" placeholder="Enter city name" autocomplete="off" name="name" >
+                                                    <input type="hidden" id="id" value="<?php echo $DISTRICT->id; ?>" name="id"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row clearfix">
+                                        <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-4"> 
+
+                                            <input type="submit" name="add-city" class="btn btn-primary m-t-15 waves-effect" value="Add City"/>
+                                        </div>
+                                    </div>
+
+                                    <hr/>
+                                </form>
+                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th> 
+                                            <th>Option</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <?php
+                                        $CITY = City::GetCitiesByDistrict($id);
+                                        if (count($CITY) > 0) {
+                                            foreach ($CITY as $key => $city) {
+                                                ?>
+                                                <tr id="row_<?php echo $city['id']; ?>">
+                                                    <td><?php echo $city['sort']; ?></td> 
+
+                                                    <td><?php echo $city['name']; ?></td>
+
+                                                    <td> 
+                                                        <a href="edit-city.php?id=<?php echo $city['id']; ?>" class="op-link btn btn-sm btn-success"><i class="glyphicon glyphicon-pencil"></i>
+                                                        </a>
+
+                                                        <a href="#" class="delete-city btn btn-sm btn-danger" data-id="<?php echo $city['id']; ?>">
+                                                            <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                        </a>
+
+                                                        <a href="arrange-city.php?id=<?php echo $id ?>" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-random"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <?php
+                                            }
+                                        }
+                                        ?>   
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th> 
+                                            <th>Option</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                             </div>
-
-                            <div class="row clearfix">
-                                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5"> 
-                                    <input type="submit" name="add-city" class="btn btn-primary m-t-15 waves-effect" value="Add City"/>
-                                </div>
-                            </div>
-
-
-                            <hr/>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -108,12 +151,16 @@ include_once(dirname(__FILE__) . './auth.php');
     <!-- Jquery Core Js -->
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.js"></script> 
+    <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
     <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
-    <script src="plugins/node-waves/waves.js"></script>
     <script src="plugins/jquery-spinner/js/jquery.spinner.js"></script>
+    <script src="plugins/bootstrap-notify/bootstrap-notify.js"></script>
+    <script src="plugins/node-waves/waves.js"></script>
+    <script src="plugins/sweetalert/sweetalert.min.js"></script>
     <script src="js/admin.js"></script>
+    <script src="js/pages/ui/dialogs.js"></script>
     <script src="js/demo.js"></script>
-
+    <script src="delete/js/city.js" type="text/javascript"></script>
 
 </body>
 
