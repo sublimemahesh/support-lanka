@@ -9,11 +9,10 @@ if (isset($_POST['add-city'])) {
     $CITY = New City(NULL);
     $VALID = new Validator();
 
-    $CITY->district = $_POST['district'];
+    $CITY->district = $_POST['id'];
     $CITY->name = $_POST['name'];
 
     $VALID->check($CITY, [
-        'district' => ['required' => TRUE],
         'name' => ['required' => TRUE],
     ]);
 
@@ -72,5 +71,14 @@ if (isset($_POST['edit-city'])) {
     }
 }
 
+if (isset($_POST['save-arrange'])) {
 
+    foreach ($_POST['sort'] as $key => $img) {
+        $key = $key + 1;
+
+        $CITY = City::arrange($key, $img);
+
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+}
 

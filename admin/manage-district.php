@@ -2,7 +2,7 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 
-$DISTRICT = new District(NULL)
+$DISTRICT = new District(NULL);
 ?> 
 ﻿<!DOCTYPE html>
 <html>
@@ -13,7 +13,6 @@ $DISTRICT = new District(NULL)
         <title>Manage District || Admin || Support Lanka</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
@@ -52,57 +51,63 @@ $DISTRICT = new District(NULL)
                                 </ul>
                             </div>
                             <div class="body">
-                                <!-- <div class="table-responsive">-->
-                                <div>
-                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Name</th> 
-                                                <th>Options</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Name</th> 
-                                                <th>Options</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-                                            <?php
-                                            foreach ($DISTRICT->all() as $key => $district) {
-                                                ?>
-                                                <tr id="row_<?php echo $district['id']; ?>">
-                                                    <td><?php echo $district['id']; ?></td> 
-                                                    <td><?php echo $district['name']; ?></td> 
-                                                    <td> 
-                                                        <a href="edit-district.php?id=<?php echo $district['id']; ?>" class="op-link btn btn-sm btn-default">
-                                                            <i class="glyphicon glyphicon-pencil"></i>
-                                                        </a>
-
-                                                        <a href="#" class="delete-district btn btn-sm btn-danger" data-id="<?php echo $district['id']; ?>">
-                                                            <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
-                                                        </a>
-                                                    </td>
+                                <div class="table-responsive">
+                                    <div>
+                                        <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Name</th> 
+                                                    <th>Options</th>
                                                 </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Name</th> 
+                                                    <th>Options</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
                                                 <?php
-                                            }
-                                            ?>   
-                                        </tbody>
-                                    </table>
+                                                foreach ($DISTRICT->all() as $key => $district) {
+                                                    ?>
+                                                    <tr id="row_<?php echo $district['id']; ?>">
+                                                        <td><?php echo $district['sort']; ?></td> 
+                                                        <td><?php echo $district['name']; ?></td> 
+                                                        <td> 
+                                                            <a href="edit-district.php?id=<?php echo $district['id']; ?>" class="op-link btn btn-sm btn-success">
+                                                                <i class="glyphicon glyphicon-pencil"></i>
+                                                            </a>
+
+                                                            <a href="#" class="delete-district btn btn-sm btn-danger" data-id="<?php echo $district['id']; ?>">
+                                                                <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                            </a>
+
+                                                            <a href="arrange-district.php" class="btn btn-sm btn-primary">
+                                                                <i class="glyphicon glyphicon-random"></i>
+                                                            </a>
+
+                                                            <a href="create-city.php?id=<?php echo $district['id']; ?>" class="btn btn-sm btn-warning">
+                                                                <i class="glyphicon glyphicon-map-marker"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                                }
+                                                ?>   
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- #END# Manage District -->
 
-            </div>
+                </div>
         </section>
 
-        <!-- Jquery Core Js -->
-        <!-- Jquery Core Js -->
+
         <script src="plugins/jquery/jquery.min.js"></script>
         <script src="plugins/bootstrap/js/bootstrap.js"></script> 
         <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>

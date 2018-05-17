@@ -74,8 +74,14 @@ class District {
         }
     }
 
-    public function delete() {
+    public function arrange($key, $img) {
+        $query = "UPDATE `district` SET `sort` = '" . $key . "'  WHERE id = '" . $img . "'";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        return $result;
+    }
 
+    public function delete() {
 
         $CITY = new City(NULL);
 

@@ -42,7 +42,6 @@ $DIS = new District($id);
         <?php
         include './navigation-and-header.php';
         ?>
-
         <section class="content">
             <div class="container-fluid"> 
                 <!-- Body Copy -->
@@ -60,12 +59,13 @@ $DIS = new District($id);
                                 <form class="form-horizontal col-sm-9 col-md-9" method="post" action="post-and-get/district.php" enctype="multipart/form-data"> 
 
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                             <label for="name">Name</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                             <div class="form-group">
                                                 <div class="form-line">
+                                                    <label for="name" class="hidden-lg hidden-md">Name</label>
                                                     <input type="text" id="name" class="form-control" placeholder="Enter name" value="<?php echo $DIS->name; ?>"  name="name"  required="TRUE">
                                                 </div>
                                             </div>
