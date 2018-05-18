@@ -89,7 +89,7 @@ $MEMBER = new Member(NULL)
                                                     </td> 
                                                     <td><?php echo $member['rank']; ?></td> 
                                                     <td>  
-                                                        <a href="member-skills.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-warning"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                                        <a href="member-skills.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-share-alt"></i></a>
                                                     </td>
                                                     <td> 
                                                         <a href="edit-member.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
