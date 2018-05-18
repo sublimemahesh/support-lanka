@@ -106,9 +106,35 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
 
+
+                                        <div class="row clearfix">
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                                <label for="percentage">Percentage</label>
+                                            </div>
+                                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text"  class="form-control" name="percentage" placeholder="Enter Precentage"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+
+                                        <div class="row clearfix">
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                                <label for="Description ">Description </label>
+                                            </div>
+                                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea id="about_me" name="description" class="form-control" rows="5" placeholder="Enter Your Description"></textarea> 
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-sm-12 text-center" style="margin-top: 19px;">
-                                                <input type="hidden" value="<?php echo $MEMBER->id?>" name="member" id="member">
+                                                <input type="hidden" value="<?php echo $MEMBER->id ?>" name="member" id="member">
                                                 <input type="submit" class="btn btn-info" id="btn-submit" value="ADD" name="add-skill-details">
                                             </div>
                                         </div>

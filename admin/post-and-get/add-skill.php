@@ -11,11 +11,13 @@ if (isset($_POST['add-skill-details'])) {
 
     $SKILLDETAILS->member = $_POST['member'];
     $SKILLDETAILS->skill = $_POST['skill'];
+    $SKILLDETAILS->percentage = $_POST['percentage'];
+    $SKILLDETAILS->description = $_POST['description'];
 
 
     $VALID->check($SKILLDETAILS, [
         'skill' => ['required' => TRUE],
-    
+        'percentage' => ['required' => TRUE],
     ]);
 
     if ($VALID->passed()) {
