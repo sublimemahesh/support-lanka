@@ -3046,16 +3046,16 @@ section.content {
     margin-bottom: 20px; }
 .card .body .col-xs-10,
 .card .body .col-sm-10,
-.card .body .col-md-10,
-.card .body .col-lg-10 {
+.card .body .col-md-,
+.card .body .col-lg- {
     margin-bottom: 20px; }
 .card .body .col-xs-11,
 .card .body .col-sm-11,
 .card .body .col-md-11,
 .card .body .col-lg-11 {
     margin-bottom: 20px; }
-.card .body .col-xs-12,
-.card .body .col-sm-12,
+.card .body ,
+.card .body ,
 .card .body .col-md-12,
 .card .body .col-lg-12 {
     margin-bottom: 20px; }
@@ -8128,3 +8128,10 @@ html.ie11 .bs-searchbox .form-control {
 .img-width{
     width: 60%;
 }
+/*formresponsive*/
+@media(min-width:360px) and (max-width:640px){
+    .p-top{
+        padding-top: 15px;
+    }
+}
+
