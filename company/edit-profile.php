@@ -141,28 +141,7 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                                     <input type="text" name="address" class="form-control" placeholder="Please Enter Company Address" required="TRUE" value="<?php echo $COMPANY->address; ?>">
                                                                 </div>
                                                             </div>
-                                                            <!--City-->
-                                                            <div class="">
-                                                                <div class="bottom-top">
-                                                                    <label for="city">City</label>
-                                                                </div>
-                                                                <div class="">
-                                                                    <select class="form-control" type="text" id="city" autocomplete="off" name="city">
-                                                                        <option value="<?php $COMPANY->id ?>" class="active light-c">
-                                                                            <?php
-                                                                            $CITY = new City($COMPANY->city);
-                                                                            echo $CITY->name;
-                                                                            ?>
-                                                                        </option>
-                                                                        <?php foreach (City::all() as $key => $city) {
-                                                                            ?>
-                                                                            <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
-                                                                            <?php
-                                                                        }
-                                                                        ?>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
+
                                                             <!--Industry-->
                                                             <div class="">
                                                                 <div class="bottom-top">
@@ -185,7 +164,35 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                                     </select>
                                                                 </div>
                                                             </div>
+                                                            <!--Districts-->
+                                                            <div class="">
+                                                                <div>
+                                                                    <label for="disrict">District</label>
+                                                                </div>
+                                                                <div class="">
+                                                                    <select class="form-control" type="text" id="district" autocomplete="off" name="district">
+                                                                        <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please Select Your District --  </option>
+                                                                        <?php foreach (District::all() as $key => $district) {
+                                                                            ?>
+                                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
 
+                                                                            <?php
+                                                                        }
+                                                                        ?>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <!--City-->
+                                                            <div class="">
+                                                                <div class="bottom-top">
+                                                                    <label for="city">City</label>
+                                                                </div>
+                                                                <div class="">
+                                                                    <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
+                                                                        <option value=""> -- Please Select a District First -- </option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
                                                         </div> 
                                                         <div class="col-md-3">
                                                             <div>
@@ -255,7 +262,7 @@ $COMPANY = new Company($_SESSION['id_com']);
         <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
 
         <script src="assets/js/form-component.js"></script>    
-
+        <script src="js/city.js" type="text/javascript"></script>
 
         <script>
             //custom select box
