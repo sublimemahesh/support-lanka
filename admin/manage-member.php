@@ -66,7 +66,8 @@ $MEMBER = new Member(NULL)
                                                 <th>Status</th> 
                                                 <th>Rank</th> 
                                                 <th> Skill</th>
-                                                 <th>Options</th>
+                                                <th> portfolio</th>
+                                                <th>Options</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -91,6 +92,10 @@ $MEMBER = new Member(NULL)
                                                     <td>  
                                                         <a href="member-skills.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-share-alt"></i></a>
                                                     </td>
+                                                    <td>
+                                                        <a href="member-portfolio.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-flash"></i></a>
+
+                                                    </td>
                                                     <td> 
                                                         <a href="edit-member.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 
@@ -111,6 +116,8 @@ $MEMBER = new Member(NULL)
                                                 <th>Contact Number</th> 
                                                 <th>Status</th> 
                                                 <th>Rank</th> 
+                                                <th>skill</th> 
+                                                <th>portfolio</th> 
                                                 <th>Options</th>
                                             </tr>
                                         </tfoot>
