@@ -55,16 +55,13 @@ $MEMBER = new Member(NULL)
                             </div>
                             <div class="body">
                                 <!-- <div class="table-responsive">-->
-                                <div>
+                                <div class="table-responsive">
                                     <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Name</th> 
-                                                <th>email</th>
                                                 <th>Contact Number</th> 
-                                                <th>Status</th> 
-                                                <th>Rank</th> 
                                                 <th> Skill</th>
                                                 <th> portfolio</th>
                                                 <th>Options</th>
@@ -77,18 +74,8 @@ $MEMBER = new Member(NULL)
                                                 <tr id="row_<?php echo $member['id']; ?>">
                                                     <td><?php echo $member['id']; ?></td> 
                                                     <td><?php echo substr($member['name'], 0, 20); ?></td> 
-                                                    <td><?php echo substr($member['email'], 0, 30); ?></td> 
                                                     <td><?php echo $member['contact_number']; ?></td> 
-                                                    <td>
-                                                        <?php
-                                                        if ($member['status'] == 1) {
-                                                            echo 'Active';
-                                                        } else {
-                                                            echo 'Inactive';
-                                                        }
-                                                        ?>
-                                                    </td> 
-                                                    <td><?php echo $member['rank']; ?></td> 
+
                                                     <td>  
                                                         <a href="member-skills.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-share-alt"></i></a>
                                                     </td>
@@ -108,14 +95,12 @@ $MEMBER = new Member(NULL)
                                             }
                                             ?>   
                                         </tbody>
+
                                         <tfoot>
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Name</th> 
-                                                <th>email</th>
                                                 <th>Contact Number</th> 
-                                                <th>Status</th> 
-                                                <th>Rank</th> 
                                                 <th>skill</th> 
                                                 <th>portfolio</th> 
                                                 <th>Options</th>
@@ -123,6 +108,8 @@ $MEMBER = new Member(NULL)
                                         </tfoot>
                                     </table>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
