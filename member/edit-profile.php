@@ -130,9 +130,7 @@ $MEMBER = new Member($_SESSION['id']);
                                                                 </div>
                                                                 <div class="formrow">
                                                                     <select class="form-control" type="text" id="district" autocomplete="off" name="district">
-                                                                        <option value="<?php $MEMBER->city ?>" class="active light-c">
-
-                                                                        </option>
+                                                                        <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please Select Your District --  </option>
                                                                         <?php foreach (District::all() as $key => $district) {
                                                                             ?>
                                                                             <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>

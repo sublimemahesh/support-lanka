@@ -116,21 +116,38 @@ include_once(dirname(__FILE__) . './auth.php');
                                             </div>
                                         </div>
                                     </div> 
-                                    <!-- city-->
+                                    <!--Districts-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="disrict">District</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <select class="form-control" type="text" id="district" autocomplete="off" name="district">
+                                                        <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please  Select Your District -- </option>
+                                                        <?php foreach (District::all() as $key => $district) {
+                                                            ?>
+                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--City-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                             <label for="city">City</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
+                                            <div class="form-group">
                                                 <div class="form-line">
-                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="city" autocomplete="off" name="city" >
-                                                        <option value=""> -- Please Select -- </option>
-                                                        <?php foreach (City::all() as $key => $city) {
-                                                            ?>
-                                                            <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option><?php
-                                                        }
-                                                        ?>
+                                                    <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
+                                                        <option value=""> -- Please Select a District First -- </option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -216,7 +233,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <input type="hidden" name="status" value="1"/>
                                             <div class="btn btn-primary m-t-15 waves-effect  pull-left" id="btnSubmit">Add member</div>
-                                            
+
                                             <input type="hidden" name="save" value="save"/>
                                             <div class=" text-danger btn-padding pull-left error-mess" id="message" ></div> 
                                         </div>
@@ -239,6 +256,8 @@ include_once(dirname(__FILE__) . './auth.php');
         <script src="js/demo.js"></script>
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script src="js/create-member.js" type="text/javascript"></script>
+        <script src="js/city.js" type="text/javascript"></script>
+
         <script>
             tinymce.init({
                 selector: "#about_me",
