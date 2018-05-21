@@ -50,15 +50,16 @@ include_once(dirname(__FILE__) . './auth.php');
                                 </ul>
                             </div>
                             <div class="body">
-                                <form class="form-horizontal"  method="post" action="post-and-get/company.php" enctype="multipart/form-data"> 
+                                <form class=""  method="post" action="post-and-get/company.php" enctype="multipart/form-data"> 
                                     <!--name-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                             <label for="name">Name</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
                                                 <div class="form-line">
+                                                    <label for="name" class="hidden-lg hidden-md">Name</label>
                                                     <input type="text" id="name" class="form-control" placeholder="Enter Member name" autocomplete="off" name="name" required="TRUE">
                                                 </div>
                                             </div>
@@ -66,12 +67,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div> 
                                     <!-- Industry-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="industry">Industry</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Industry">Industry</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
-                                                <div class="form-line">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line p-top ">
+                                                    <label for="Industry" class="hidden-lg hidden-md">Industry  </label>
                                                     <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="industry" autocomplete="off" name="industry" required="TRUE">
                                                         <option value=""> -- Please Select -- </option>
                                                         <?php foreach (Industry::all() as $key => $industry) {
@@ -86,12 +88,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                     <!--Districts-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="disrict">District</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="District">District</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for="District" class="hidden-lg hidden-md">District  </label>
                                                     <select class="form-control" type="text" id="district" autocomplete="off" name="district">
                                                         <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please  Select Your District -- </option>
                                                         <?php foreach (District::all() as $key => $district) {
@@ -108,12 +111,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                     <!--City-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                             <label for="city">City</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for="city" class="hidden-lg hidden-md">City  </label>
                                                     <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
                                                         <option value=""> -- Please Select a District First -- </option>
                                                     </select>
@@ -123,12 +127,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                     <!--Company Register Number-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="company_register_number">Company Register Number</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Company Register Number">Company Register Number </label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top">
+                                                    <label for="Company Register Number" class="hidden-lg hidden-md">Company Register Number  </label>
                                                     <input type="text" id="company_register_number" class="form-control" placeholder="Enter Company Register Number" autocomplete="off" name="company_register_number" required="TRUE">
                                                 </div>
                                             </div>
@@ -136,12 +141,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div> 
                                     <!--Address-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="address">Address</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Address">Address</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for="Address" class="hidden-lg hidden-md">Address  </label>
                                                     <input type="text" id="address" class="form-control" placeholder="Enter Address" autocomplete="off" name="address" required="TRUE">
                                                 </div>
                                             </div>
@@ -149,12 +155,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div> 
                                     <!--Contact Number-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="contact_number">Contact Number</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for=" Contact Number"> Contact Number</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for=" Contact Number" class="hidden-lg hidden-md"> Contact Number  </label>
                                                     <input type="text" id="contact_number" class="form-control" placeholder="Enter Contact Number" autocomplete="off" name="contact_number" required="TRUE">
                                                 </div>
                                             </div>
@@ -162,12 +169,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div> 
                                     <!--Email-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="email">Email</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Email">Email</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for="Email" class="hidden-lg hidden-md">Email  </label>
                                                     <input type="text" id="email" class="form-control" placeholder="Enter Email" autocomplete="off" name="email" required="TRUE">
                                                 </div>
                                             </div>
@@ -175,12 +183,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div> 
                                     <!--Since-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="since">Since</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Since Company">Since Company</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for="Since Company" class="hidden-lg hidden-md">Since Company  </label>
                                                     <input type="text" id="since" class="form-control" placeholder="When is company start" autocomplete="off" name="since" required="TRUE">
                                                 </div>
                                             </div>
@@ -188,12 +197,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                     <!--No Of Employees In your Company-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="team_size">No Of Employees In your Company</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="no of employees">Number of Employees</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for="city" class="hidden-lg hidden-md">NO of Employees </label>
                                                     <input type="text" id="team_size" class="form-control" placeholder="No Of Employees" autocomplete="off" name="team_size" required="TRUE">
                                                 </div>
                                             </div>
@@ -201,12 +211,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div> 
                                     <!--About Company-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="about">About Company</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="about me">About Us</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for="about me" class="hidden-lg hidden-md">About us  </label>
                                                     <textarea id="about" name="about" class="form-control" rows="5"></textarea> 
                                                 </div>
                                             </div>
@@ -214,12 +225,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                     <!--Profile Picture-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="image">Company Logo</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="image">Image In Company</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for="image" class="hidden-lg hidden-md">Image in Company  </label>
                                                     <input type="file" id="image" class="form-control" name="image" required="true">
                                                 </div>
                                             </div>
@@ -227,12 +239,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                     <!-- Rank-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                             <label for="rank">Rank</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
-                                                <div class="form-line">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line  p-top ">
+                                                    <label for="rank" class="hidden-lg hidden-md">Rank  </label>
                                                     <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
                                                         <option value=""> -- Please Select -- </option>
                                                         <option value="1">1</option>
@@ -247,12 +260,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                     <!--Password-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Password</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="password">Password</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line  p-top ">
+                                                    <label for="password" class="hidden-lg hidden-md">Password  </label>
                                                     <input type="password" id="password" class="form-control" placeholder="Enter password" autocomplete="off" name="password" required="TRUE">
                                                     <input type="hidden" value="1" name="status">
                                                 </div>

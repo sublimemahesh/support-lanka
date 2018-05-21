@@ -36,211 +36,219 @@ include_once(dirname(__FILE__) . './auth.php');
                 $vali->show_message();
                 ?>
                 <!-- Vertical Layout -->
-                <div class="row clearfix">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="card">
-                            <div class="header">
-                                <h2>Add New Member</h2>
-                                <ul class="header-dropdown">
-                                    <li class="">
-                                        <a href="manage-member.php">
-                                            <i class="material-icons">list</i> 
-                                        </a>
-                                    </li>
-                                </ul>
+                <div class="card">
+                    <div class="header">
+                        <h2>Add New Member</h2>
+                        <ul class="header-dropdown">
+                            <li class="">
+                                <a href="manage-member.php">
+                                    <i class="material-icons">list</i> 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <form class="" id="member-data" method="post"  enctype="multipart/form-data"> 
+                            <!--name-->
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="name">Name</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="name" class="hidden-lg hidden-md">Name</label>
+                                            <input type="text" id="name" class="form-control" placeholder="Enter Member name" autocomplete="off" name="name" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!--Email-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="email" class="hidden-lg hidden-md">Email</label>
+                                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" autocomplete="off" name="email" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!--Contact Number-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="contact number">Contact Number</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="contact number" class="hidden-lg hidden-md">contact number</label>
+                                            <input type="text" id="contact_number" class="form-control" placeholder="Enter contact number" autocomplete="off" name="contact_number" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!--NIC Number-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="Enter NIC number">Enter NIC Number</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="Enter NIC number" class="hidden-lg hidden-md">Enter NIC Number</label>
+                                            <input type="text" id="nic_number" class="form-control" placeholder="Enter NIC number" autocomplete="off" name="nic_number"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!--Home Address-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="Address">Home Address</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="Address" class="hidden-lg hidden-md">Home Address</label>
+                                            <input type="text" id="home_address" class="form-control" placeholder="Enter Home Address" autocomplete="off" name="home_address" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!--Districts-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="Districts">Districts</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="Districts" class="hidden-lg hidden-md">Districts</label>
+                                            <select class="form-control" type="text" id="district" autocomplete="off" name="district">
+                                                <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please  Select Your District -- </option>
+                                                <?php foreach (District::all() as $key => $district) {
+                                                    ?>
+                                                    <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+
+                                                    <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="body">
-                                <form class="form-horizontal" id="member-data" method="post"  enctype="multipart/form-data"> 
-                                    <!--name-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Name</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="name" class="form-control" placeholder="Enter Member name" autocomplete="off" name="name" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <!--Email-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="email">Email</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" autocomplete="off" name="email" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <!--Contact Number-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="contact_number">Contact Number</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="contact_number" class="form-control" placeholder="Enter contact number" autocomplete="off" name="contact_number" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <!--NIC Number-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="nic_number">NIC Number</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="nic_number" class="form-control" placeholder="Enter NIC number" autocomplete="off" name="nic_number"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <!--Home Address-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="home_address">Home Address</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="home_address" class="form-control" placeholder="Enter Home Address" autocomplete="off" name="home_address" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <!--Districts-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="disrict">District</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <select class="form-control" type="text" id="district" autocomplete="off" name="district">
-                                                        <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please  Select Your District -- </option>
-                                                        <?php foreach (District::all() as $key => $district) {
-                                                            ?>
-                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
-
-                                                            <?php
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                            </div>
+                            <!--City-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="City">City</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="City" class="hidden-lg hidden-md">City</label>
+                                            <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
+                                                <option value=""> -- Please Select a District First -- </option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <!--City-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="city">City</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
-                                                        <option value=""> -- Please Select a District First -- </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--date_of_birthday-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="date_of_birthday">Date Of Birthday</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="date" id="date_of_birthday" class="form-control" placeholder="Enter Date Of Birthday" autocomplete="off" name="date_of_birthday" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <!--About Your Details-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="about_me">About Your Details</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <textarea  name="about_me" class="form-control" rows="5" autocomplete="off" id="about_me"></textarea> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Profile Picture-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="image">Profile Picture</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="file" id="image" class="form-control" name="image" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Rank-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="rank">Rank</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
-                                                <div class="form-line">
-                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
-                                                        <option value="0"> -- Please Select -- </option> 
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Password-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Password</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="password" id="password" class="form-control" placeholder="Enter password" autocomplete="off" name="password" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                    <!--Password-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">  
-
-                                        </div>  
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <input type="hidden" name="status" value="1"/>
-                                            <div class="btn btn-primary m-t-15 waves-effect  pull-left" id="btnSubmit">Add member</div>
-
-                                            <input type="hidden" name="save" value="save"/>
-                                            <div class=" text-danger btn-padding pull-left error-mess" id="message" ></div> 
-                                        </div>
-                                    </div> 
-                                </form> 
+                                </div>
                             </div>
-                        </div>
+                            <!--date_of_birthday-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="date_of_birthday">Date_Of_Birthday</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="date_of_birthday" class="hidden-lg hidden-md">Date_Of_Birthday</label>
+                                            <input type="date" id="date_of_birthday" class="form-control" placeholder="Enter Date Of Birthday" autocomplete="off" name="date_of_birthday" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!--About Your Details-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="about_me">About Me</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="about_me" class="hidden-lg hidden-md">About Me</label>
+                                            <textarea  name="about_me" class="form-control" rows="5" autocomplete="off" id="about_me"></textarea> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Profile Picture-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="Image Profile">Image Profile</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="Image Profile" class="hidden-lg hidden-md">Image Profile</label>
+                                            <input type="file" id="image" class="form-control" name="image" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Rank-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="Rank">Rank</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="Rank" class="hidden-lg hidden-md">Rank</label>
+                                            <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
+                                                <option value="0"> -- Please Select -- </option> 
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Password-->
+                            <div class="row clearfix">
+                                 <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="password" class="hidden-lg hidden-md">Password</label>
+                                            <input type="password" id="password" class="form-control" placeholder="Enter password" autocomplete="off" name="password" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <!--Password-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">  
+
+                                </div>  
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <input type="hidden" name="status" value="1"/>
+                                    <div class="btn btn-primary m-t-15 waves-effect  pull-left" id="btnSubmit">Add member</div>
+
+                                    <input type="hidden" name="save" value="save"/>
+                                    <div class=" text-danger btn-padding pull-left error-mess" id="message" ></div> 
+                                </div>
+                            </div> 
+                        </form> 
                     </div>
                 </div>
             </div>
