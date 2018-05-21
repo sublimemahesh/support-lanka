@@ -78,7 +78,7 @@ $MEMBER = new Member($_SESSION['id']);
                                                                     <input type="text" name="name" class="form-control" placeholder="Please Enter Your Full Name"  value="<?php echo $MEMBER->name; ?>">
                                                                 </div>
                                                             </div>
-                                                           
+
                                                             <!--Email-->
                                                             <div class="">
                                                                 <div>Email</div>
@@ -120,28 +120,37 @@ $MEMBER = new Member($_SESSION['id']);
                                                             <div class="">
                                                                 <div>Home Address</div>
                                                                 <div class="formrow">
-                                                                    <input type="text" name="home_address" class="form-control" placeholder="Please Enter Home Address" required="TRUE" value="<?php echo $MEMBER->home_address; ?>">
+                                                                    <input type="text" name="home_address" id="home_address" class="form-control" placeholder="Please Enter Home Address" required="TRUE" value="<?php echo $MEMBER->home_address; ?>">
+                                                                </div>
+                                                            </div>
+                                                            <!--Districts-->
+                                                            <div class="">
+                                                                <div>
+                                                                    <label for="disrict">District</label>
+                                                                </div>
+                                                                <div class="formrow">
+                                                                    <select class="form-control" type="text" id="district" autocomplete="off" name="district">
+                                                                        <option value="<?php $MEMBER->city ?>" class="active light-c">
+
+                                                                        </option>
+                                                                        <?php foreach (District::all() as $key => $district) {
+                                                                            ?>
+                                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+
+                                                                            <?php
+                                                                        }
+                                                                        ?>
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                             <!--City-->
                                                             <div class="">
-                                                                <div>
+                                                                <div class="bottom-top">
                                                                     <label for="city">City</label>
                                                                 </div>
-                                                                <div class="formrow">
-                                                                    <select class="form-control" type="text" id="city" autocomplete="off" name="city">
-                                                                        <option value="<?php $MEMBER->id ?>" class="active light-c">
-                                                                            <?php
-                                                                            $CITY = new City($MEMBER->city);
-                                                                            echo $CITY->name;
-                                                                            ?>
-                                                                        </option>
-                                                                        <?php foreach (City::all() as $key => $city) {
-                                                                            ?>
-                                                                            <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
-                                                                            <?php
-                                                                        }
-                                                                        ?>
+                                                                <div class="">
+                                                                    <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
+                                                                        <option value=""> -- Please Select a District First -- </option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -217,19 +226,10 @@ $MEMBER = new Member($_SESSION['id']);
         <script type="text/javascript" src="../../../blacktie.co/demo/dashgum/assets/js/bootstrap-daterangepicker/daterangepicker-2.html"></script>
 
         <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-
-
         <script src="assets/js/form-component.js"></script>    
 
-
-        <script>
-            //custom select box
-
-            $(function () {
-                $('select.styled').customSelect();
-            });
-
-        </script>
+        <script src="js/city.js" type="text/javascript"></script>
+        
         <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({
