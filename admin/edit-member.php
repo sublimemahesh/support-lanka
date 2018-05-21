@@ -128,26 +128,40 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
                                     </div> 
-                                    <!-- city-->
+                                    <!--Districts-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="city">City</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Districts">Districts</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                            <div class="form-group">
                                                 <div class="form-line">
-                                                    <select class="form-control show-tick place-select1" type="text" id="city" autocomplete="off" name="city">
-                                                        <option value="<?php echo $MEMBER->id; ?>" class="active light-c">
+                                                    <label for="Districts" class="hidden-lg hidden-md">Districts</label>
+                                                    <select class="form-control" type="text" id="district" autocomplete="off" name="district">
+                                                        <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please  Select Your District -- </option>
+                                                        <?php foreach (District::all() as $key => $district) {
+                                                            ?>
+                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+
                                                             <?php
-                                                            $CITY = new City($MEMBER->city);
-                                                            echo $CITY->name;
-                                                            ?>
-                                                        </option>
-                                                        <?php foreach (City::all() as $key => $city) {
-                                                            ?>
-                                                            <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option><?php
                                                         }
                                                         ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--City-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="City">City</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <label for="City" class="hidden-lg hidden-md">City</label>
+                                                    <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
+                                                        <option value=""> -- Please Select a District First -- </option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -235,6 +249,7 @@ $MEMBER = new Member($id);
         <script src="js/demo.js"></script>
         <script src="js/add-new-ad.js" type="text/javascript"></script>
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+        <script src="js/city.js" type="text/javascript"></script>
         <script>
             tinymce.init({
                 selector: "#about_me",
