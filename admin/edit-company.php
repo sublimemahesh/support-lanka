@@ -49,15 +49,16 @@ $COMPANY = new Company($id);
                                 </h2>
                             </div>
                             <div class="body row">
-                                <form class="form-horizontal" method="post" action="post-and-get/company.php" enctype="multipart/form-data"> 
+                                <form class="" method="post" action="post-and-get/company.php" enctype="multipart/form-data"> 
                                     <!--Name-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Name</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Name">Name</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Name" class="hidden-lg hidden-md">Name</label>
                                                     <input type="text" id="name" class="form-control" placeholder="Enter Company name" autocomplete="off" name="name" required="TRUE" value="<?php echo $COMPANY->name; ?>">
                                                 </div>
                                             </div>
@@ -65,12 +66,13 @@ $COMPANY = new Company($id);
                                     </div> 
                                     <!--Company Register Number-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="company_register_number">Company Register Number</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Register Number">Register Number</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Register Number" class="hidden-lg hidden-md">Register Number</label>
                                                     <input type="text" id="company_register_number" class="form-control" placeholder="Enter Company Register Number" autocomplete="off" name="company_register_number" required="TRUE" value="<?php echo $COMPANY->company_register_number; ?>">
                                                 </div>
                                             </div>
@@ -78,12 +80,13 @@ $COMPANY = new Company($id);
                                     </div> 
                                     <!--Address-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="address">Address</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Address">Address</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Address" class="hidden-lg hidden-md">Address</label>
                                                     <input type="text" id="address" class="form-control" placeholder="Enter Address" autocomplete="off" name="address" required="TRUE" value="<?php echo $COMPANY->address; ?>">
                                                 </div>
                                             </div>
@@ -92,12 +95,13 @@ $COMPANY = new Company($id);
 
                                     <!-- industry-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="industry">Industry</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Category">Category</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
-                                                <div class="form-line">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line p-top ">
+                                                    <label for="Category" class="hidden-lg hidden-md">Category</label>
                                                     <select class="form-control show-tick place-select1" type="text" id="industry" autocomplete="off" name="industry" required="TRUE">
                                                         <option value="<?php echo $COMPANY->id; ?>" class="active light-c">
                                                             <?php
@@ -157,12 +161,13 @@ $COMPANY = new Company($id);
 
                                     <!--Contact Number-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="contact_number">Contact Number</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Contact Number">Contact Number</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Contact Number" class="hidden-lg hidden-md">Contact Number</label>
                                                     <input type="text" id="contact_number" class="form-control" placeholder="Enter Contact Number" autocomplete="off" name="contact_number" required="TRUE" value="<?php echo $COMPANY->contact_number; ?>">
                                                 </div>
                                             </div>
@@ -170,12 +175,13 @@ $COMPANY = new Company($id);
                                     </div> 
                                     <!--Email-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="email">Email</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Email">Email</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for=" Email" class="hidden-lg hidden-md"> Email</label>
                                                     <input type="text" id="email" class="form-control" placeholder="Enter Email" autocomplete="off" name="email" required="TRUE" value="<?php echo $COMPANY->email; ?>">
                                                 </div>
                                             </div>
@@ -183,12 +189,13 @@ $COMPANY = new Company($id);
                                     </div> 
                                     <!--Since-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="since">Since</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Since">Since</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for=" Since" class="hidden-lg hidden-md"> Since</label>
                                                     <input type="text" id="since" class="form-control" placeholder="When is company start" autocomplete="off" name="since" required="TRUE" value="<?php echo $COMPANY->since; ?>">
                                                 </div>
                                             </div>
@@ -196,12 +203,13 @@ $COMPANY = new Company($id);
                                     </div>
                                     <!--No Of Employees In your Company-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="team_size">No Of Employees In your Company</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="team_sizee">No Of Employees In your Company</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for=" team_sizee" class="hidden-lg hidden-md"> No Of Employees In your Company</label>
                                                     <input type="text" id="team_size" class="form-control" placeholder="No Of Employees" autocomplete="off" name="team_size" required="TRUE" value="<?php echo $COMPANY->team_size; ?>">
                                                 </div>
                                             </div>
@@ -209,12 +217,14 @@ $COMPANY = new Company($id);
                                     </div> 
                                     <!--About Company-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="about">About Company</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="About Company">About Company</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for=" About Company" class="hidden-lg hidden-md">About Company</label>
+
                                                     <textarea id="about" name="about" class="form-control" rows="5"><?php echo $COMPANY->about; ?></textarea> 
                                                 </div>
                                             </div>
@@ -222,12 +232,13 @@ $COMPANY = new Company($id);
                                     </div>
                                     <!--Logo Image-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="logo_image">Company Logo Image</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Company Logo Image ">Company Logo Image </label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for=" Company Logo Image" class="hidden-lg hidden-md"> Company Logo Image</label>
                                                     <input type="file" id="logo_image" class="form-control" name="logo_image" value="<?php echo $COMPANY->logo_image; ?>">
                                                     <img src="../upload/company/<?php echo $COMPANY->logo_image; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                                 </div>
@@ -236,12 +247,13 @@ $COMPANY = new Company($id);
                                     </div>
                                     <!--Rank-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="rank">Rank</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Rank">Rank </label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
-                                                <div class="form-line">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line p-top ">
+                                                    <label for="Rank" class="hidden-lg hidden-md"> Rank</label>
                                                     <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
                                                         <option value="<?php echo $COMPANY->rank; ?>"><?php echo $COMPANY->rank; ?></option>
                                                         <option value="1">1</option>

@@ -49,15 +49,16 @@ $MEMBER = new Member($id);
                                 </h2>
                             </div>
                             <div class="body row">
-                                <form class="form-horizontal" method="post" action="post-and-get/member.php" enctype="multipart/form-data"> 
+                                <form class="" method="post" action="post-and-get/member.php" enctype="multipart/form-data"> 
                                     <!--Name-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Name</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Name">Name</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Name" class="hidden-lg hidden-md">Name</label>
                                                     <input type="text" id="name" class="form-control" placeholder="Enter Member name" autocomplete="off" name="name" required="TRUE" value="<?php echo $MEMBER->name; ?>">
                                                 </div>
                                             </div>
@@ -65,12 +66,13 @@ $MEMBER = new Member($id);
                                     </div> 
                                     <!--Email-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Email</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Email">Email</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Email" class="hidden-lg hidden-md">Email</label>
                                                     <input type="email" id="email" class="form-control" placeholder="Enter Email" autocomplete="off" name="email" required="TRUE" value="<?php echo $MEMBER->email; ?>">
                                                 </div>
                                             </div>
@@ -78,12 +80,13 @@ $MEMBER = new Member($id);
                                     </div> 
                                     <!--Contact Number-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Contact Number</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Contact Number">Contact Number</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Contact Number" class="hidden-lg hidden-md">Contact Number</label>
                                                     <input type="text" id="contact_number" class="form-control" placeholder="Enter contact number" autocomplete="off" name="contact_number" required="TRUE" value="<?php echo $MEMBER->contact_number; ?>">
                                                 </div>
                                             </div>
@@ -91,12 +94,13 @@ $MEMBER = new Member($id);
                                     </div> 
                                     <!--NIC Number-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="nic_number">NIC Number</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="nic-number">NIC Number</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="nic-number" class="hidden-lg hidden-md">NIC Number</label>
                                                     <input type="text" id="nic_number" class="form-control" placeholder="Enter NIC number" autocomplete="off" name="nic_number" required="TRUE" value="<?php echo $MEMBER->nic_number; ?>">
                                                 </div>
                                             </div>
@@ -104,12 +108,13 @@ $MEMBER = new Member($id);
                                     </div> 
                                     <!--About Your Details-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="about_me">About Your Details</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="about">About</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="about" class="hidden-lg hidden-md">About</label>
                                                     <textarea id="about_me" name="about_me" class="form-control" rows="5" ><?php echo $MEMBER->about_me; ?></textarea> 
                                                 </div>
                                             </div>
@@ -117,12 +122,13 @@ $MEMBER = new Member($id);
                                     </div>
                                     <!--Home Address-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="home_address">Home Address</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Address">Address</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Address" class="hidden-lg hidden-md">Address</label>
                                                     <input type="text" id="home_address" class="form-control" placeholder="Enter Home Address" autocomplete="off" name="home_address" required="TRUE" value="<?php echo $MEMBER->home_address; ?>">
                                                 </div>
                                             </div>
@@ -133,9 +139,9 @@ $MEMBER = new Member($id);
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                             <label for="Districts">Districts</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
                                                     <label for="Districts" class="hidden-lg hidden-md">Districts</label>
                                                     <select class="form-control" type="text" id="district" autocomplete="off" name="district">
                                                         <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please  Select Your District -- </option>
@@ -169,12 +175,13 @@ $MEMBER = new Member($id);
                                     </div>
                                     <!--date_of_birthday-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="date_of_birthday">Date Of Birthday</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="date_of_birth">Date of Birth</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="date_of_birth" class="hidden-lg hidden-md">Date of Birth</label>
                                                     <input type="date" id="date_of_birthday" class="form-control" value="<?php echo $MEMBER->date_of_birthday; ?>" autocomplete="off" name="date_of_birthday" required="TRUE">
                                                 </div>
                                             </div>
@@ -182,12 +189,13 @@ $MEMBER = new Member($id);
                                     </div> 
                                     <!--Profile Picture-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="image">Profile Picture</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Profile_image">Profile Image</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Profile_image" class="hidden-lg hidden-md">Profile Image</label>
                                                     <input type="file" id="image" class="form-control" name="image" value="<?php echo $MEMBER->profile_picture; ?>">
                                                     <img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                                 </div>
@@ -196,12 +204,13 @@ $MEMBER = new Member($id);
                                     </div>
                                     <!--Rank-->
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="rank">Rank</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Rank">Rank</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
-                                                <div class="form-line">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line p-top ">
+                                                    <label for="Rank" class="hidden-lg hidden-md">Rank</label>
                                                     <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
                                                         <option value="<?php echo $MEMBER->rank; ?>"><?php echo $MEMBER->rank; ?></option>
                                                         <option value="1">1</option>
