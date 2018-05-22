@@ -58,7 +58,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                 <div class="panel-body">
                                                                     <div class="">
                                                                         <div class="bottom-top">
-                                                                            <label for="industry">Industry</label>
+                                                                            <label for="Category">Category</label>
                                                                         </div>
                                                                         <div class="">
                                                                             <select class="form-control" autocomplete="off" type="text" id="industry" autocomplete="off" name="industry" required="TRUE">

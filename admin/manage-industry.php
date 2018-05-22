@@ -35,7 +35,7 @@ $INDUSTRY = new Industry(NULL)
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Manage Industry
+                                    Manage Category
                                 </h2>
                                 <ul class="header-dropdown">
                                     <li>

@@ -35,7 +35,7 @@ $INDUSTRY = Industry::all();
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
-                                <h2>Arrange Industry</h2>
+                                <h2>Arrange Category</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
                                         <a href="manage-industry.php">

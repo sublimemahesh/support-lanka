@@ -32,7 +32,7 @@ include_once(dirname(__FILE__) . './auth.php');
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
-                                <h2>Add New Industry</h2>
+                                <h2>Add New Category</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
                                         <a href="manage-industry.php">
@@ -45,13 +45,13 @@ include_once(dirname(__FILE__) . './auth.php');
                                 <form class="form-horizontal"  method="post" action="post-and-get/industry.php" enctype="multipart/form-data"> 
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
-                                            <label for="Industry">Industry</label>
+                                            <label for="Category">Category</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <label for="Industry" class="hidden-lg hidden-md">Industry</label>
-                                                    <input type="text" id="name" class="form-control" placeholder="Enter Industry name" autocomplete="off" name="name" required="TRUE">
+                                                    <label for="Category" class="hidden-lg hidden-md">Category</label>
+                                                    <input type="text" id="name" class="form-control" placeholder="Enter Category name" autocomplete="off" name="name" required="TRUE">
                                                 </div>
                                             </div>
                                         </div>
@@ -59,7 +59,7 @@ include_once(dirname(__FILE__) . './auth.php');
 
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
-                                            <label for="Industry image">Industry image</label>
+                                            <label for="Industry image">Category image</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                             <div class="form-group">

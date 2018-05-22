@@ -54,7 +54,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Industry</th>
+                                                    <th>Category</th>
                                                     <th>Skill</th> 
                                                     <th>Option</th>
 
@@ -63,7 +63,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <tfoot>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Industry</th>
+                                                    <th>Category</th>
                                                     <th>Skill</th> 
                                                     <th>Option</th>
                                                 </tr>

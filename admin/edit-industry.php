@@ -51,7 +51,7 @@ $INDUSTRY = new Industry($id);
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Edit Industry
+                                    Edit Category
                                 </h2>
 
                             </div>

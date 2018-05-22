@@ -76,7 +76,7 @@ if (!empty($industryGet)) {
                         <div class="row no-gape">
                             <aside class="col-lg-3 col-md-3  hidden-md hidden-xs column" style="padding-bottom: 35px;">
                                 <div class="widget border">
-                                    <h3 class="sb-title open">Industry</h3>
+                                    <h3 class="sb-title open">Category</h3>
                                     <div class="specialism_widget">
                                         <div class="simple-checkbox">
                                             <?php

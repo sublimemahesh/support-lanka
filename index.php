@@ -45,7 +45,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="heading">
-                                    <h2>Select Your Industry</h2>
+                                    <h2>Select Your Category</h2>
                                     <span>Sri Lanka Supporting Evolution By Business</span>
                                 </div><!-- Heading -->
                                 <div class="cat-sec">
