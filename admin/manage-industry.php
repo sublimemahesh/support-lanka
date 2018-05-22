@@ -100,6 +100,7 @@ $INDUSTRY = new Industry(NULL)
 
         <script src="plugins/node-waves/waves.js"></script>
 
+        
         <script src="plugins/jquery-datatable/jquery.dataTables.js"></script>
         <script src="plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
         <script src="plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
