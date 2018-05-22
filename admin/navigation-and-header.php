@@ -318,7 +318,7 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                             </a>
                         </li>
                         <li>
-                            <a href="arrange-skills.php">
+                            <a href="all-skills.php">
                                 <i class="material-icons">compare_arrows</i>
                                 <span>Arrange</span>
                             </a>

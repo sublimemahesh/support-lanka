@@ -1,8 +1,10 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . './auth.php');
-
-$SKILL = Skill::all();
+$id = '';
+$id = $_GET['id'];
+$INDUSTRY = new Industry($id);
+$SKILl = Skill::GetSkillsByIndustry($id);
 ?>
 <!DOCTYPE html>
 <html> 
@@ -35,7 +37,7 @@ $SKILL = Skill::all();
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
-                                <h2>Arrange Skill</h2>
+                                <h2><?php echo $INDUSTRY->name ?></h2>
                                 <ul class="header-dropdown">
                                     <li class="">
                                         <a href="manage-skills.php">
@@ -51,21 +53,14 @@ $SKILL = Skill::all();
                                             <div class="col-md-12 arrange-container">
                                                 <ul id="sortable">
                                                     <?php
-                                                    if (count($SKILL) > 0) {
-                                                        foreach ($SKILL as $key => $img) {
+                                                    if (count($SKILl) > 0) {
+                                                        foreach ($SKILl as $key => $img) {
                                                             ?>
                                                             <div class="col-md-3" style="list-style: none;">
                                                                 <li class="ui-state-default">
                                                                     <span class="number-class">(<?php echo $key + 1; ?>)</span>
-                                                                    <div><b>Industry :  </b>
-                                                                        <?php
-                                                                        $INDUSTRY = new Industry($img['industry']);
-                                                                        echo $INDUSTRY->name;
-                                                                        ?>
-                                                                    </div>
                                                                     <div><b>Skill :  </b><?php echo $img["name"]; ?></div>
                                                                     <input type="hidden" name="sort[]"  value="<?php echo $img["id"]; ?>" class="sort-input"/>
-
                                                                 </li>
                                                             </div>
 
