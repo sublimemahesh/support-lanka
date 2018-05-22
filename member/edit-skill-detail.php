@@ -61,7 +61,7 @@ $SKILL = new Skill($SKILLDETAILS->skill);
 
                                                         <div class="">
                                                             <div class="bottom-top">
-                                                                <label for="Industry">Industry</label>
+                                                                <label for="Category">Category</label>
                                                             </div>
                                                             <div class="">
                                                                 <select class="form-control show-tick place-select1" type="text" id="industry" autocomplete="off" name="industry" disabled="true">

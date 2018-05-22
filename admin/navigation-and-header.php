@@ -194,73 +194,6 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                 </li>
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">location_on</i>
-                        <span>District</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-district.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-district.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">account_balance</i>
-                        <span>Industry</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-industry.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-industry.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-industry.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">assistant</i>
-                        <span>Skill</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="manage-skills.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-skills.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-               
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">supervisor_account</i>
                         <span>Member</span>
                     </a>
@@ -279,7 +212,7 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                         </li>
                     </ul>
                 </li>
-                <li>
+                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">contacts</i>
                         <span>Company</span>
@@ -325,6 +258,76 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">account_balance</i>
+                        <span>Category</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-industry.php">
+                                <i class="material-icons">add</i>
+                                <span>Add New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-industry.php">
+                                <i class="material-icons">list</i>
+                                <span>Manage</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="arrange-industry.php">
+                                <i class="material-icons">compare_arrows</i>
+                                <span>Arrange</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">location_on</i>
+                        <span>District</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-district.php">
+                                <i class="material-icons">add</i>
+                                <span>Add New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-district.php">
+                                <i class="material-icons">list</i>
+                                <span>Manage</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">assistant</i>
+                        <span>Skill</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="manage-skills.php">
+                                <i class="material-icons">list</i>
+                                <span>Manage</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="arrange-skills.php">
+                                <i class="material-icons">compare_arrows</i>
+                                <span>Arrange</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>             
+                
+               
+                
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">question_answer</i>

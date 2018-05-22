@@ -34,14 +34,20 @@ include_once(dirname(__FILE__) . '/auth.php');
                <section class="content">
             <div class="container-fluid"> 
                 <!-- Manage Costomer -->
-                <div class="row clearfix">
+               <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Manage Message Request
+                                    Manage Skills
                                 </h2>
-                              
+                                <ul class="header-dropdown">
+                                    <li>
+                                        <a href="create-skill.php">
+                                            <i class="material-icons">add</i> 
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="body">
                                 <div class="table-responsive">
@@ -50,48 +56,47 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Vacancy</th> 
-                                                    <th>Name</th>
-                                                    <th>Date</th> 
-                                                    <th>Message</th> 
+                                                    <th>Industry</th>
+                                                    <th>Skill</th> 
                                                     <th>Option</th>
+
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Vacancy</th> 
-                                                    <th>Name</th>
-                                                    <th>Date</th> 
-                                                    <th>Message</th> 
+                                                    <th>Industry</th>
+                                                    <th>Skill</th> 
                                                     <th>Option</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
                                                 <?php
-                                                $MESSAGEREQUEST = new MessageRequest(NULL);
-                                                foreach ($MESSAGEREQUEST->getOnlyVacancyMessage() as $key => $mess) {
+                                                $SKILL_OBJ = new Skill(NULL);
+                                                $SKILL = $SKILL_OBJ->GetSkillsByIndustry($INDUSTRY->id);
+
+
+                                                foreach ($SKILL as $skill) {
                                                     ?>
-                                                    <tr id="row_<?php echo $mess['id']; ?>">
-                                                        <td><?php echo $mess['id']; ?></td> 
-                                                        <td><?php
-                                                            $VACANCY = new Vacancy($mess['vacancy']);
-                                                            echo $VACANCY->title;
-                                                            ?>
-                                                        </td>
-                                                        <td><?php echo $mess['title']; ?></td>
-                                                        <td><?php echo $mess['date']; ?></td>
-                                                        <td><?php echo $mess['message']; ?></td>
+                                                    <tr id="row_<?php echo $skill['id']; ?>">
+                                                        <td><?php echo $INDUSTRY->id ?></td> 
+                                                        <td><?php echo $INDUSTRY->name ?></td>
+                                                        <td><?php echo $skill['name'] ?></td>
+
                                                         <td> 
-                                                            <a href="#" class="delete-message-request btn btn-sm btn-danger" data-id="<?php echo $mess['id']; ?>">
+                                                            <a href="edit-skill.php?id=<?php echo $skill['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
+                                                            <a href="create-subskill.php?id=<?php echo $skill['id']; ?>" class=" btn btn-sm btn-primary">
+                                                                <i class="glyphicon glyphicon-folder-open" ></i>
+                                                            </a>
+                                                            <a href="#" class="delete-skill btn btn-sm btn-danger" data-id="<?php echo $skill['id']; ?>">
                                                                 <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                             </a>
 
-                                                        </td>
+                                                        </td
                                                     </tr>
                                                     <?php
                                                 }
-                                                ?>   
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>

@@ -45,7 +45,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="inner-header">
-                                    <h3 id="txt-bottom">Select Your Industry</h3>
+                                    <h3 id="txt-bottom">Select Your Category</h3>
                                 </div>
                             </div>
                         </div>

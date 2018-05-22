@@ -68,12 +68,12 @@ include_once(dirname(__FILE__) . './auth.php');
                                     <!-- Industry-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
-                                            <label for="Industry">Industry</label>
+                                            <label for="Category">Category</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
-                                                    <label for="Industry" class="hidden-lg hidden-md">Industry  </label>
+                                                    <label for="Category" class="hidden-lg hidden-md">Category  </label>
                                                     <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="industry" autocomplete="off" name="industry" required="TRUE">
                                                         <option value=""> -- Please Select -- </option>
                                                         <?php foreach (Industry::all() as $key => $industry) {
