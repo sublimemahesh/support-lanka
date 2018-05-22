@@ -53,6 +53,11 @@ if ($_POST['save']) {
         $response['message'] = "Please enter the password.";
         echo json_encode($response);
         exit();
+    } else if (empty($_POST['privacy'])) {
+        $response['status'] = 'error';
+        $response['message'] = "Please enter the privacy.";
+        echo json_encode($response);
+        exit();
     } else {
         $MEMBER = new Member(NULL);
         $result = $MEMBER->checkEmail($_POST['email']);
@@ -76,6 +81,7 @@ if ($_POST['save']) {
             $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
             $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
             $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
+            $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
  
             $dir_dest = '../../../upload/member/';
 
