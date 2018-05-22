@@ -7,7 +7,6 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
 $SKILL = new Skill($id);
-
 ?> 
 ﻿<!DOCTYPE html>
 <html> 
@@ -58,15 +57,16 @@ $SKILL = new Skill($id);
                                 </ul>
                             </div>
                             <div class="body row">
-                                <form class="form-horizontal col-sm-9 col-md-12" method="post" action="post-and-get/skill.php" enctype="multipart/form-data"> 
+                                <form class=" col-sm-9 col-md-12" method="post" action="post-and-get/skill.php" enctype="multipart/form-data"> 
 
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="industry">Industry</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Category">Category</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                            <div class="form-group place-select">
-                                                <div class="form-line">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line p-top ">
+                                                    <label for="Category" class="hidden-lg hidden-md">Category</label>
                                                     <select class="form-control show-tick place-select1" type="text" id="industry" autocomplete="off" name="industry" disabled="true">
                                                         <option value="<?php $SKILL->id ?>" class="active light-c">
                                                             <?php
@@ -87,12 +87,13 @@ $SKILL = new Skill($id);
                                     </div>
 
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Name</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Skill">Skill</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Skill" class="hidden-lg hidden-md">Skill</label>
                                                     <input type="text" id="name" class="form-control" placeholder="Enter Skill name" autocomplete="off" name="name" value="<?php echo $SKILL->name; ?>" >
                                                 </div>
                                             </div>

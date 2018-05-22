@@ -56,15 +56,16 @@ $INDUSTRY = new Industry($id);
 
                             </div>
                             <div class="body row">
-                                <form class="form-horizontal col-sm-9 col-md-9" method="post" action="post-and-get/industry.php" enctype="multipart/form-data"> 
+                                <form class=" col-sm-9 col-md-9" method="post" action="post-and-get/industry.php" enctype="multipart/form-data"> 
 
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Name</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Category">Category</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Category" class="hidden-lg hidden-md">Category  </label>
                                                     <input type="text" id="name" class="form-control" placeholder="Enter name" value="<?php echo $INDUSTRY->name; ?>"  name="name"  required="TRUE">
                                                 </div>
                                             </div>
@@ -72,11 +73,13 @@ $INDUSTRY = new Industry($id);
                                     </div>
 
                                     <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="image_name">Image</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="image name">Image</label>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">                                                                         <div class="form-group">
-                                                <div class="form-line">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line p-top ">
+                                                    <label for="image name" class="hidden-lg hidden-md">Image</label>
                                                     <input type="file" id="image_name" class="form-control" value="<?php echo $INDUSTRY->image_name; ?>"  name="image_name">
                                                     <img src="../upload/industry/<?php echo $INDUSTRY->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image_name" alt="old image">
                                                 </div>
