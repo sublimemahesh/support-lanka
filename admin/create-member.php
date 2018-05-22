@@ -221,9 +221,27 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                 </div>
                             </div>
-                            <!--Password-->
                             <div class="row clearfix">
-                                 <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="Rank">Privacy</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="Rank" class="hidden-lg hidden-md">Rank</label>
+                                            <select class="form-control  "  type="text"   name="privacy" >
+                                                <option value="0" >-- Please Select the Privacy</option>
+                                                <option value="1">Public</option>
+                                                <option value="2">Private</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--privacy-->
+                            
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                     <label for="password">Password</label>
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">

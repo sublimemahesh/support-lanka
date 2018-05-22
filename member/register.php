@@ -86,11 +86,11 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     <input name="email" id="email" placeholder="Email" class="inputbox" type="text">
                                     <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">
                                     <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
-                                    <div >
-                                        <select name="privacy" class="inputbox" id="privacy">
-                                            <option placeholder="- Please Select Your Account Type - "> </option>
+                                    <div>
+                                        <select name="privacy" class="inputbox" type="text" >
+                                            <option value="0"> - Please Select Your Account Type -</option>
                                             <option value="1" > Public </option>
-                                            <option value="0"> Private </option>
+                                            <option value="2"> Private </option>
                                         </select>
                                         <input type="hidden" name="status" value="1"/>
                                         <input type="hidden" name="profile_picture" value="member.png"/>
