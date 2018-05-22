@@ -2,6 +2,7 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 $MEMBER = new Member(NULL);
+$SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
 ?>
 ﻿<!DOCTYPE html>
 <html>
@@ -66,9 +67,8 @@ $MEMBER = new Member(NULL);
                                         <th>ID</th>
                                         <th>Name</th> 
                                         <th>Contact Number</th> 
-                                        <th> Skill</th>
-                                        <th> portfolio</th>
-                                        <th>Options</th>
+                                        <td>Skill</td>
+                                        <th class="text-center">Options</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -80,16 +80,25 @@ $MEMBER = new Member(NULL);
                                             <td><?php echo substr($member['name'], 0, 20); ?></td> 
                                             <td><?php echo $member['contact_number']; ?></td> 
 
-                                            <td>  
-                                                <a href="member-skills.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-share-alt"></i></a>
-                                            </td>
                                             <td>
-                                                <a href="member-portfolio.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-flash"></i></a>
+                                                <?php
+                                                $skills = SkillDetail::GetSkillByMember($member['id']);
 
+                                                foreach ($skills as $key => $skill) {
+                                                    if ($key == 1) {
+                                                        break;
+                                                    } 
+                                                    
+                                                    $SKILL = new Skill($skill["skill"]);
+                                                    echo $SKILL->name;
+                                                }
+                                                ?> 
                                             </td>
-                                            <td> 
-                                                <a href="edit-member.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 
+                                            <td class="text-center"> 
+                                                <a href="member-skills.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-share-alt"></i></a>&nbsp;&nbsp;|&nbsp;
+                                                <a href="member-portfolio.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn btn-warning"><i class=" glyphicon glyphicon-chevron-up "></i></a>&nbsp;&nbsp;|&nbsp;
+                                                <a href="edit-member.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;|&nbsp;
                                                 <a href="#" class="delete-member btn btn-sm btn-danger" data-id="<?php echo $member['id']; ?>">
                                                     <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                 </a>
@@ -104,10 +113,9 @@ $MEMBER = new Member(NULL);
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th> 
-                                        <th>Contact Number</th> 
-                                        <th>skill</th> 
-                                        <th>portfolio</th> 
-                                        <th>Options</th>
+                                        <th>Contact Number</th>
+                                        <th>Skill</th>
+                                        <th class="text-center">Options</th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -116,6 +124,10 @@ $MEMBER = new Member(NULL);
                 </div>
             </div>
         </section>
+        <!--         $SKILL_DETALS = SkillDetail::GetSkillByMember($member["id"]);
+                                                foreach ($SKILL_DETALS as $key => $skill_details) {
+                                                    $SKILL = skill::GetSkillById($skill_details['skill']);
+                                                    foreach ($SKILL as $key => $skill) {-->
 
         <script src="plugins/jquery/jquery.min.js"></script>
         <script src="plugins/bootstrap/js/bootstrap.js"></script>

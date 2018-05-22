@@ -139,8 +139,40 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
                                     </div>
-
                                 </form> 
+                            </div>
+                            <div class="body">
+                                <div class="header">
+                                    <h2 class="text-center">
+                                        Sub Skills
+                                    </h2> 
+                                </div> 
+                                <div class="row clearfix">
+                                    <?php
+                                    foreach (Skill::all() as $key => $sub_skill) {
+                                        ?>
+                                        <div class="col-md-4" id="div_<?php echo $sub_skill['id']; ?>">
+
+                                            <div><?php echo $sub_skill['name']; ?></div> 
+
+                                            <div class="top-10"> 
+                                                <a href="edit-sub-skill.php?id=<?php echo $sub_skill['id']; ?>" class="op-link btn btn-sm btn-info">
+                                                    <i class="glyphicon glyphicon-pencil"></i>
+                                                </a> 
+
+                                                |  
+                                                <a href="#" class="delete-sub-skill btn btn-sm btn-danger" data-id="<?php echo $sub_skill['id']; ?>">
+                                                    <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?> 
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
