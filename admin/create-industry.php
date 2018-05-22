@@ -64,7 +64,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <label for="Industry image" class="hidden-lg hidden-md">Industry image</label>
+                                                    <label for="Industry image" class="hidden-lg hidden-md">Category image</label>
                                                     <input type="file" id="image" class="form-control" name="image" required="true">
                                                 </div>
                                             </div>
