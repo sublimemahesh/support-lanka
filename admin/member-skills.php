@@ -122,7 +122,7 @@ $MEMBER = new Member($id);
 
                                         <div class="row clearfix">
                                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                                <label for="Description">Description </label>
+                                                <label for="Description ">Description </label>
                                             </div>
                                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                 <div class="form-group">
@@ -139,35 +139,38 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
                                     </div>
+
                                 </form> 
                             </div>
                             <div class="body">
                                 <div class="header">
                                     <h2 class="text-center">
-                                        Sub Skills
+                                       Members Skills
                                     </h2> 
                                 </div> 
                                 <div class="row clearfix">
                                     <?php
-                                    foreach (Skill::all() as $key => $sub_skill) {
-                                        ?>
-                                        <div class="col-md-4" id="div_<?php echo $sub_skill['id']; ?>">
+                                    foreach (SkillDetail::GetSkillByMember($MEMBER->id) as $key => $skill_details) {
+                                        foreach (Skill::GetSkillById($skill_details["skill"]) as $skill) {
+                                            ?>
+                                            <div class="col-md-4" id="div_<?php echo $skill['id']; ?>">
 
-                                            <div><?php echo $sub_skill['name']; ?></div> 
+                                                <div><?php echo $skill['name']; ?></div> 
 
-                                            <div class="top-10"> 
-                                                <a href="edit-sub-skill.php?id=<?php echo $sub_skill['id']; ?>" class="op-link btn btn-sm btn-info">
-                                                    <i class="glyphicon glyphicon-pencil"></i>
-                                                </a> 
+                                                <div class="top-10"> 
+                                                    <a href="edit-skill.php?id=<?php echo $skill['id']; ?>" class="op-link btn btn-sm btn-info">
+                                                        <i class="glyphicon glyphicon-pencil"></i>
+                                                    </a> 
 
-                                                |  
-                                                <a href="#" class="delete-sub-skill btn btn-sm btn-danger" data-id="<?php echo $sub_skill['id']; ?>">
-                                                    <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
-                                                </a>
+                                                    |  
+                                                    <a href="#" class="delete-member-skill btn btn-sm btn-danger" member-id="<?php echo $MEMBER->id?>"skill-id="<?php echo $skill['id']; ?>">
+                                                        <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                    </a>
 
+                                                </div>
                                             </div>
-                                        </div>
-                                        <?php
+                                            <?php
+                                        }
                                     }
                                     ?> 
 
@@ -186,11 +189,13 @@ $MEMBER = new Member($id);
         <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
         <script src="plugins/node-waves/waves.js"></script>
         <script src="plugins/jquery-spinner/js/jquery.spinner.js"></script>
+        
+         <script src="plugins/sweetalert/sweetalert.min.js"></script>
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+        <script src="delete/js/member-skill.js" type="text/javascript"></script>
         <script src="js/skill.js" type="text/javascript"></script>
-
         <script>
             tinymce.init({
                 selector: "#about_me",

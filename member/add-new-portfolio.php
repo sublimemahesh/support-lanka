@@ -126,10 +126,7 @@ if (isset($_GET['skill'])) {
                                                         </div>
                                                     </div>
                                                 </div>
-
-
                                             </form>
-
                                         </div>
                                     </div>
                                 </div>

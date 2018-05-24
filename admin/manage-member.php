@@ -96,10 +96,10 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                                             </td>
 
                                             <td class="text-center"> 
-                                                <a href="member-skills.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-share-alt"></i></a>&nbsp;&nbsp;|&nbsp;
-                                                <a href="member-portfolio.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn btn-warning"><i class=" glyphicon glyphicon-chevron-up "></i></a>&nbsp;&nbsp;|&nbsp;
-                                                <a href="edit-member.php?id=<?php echo $member['id']; ?>" class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;|&nbsp;
-                                                <a href="#" class="delete-member btn btn-sm btn-danger" data-id="<?php echo $member['id']; ?>">
+                                                <a href="member-skills.php?id=<?php echo $member['id']; ?> " title="Skills" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-star-empty"></i></a>&nbsp;&nbsp;|&nbsp;
+                                                <a href="member-portfolio.php?id=<?php echo $member['id']; ?>" title="Portfolio"class="op-link btn btn-sm btn btn-warning"><i class="  glyphicon glyphicon-briefcase  "></i></a>&nbsp;&nbsp;|&nbsp;
+                                                <a href="edit-member.php?id=<?php echo $member['id']; ?>" title="Edit"class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;|&nbsp;
+                                                <a href="#" class="delete-member btn btn-sm btn-danger" title="Delete" data-id="<?php echo $member['id']; ?>">
                                                     <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                 </a>
                                             </td>
