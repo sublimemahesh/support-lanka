@@ -1,7 +1,9 @@
 $(document).ready(function () {
  
-    $('.delete-skill').click(function () {
-        var id = $(this).attr("data-id");
+    $('.delete-member-skill').click(function () {
+        var skillid = $(this).attr("skill-id");
+        var memberid = $(this).attr("member-id");
+      
        
 
         swal({
@@ -15,9 +17,9 @@ $(document).ready(function () {
         }, function () {
 
             $.ajax({
-                url: "delete/ajax/skill.php",
+                url: "delete/ajax/member-skill.php",
                 type: "POST",
-                data: {id: id, option: 'delete'},
+                data: {skillid: skillid,memberid:memberid, option: 'delete'},
                 dataType: "JSON",
                 success: function (jsonStr) {
                     if (jsonStr.status) {
@@ -30,7 +32,7 @@ $(document).ready(function () {
                             showConfirmButton: false
                         });
 
-                        $('#row_' + id).remove();
+                        $('#div_' + skillid).remove();
 
                     }
                 }

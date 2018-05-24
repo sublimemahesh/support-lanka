@@ -1,9 +1,9 @@
 $(document).ready(function () {
- 
-    $('.delete-skill').click(function () {
-        var id = $(this).attr("data-id");
-       
 
+    $('.delete-portfolio').click(function () {
+
+        var id = $(this).attr("data-id");
+        
         swal({
             title: "Are you sure?",
             text: "You will not be able to recover!",
@@ -15,7 +15,7 @@ $(document).ready(function () {
         }, function () {
 
             $.ajax({
-                url: "delete/ajax/skill.php",
+                url: "delete/ajax/portfolio.php",
                 type: "POST",
                 data: {id: id, option: 'delete'},
                 dataType: "JSON",
@@ -24,14 +24,13 @@ $(document).ready(function () {
 
                         swal({
                             title: "Deleted!",
-                            text: "Skill has been deleted.",
+                            text: "Portfolio has been deleted.",
                             type: 'success',
                             timer: 2000,
                             showConfirmButton: false
                         });
 
-                        $('#row_' + id).remove();
-
+                        $('#div_' + id).remove();
                     }
                 }
             });
