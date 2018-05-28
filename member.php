@@ -283,6 +283,7 @@ $td = date('Y-m-d');
                                                     <input type="email" id="email" name="email" class="form-control" placeholder="Please Enter Your Mail" required="true">
                                                     <input type="text" id="contact" name="contact" class="form-control" placeholder="Please Enter Your Contact" required="true"> 
                                                     <input type="hidden" id="new-messages" name="new-messages" value="new-messages">
+                                                    <input type="hidden" id="new-messages" name="read" value="read">
                                                     <input type="hidden" id="company" name="member" value="<?php echo $id ?>">
 
                                                     <textarea type="text" id="message" name="message" class="form-control" placeholder="Please Enter Message" required="true"></textarea>
@@ -359,6 +360,8 @@ $td = date('Y-m-d');
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/portfolio.js" type="text/javascript"></script>
         <script src="css/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <script src="plugins/sweetalert/sweetalert.min.js"></script>
+
         <script src="js/message-member.js" type="text/javascript"></script>
 
 
