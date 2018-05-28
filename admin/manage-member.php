@@ -1,10 +1,10 @@
-﻿<?php
+<?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 $MEMBER = new Member(NULL);
 $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
 ?>
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
     <head>
@@ -124,10 +124,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                 </div>
             </div>
         </section>
-        <!--         $SKILL_DETALS = SkillDetail::GetSkillByMember($member["id"]);
-                                                foreach ($SKILL_DETALS as $key => $skill_details) {
-                                                    $SKILL = skill::GetSkillById($skill_details['skill']);
-                                                    foreach ($SKILL as $key => $skill) {-->
+        
 
         <script src="plugins/jquery/jquery.min.js"></script>
         <script src="plugins/bootstrap/js/bootstrap.js"></script>

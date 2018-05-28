@@ -44,17 +44,19 @@ class MessageRequest {
 
     public function create() {
 
-        $query = "INSERT INTO `message_request` (`date`, `company`, `member`, `vacancy`, `contact`, `email`, `title`, `message`,`read`) VALUES  ('"
+
+        $query = "INSERT INTO `message_request` (`date`, `company`, `member`, `vacancy`, `contact`,`email`,`title`,`message`,`read`) VALUES  ('"
                 . $this->date . "','"
-                . $this->company . "', '"
-                . $this->member . "', '"
-                . $this->vacancy . "', '"
-                . $this->contact . "', '"
-                . $this->email . "', '"
-                . $this->title . "', '"
-                . $this->message . "')"
+                . $this->company . "','"
+                . $this->member . "','"
+                . $this->vacancy . "','"
+                . $this->contact . "','"
+                . $this->email . "','"
+                . $this->title . "','"
+                . $this->message . "','"
                 . $this->read . "')";
-                
+
+
 
         $db = new Database();
 
@@ -134,7 +136,7 @@ class MessageRequest {
 
         return $array_res;
     }
-    
+
     public function getOnlyCompanyMessage() {
 
         $query = "SELECT * FROM `message_request` WHERE `company` != 0 ";
@@ -150,7 +152,7 @@ class MessageRequest {
 
         return $array_res;
     }
-    
+
     public function getOnlyVacancyMessage() {
 
         $query = "SELECT * FROM `message_request` WHERE `vacancy` != 0 ";
