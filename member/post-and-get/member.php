@@ -6,10 +6,10 @@ if (isset($_POST['login'])) {
 
     $MEMBER = new Member(NULL);
 
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+    $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
     $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
 
-    if ($MEMBER->login($email, $password)) {
+    if ($MEMBER->login($username, $password)) {
         header('Location: ../index.php?message=5');
         exit();
     } else {
@@ -76,6 +76,7 @@ if (isset($_POST['update'])) {
     $MEMBER = new Member($_POST['id']);
 
     $MEMBER->profile_picture = $imgName;
+    $MEMBER->username = mysql_real_escape_string($_POST['username']);
     $MEMBER->name = mysql_real_escape_string($_POST['name']);
     $MEMBER->email = mysql_real_escape_string($_POST['email']);
     $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');

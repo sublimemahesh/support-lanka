@@ -62,7 +62,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                 }
                                 ?>
                                 <form action="post-and-get/member.php" method="POST">
-                                    <input name="email" id="email" placeholder="Email" class="inputbox" type="text">
+                                    <input name="username" id="email" placeholder="Username" class="inputbox" type="text">
                                     <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
                                     <div>
                                         <input type="hidden" name="status" value="1"/>
@@ -82,6 +82,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                         <div id="register1" class="tab-pane fade">
                             <div class="margin-l-20">
                                 <form id="register" method="post"> 
+                                    <input name="username"  class="inputbox" type="text"  value="<?php echo Member::getNextAvailableUsername(); ?>" readonly="" >
                                     <input name="name" id="name" placeholder="Enter Your Name" class="inputbox" type="text">
                                     <input name="email" id="email" placeholder="Email" class="inputbox" type="text">
                                     <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">

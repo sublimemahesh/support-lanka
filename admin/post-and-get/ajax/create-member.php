@@ -28,48 +28,49 @@ if ($_POST['save']) {
         $response['message'] = "Please enter your contact number.";
         echo json_encode($response);
         exit();
-    } else if (empty($_POST['nic_number'])) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter your nic number.";
-        echo json_encode($response);
-        exit();
-    } else if (empty($_POST['home_address'])) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter your home address.";
-        echo json_encode($response);
-        exit();
-    } else if (empty($_POST['city'])) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter your city.";
-        echo json_encode($response);
-        exit();
-    } else if (empty($_POST['date_of_birthday'])) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter date of birthday.";
-        echo json_encode($response);
-        exit();
-    } else if (empty($_POST['password'])) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter the password.";
-        echo json_encode($response);
-        exit();
-    } else if (empty($_POST['privacy'])) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter the privacy.";
-        echo json_encode($response);
-        exit();
-    } else {
-        $MEMBER = new Member(NULL);
-        $result = $MEMBER->checkEmail($_POST['email']);
-        if ($result) {
-            $response['status'] = 'error';
-            $response['message'] = "The email address you entered is already in use.";
-            echo json_encode($response);
-            exit();
+//    } else if (empty($_POST['nic_number'])) {
+//        $response['status'] = 'error';
+//        $response['message'] = "Please enter your nic number.";
+//        echo json_encode($response);
+//        exit();
+//    } else if (empty($_POST['home_address'])) {
+//        $response['status'] = 'error';
+//        $response['message'] = "Please enter your home address.";
+//        echo json_encode($response);
+//        exit();
+//    } else if (empty($_POST['city'])) {
+//        $response['status'] = 'error';
+//        $response['message'] = "Please enter your city.";
+//        echo json_encode($response);
+//        exit();
+//    } else if (empty($_POST['date_of_birthday'])) {
+//        $response['status'] = 'error';
+//        $response['message'] = "Please enter date of birthday.";
+//        echo json_encode($response);
+//        exit();
+//    } else if (empty($_POST['password'])) {
+//        $response['status'] = 'error';
+//        $response['message'] = "Please enter the password.";
+//        echo json_encode($response);
+//        exit();
+//    } else if (empty($_POST['privacy'])) {
+//        $response['status'] = 'error';
+//        $response['message'] = "Please enter the privacy.";
+//        echo json_encode($response);
+//        exit();
+//    } else {
+//        $MEMBER = new Member(NULL);
+//        $result = $MEMBER->checkEmail($_POST['email']);
+//        if ($result) {
+//            $response['status'] = 'error';
+//            $response['message'] = "The email address you entered is already in use.";
+//            echo json_encode($response);
+//            exit();
         } else {
 
             $MEMBER = new Member(NULL);
 
+            $MEMBER->username = filter_input(INPUT_POST, 'username');
             $MEMBER->name = filter_input(INPUT_POST, 'name');
             $MEMBER->email = filter_input(INPUT_POST, 'email');
             $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
@@ -119,5 +120,5 @@ if ($_POST['save']) {
                 exit();
             }
         }
-    }
+    
 }

@@ -3,6 +3,8 @@ jQuery(document).ready(function () {
 
     $("#btnSubmit").click(function (e) {
         var datastring = $("#register").serialize();
+    
+        
         $.ajax({
             url: "post-and-get/ajax/register.php",
             cache: false,
