@@ -37,18 +37,18 @@ if ($_POST['save']) {
         $response['message'] = "Please enter your privacy .";
         echo json_encode($response);
         exit();
-    } else {
-        $MEMBER = new Member(NULL);
-        $result = $MEMBER->checkEmail($_POST['email']);
-        if ($result) {
-            $response['status'] = 'error';
-            $response['message'] = "The email address you entered is already in use.";
-            echo json_encode($response);
-            exit();
+//    } else {
+//        $MEMBER = new Member(NULL);
+//        $result = $MEMBER($_POST['email']);
+//        if ($result) {
+//            $response['status'] = 'error';
+//            $response['message'] = "The email address you entered is already in use.";
+//            echo json_encode($response);
+//            exit();
         } else {
 
             $MEMBER = new Member(NULL);
-
+            $MEMBER->username = filter_input(INPUT_POST, 'username');
             $MEMBER->name = filter_input(INPUT_POST, 'name');
             $MEMBER->email = filter_input(INPUT_POST, 'email');
             $MEMBER->profile_picture = filter_input(INPUT_POST, 'profile_picture');
@@ -58,9 +58,9 @@ if ($_POST['save']) {
             $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
 
             $MEMBER->create();
-
+                
             if ($MEMBER->id) {
-                $MEMBER->login($MEMBER->email, $MEMBER->password);
+                $MEMBER->login($MEMBER->username, $MEMBER->password);
                 $response['status'] = 'success';
                 echo json_encode($response);
                 exit();
@@ -71,5 +71,5 @@ if ($_POST['save']) {
                 exit();
             }
         }
-    }
+    
 }

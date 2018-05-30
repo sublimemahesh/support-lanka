@@ -163,9 +163,9 @@ class Member {
         return $array_res;
     }
 
-    public function login($email, $password) {
+    public function login($username, $password) {
 
-        $query = "SELECT * FROM `member` WHERE `email`= '" . $email . "' AND `password`= '" . $password . "' AND `status`= '" . 1 . "'";
+        $query = "SELECT * FROM `member` WHERE `username`= '" . $username . "' AND `password`= '" . $password . "' AND `status`= '" . 1 . "'";
 
         $db = new Database();
 
@@ -417,6 +417,17 @@ class Member {
         }
     }
 
+    public function getNextAvailableUsername() {
+
+        $query = "SELECT MAX(id)+1 FROM `member`";
+
+        $db = new Database();
+
+        $result = mysql_fetch_array($db->readQuery($query));
+
+        return 'SUP' . str_pad($result["MAX(id)+1"], 6, '0', STR_PAD_LEFT);
+    }
+
     public function SelectResetCode($code) {
 
         $query = "SELECT `id` FROM `member` WHERE `resetcode`= '" . $code . "'";
@@ -635,5 +646,4 @@ class Member {
         echo $setPaginate;
     }
 
-  
 }
