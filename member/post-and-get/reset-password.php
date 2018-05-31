@@ -4,22 +4,23 @@ include_once(dirname(__FILE__) . '/../../class/include.php');
 
 $MEMBER = new Member(NULL);
 
-$email = $_POST['email'];
+$username = $_POST['username'];
 
-if (empty($email)) {
-    header('Location: ../forgot-password.php?message=11');
+if (empty($username)) {
+    header('Location: ../forgot-password.php?message=19');
     exit();
 }
 
-if ($MEMBER->checkEmail($email)) {
+if ($MEMBER->checkUsername($username)) {
 
-    if ($MEMBER->GenarateCode($email)) {
-        $res = $MEMBER->SelectForgetMember($email);
-
+    if ($MEMBER->GenarateCodeMember($username)) {
+        $res = $MEMBER->SelectForgetMember($username);
+       
         $username = $MEMBER->username;
         $email = $MEMBER->email;
         $resetcode = $MEMBER->resetcode;
-
+        $re = $MEMBER->resetcode;
+     
         date_default_timezone_set('Asia/Colombo');
 
         $todayis = date("l, F j, Y, g:i a");
@@ -46,7 +47,7 @@ if ($MEMBER->checkEmail($email)) {
         $html .= "<tr><td colspan='3' style='font-size: 14px; background-color: #FAFAFA; padding: 25px; color: #333; font-weight: 300; text-align: justify; '>Thank you</td></tr>";
 
         $html .= "</table>";
-
+      
         if (mail($email, $subject, $html, $headers)) {
             header('Location: ../reset-password.php?message=12');
         } else {
@@ -55,7 +56,7 @@ if ($MEMBER->checkEmail($email)) {
     }
     exit();
 } else {
-    header('Location: ../forgot-password.php?message=13');
+    header('Location: ../forgot-password.php?message=20');
     exit();
 }
 

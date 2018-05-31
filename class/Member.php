@@ -326,7 +326,6 @@ class Member {
         $db = new Database();
 
         return $db->readQuery($query);
-//        dd($query);
     }
 
     public function checkOldPass($id, $password) {
@@ -366,8 +365,21 @@ class Member {
     }
 
     public function checkEmail($email) {
-
         $query = "SELECT `email`,`username` FROM `member` WHERE `email`= '" . $email . "'";
+
+        $db = new Database();
+
+        $result = mysql_fetch_array($db->readQuery($query));
+
+        if (!$result) {
+            return FALSE;
+        } else {
+            return $result;
+        }
+    }
+
+    public function checkUsername($username) {
+        $query = "SELECT `email`,`username` FROM `member` WHERE `username`= '" . $username . "'";
 
         $db = new Database();
 
@@ -399,19 +411,37 @@ class Member {
         }
     }
 
-    public function SelectForgetMember($email) {
+    public function GenarateCodeMember($username) {
 
-        if ($email) {
+        $rand = rand(10000, 99999);
 
-            $query = "SELECT `email`,`username`,`resetcode` FROM `member` WHERE `email`= '" . $email . "'";
+        $query = "UPDATE  `member` SET "
+                . "`resetcode` ='" . $rand . "' "
+                . "WHERE `username` = '" . $username . "'";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+
+        if ($result) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+    public function SelectForgetMember($username) {
+
+        if ($username) {
+
+            $query = "SELECT `email`,`username`,`resetcode` FROM `member` WHERE `username`= '" . $username . "'";
 
             $db = new Database();
 
             $result = mysql_fetch_array($db->readQuery($query));
-
             $this->username = $result['username'];
             $this->email = $result['email'];
-            $this->restCode = $result['resetcode'];
+            $this->resetcode = $result['resetcode'];
 
             return $result;
         }
