@@ -50,6 +50,20 @@ $MEMBER = new Member($id);
                             </div>
                             <div class="body row">
                                 <form class="" method="post" action="post-and-get/member.php" enctype="multipart/form-data"> 
+                                    <!--user Name-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="username">Username</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line p-top ">
+                                                    <label for="Username" class="hidden-lg hidden-md">Username</label>
+                                                    <input type="text" id="name" class="form-control"  autocomplete="off" name="username" required="TRUE" value="<?php echo $MEMBER->username; ?>" readonly="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
                                     <!--Name-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">

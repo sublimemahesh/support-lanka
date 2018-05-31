@@ -64,7 +64,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Username</th>
                                         <th>Name</th> 
                                         <th>Contact Number</th> 
                                         <td>Skill</td>
@@ -76,7 +76,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                                     foreach ($MEMBER->all() as $key => $member) {
                                         ?>
                                         <tr id="row_<?php echo $member['id']; ?>">
-                                            <td><?php echo $member['id']; ?></td> 
+                                            <td><?php echo $member['username']; ?></td> 
                                             <td><?php echo substr($member['name'], 0, 20); ?></td> 
                                             <td><?php echo $member['contact_number']; ?></td> 
 
@@ -111,7 +111,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
 
                                 <tfoot>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Username</th>
                                         <th>Name</th> 
                                         <th>Contact Number</th>
                                         <th>Skill</th>

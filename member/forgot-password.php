@@ -58,8 +58,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                 }
                                 ?>
                                 <div class="modal-body">
-                                    <p>Enter your e-mail address below to reset your password.</p>
-                                    <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+                                    <p>Enter your username below to reset your password.</p>
+                                    <input type="text" name="username" placeholder="Username" autocomplete="off" class="form-control placeholder-no-fix">
 
                                 </div>
                                 <div class="modal-footer">
