@@ -103,8 +103,9 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                                 </a>
                                             </div>
                                             <div class="emply-resume-info ">
-                                                <h3><a href="#" title=""> <?php echo $member['name']; ?></a></h3>
+                                                <h3><a href="member.php?member=<?php echo $member['id']; ?>" title=""> <?php echo $member['name']; ?></a></h3>
                                                 <span>
+                                                    <a href="member.php?member=<?php echo $member['id']; ?>" >
                                                     <i>
                                                         <?php
                                                         $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
@@ -124,6 +125,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                                         }
                                                         ?> 
                                                     </i>
+                                                    </a>
                                                 </span>
                                                 <p><i class="la la-map-marker"></i>
                                                     <?php
