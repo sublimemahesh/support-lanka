@@ -136,7 +136,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                             $COMPANY = new Company($vacant['company']);
                                                             $CITY = new City($COMPANY->city)
                                                             ?>
-                                                            <a href="#" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
+                                                            <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
                                                         </div>
                                                         <div class="emply-list-info">
                                                             <div class="emply-pstn">
@@ -145,8 +145,8 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                                     <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title="">View Details <i class="la la-plus"></i></a>
                                                                 </div>
                                                             </div>
-                                                            <h3><a href="#" title=""><?php echo $vacant['title'] ?></a></h3>
-                                                            <span><?php echo $vacant['designation']; ?> / <?php echo $vacant['job_type']; ?></span>
+                                                            <h3> <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title=""><?php echo $vacant['title'] ?></a></h3>
+                                                            <span><a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>"><?php echo $vacant['designation']; ?> / <?php echo $vacant['job_type']; ?></a></span>
                                                             <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
                                                             <?php echo substr($vacant['description'], 0, 160) . "..." ?>
                                                         </div>
