@@ -35,7 +35,6 @@ $USER = new User($id);
                 if (isset($_GET['message'])) {
 
                     $MESSAGE = New Message($_GET['message']);
-  
                     ?>
                     <div class="alert alert-<?php echo $MESSAGE->status; ?>" role = "alert">
                         <?php echo $MESSAGE->description; ?>
@@ -53,15 +52,16 @@ $USER = new User($id);
 
                             </div>
                             <div class="body row">
-                                <form class="form-horizontal col-sm-9 col-md-9" method="post" action="post-and-get/change-password.php" enctype="multipart/form-data"> 
+                                <form class=" col-sm-9 col-md-9" method="post" action="post-and-get/change-password.php" enctype="multipart/form-data"> 
 
                                     <div class="row clearfix">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="oldPass">Old Password</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Old Password">Old Password</label>
                                         </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="Old Password" class="hidden-lg hidden-md">Old Password</label>
                                                     <input type="password" id="oldPass" class="form-control" placeholder="Enter your old password" name="oldPass"  required="TRUE">
                                                 </div>
                                             </div>
@@ -69,12 +69,13 @@ $USER = new User($id);
                                     </div>
 
                                     <div class="row clearfix">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="newPass">New Password</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="New Password">New Password</label>
                                         </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
+                                                <div class="form-line p-top ">
+                                                    <label for="New Password" class="hidden-lg hidden-md">New Password</label>
                                                     <input type="password" id="newPass" class="form-control" minlength="6" placeholder="Enter your new password" name="newPass"  required="TRUE">
                                                 </div>
                                             </div>
@@ -82,13 +83,14 @@ $USER = new User($id);
                                     </div>
 
                                     <div class="row clearfix">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="confPass">Confirm Password</label>
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Confirm Password">Confirm Password</label>
                                         </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line">
-                                                    <input type="password" id="confPass" class="form-control" minlength="6" placeholder="confirm your new password" name="confPass"  required="TRUE">
+                                                <div class="form-line p-top ">
+                                                    <label for="Confirm Password" class="hidden-lg hidden-md">Confirm Password</label>
+                                                      <input type="password" id="confPass" class="form-control" minlength="6" placeholder="confirm your new password" name="confPass"  required="TRUE">
                                                 </div>
                                             </div>
                                         </div>
