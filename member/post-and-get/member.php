@@ -76,7 +76,6 @@ if (isset($_POST['update'])) {
     $MEMBER = new Member($_POST['id']);
 
     $MEMBER->profile_picture = $imgName;
-    $MEMBER->username = mysql_real_escape_string($_POST['username']);
     $MEMBER->name = mysql_real_escape_string($_POST['name']);
     $MEMBER->email = mysql_real_escape_string($_POST['email']);
     $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
@@ -85,6 +84,8 @@ if (isset($_POST['update'])) {
     $MEMBER->about_me = filter_input(INPUT_POST, 'about_me');
     $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
     $MEMBER->city = filter_input(INPUT_POST, 'city');
+    $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
+    $MEMBER->job_type = filter_input(INPUT_POST, 'job_type');
     $MEMBER->contact_number = mysql_real_escape_string($_POST['contact_number']);
 
 

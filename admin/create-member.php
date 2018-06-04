@@ -235,6 +235,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                 </div>
                             </div>
+                            <!--privacy-->
                             <div class="row clearfix">
                                 <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                     <label for="Rank">Privacy</label>
@@ -242,7 +243,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                 <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                     <div class="form-group">
                                         <div class="form-line">
-                                            <label for="Rank" class="hidden-lg hidden-md">Rank</label>
+                                            <label for="Privacy" class="hidden-lg hidden-md">Privacy</label>
                                             <select class="form-control  "  type="text"   name="privacy" >
                                                 <option value="0" >-- Please Select the Privacy</option>
                                                 <option value="1">Public</option>
@@ -252,8 +253,25 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                 </div>
                             </div>
-                            <!--privacy-->
-
+                            <!--job type-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                    <label for="job type">job type</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label for="job type" class="hidden-lg hidden-md">job type</label>
+                                            <select class="form-control  "  type="text"   name="job_type" >
+                                                <option value="0" >-- Please Select the job type</option>
+                                                <option value="PartTime">Part type</option>
+                                                <option value="FullTime">Full Time</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--password-->
                             <div class="row clearfix">
                                 <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                     <label for="password">Password</label>
@@ -267,7 +285,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                     </div>
                                 </div>
                             </div>  
-                            <!--Password-->
+                            <!--Add member-->
                             <div class="row clearfix">
                                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">  
 
