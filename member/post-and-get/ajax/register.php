@@ -22,6 +22,11 @@ if ($_POST['save']) {
         $response['message'] = "Please enter valid email.";
         echo json_encode($response);
         exit();
+    } else if (empty($_POST['nic_number'])) {
+        $response['status'] = 'error';
+        $response['message'] = "Please enter your nic_number.";
+        echo json_encode($response);
+        exit();
     } else if (empty($_POST['contact_number'])) {
         $response['status'] = 'error';
         $response['message'] = "Please enter your contact number.";
@@ -45,31 +50,30 @@ if ($_POST['save']) {
 //            $response['message'] = "The email address you entered is already in use.";
 //            echo json_encode($response);
 //            exit();
+    } else {
+
+        $MEMBER = new Member(NULL);
+        $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
+        $MEMBER->name = filter_input(INPUT_POST, 'name');
+        $MEMBER->email = filter_input(INPUT_POST, 'email');
+        $MEMBER->profile_picture = filter_input(INPUT_POST, 'profile_picture');
+        $MEMBER->status = filter_input(INPUT_POST, 'status');
+        $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
+        $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
+        $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
+
+        $MEMBER->create();
+
+        if ($MEMBER->id) {
+            $MEMBER->login($MEMBER->nic_number, $MEMBER->password);
+            $response['status'] = 'success';
+            echo json_encode($response);
+            exit();
         } else {
-
-            $MEMBER = new Member(NULL);
-            $MEMBER->username = filter_input(INPUT_POST, 'username');
-            $MEMBER->name = filter_input(INPUT_POST, 'name');
-            $MEMBER->email = filter_input(INPUT_POST, 'email');
-            $MEMBER->profile_picture = filter_input(INPUT_POST, 'profile_picture');
-            $MEMBER->status = filter_input(INPUT_POST, 'status');
-            $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
-            $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
-            $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
-
-            $MEMBER->create();
-                
-            if ($MEMBER->id) {
-                $MEMBER->login($MEMBER->username, $MEMBER->password);
-                $response['status'] = 'success';
-                echo json_encode($response);
-                exit();
-            } else {
-                $response['status'] = 'error';
-                $response['message'] = "Oops. Something went wrong, Please try again.";
-                echo json_encode($response);
-                exit();
-            }
+            $response['status'] = 'error';
+            $response['message'] = "Oops. Something went wrong, Please try again.";
+            echo json_encode($response);
+            exit();
         }
-    
+    }
 }

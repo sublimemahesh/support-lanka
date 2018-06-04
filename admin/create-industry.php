@@ -73,7 +73,7 @@ include_once(dirname(__FILE__) . './auth.php');
 
                                     <div class="row clearfix">
                                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5"> 
-                                            <input type="submit" name="add-industry" class="btn btn-primary m-t-15 waves-effect" value="Add Industry"/>
+                                            <input type="submit" name="add-industry" class="btn btn-primary m-t-15 waves-effect" value="Add Category"/>
                                         </div>
                                     </div>
                                     <hr/>
