@@ -166,9 +166,9 @@ class Member {
         return $array_res;
     }
 
-    public function login($username, $password) {
+    public function login($nic_number, $password) {
 
-        $query = "SELECT * FROM `member` WHERE `username`= '" . $username . "' AND `password`= '" . $password . "' AND `status`= '" . 1 . "'";
+        $query = "SELECT * FROM `member` WHERE `nic_number`= '" . $nic_number . "' AND `password`= '" . $password . "' AND `status`= '" . 1 . "'";
 
         $db = new Database();
 
