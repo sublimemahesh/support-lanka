@@ -83,6 +83,7 @@ if ($_POST['save']) {
             $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
             $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
             $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
+            $MEMBER->job_type = filter_input(INPUT_POST, 'job_type');
  
             $dir_dest = '../../../upload/member/';
 

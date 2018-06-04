@@ -180,7 +180,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line">
                                                     <label for="City" class="hidden-lg hidden-md">City</label>
-                                                    <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
+                                                    <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" >
                                                         <option value=""> -- Please Select a District First -- </option>
                                                     </select>
                                                 </div>
@@ -196,7 +196,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="date_of_birth" class="hidden-lg hidden-md">Date of Birth</label>
-                                                    <input type="date" id="date_of_birthday" class="form-control" value="<?php echo $MEMBER->date_of_birthday; ?>" autocomplete="off" name="date_of_birthday" required="TRUE">
+                                                    <input type="date" id="date_of_birthday" class="form-control" value="<?php echo $MEMBER->date_of_birthday; ?>" autocomplete="off" name="date_of_birthday" >
                                                 </div>
                                             </div>
                                         </div>
@@ -225,7 +225,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="Rank" class="hidden-lg hidden-md">Rank</label>
-                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
+                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" >
                                                         <option value="<?php echo $MEMBER->rank; ?>"><?php echo $MEMBER->rank; ?></option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -237,6 +237,43 @@ $MEMBER = new Member($id);
                                             </div>
                                         </div>
                                     </div>
+                                    <!--privacy-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Rank">Privacy</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <label for="Privacy" class="hidden-lg hidden-md">Privacy</label>
+                                                    <select class="form-control  "  type="text"   name="privacy" >
+                                                        <option value="0" >-- Please Select the Privacy</option>
+                                                        <option value="1">Public</option>
+                                                        <option value="2">Private</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--job type-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="job type">job type</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <label for="job type" class="hidden-lg hidden-md">job type</label>
+                                                    <select class="form-control  "  type="text"   name="job_type" >
+                                                        <option value="0" >-- Please Select the job type</option>
+                                                        <option value="PartTime">Part type</option>
+                                                        <option value="FullTime">Full Time</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Activity-->
                                     <div class="col-md-12">
                                         <div class="col-md-2"></div>  
                                         <div class="form-group">

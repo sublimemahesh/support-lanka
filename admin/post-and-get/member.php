@@ -117,6 +117,7 @@ if (isset($_POST['update'])) {
     $MEMBER->city = filter_input(INPUT_POST, 'city');
     $MEMBER->username = filter_input(INPUT_POST, 'username');
     $MEMBER->rank = filter_input(INPUT_POST, 'rank');
+    $MEMBER->job_type = filter_input(INPUT_POST, 'job_type');
     $MEMBER->status = mysql_real_escape_string($_POST['active']);
 
     $VALID = new Validator();

@@ -20,6 +20,7 @@ class Member {
     public $username;
     public $password;
     public $privacy;
+    public $job_type;
     public $resetcode;
     public $rank;
     public $status;
@@ -27,7 +28,7 @@ class Member {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`privacy`,`status`,`rank` FROM `member` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`privacy`,`job_type`,`status`,`rank` FROM `member` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -44,7 +45,8 @@ class Member {
             $this->city = $result['city'];
             $this->profile_picture = $result['profile_picture'];
             $this->username = $result['username'];
-            $this->public = $result['privacy'];
+            $this->privacy = $result['privacy'];
+            $this->job_type = $result['job_type'];
             $this->rank = $result['rank'];
             $this->status = $result['status'];
 
@@ -54,7 +56,7 @@ class Member {
 
     public function create() {
 
-        $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`password`,`privacy`,`status`,`rank`) VALUES  ('"
+        $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`password`,`privacy`,`job_type`,`status`,`rank`) VALUES  ('"
                 . $this->name . "','"
                 . $this->email . "','"
                 . $this->nic_number . "','"
@@ -67,6 +69,7 @@ class Member {
                 . $this->username . "','"
                 . $this->password . "','"
                 . $this->privacy . "','"
+                . $this->job_type . "','"
                 . $this->status . "','"
                 . $this->rank . "')";
 
@@ -295,7 +298,8 @@ class Member {
                 . "`profile_picture` ='" . $this->profile_picture . "', "
                 . "`username` ='" . $this->username . "', "
                 . "`status` ='" . $this->status . "', "
-                . "`rank` ='" . $this->rank . "' "
+                . "`rank` ='" . $this->rank . "', "
+                . "`job_type` ='" . $this->job_type . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();

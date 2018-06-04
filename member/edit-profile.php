@@ -152,6 +152,19 @@ $MEMBER = new Member($_SESSION['id']);
                                                                     </select>
                                                                 </div>
                                                             </div>
+                                                            <!--Job_type-->
+                                                            <div class="">
+                                                                <div class="bottom-top">
+                                                                    <label for="job type">Job Type</label>
+                                                                </div>
+                                                                <div class="">
+                                                                    <select name="job_type" class="form-control">
+                                                                        <option>-- Please Select Job Type -- </option>
+                                                                        <option value="Part time">Part Time</option>
+                                                                        <option value="Full time">Full Time</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
                                                         </div> 
                                                         <div class="col-md-4">
                                                             <div>
@@ -227,7 +240,7 @@ $MEMBER = new Member($_SESSION['id']);
         <script src="assets/js/form-component.js"></script>    
 
         <script src="js/city.js" type="text/javascript"></script>
-        
+
         <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({

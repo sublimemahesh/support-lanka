@@ -66,6 +66,7 @@ $MEMBER = new Member($_SESSION['id']);
                                                         <li class="list-group-item"> <b>Date Of Birthday</b> : <?php echo $MEMBER->date_of_birthday; ?></li>
                                                         <li class="list-group-item text-justify"> <b>About Me</b> : <?php echo $MEMBER->about_me; ?></li>
                                                         <li class="list-group-item"> <b>Home Address</b> : <?php echo $MEMBER->home_address; ?></li>
+                                                        <li class="list-group-item"> <b>Job Type</b> : <?php echo $MEMBER->job_type; ?></li>
                                                         <li class="list-group-item"> <b>City</b> :
                                                             <?php
                                                             $CITY = new City($MEMBER->city);
