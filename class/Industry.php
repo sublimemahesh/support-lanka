@@ -82,6 +82,7 @@ class Industry {
         }
     }
 
+    
     public function delete() {
 
         $SKILL = new Skill(NULL);

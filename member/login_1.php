@@ -51,7 +51,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                 <?php
                             }
                             ?>
-                            <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+                            <input type="text" class="form-control" name="nic_number" placeholder="NIC_Number." autofocus>
                             <br>
                             <input type="password" class="form-control" name="password" placeholder="Password">
                             <label class="checkbox">

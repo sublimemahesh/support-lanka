@@ -71,7 +71,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                     <div class="form-group">
                                         <div class="form-line">
                                             <label for="Username" class="hidden-lg hidden-md">Username</label>
-                                            <input name="username" class="form-control inputbox" type="text"  value="<?php echo Member::getNextAvailableUsername(); ?>" readonly="" >
+                                            <input name="username" class="form-control inputbox" type="text" placeholder="Enter the username"  >
 
                                         </div>
                                     </div>
