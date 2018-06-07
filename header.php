@@ -8,10 +8,16 @@
             <a href="index.php">
                 <div class="res-logo col-md-9">
                     <img src="images/resource/logo11.png" alt=""  class="img-new"/>
+                    <div class="pull-right translation-links" style="margin-right: -13px;margin-top: -10px; margin-left:26px "> 
+                        <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > <img src="images/Word_Sinhala_in_Yasarath_font.svg.png" alt="" width="60px" class="pull-leftss"/> </a>
+                        <img src="images/line.png" alt="" width="10px"/>
+                        <a href=""  class="English notranslate" data-lang="English" ><img src="images/english.png" alt="" width="60px"/></a>
+                    </div>
                 </div>
             </a>
 
             <div class="menu-resaction col-md-3">
+
                 <div class="res-openmenu">
                     <i class="la la-list nav-icon"></i>
                 </div>
@@ -21,8 +27,9 @@
                 </a>
 
             </div>
-            <div class="new-btn-p">
-                <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn2" ><i class="la la-user"></i>Login Or Register</a>
+            <div class="new-btn-p2">
+
+                <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn3" ><i class="la la-user"></i>Login Or Register</a>
             </div>
         </div>
     </div>
@@ -61,7 +68,7 @@
 <header class="stick-top forsticky">
 
     <div class="menu-sec new-height">
-        <div class="pull-right translation-links" style="margin-right: 30px;margin-top: -50px;"> 
+        <div class="pull-right translation-links" style="margin-right: 110px;margin-top: -50px;"> 
             <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > <img src="images/Word_Sinhala_in_Yasarath_font.svg.png" alt="" width="60px" class="pull-leftss"/> </a>
             <img src="images/line.png" alt="" width="10px"/>
             <a href=""  class="English notranslate" data-lang="English" ><img src="images/english.png" alt="" width="60px"/></a>
