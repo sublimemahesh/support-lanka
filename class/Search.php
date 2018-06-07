@@ -37,11 +37,7 @@ class Search {
 
     public function industry($keyword) {
 
-        $query = "SELECT DISTINCT `industry`.* 
-                FROM 
-                `industry` industry,
-                `skill` skill
-                WHERE (industry.id = skill.industry OR skill.name='" . $keyword . "')";
+        $query ="SELECT * FROM `industry` WHERE `name` LIKE '%" . $keyword . "%'";
 
         $db = new Database();
 

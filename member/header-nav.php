@@ -121,7 +121,7 @@ $MEMBER = new Member($_SESSION['id']);
             <h6  class="centered"><?php echo $MEMBER->email; ?></h6>
 
             <li class="sub-menu">
-                <a href="./" >
+                <a href="profile.php" >
                     <i class="fa fa-user-circle"></i>
                     <span>Your Profile</span>
                 </a> 

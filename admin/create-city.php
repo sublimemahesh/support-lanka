@@ -56,7 +56,7 @@ $DISTRICT = new District($id)
                                 </ul>
                             </div>
                             <div class="body">
-                                <form class="form-horizontal"  method="post" action="post-and-get/city.php" enctype="multipart/form-data"> 
+                                <form class=""  method="post" action="post-and-get/city.php" enctype="multipart/form-data"> 
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                             <label for="district">District</label>

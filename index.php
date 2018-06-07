@@ -125,7 +125,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                 <div class="col-md-10 col-md-offset-1 column pad-bottom">
                                     <div class="emply-list-sec style2">
                                         <?php
-                                        $VACANCY = Vacancy::all(0,5);
+                                        $VACANCY = Vacancy::all(0, 5);
                                         if (count($VACANCY) > 0) {
                                             foreach ($VACANCY as $key => $vacant) {
                                                 if ($key < 3) {
@@ -290,6 +290,26 @@ include_once(dirname(__FILE__) . '/class/include.php');
         <script src="js/slick.min.js" type="text/javascript"></script>
         <script src="js/parallax.js" type="text/javascript"></script>
         <script src="js/select-chosen.js" type="text/javascript"></script>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $('.translation-links a').click(function () {
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
+        </script>
 
     </body>
 </html>

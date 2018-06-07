@@ -1,6 +1,10 @@
+
+
 <div class="responsive-header">
     <div class="row">
+
         <div class="col-md-12">
+
             <a href="index.php">
                 <div class="res-logo col-md-9">
                     <img src="images/resource/logo11.png" alt=""  class="img-new"/>
@@ -12,8 +16,8 @@
                     <i class="la la-list nav-icon"></i>
                 </div>
                 <a href="index.php"> <div class="res-closemenu">
-                    <img src="images/icon2.png" alt="" />
-                </div>
+                        <img src="images/icon2.png" alt="" />
+                    </div>
                 </a>
 
             </div>
@@ -55,12 +59,21 @@
 </div>
 
 <header class="stick-top forsticky">
+
     <div class="menu-sec new-height">
+        <div class="pull-right translation-links" style="margin-right: 30px;margin-top: -50px;"> 
+            <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > <img src="images/Word_Sinhala_in_Yasarath_font.svg.png" alt="" width="60px" class="pull-leftss"/> </a>
+            <img src="images/line.png" alt="" width="10px"/>
+            <a href=""  class="English notranslate" data-lang="English" ><img src="images/english.png" alt="" width="60px"/></a>
+        </div>
         <div class="container new-height " >
+
             <div class="logo">
+
                 <a href="index.php" title=""><img class="hidesticky" src="images/resource/logo11.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
-            </div><!-- Logo -->
+            </div> 
             <div class="btn-extars"> 
+
                 <ul class="account-btn">
 
                     <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn2" style="padding-right: 20px;"><i class="la la-user"></i>Login Or Register</a>
@@ -68,6 +81,10 @@
                 <a href="company/register.php" title="" id="post-job-btn1"class=" sticky1 btn2"><i class="la la-plus"></i>Post Vacancy</a>
 
             </div><!-- Btn Extras -->
+            <div>
+
+
+            </div>
             <nav>
                 <ul>
                     <li class="">
