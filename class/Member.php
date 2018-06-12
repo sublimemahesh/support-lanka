@@ -382,8 +382,8 @@ class Member {
         }
     }
 
-    public function checkUsername($username) {
-        $query = "SELECT `email`,`username` FROM `member` WHERE `username`= '" . $username . "'";
+    public function CheckNicNumber($nic_number) {
+        $query = "SELECT `email`,`nic_number` FROM `member` WHERE `nic_number`= '" . $nic_number . "'";
 
         $db = new Database();
 
@@ -415,13 +415,13 @@ class Member {
         }
     }
 
-    public function GenarateCodeMember($username) {
+    public function GenarateCodeMember($nic_number) {
 
         $rand = rand(10000, 99999);
 
         $query = "UPDATE  `member` SET "
                 . "`resetcode` ='" . $rand . "' "
-                . "WHERE `username` = '" . $username . "'";
+                . "WHERE `nic_number` = '" . $nic_number . "'";
 
         $db = new Database();
 
@@ -434,16 +434,16 @@ class Member {
         }
     }
 
-    public function SelectForgetMember($username) {
+    public function SelectForgetMember($nic_number) {
 
-        if ($username) {
+        if ($nic_number) {
 
-            $query = "SELECT `email`,`username`,`resetcode` FROM `member` WHERE `username`= '" . $username . "'";
+            $query = "SELECT `email`,`nic_number`,`resetcode` FROM `member` WHERE `nic_number`= '" . $nic_number . "'";
 
             $db = new Database();
 
             $result = mysql_fetch_array($db->readQuery($query));
-            $this->username = $result['username'];
+            $this->nic_number = $result['nic_number'];
             $this->email = $result['email'];
             $this->resetcode = $result['resetcode'];
 

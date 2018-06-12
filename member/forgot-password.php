@@ -59,7 +59,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                 ?>
                                 <div class="modal-body">
                                     <p>Enter your username below to reset your password.</p>
-                                    <input type="text" name="username" placeholder="Username" autocomplete="off" class="form-control placeholder-no-fix">
+                                    <input type="text" name="nic_number" placeholder="NIC_Number" autocomplete="off" class="form-control placeholder-no-fix">
 
                                 </div>
                                 <div class="modal-footer">
