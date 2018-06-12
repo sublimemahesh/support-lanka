@@ -4,19 +4,19 @@ include_once(dirname(__FILE__) . '/../../class/include.php');
 
 $MEMBER = new Member(NULL);
 
-$username = $_POST['username'];
+$nic_number = $_POST['nic_number'];
 
-if (empty($username)) {
+if (empty($nic_number)) {
     header('Location: ../forgot-password.php?message=19');
     exit();
 }
 
-if ($MEMBER->checkUsername($username)) {
+if ($MEMBER->CheckNicNumber($nic_number)) {
 
-    if ($MEMBER->GenarateCodeMember($username)) {
-        $res = $MEMBER->SelectForgetMember($username);
+    if ($MEMBER->GenarateCodeMember($nic_number)) {
+        $res = $MEMBER->SelectForgetMember($nic_number);
        
-        $username = $MEMBER->username;
+        $nic_number = $MEMBER->nic_number;
         $email = $MEMBER->email;
         $resetcode = $MEMBER->resetcode;
         $re = $MEMBER->resetcode;
@@ -42,7 +42,7 @@ if ($MEMBER->checkUsername($username)) {
 
         $html .= "<tr><td colspan='3' style='font-size: 14px; padding: 5px 25px 10px 25px; color: #666; background-color: #fff; line-height: 25px;'><b>Password Reset Code: </b> " . $resetcode . "</td></tr>";
 
-        $html .= "<tr><td colspan='3' style='font-size: 14px; padding: 0 25px 10px 25px; color: #666; background-color: #fff; '><b>Username: </b> " . $username . "</td></tr>";
+        $html .= "<tr><td colspan='3' style='font-size: 14px; padding: 0 25px 10px 25px; color: #666; background-color: #fff; '><b>Username: </b> " . $nic_number . "</td></tr>";
 
         $html .= "<tr><td colspan='3' style='font-size: 14px; background-color: #FAFAFA; padding: 25px; color: #333; font-weight: 300; text-align: justify; '>Thank you</td></tr>";
 
