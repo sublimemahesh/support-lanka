@@ -635,7 +635,7 @@ label::after {
 .menu-sec {
     float: left;
     width: 100%;
-    margin: 30px 0;
+    margin: 28px 0;
     margin-bottom: 0;
 }
 .logo {
@@ -650,6 +650,10 @@ label::after {
 .btn-extars {
     float: right;
     margin-right: -143px;
+    margin-top: 4px;
+}
+.btn2:hover{
+    color:#00FFFF;
 }
 .post-job-btn {
     float: left;
@@ -723,11 +727,13 @@ label::after {
 .menu-sec nav > ul {
     float: left;
     margin: 0;
+    margin-left: 15px;
+    
 }
 .menu-sec nav > ul > li {
     float: right;
     position: relative;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 .menu-sec nav > ul > li > a {
     float: left;

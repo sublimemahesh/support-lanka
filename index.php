@@ -31,8 +31,8 @@ include_once(dirname(__FILE__) . '/class/include.php');
             }
         </style>
     </head>
-    
-    
+
+
     <body>
         <div class="theme-layout" id="scrollup">
             <?php
@@ -76,7 +76,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 }
                                             } else {
                                                 ?> 
-                                                <b>No Industry in the database.</b> 
+                                                <b>No  Category in the database.</b> 
                                                 <?php
                                             }
                                             ?> 
@@ -86,7 +86,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                             </div>
                             <div class="col-lg-12">
                                 <div class="browse-all-cat">
-                                    <a href="all_industry.php" title="">All Industry</a>
+                                    <a href="all_industry.php" title="">All  Category </a>
                                 </div>
                             </div>
                         </div>
@@ -121,54 +121,108 @@ include_once(dirname(__FILE__) . '/class/include.php');
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="heading">
-                                    <h2>Vacancy</h2>
+                                    <h2>Best Skills</h2>
                                     <span>Leading Employers already using job and talent.</span>
                                 </div>
-                                <div class="col-md-10 col-md-offset-1 column pad-bottom">
-                                    <div class="emply-list-sec style2">
-                                        <?php
-                                        $VACANCY = Vacancy::all(0, 5);
-                                        if (count($VACANCY) > 0) {
-                                            foreach ($VACANCY as $key => $vacant) {
-                                                if ($key < 3) {
-                                                    ?>
-                                                    <div class="emply-list">
-                                                        <div class="emply-list-thumb">
-                                                            <?php
-                                                            $COMPANY = new Company($vacant['company']);
-                                                            $CITY = new City($COMPANY->city)
-                                                            ?>
-                                                            <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
-                                                        </div>
-                                                        <div class="emply-list-info">
-                                                            <div class="emply-pstn">
+                                <div class="cat-sec">
+                                    <div class="no-gape">
+                                        <div class="no-gape">
+                                                                                                                                                                                                                                                                                                                                                                                                                 <!--  <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
+                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
+                                                <div class="p-category">
+                                                    <a href="skills.php?industry=" title="">
+                                                        <i>
+                                                            <img src="images/carpenter.png" class="img-responsive img-industy">
+                                                        </i>
+                                                        <span><h6><b>Carpenter</b></h6></span>
 
-                                                                <div class="shortlists" id="btn-view"style="float: right;">
-                                                                    <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title="">View Details <i class="la la-plus"></i></a>
-                                                                </div>
-                                                            </div>
-                                                            <h3> <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title=""><?php echo $vacant['title'] ?></a></h3>
-                                                            <span><a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>"><?php echo $vacant['designation']; ?> / <?php echo $vacant['job_type']; ?></a></span>
-                                                            <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
-                                                            <?php echo substr($vacant['description'], 0, 160) . "..." ?>
-                                                        </div>
-                                                    </div>
-                                                    <?php
-                                                }
-                                            }
-                                        } else {
-                                            ?> 
-                                            <b>No vacancy in the database.</b> 
-                                            <?php
-                                        }
-                                        ?> 
-                                        <div class="col-lg-12">
-                                            <div class="browse-all-cat">
-                                                <a href="vacancy.php" title="">All Vacancy</a>
+                                                    </a>
+                                                </div>
                                             </div>
+                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
+                                                <div class="p-category">
+                                                    <a href="skills.php?industry=" title="">
+                                                        <i>
+                                                            <img src="images/engineer.png" class="img-responsive img-industy">
+                                                        </i>
+                                                        <span><h6><b>Engineer</b></h6></span>
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
+                                                <div class="p-category">
+                                                    <a href="skills.php?industry=" title="">
+                                                        <i>
+                                                            <img src="images/doctor.png" class="img-responsive img-industy">
+                                                        </i>
+                                                        <span><h6><b>Doctor</b></h6></span>
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
+                                                <div class="p-category">
+                                                    <a href="skills.php?industry=" title="">
+                                                        <i>
+                                                            <img src="images/worker.png" class="img-responsive img-industy">
+                                                        </i>
+                                                        <span><h6><b>Worker</b></h6></span>
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
+                                                <div class="p-category">
+                                                    <a href="skills.php?industry=" title="">
+                                                        <i>
+                                                            <img src="images/hacker.png" class="img-responsive img-industy">
+                                                        </i>
+                                                        <span><h6><b>Computer Engineering</b></h6></span>
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
+                                                <div class="p-category">
+                                                    <a href="skills.php?industry=" title="">
+                                                        <i>
+                                                            <img src="images/electrician.png" class="img-responsive img-industy">
+                                                        </i>
+                                                        <span><h6><b>Electrician</b></h6></span>
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
+                                                <div class="p-category">
+                                                    <a href="skills.php?industry=" title="">
+                                                        <i>
+                                                            <img src="images/lawyer.png" class="img-responsive img-industy">
+                                                        </i>
+                                                        <span><h6><b>Lawyer</b></h6></span>
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
+                                                <div class="p-category">
+                                                    <a href="skills.php?industry=" title="">
+                                                        <i>
+                                                            <img src="images/brush.png" class="img-responsive img-industy">
+                                                        </i>
+                                                        <span><h6><b>Painter</b></h6></span>
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!--  </div>-->
+
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                           
                             </div>
                         </div>
                     </div>

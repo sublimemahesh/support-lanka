@@ -56,7 +56,7 @@
                 </li>
                 <li class="">
                     <a href="about_us.php" title="">About</a>
-                </li>s
+                </li>
                 <li class="">
                     <a href="all_member.php" title="">Members</a>
                 </li>
@@ -66,12 +66,12 @@
             </ul>
         </div>
     </div>
-</div>
+</div>                                               
 
 <header class="stick-top forsticky">
 
     <div class="menu-sec new-height">
-        <div class="pull-right translation-links" style="margin-right: 110px;margin-top: -46px;"> 
+        <div class="pull-right translation-links" style="margin-right: 110px;margin-top: -45px;"> 
             <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > <img src="images/Word_Sinhala_in_Yasarath_font.svg.png" alt="" width="60px" class="pull-leftss"/> </a>
             <img src="images/line.png" alt="" width="10px"/>
             <a href=""  class="English notranslate" data-lang="English" ><img src="images/english.png" alt="" width="60px"/></a>
