@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 class Search {
 
@@ -7,7 +7,10 @@ class Search {
 
         $query = "SELECT * FROM `member` WHERE `name` LIKE '%" . $keyword . "%' OR "
                 . "`id` in (SELECT `member` FROM `skill_details` WHERE `skill` in(SELECT `id` FROM `skill` WHERE `name` LIKE '%" . $keyword . "%' OR"
-                . " `city` in (SELECT `id` FROM `city` WHERE `name` LIKE '%" . $keyword . "%')))LIMIT " . $pageLimit . " , " . $setLimit . " ";
+                ."`industry` in (SELECT `id` FROM `industry` WHERE  `name` LIKE '%" . $keyword . "%' OR"
+                . " `city` in (SELECT `id` FROM `city` WHERE `name` LIKE '%" . $keyword . "%'))))LIMIT " . $pageLimit . " , " . $setLimit . " ";
+        
+   
         $db = new Database();
 
         $result = $db->readQuery($query);
