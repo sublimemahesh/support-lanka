@@ -31,6 +31,8 @@ include_once(dirname(__FILE__) . '/class/include.php');
             }
         </style>
     </head>
+    
+    
     <body>
         <div class="theme-layout" id="scrollup">
             <?php

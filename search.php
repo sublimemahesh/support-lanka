@@ -105,7 +105,6 @@ if ($_GET['keyword'] !== '') {
                                     <ul class="nav nav-tabs">
                                         <li><a class="current" data-tab="fjobs">Members</a></li>
                                         <li><a data-tab="rjobs">Employers</a></li>
-                                        <li><a data-tab="ijobs">Employers</a></li>
                                     </ul>
                                     <div id="fjobs " class="tab-content current">
                                         <div class="job-listings-tabs">
@@ -184,8 +183,7 @@ if ($_GET['keyword'] !== '') {
                                                                 <h3>
                                                                     <a href="#" title="" style="color:black;">
                                                                         <?php echo $company['name'];
-                                                                        ?>
-
+                                                                        ?>  
                                                                     </a>
                                                                 </h3>
                                                                 <span>
@@ -235,75 +233,7 @@ if ($_GET['keyword'] !== '') {
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="ijob" class="tab-content">
-                                        <div class="job-listinhgs-tabs">
-                                            <div class="row">
-                                                <?php
-                                                
-                                                foreach ($MEMBER as $member) {
-                                                    
-                                                    ?>
-                                                    <div class="col-lg-6">
-                                                        <div class="job-listing wtabs">
-                                                            <div class="job-title-sec">
-                                                                <div class="c-logo"> 
-                                                                    <img src="upload/member/<?php echo $member['logo_image']; ?>" alt="" /> 
-                                                                </div>
-                                                                <h3>
-                                                                    <a href="#" title="" style="color:black;">
-                                                                        <?php echo $company['name'];
-                                                                        ?>
-
-                                                                    </a>
-                                                                </h3>
-                                                                <span>
-                                                                    <?php
-                                                                    $INDUSTRY = new Industry($company['industry']);
-                                                                    echo $INDUSTRY->name;
-                                                                    ?>
-                                                                </span>
-                                                                <div class="job-lctn">
-                                                                    <i class="la la-map-marker"></i>
-                                                                    <?php
-                                                                    $CITY = new City($company['city']);
-                                                                    echo $CITY->name;
-                                                                    ?>
-                                                                </div>
-                                                                <div class="emply-pstn">
-                                                                    <?php
-                                                                    for ($ran = 0; $ran <= 4; $ran++) {
-
-                                                                        if ($company['rank'] > $ran) {
-                                                                            ?>
-                                                                            <span class="fav-job" style="color:yellow; ">
-                                                                                <i class="la la-star"></i>
-                                                                            </span> 
-                                                                            <?php
-                                                                        } else {
-                                                                            ?>
-                                                                            <span class="fav-job">
-                                                                                <i class="la la-star"></i>
-                                                                            </span>
-                                                                            <?php
-                                                                        }
-                                                                    }
-                                                                    ?>
-                                                                </div>
-                                                            </div>
-                                                            <div class="job-style-bx">
-                                                                <a href="company.php?company=<?php echo $company['id']; ?>">
-                                                                    <span class="job-is ft fill">View Profile</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                   
                                     <div class="pagination">
 
                                     </div>
