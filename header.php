@@ -56,6 +56,9 @@
                 </li>
                 <li class="">
                     <a href="about_us.php" title="">About</a>
+                </li>s
+                <li class="">
+                    <a href="all_member.php" title="">Members</a>
                 </li>
                 <li class="">
                     <a href="contact_us.php" title="">Contact</a>
@@ -68,7 +71,7 @@
 <header class="stick-top forsticky">
 
     <div class="menu-sec new-height">
-        <div class="pull-right translation-links" style="margin-right: 110px;margin-top: -50px;"> 
+        <div class="pull-right translation-links" style="margin-right: 110px;margin-top: -46px;"> 
             <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > <img src="images/Word_Sinhala_in_Yasarath_font.svg.png" alt="" width="60px" class="pull-leftss"/> </a>
             <img src="images/line.png" alt="" width="10px"/>
             <a href=""  class="English notranslate" data-lang="English" ><img src="images/english.png" alt="" width="60px"/></a>
@@ -95,22 +98,25 @@
             <nav>
                 <ul>
                     <li class="">
-                        <a href="index.php" title="">Home</a>
+                        <a href="contact_us.php" title="">Contact</a>
                     </li>
-                    <li class="">
-                        <a href="all_member.php" title="">Members</a>
-                    </li>
-                    <li class="">
-                        <a href="industry_of_company.php" title="">Employers</a>
-                    </li>
-                    <li class="">
-                        <a href="vacancy.php" title="">Vacancy</a>
-                    </li>
+
                     <li class="">
                         <a href="about_us.php" title="">About</a>
                     </li>
                     <li class="">
-                        <a href="contact_us.php" title="">Contact</a>
+                        <a href="vacancy.php" title="">Vacancy</a>
+                    </li>
+
+                    <li class="">
+                        <a href="industry_of_company.php" title="">Employers</a>
+                    </li>
+                    <li class="">
+                        <a href="all_member.php" title="">Members</a>
+                    </li>
+
+                    <li class="">
+                        <a href="index.php" title="">Home</a>
                     </li>
                 </ul>
             </nav><!-- Menus -->
