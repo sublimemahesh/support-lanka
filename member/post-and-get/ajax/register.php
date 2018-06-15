@@ -7,7 +7,12 @@ if ($_POST['save']) {
     header('Content-Type: application/json; charset=UTF8');
     $response = array();
 
-    if (empty($_POST['name'])) {
+    if (empty($_POST['nic_number'])) {
+        $response['status'] = 'error';
+        $response['message'] = "Please enter your nic number.";
+        echo json_encode($response);
+        exit();
+    } else if (empty($_POST['name'])) {
         $response['status'] = 'error';
         $response['message'] = "Please enter your name.";
         echo json_encode($response);
@@ -22,12 +27,7 @@ if ($_POST['save']) {
         $response['message'] = "Please enter valid email.";
         echo json_encode($response);
         exit();
-    } else if (empty($_POST['nic_number'])) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter your nic_number.";
-        echo json_encode($response);
-        exit();
-    } else if (empty($_POST['contact_number'])) {
+    }  else if (empty($_POST['contact_number'])) {
         $response['status'] = 'error';
         $response['message'] = "Please enter your contact number.";
         echo json_encode($response);

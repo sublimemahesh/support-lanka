@@ -12,7 +12,7 @@ class Database {
 //    private $name = 'supportlanka';
 //    private $user = 'supportlanka';
 //    private $password = '2L{;nEUJ@2\):7r!';
-//    
+    
   
     private $host = 'localhost';
     private $name = 'support_lanka';

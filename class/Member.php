@@ -167,7 +167,7 @@ class Member {
     }
 
     public function login($nic_number, $password) {
-
+        
         $query = "SELECT * FROM `member` WHERE `nic_number`= '" . $nic_number . "' AND `password`= '" . $password . "' AND `status`= '" . 1 . "'";
 
         $db = new Database();
@@ -180,7 +180,7 @@ class Member {
 
             $this->id = $result['id'];
             $member = $this->__construct($this->id);
-
+    
             if (!isset($_SESSION)) {
                 session_start();
                 session_unset($_SESSION);
@@ -189,6 +189,7 @@ class Member {
             $_SESSION["login"] = TRUE;
 
             $_SESSION["id"] = $member->id;
+            
             $_SESSION["name"] = $member->name;
             $_SESSION["email"] = $member->email;
             $_SESSION["nic_number"] = $member->nic_number;
@@ -202,6 +203,7 @@ class Member {
             $_SESSION["status"] = $member->status;
             $_SESSION["rank"] = $member->rank;
 
+         
             return TRUE;
         }
     }
