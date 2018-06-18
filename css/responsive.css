@@ -1255,6 +1255,7 @@
     .res-logo > a img {
         float: left;
         width: 120px;
+        margin-left: -2px;
     }
 
     .five .res-logo > a img {
@@ -1263,7 +1264,7 @@
     }
 
     .res-openmenu {
-        padding: 9px 0px;
+        padding: 9px 10px;
     }
     .res-openmenu > img {
         width: 26px;
@@ -1317,6 +1318,9 @@
     }
     .hidden-image{
         display: none;
+    }
+    .p-bottom-h{
+        padding-bottom: 5px;
     }
 
 }

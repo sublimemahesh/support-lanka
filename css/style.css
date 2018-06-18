@@ -649,11 +649,21 @@ label::after {
 }
 .btn-extars {
     float: right;
-    margin-right: -143px;
+    margin-right:   -139px;
     margin-top: 4px;
 }
 .btn2:hover{
     color:#00FFFF;
+}
+.p-pad{
+
+    margin-right: 110px;
+    margin-top: -34px;
+
+}
+.sticky .p-pad{
+     margin-right: 110px;
+    margin-top: -32px;
 }
 .post-job-btn {
     float: left;
@@ -728,7 +738,7 @@ label::after {
     float: left;
     margin: 0;
     margin-left: 15px;
-    
+
 }
 .menu-sec nav > ul > li {
     float: right;
@@ -11332,7 +11342,7 @@ footer.ft .scrollup {
     padding: 30px 0;
 }
 .res-logo {
-    float: left;
+
 }
 .menu-resaction {
     float: right;
@@ -11672,10 +11682,10 @@ header.style4 .account-btns > li a,
     margin-bottom: 15px;
 }
 .new-btn-p2{
-    float: right;
+
     margin-top: -35px;
     margin-bottom: 12px;
-    margin-right: 42px;
+    margin-right: 58px;
 }
 .img-new{
     width: 88%;  
@@ -11685,4 +11695,9 @@ header.style4 .account-btns > li a,
 
 .row-padding-new{
     padding-top: 28px;
+}
+.new-style{
+    margin-right: -13px;
+    margin-top: 3px;
+    margin-left:5px
 }
