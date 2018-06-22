@@ -21,7 +21,6 @@ if (!empty($companyGet)) {
 } else {
     $VACANCY = Vacancy::all1($pageLimit, $setLimit);
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -81,31 +80,30 @@ if (!empty($companyGet)) {
                                             $COMPAN = Company::all();
 
                                             foreach ($COMPAN as $key => $com) {
-                                                
                                                 ?>
                                                 <a href="vacancy.php?company=<?php echo $com['id']; ?>">
 
                                                     <div class="link-line" for="<?php echo $key; ?>"><?php echo $com['name']; ?></div>
                                                 </a>
-                                                <?php
-                                            }
-                                            ?>
+    <?php
+}
+?>
                                         </div>
                                     </div>
                                 </div>
                             </aside>
                             <div class="col-lg-9 column">
                                 <div class="emply-list-sec style2 row-padding-new">
-                                    <?php
-                                    foreach ($VACANCY as $vacant) {
-                                        ?>
+<?php
+foreach ($VACANCY as $vacant) {
+    ?>
                                         <div class="emply-list">
                                             <div class="emply-list-thumb">
-                                                <?php
-                                                $COMPANY = new Company($vacant['company']);
-                                                $CITY = new City($COMPANY->city)
-                                                ?>
-                                                 <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
+    <?php
+    $COMPANY = new Company($vacant['company']);
+    $CITY = new City($COMPANY->city)
+    ?>
+                                                <a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title=""><img src="upload/company/<?php echo $COMPANY->logo_image ?>" alt="" /></a>
                                             </div>
                                             <div class="emply-list-info">
                                                 <div class="emply-pstn">
@@ -117,16 +115,16 @@ if (!empty($companyGet)) {
                                                 <h3><a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>" title=""><?php echo $vacant['title'] ?></a></h3>
                                                 <span><a href="view_vacancy.php?id=<?php echo $vacant['id'] ?>"><?php echo $vacant['designation']; ?> / <?php echo $vacant['job_type']; ?></a></span>
                                                 <h6><i class="la la-map-marker"></i> <?php echo $COMPANY->address ?>, <?php echo $CITY->name ?></h6>
-                                                <?php echo substr($vacant['description'], 0, 160) . "..." ?>
+    <?php echo substr($vacant['description'], 0, 160) . "..." ?>
 
                                             </div>
                                         </div>
-                                        <?php
-                                    }
-                                    ?>
+    <?php
+}
+?>
 
-                                     <?php Vacancy::showPagination($setLimit, $page, $companyGet); ?>
-                                    
+                                    <?php Vacancy::showPagination($setLimit, $page, $companyGet); ?>
+
                                 </div>
                             </div>
                         </div>
@@ -134,9 +132,9 @@ if (!empty($companyGet)) {
                 </div>
             </section>
 
-            <?php
-            include_once './footer.php';
-            ?>
+<?php
+include_once './footer.php';
+?>
 
         </div>
 
@@ -228,7 +226,26 @@ if (!empty($companyGet)) {
         <script src="js/select-chosen.js" type="text/javascript"></script>
         <script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
         <script src="js/rslider.js" type="text/javascript"></script>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
+        <script type="text/javascript">
+            $('.translation-links a').click(function () {
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
+        </script>
     </body>
 </html>
 

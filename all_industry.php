@@ -69,7 +69,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                             if (count($INDUSTRY) > 0) {
                                                 foreach ($INDUSTRY as $key => $industry) {
                                                     ?>
-                                                                                                                                                                                                                                                                                                                                          <!--                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
+                                                                                                                                                                                                                                                                                                                                                  <!--                                                        <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
                                                     <div class="col-lg-3 col-md-3 col-sm-6">
                                                         <div class="p-category">
                                                             <a href="skills.php?industry=<?php echo $industry['id']; ?>" title="">
@@ -101,9 +101,9 @@ include_once(dirname(__FILE__) . '/class/include.php');
             </section>
 
 
-<?php
-include './footer.php';
-?>
+            <?php
+            include './footer.php';
+            ?>
 
         </div>
 
@@ -130,6 +130,26 @@ include './footer.php';
         <script src="js/slick.min.js" type="text/javascript"></script>
         <script src="js/parallax.js" type="text/javascript"></script>
         <script src="js/select-chosen.js" type="text/javascript"></script>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $('.translation-links a').click(function () {
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
+        </script>
 
     </body>
 </html>

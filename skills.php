@@ -22,8 +22,6 @@ if (!empty($industryGet)) {
 } else {
     $SKILLS = Skill::all1($pageLimit, $setLimit);
 }
-
-    
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,7 +51,7 @@ if (!empty($industryGet)) {
 
         <div class="theme-layout" id="scrollup">
 
-            <?php include './header.php'; ?>
+<?php include './header.php'; ?>
 
             <section class="overlape">
                 <div class="block no-padding">
@@ -79,34 +77,34 @@ if (!empty($industryGet)) {
                                     <h3 class="sb-title open">Category</h3>
                                     <div class="specialism_widget">
                                         <div class="simple-checkbox">
-                                            <?php
-                                            $industry = Industry::all();
-                                            foreach ($industry as $key => $ind) {
-                                                $key++;
-                                                ?>
+<?php
+$industry = Industry::all();
+foreach ($industry as $key => $ind) {
+    $key++;
+    ?>
                                                 <a href="skills.php?industry=<?php echo $ind['id']; ?>">
 
                                                     <div class="link-line" for="<?php echo $key; ?>"><?php echo $ind['name']; ?></div>
                                                 </a>
-                                                <?php
-                                            }
-                                            ?>
+    <?php
+}
+?>
                                         </div>
                                     </div>
                                 </div>
                             </aside>
                             <div class="col-lg-9 col-md-12 column">
                                 <div class="emply-resume-sec row-padding-new">
-                                    <?php
-                                    foreach ($SKILLS as $skill) {
-                                        ?>
+<?php
+foreach ($SKILLS as $skill) {
+    ?>
                                         <div class="emply-resume-list square">
                                             <div class="emply-resume-info">
                                                 <h3><a href="#" title=""><?php echo $skill['name']; ?></a></h3>
                                                 <span><i><?php
-                                                        $skill['id'];
-                                                        echo $INDUSTRY->name;
-                                                        ?>
+                                    $skill['id'];
+                                    echo $INDUSTRY->name;
+    ?>
                                                         / <?php echo $skill['name']; ?></i></span>
 
                                             </div>
@@ -116,9 +114,9 @@ if (!empty($industryGet)) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <?php
-                                    }
-                                    ?>
+    <?php
+}
+?>
                                     <?php
                                     Skill::showPagination($setLimit, $page, $industryGet);
                                     ?>
@@ -129,9 +127,9 @@ if (!empty($industryGet)) {
                 </div>
             </section>
 
-            <?php
-            include './footer.php';
-            ?>
+<?php
+include './footer.php';
+?>
         </div>
 
         <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -144,7 +142,26 @@ if (!empty($industryGet)) {
         <script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYc537bQom7ajFpWE5sQaVyz1SQa9_tuY&sensor=true&libraries=places"></script>
         <script type="text/javascript" src="js/maps.js"></script><!-- Nice Select -->
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
+        <script type="text/javascript">
+            $('.translation-links a').click(function () {
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
+        </script>
     </body>
 </html>
 

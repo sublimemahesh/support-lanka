@@ -58,7 +58,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                             <div class="col-lg-12">
                                 <div class="inner-header">
                                     <h3>
-                                       Employee
+                                        Employee
                                     </h3>
 
                                 </div>
@@ -161,6 +161,25 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
         <script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYc537bQom7ajFpWE5sQaVyz1SQa9_tuY&sensor=true&libraries=places"></script>
         <script type="text/javascript" src="js/maps.js"></script>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
+        <script type="text/javascript">
+            $('.translation-links a').click(function () {
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
+        </script>
     </body>
 </html>
