@@ -10,6 +10,7 @@ class Portfolio {
     public $id;
     public $skill_detail;
     public $title;
+    public $image_name;
     public $date;
     public $description;
     public $sort;
@@ -17,7 +18,7 @@ class Portfolio {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`skill_detail`,`title`,`date`,`description`,`sort` FROM `portfolio` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`skill_detail`,`title`,`image_name`,`date`,`description`,`sort` FROM `portfolio` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -26,6 +27,7 @@ class Portfolio {
             $this->id = $result['id'];
             $this->skill_detail = $result['skill_detail'];
             $this->title = $result['title'];
+            $this->image_name = $result['image_name'];
             $this->date = $result['date'];
             $this->description = $result['description'];
             $this->sort = $result['sort'];
@@ -36,9 +38,10 @@ class Portfolio {
 
     public function create() {
 
-        $query = "INSERT INTO `portfolio` (`skill_detail`, `title`, `date`, `description`, `sort`) VALUES  ('"
+        $query = "INSERT INTO `portfolio` (`skill_detail`, `title`,`image_name`, `date`, `description`, `sort`) VALUES  ('"
                 . $this->skill_detail . "','"
                 . $this->title . "','"
+                . $this->image_name . "','"
                 . $this->date . "','"
                 . $this->description . "','"
                 . $this->sort . "')";
@@ -74,6 +77,7 @@ class Portfolio {
 
         $query = "UPDATE `portfolio` SET "
                 . "`title` ='" . $this->title . "', "
+                . "`image_name` ='" . $this->image_name . "', "
                 . "`description` ='" . $this->description . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 

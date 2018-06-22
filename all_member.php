@@ -106,25 +106,25 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                                 <h3><a href="member.php?member=<?php echo $member['id']; ?>" title=""> <?php echo $member['name']; ?></a></h3>
                                                 <span>
                                                     <a href="member.php?member=<?php echo $member['id']; ?>" >
-                                                    <i>
-                                                        <?php
-                                                        $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
-
-                                                        foreach ($SKILLDETAIL as $skill_d) {
-
-                                                            $SKILL = new Skill($skill_d['skill']);
-
-                                                            $INDUSTRY = new Industry($SKILL->industry);
-
-                                                            echo $INDUSTRY->name;
-                                                            ?> 
-                                                            /  
+                                                        <i>
                                                             <?php
-                                                            $SKIL = new Skill($skill_d['skill']);
-                                                            echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
-                                                        }
-                                                        ?> 
-                                                    </i>
+                                                            $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
+
+                                                            foreach ($SKILLDETAIL as $skill_d) {
+
+                                                                $SKILL = new Skill($skill_d['skill']);
+
+                                                                $INDUSTRY = new Industry($SKILL->industry);
+
+                                                                echo $INDUSTRY->name;
+                                                                ?> 
+                                                                /  
+                                                                <?php
+                                                                $SKIL = new Skill($skill_d['skill']);
+                                                                echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
+                                                            }
+                                                            ?> 
+                                                        </i>
                                                     </a>
                                                 </span>
                                                 <p><i class="la la-map-marker"></i>
@@ -248,6 +248,25 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
         <script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYc537bQom7ajFpWE5sQaVyz1SQa9_tuY&sensor=true&libraries=places"></script>
         <script type="text/javascript" src="js/maps.js"></script><!-- Nice Select -->
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
+        <script type="text/javascript">
+            $('.translation-links a').click(function () {
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
+        </script>
     </body>
 </html>

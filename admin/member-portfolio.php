@@ -117,6 +117,18 @@ $SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
                                         </div> 
                                         <div class="row clearfix">
                                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                                <label for="title">Image</label>
+                                            </div>
+                                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="file"  class="form-control" name="image_name" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="row clearfix">
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                                 <label for="date">Date</label>
                                             </div>
                                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
