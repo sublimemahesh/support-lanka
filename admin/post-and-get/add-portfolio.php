@@ -11,6 +11,7 @@ if (isset($_POST['add-portfolio'])) {
 
     $PORTFILIO->skill_detail = $_POST['skill-detail'];
     $PORTFILIO->title = $_POST['title'];
+    $PORTFILIO->image_name = $_POST['image_name'];
     $PORTFILIO->date = $_POST['date'];
     $PORTFILIO->description = $_POST['description'];
     $PORTFILIO->sort = $_POST['sort'];
@@ -47,6 +48,7 @@ if (isset($_POST['edit-portfolio'])) {
     $VALID = new Validator();
 
     $PORTFILIO->title = $_POST['title'];
+    $PORTFILIO->image_name = $_POST['image_name'];
     $PORTFILIO->description = $_POST['description'];
 
     $VALID->check($PORTFILIO, [

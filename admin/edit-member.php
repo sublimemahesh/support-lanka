@@ -59,7 +59,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="Username" class="hidden-lg hidden-md">Username</label>
-                                                    <input type="text" id="name" class="form-control"  autocomplete="off" name="username" required="TRUE" value="<?php echo $MEMBER->username; ?>" readonly="">
+                                                    <input type="text" id="name" class="form-control"  autocomplete="off" name="username" required="TRUE" value="<?php echo $MEMBER->username; ?>" >
                                                 </div>
                                             </div>
                                         </div>
