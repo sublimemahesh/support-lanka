@@ -44,7 +44,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-pencil"></i> Create Skill Details</div>
+                                <div class="panel-heading"><i class="fa fa-pencil"></i> Add New Skill</div>
                                 <div class="panel-body">
 
                                     <div class="userccount">
@@ -82,7 +82,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                             </select>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="">
+                                                                    <div class="hidden">
                                                                         <div class="bottom-top">
                                                                             <label for="sub-skill-bar">Sub Skill</label>
                                                                         </div>
@@ -98,7 +98,20 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                             <label for="percentage">Percentage</label>
                                                                         </div>
                                                                         <div class="">
-                                                                            <input type="text" id="percentage" name="percentage" class="form-control" placeholder="Please Enter Your Skill Percentage">
+                                                                            <select id="percentage" name="percentage" class="form-control">
+                                                                                <option value="">-- Please Enter Your Skill Percentage --</option>
+                                                                                <option value="0">0</option>
+                                                                                <option value="10">10</option>
+                                                                                <option value="20">20</option>
+                                                                                <option value="30">30</option>
+                                                                                <option value="40">40</option>
+                                                                                <option value="50">50</option>
+                                                                                <option value="60">60</option>
+                                                                                <option value="70">70</option>
+                                                                                <option value="80">80</option>
+                                                                                <option value="90">90</option>
+                                                                                <option value="100">100</option>
+                                                                            </select>
                                                                         </div>
                                                                     </div>
 
