@@ -1,6 +1,7 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
+$SKILLDETAILS = SkillDetail::GetSkillByMember($_SESSION['id']);
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,25 +57,28 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="row clearfix" style="padding-top: 15px;">
+
+
                                             <div class="col-md-3">
                                                 <a href="add-new-skill-details.php">
                                                     <div class="uploadbox uploadphotobx" id="uploadphotobx" >
                                                         <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                        <div style="padding:0px 25px; boarder-radius:6px;">
-                                                            <button class="btn-primary form-control"> Click Here To Add MY Skill</button>
-                                                        </div>
-                                                        <div style="padding:5px 25px;">
-                                                            <button class="btn-warning form-control"> Click Here To Another Skill</button>
-                                                        </div>
 
-                                                        <!--                                                  Click Here To Add MY Skill-->
-
-
+                                                        <?php
+                                                        if (empty($SKILLDETAILS)) {
+                                                            ?>
+                                                            <label class = "uploadBox">Click here to add my skill</label>
+                                                            <?php
+                                                        } else {
+                                                            ?>
+                                                            <label class = "uploadBox">Click here to another skill</label>
+                                                            <?php
+                                                        }
+                                                        ?>
                                                     </div>
                                                 </a>
                                             </div>  
                                             <?php
-                                            $SKILLDETAILS = SkillDetail::GetSkillByMember($_SESSION['id']);
                                             foreach ($SKILLDETAILS as $key => $skill_d) {
                                                 ?>
                                                 <div class="col-xs-12 col-sm-6 col-md-6 col-md-3" id="div_<?php echo $skill_d['id']; ?>">
@@ -102,13 +106,13 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             </div>
 
                                                             <div class=" text-right" style="padding-top: 4px;">
-                                                                <a href="add-new-experience.php?skill=<?php echo $skill_d['id']; ?>" title="ADD EXPERIENCE">
+                                                                <a href="add-new-experience.php?skill=<?php echo $skill_d['id']; ?>">
                                                                     <button class="btn btn-warning btn-sm all-icon fa fa-plus-circle"></button>
                                                                 </a> |
-                                                                <a href="edit-skill-detail.php?id=<?php echo $skill_d['id']; ?>" title="MANAGE SKILL">
+                                                                <a href="edit-skill-detail.php?id=<?php echo $skill_d['id']; ?>">
                                                                     <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
                                                                 </a> |
-                                                                <a href="#" title="DELETE SKILL"> 
+                                                                <a href="#"> 
                                                                     <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-skill-detail" data-id="<?php echo $skill_d['id']; ?>"></button>
                                                                 </a> 
                                                             </div>

@@ -50,7 +50,7 @@ $SKILL = new Skill($SKILLDETAILS->skill);
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-pencil"></i> Edit Skill Detail</div>
+                                <div class="panel-heading"><i class="fa fa-pencil"></i> Edit Skill&nbsp;:&nbsp; <?php echo $SKILL->name?></div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="userccount">
@@ -101,7 +101,7 @@ $SKILL = new Skill($SKILLDETAILS->skill);
                                                                 </select>
                                                             </div>
                                                         </div> 
-                                                        <div class="">
+                                                        <div class="hidden">
                                                             <div class="bottom-top">
                                                                 <label for="sub skill">Sub Skill</label>
                                                             </div>
@@ -135,8 +135,20 @@ $SKILL = new Skill($SKILLDETAILS->skill);
                                                                 <label for="percentage">Percentage</label>
                                                             </div>
                                                             <div class="">
-
-                                                                <input type="text" id="percentage" name="percentage" class="form-control" placeholder="Please Enter Duration" value="<?php echo $SKILLDETAILS->percentage; ?>">
+                                                                <select id="percentage" name="percentage" class="form-control">
+                                                                    <option value="">-- Please Enter Your Skill Percentage --</option>
+                                                                    <option value="0">0</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="20">20</option>
+                                                                    <option value="30">30</option>
+                                                                    <option value="40">40</option>
+                                                                    <option value="50">50</option>
+                                                                    <option value="60">60</option>
+                                                                    <option value="70">70</option>
+                                                                    <option value="80">80</option>
+                                                                    <option value="90">90</option>
+                                                                    <option value="100">100</option>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div class="">
@@ -144,7 +156,7 @@ $SKILL = new Skill($SKILLDETAILS->skill);
                                                                 <label for="description">Description</label>
                                                             </div>
                                                             <div class="">
-                                                                <textarea type="text" id="description" name="description" class="form-control" placeholder="Please Enter Description"><?php echo $SKILLDETAILS->description; ?></textarea>
+                                                                <textarea type="text"  name="description" class="form-control" placeholder="Please Enter Description"><?php echo $SKILLDETAILS->description; ?></textarea>
                                                             </div>
                                                         </div>
 
@@ -216,33 +228,7 @@ $SKILL = new Skill($SKILLDETAILS->skill);
 
         </script>
         <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
-        <script>
-            tinymce.init({
-                selector: "#description",
-                // ===========================================
-                // INCLUDE THE PLUGIN
-                // ===========================================
-
-                plugins: [
-                    "advlist autolink lists link image charmap print preview anchor",
-                    "searchreplace visualblocks code fullscreen",
-                    "insertdatetime media table contextmenu paste"
-                ],
-                // ===========================================
-                // PUT PLUGIN'S BUTTON on the toolbar
-                // ===========================================
-
-                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-                // ===========================================
-                // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-                // ===========================================
-
-                relative_urls: false
-
-            });
-
-
-        </script>
+        
 
     </body>
 
