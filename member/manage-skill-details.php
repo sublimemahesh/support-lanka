@@ -1,6 +1,7 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
+$SKILLDETAILS = SkillDetail::GetSkillByMember($_SESSION['id']);
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,18 +57,28 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="row clearfix" style="padding-top: 15px;">
+
+
                                             <div class="col-md-3">
                                                 <a href="add-new-skill-details.php">
                                                     <div class="uploadbox uploadphotobx" id="uploadphotobx" >
                                                         <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                        <label class="uploadBox">Click here to add my skill
 
-                                                        </label>
+                                                        <?php
+                                                        if (empty($SKILLDETAILS)) {
+                                                            ?>
+                                                            <label class = "uploadBox">Click here to add my skill</label>
+                                                            <?php
+                                                        } else {
+                                                            ?>
+                                                            <label class = "uploadBox">Click here to another skill</label>
+                                                            <?php
+                                                        }
+                                                        ?>
                                                     </div>
                                                 </a>
                                             </div>  
                                             <?php
-                                            $SKILLDETAILS = SkillDetail::GetSkillByMember($_SESSION['id']);
                                             foreach ($SKILLDETAILS as $key => $skill_d) {
                                                 ?>
                                                 <div class="col-xs-12 col-sm-6 col-md-6 col-md-3" id="div_<?php echo $skill_d['id']; ?>">
@@ -171,4 +182,3 @@ include_once(dirname(__FILE__) . '/auth.php');
     </body>
 
 </html>
-    
