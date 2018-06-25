@@ -91,19 +91,19 @@ include_once(dirname(__FILE__) . '/auth.php');
 
                                                                 <div class=" text-right" style="padding-top: 4px;">
                                                                     <a href="edit-portfolio.php?id=<?php echo $portf['id']; ?>">
-                                                                        <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                        <button class="btn btn-primary btn-sm all-icon fa fa-pencil" title="Edit"></button>
                                                                     </a> 
                                                                     |
                                                                     <a href="arrange-portfolio.php">
-                                                                        <button class="btn btn-warning btn-sm all-icon fa fa-random"></button>
+                                                                        <button class="btn btn-warning btn-sm all-icon fa fa-random" title="Arrange"></button>
                                                                     </a> 
                                                                     | 
                                                                     <a href="#"> 
-                                                                        <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-portfolio" data-id="<?php echo $portf['id']; ?>"></button>
+                                                                        <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-portfolio" title="Delete" data-id="<?php echo $portf['id']; ?>"></button>
                                                                     </a>
                                                                     |
                                                                     <a href="create-portfolio-photo.php?id=<?php echo $portf['id']; ?>">
-                                                                        <button class="btn btn-success btn-sm all-icon fa fa-photo"></button>
+                                                                        <button class="btn btn-success btn-sm all-icon fa fa-photo" title="Add Portfolio Photo"></button>
                                                                     </a> 
                                                                 </div>
                                                             </div>

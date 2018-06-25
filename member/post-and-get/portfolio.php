@@ -28,7 +28,7 @@ if (isset($_POST['add-portfolio'])) {
         $VALID->addError("Your data was saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-          header("location: ../create-portfolio-photo.php?id=". $PORTFILIO->id);
+        header("location: ../create-portfolio-photo.php?id=" . $PORTFILIO->id);
     } else {
 
         if (!isset($_SESSION)) {
@@ -48,7 +48,13 @@ if (isset($_POST['edit-portfolio'])) {
 
     $PORTFILIO->title = $_POST['title'];
     $PORTFILIO->description = $_POST['description'];
-
+    $year = $_POST['year'];
+    $month = $_POST['month'];
+    $date = $_POST['date'];
+    $PORTFILIO->date = $year.$month.$date;
+    
+    
+    
     $VALID->check($PORTFILIO, [
         'title' => ['required' => TRUE],
     ]);
@@ -62,7 +68,7 @@ if (isset($_POST['edit-portfolio'])) {
         $VALID->addError("Your changes saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-          header("location: ../manage-portfolio.php");
+        header("location: ../manage-portfolio.php");
     } else {
 
         if (!isset($_SESSION)) {
@@ -76,7 +82,7 @@ if (isset($_POST['edit-portfolio'])) {
 }
 
 if (isset($_POST['arrange-portfolio'])) {
-   
+
     foreach ($_POST['sort'] as $key => $portf) {
 
         $key++;

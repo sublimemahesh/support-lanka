@@ -107,13 +107,13 @@ $SKILLDETAILS = SkillDetail::GetSkillByMember($_SESSION['id']);
 
                                                             <div class=" text-right" style="padding-top: 4px;">
                                                                 <a href="add-new-experience.php?skill=<?php echo $skill_d['id']; ?>">
-                                                                    <button class="btn btn-warning btn-sm all-icon fa fa-plus-circle"></button>
+                                                                    <button class="btn btn-warning btn-sm all-icon fa fa-plus-circle" title="Experience"></button>
                                                                 </a> |
                                                                 <a href="edit-skill-detail.php?id=<?php echo $skill_d['id']; ?>">
-                                                                    <button class="btn btn-primary btn-sm all-icon fa fa-pencil"></button>
+                                                                    <button class="btn btn-primary btn-sm all-icon fa fa-pencil" title="Edit"></button>
                                                                 </a> |
                                                                 <a href="#"> 
-                                                                    <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-skill-detail" data-id="<?php echo $skill_d['id']; ?>"></button>
+                                                                    <button class="btn btn-danger btn-sm all-icon fa fa-trash-o delete-skill-detail" title="Delete" data-id="<?php echo $skill_d['id']; ?>"></button>
                                                                 </a> 
                                                             </div>
                                                         </div>
