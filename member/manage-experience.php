@@ -61,7 +61,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <a href="add-new-experience.php">
                                                         <div class="uploadbox uploadphotobx" id="uploadphotobx">
                                                             <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                            <label class="uploadBox">Click Here To Add My Experience
+                                                            <label class="uploadBox">Click here to add my experience
 
                                                             </label>
                                                         </div>

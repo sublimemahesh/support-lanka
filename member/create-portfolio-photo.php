@@ -63,7 +63,7 @@ if (isset($_GET['id'])) {
                                                             <div class="formrow" style="padding-top: 40px;">
                                                                 <div class="uploadbox uploadphotobx" id="uploadphotobx">
                                                                     <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                                    <label class="uploadBox">Click Here To Upload photo
+                                                                    <label class="uploadBox">Click here to upload photo
                                                                         <input type="file" name="portfolio-picture" id="portfolio-picture">
                                                                         <input type="hidden" name="upload-portfolio-photo" id="upload-portfolio-photo" value="TRUE">
                                                                         <input type="hidden" name="portfolio" id="portfolio" value="<?php echo $id; ?>">
@@ -94,7 +94,7 @@ if (isset($_GET['id'])) {
                                                                 }
                                                             } else {
                                                                 ?> 
-                                                                <b style="padding-left: 15px;">No Room Images in the database.</b> 
+                                                                <b style="padding-left: 15px;">No Portfolio Images in the database.</b> 
                                                             <?php } ?> 
                                                         </div>
                                                     </div> 
