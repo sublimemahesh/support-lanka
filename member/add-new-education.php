@@ -45,7 +45,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             $vali->show_message();
                             ?>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> Create New Education </div>
+                                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> ADD NEW EDUCATION </div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="userccount">
@@ -97,7 +97,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                 <label for="description">Description</label>
                                                             </div>
                                                             <div class="">
-                                                                <textarea type="text" id="description" name="description" class="form-control" placeholder="Please Enter Description"></textarea>
+                                                                <textarea type="text"  name="description" class="form-control" placeholder="Please Enter Description"></textarea>
                                                             </div>
                                                         </div>
 
@@ -146,32 +146,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             });
         </script>
         <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
-        <script>
-            tinymce.init({
-                selector: "#description",
-                // ===========================================
-                // INCLUDE THE PLUGIN
-                // ===========================================
-
-                plugins: [
-                    "advlist autolink lists link image charmap print preview anchor",
-                    "searchreplace visualblocks code fullscreen",
-                    "insertdatetime media table contextmenu paste"
-                ],
-                // ===========================================
-                // PUT PLUGIN'S BUTTON on the toolbar
-                // ===========================================
-
-                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-                // ===========================================
-                // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-                // ===========================================
-
-                relative_urls: false
-
-            });
-
-        </script>
+       
 
 
     </body>
