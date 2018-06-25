@@ -61,7 +61,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <a href="add-new-award.php">
                                                         <div class="uploadbox uploadphotobx" id="uploadphotobx" style="height: 206px;">
                                                             <i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                                                            <label class="uploadBox">Click Here To Add My Award
+                                                            <label class="uploadBox">Click here to add my award
 
                                                             </label>
                                                         </div>

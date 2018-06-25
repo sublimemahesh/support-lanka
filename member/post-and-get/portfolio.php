@@ -28,7 +28,7 @@ if (isset($_POST['add-portfolio'])) {
         $VALID->addError("Your data was saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-          header("location: ../manage-portfolio.php");
+          header("location: ../create-portfolio-photo.php?id=". $PORTFILIO->id);
     } else {
 
         if (!isset($_SESSION)) {
