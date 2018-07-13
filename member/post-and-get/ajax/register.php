@@ -17,16 +17,7 @@ if ($_POST['save']) {
         $response['message'] = "Please enter your name.";
         echo json_encode($response);
         exit();
-    } else if (empty($_POST['email'])) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter your email.";
-        echo json_encode($response);
-        exit();
-    } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        $response['status'] = 'error';
-        $response['message'] = "Please enter valid email.";
-        echo json_encode($response);
-        exit();
+   
     }  else if (empty($_POST['contact_number'])) {
         $response['status'] = 'error';
         $response['message'] = "Please enter your contact number.";

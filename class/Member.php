@@ -298,12 +298,14 @@ class Member {
                 . "`home_address` ='" . $this->home_address . "', "
                 . "`city` ='" . $this->city . "', "
                 . "`profile_picture` ='" . $this->profile_picture . "', "
+                . "`password` ='" . $this->password . "', "
                 . "`username` ='" . $this->username . "', "
                 . "`status` ='" . $this->status . "', "
                 . "`rank` ='" . $this->rank . "', "
                 . "`job_type` ='" . $this->job_type . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 
+   
         $db = new Database();
 
         $result = $db->readQuery($query);

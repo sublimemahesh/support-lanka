@@ -106,8 +106,10 @@ if (isset($_POST['update'])) {
 
     $MEMBER = new Member($_POST['id']);
 
+    $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
     $MEMBER->profile_picture = $_POST["oldImageName"];
     $MEMBER->name = filter_input(INPUT_POST, 'name');
+    $MEMBER->password = $password;
     $MEMBER->email = filter_input(INPUT_POST, 'email');
     $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
     $MEMBER->date_of_birthday = filter_input(INPUT_POST, 'date_of_birthday');
@@ -122,7 +124,7 @@ if (isset($_POST['update'])) {
 
     $VALID = new Validator();
     $VALID->check($MEMBER, [
-        'profile_picture' => ['required' => TRUE],
+       
         'name' => ['required' => TRUE],
         'email' => ['required' => TRUE],
         'nic_number' => ['required' => TRUE],

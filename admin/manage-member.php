@@ -38,6 +38,17 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
 
                 $vali->show_message();
                 ?>
+                <?php
+                if (isset($_GET['message'])) {
+
+                    $MESSAGE = New Message($_GET['message']);
+                    ?>
+                    <div class="alert alert-<?php echo $MESSAGE->status; ?>" role = "alert">
+                        <?php echo $MESSAGE->description; ?>
+                    </div>
+                    <?php
+                }
+                ?>
                 <!-- Manage Districts -->
 
                 <div class="card">
@@ -87,8 +98,8 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                                                 foreach ($skills as $key => $skill) {
                                                     if ($key == 1) {
                                                         break;
-                                                    } 
-                                                    
+                                                    }
+
                                                     $SKILL = new Skill($skill["skill"]);
                                                     echo $SKILL->name;
                                                 }
@@ -124,7 +135,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                 </div>
             </div>
         </section>
-        
+
 
         <script src="plugins/jquery/jquery.min.js"></script>
         <script src="plugins/bootstrap/js/bootstrap.js"></script>
