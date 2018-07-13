@@ -5,7 +5,7 @@ include_once(dirname(__FILE__) . '/auth.php');
 
 
 if (isset($_POST['add-massage-request'])) {
-    dd($_POST['company']);
+   
     $MESSAGEREQUEST = New MessageRequest(NULL);
 
     $VALID = new Validator();

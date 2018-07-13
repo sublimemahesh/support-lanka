@@ -59,7 +59,21 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="Username" class="hidden-lg hidden-md">Username</label>
-                                                    <input type="text" id="name" class="form-control"  autocomplete="off" name="username" required="TRUE" value="<?php echo $MEMBER->username; ?>" >
+                                                    <input type="text" id="name" class="form-control"  autocomplete="off" name="username"  value="<?php echo $MEMBER->username; ?>" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!--Password-->
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
+                                            <label for="Password">Password</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line p-top ">
+                                                    <label for="Password" class="hidden-lg hidden-md">Password</label>
+                                                    <input type="password" id="name" class="form-control"  autocomplete="off" name="password"  placeholder="Enter the password" >
                                                 </div>
                                             </div>
                                         </div>
@@ -73,7 +87,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="Name" class="hidden-lg hidden-md">Name</label>
-                                                    <input type="text" id="name" class="form-control" placeholder="Enter Member name" autocomplete="off" name="name" required="TRUE" value="<?php echo $MEMBER->name; ?>">
+                                                    <input type="text" id="name" class="form-control" placeholder="Enter Member name" autocomplete="off" name="name"  value="<?php echo $MEMBER->name; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -87,7 +101,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="Email" class="hidden-lg hidden-md">Email</label>
-                                                    <input type="email" id="email" class="form-control" placeholder="Enter Email" autocomplete="off" name="email" required="TRUE" value="<?php echo $MEMBER->email; ?>">
+                                                    <input type="email" id="email" class="form-control" placeholder="Enter Email" autocomplete="off" name="email"  value="<?php echo $MEMBER->email; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -101,7 +115,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="Contact Number" class="hidden-lg hidden-md">Contact Number</label>
-                                                    <input type="text" id="contact_number" class="form-control" placeholder="Enter contact number" autocomplete="off" name="contact_number" required="TRUE" value="<?php echo $MEMBER->contact_number; ?>">
+                                                    <input type="text" id="contact_number" class="form-control" placeholder="Enter contact number" autocomplete="off" name="contact_number"  value="<?php echo $MEMBER->contact_number; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +129,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="nic-number" class="hidden-lg hidden-md">NIC Number</label>
-                                                    <input type="text" id="nic_number" class="form-control" placeholder="Enter NIC number" autocomplete="off" name="nic_number" required="TRUE" value="<?php echo $MEMBER->nic_number; ?>">
+                                                    <input type="text" id="nic_number" class="form-control" placeholder="Enter NIC number" autocomplete="off" name="nic_number"  value="<?php echo $MEMBER->nic_number; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -143,7 +157,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="Address" class="hidden-lg hidden-md">Address</label>
-                                                    <input type="text" id="home_address" class="form-control" placeholder="Enter Home Address" autocomplete="off" name="home_address" required="TRUE" value="<?php echo $MEMBER->home_address; ?>">
+                                                    <input type="text" id="home_address" class="form-control" placeholder="Enter Home Address" autocomplete="off" name="home_address"  value="<?php echo $MEMBER->home_address; ?>">
                                                 </div>
                                             </div>
                                         </div>
