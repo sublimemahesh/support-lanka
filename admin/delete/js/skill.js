@@ -1,8 +1,7 @@
 $(document).ready(function () {
- 
-    $('.delete-skill').click(function () {
+    $('.dataTable').on('click', '.delete-skill', function () {
         var id = $(this).attr("data-id");
-       
+
 
         swal({
             title: "Are you sure?",
@@ -37,4 +36,5 @@ $(document).ready(function () {
             });
         });
     });
+
 });

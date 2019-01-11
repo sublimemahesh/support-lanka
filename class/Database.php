@@ -15,7 +15,7 @@ class Database {
     
   
     private $host = 'localhost';
-    private $name = 'support_lanka';
+    private $name = 'support-lanka';
     private $user = 'root';
     private $password = '';
 

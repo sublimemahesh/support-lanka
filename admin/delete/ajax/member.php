@@ -6,10 +6,7 @@ include_once(dirname(__FILE__) . '/../../auth.php');
 
 if ($_POST['option'] == 'delete') {
     $MEMBER = new Member($_POST['id']);
-
-    if ($MEMBER->profile_picture !== 'member.png') {
-        unlink(Helper::getSitePath() . "upload/member/" . $MEMBER->profile_picture);
-    }
+    
 
 
     $result = $MEMBER->delete();

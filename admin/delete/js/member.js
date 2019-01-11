@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    $('.delete-member').click(function () {
 
+    $('.dataTable').on('click', '.delete-member', function () {
+       
         var id = $(this).attr("data-id");
 
         swal({
@@ -36,4 +37,5 @@ $(document).ready(function () {
             });
         });
     });
+
 });
