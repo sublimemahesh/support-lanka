@@ -9,7 +9,7 @@ if (isset($_GET["page"])) {
     $page = 1;
 }
 
-$setLimit = 5;
+$setLimit = 20;
 
 $pageLimit = ($page * $setLimit) - $setLimit;
 
