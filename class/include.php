@@ -25,6 +25,7 @@ include_once(dirname(__FILE__) . '/MessageRequest.php');
 include_once(dirname(__FILE__) . '/Search.php');
 include_once(dirname(__FILE__) . '/FeedBack.php');
 include_once(dirname(__FILE__) . '/SubSkill.php');
+include_once(dirname(__FILE__) . '/Advertisement.php');
 
 
 function dd($data) {
