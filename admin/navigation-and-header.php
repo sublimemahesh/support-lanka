@@ -210,6 +210,12 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                                 <span>Manage</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="manage-new-member.php">
+                                <i class="material-icons">face</i>
+                                <span>New Members</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                  <li>

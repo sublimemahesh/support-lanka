@@ -131,7 +131,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                     </div>
                                                 </div>
                                             </div> 
-                                            <div class="res-new-r">
+                                            <div class="res-new-r pull-left">
                                                 <button type="submit" id="btnSubmit" class="cp-btn-style1">SEND YOUR MESSAGE</button>
                                                 <div id="dismessage" align="center"></div>
                                             </div>
@@ -143,10 +143,10 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                 <div class="contact-textinfo style2">
 
                                     <ul>
-                                        <li><i class="la la-map-marker"></i><span>Sri Dewamitta Rd, Galle, Sri Lanka</span></li>
-                                        <li><i class="la la-phone"></i><span>Call Us : +9491 312 4477</span></li>
-                                        <li><i class="la la-fax"></i><span>Fax : +9491 312 4477</span></li>
-                                        <li><i class="la la-envelope-o"></i><span>Email : info@sublime.com</span></li>
+                                        <li><i class="la la-map-marker"></i><span>Sampatha Adurathwila , Poddala, Galle</span></li>
+                                        <li><i class="la la-phone"></i><span>Call Us : 091 224 5333</span></li>
+                                        <li><i class="la la-fax"></i><span>Mobile : 071 724 5333 | 070 229 6679</span></li>
+                                        <li><i class="la la-envelope-o"></i><span>Email : info@supportlanka.lk</span></li>
                                     </ul>
                                 </div>
                             </div>

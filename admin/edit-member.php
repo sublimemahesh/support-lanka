@@ -51,19 +51,7 @@ $MEMBER = new Member($id);
                             <div class="body row">
                                 <form class="" method="post" action="post-and-get/member.php" enctype="multipart/form-data"> 
                                     <!--user Name-->
-                                    <div class="row clearfix">
-                                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
-                                            <label for="username">Username</label>
-                                        </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
-                                            <div class="form-group">
-                                                <div class="form-line p-top ">
-                                                    <label for="Username" class="hidden-lg hidden-md">Username</label>
-                                                    <input type="text" id="name" class="form-control"  autocomplete="off" name="username"  value="<?php echo $MEMBER->username; ?>" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
+
                                     <!--Password-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
@@ -81,7 +69,7 @@ $MEMBER = new Member($id);
                                     <!--Name-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
-                                            <label for="Name">Name</label>
+                                            <label for="Name">Name<label style="color: red"> *</label></label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
@@ -95,7 +83,7 @@ $MEMBER = new Member($id);
                                     <!--Email-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
-                                            <label for="Email">Email</label>
+                                            <label for="Email">Email <label style="color: red"> *</label></label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
@@ -109,7 +97,7 @@ $MEMBER = new Member($id);
                                     <!--Contact Number-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
-                                            <label for="Contact Number">Contact Number</label>
+                                            <label for="Contact Number">Contact Number <label style="color: red"> *</label></label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
@@ -123,7 +111,7 @@ $MEMBER = new Member($id);
                                     <!--NIC Number-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
-                                            <label for="nic-number">NIC Number</label>
+                                            <label for="nic-number">NIC Number <label style="color: red"> *</label></label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
@@ -292,11 +280,11 @@ $MEMBER = new Member($id);
                                         <div class="col-md-2"></div>  
                                         <div class="form-group">
                                             <input class="filled-in chk-col-pink" type="checkbox" <?php
-                                            if ($MEMBER->status == 1) {
+                                            if ($MEMBER->is_active == 1) {
                                                 echo 'checked';
                                             }
                                             ?> name="active" value="1" id="rememberme" />
-                                            <label for="rememberme">Active</label>
+                                            <label for="rememberme" style="font-size: 20px;">Active</label>
                                         </div>
                                         <div class="row clearfix">
                                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">

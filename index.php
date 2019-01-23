@@ -104,8 +104,8 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                     <img src="images/logo11.png" alt=""/>
                                 </center>
                                 <div class="simple-text-block">
-                                    <h3>Make a Difference Your Life With Us.!</h3>
-                                    <h4 class="text-color"><b>Sharing Your Life With Us.</b> </h4>
+                                    <h3>A Paradise for part time job seekers                 </h3>
+                                    <h4 class="text-color"><b>Looking for part time jobs?</b> </h4>
                                     <h5 class="text-color"><b>Support Lanka.</b> </h5>
                                     <a href="member/register.php" title="" id="bttn">Create an Account</a>
                                 </div>
@@ -116,257 +116,82 @@ include_once(dirname(__FILE__) . '/class/include.php');
             </section>
             <!--company-->
             <section>
-                <div class="block pad-new-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="heading">
-                                    <h2>Best Skills</h2>
-                                    <span>Leading Employers already using job and talent.</span>
-                                </div>
-                                <div class="cat-sec">
-                                    <div class="no-gape">
-                                        <div class="no-gape">
-                                                                                                                                                                                                                                                                                                                                                                                                                 <!--  <div class="category-popup" data-url="skills.php?industry=<?php echo $industry['id']; ?>" data-com="companies.php?industry=<?php echo $industry['id']; ?>">-->
-                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
-                                                <div class="p-category">
-                                                    <a href="skills.php?industry=" title="">
-                                                        <i>
-                                                            <img src="images/carpenter.png" class="img-responsive img-industy">
-                                                        </i>
-                                                        <span><h6><b>Carpenter</b></h6></span>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
-                                                <div class="p-category">
-                                                    <a href="skills.php?industry=" title="">
-                                                        <i>
-                                                            <img src="images/engineer.png" class="img-responsive img-industy">
-                                                        </i>
-                                                        <span><h6><b>Engineer</b></h6></span>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
-                                                <div class="p-category">
-                                                    <a href="skills.php?industry=" title="">
-                                                        <i>
-                                                            <img src="images/doctor.png" class="img-responsive img-industy">
-                                                        </i>
-                                                        <span><h6><b>Doctor</b></h6></span>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
-                                                <div class="p-category">
-                                                    <a href="skills.php?industry=" title="">
-                                                        <i>
-                                                            <img src="images/worker.png" class="img-responsive img-industy">
-                                                        </i>
-                                                        <span><h6><b>Worker</b></h6></span>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
-                                                <div class="p-category">
-                                                    <a href="skills.php?industry=" title="">
-                                                        <i>
-                                                            <img src="images/hacker.png" class="img-responsive img-industy">
-                                                        </i>
-                                                        <span><h6><b>Computer Engineering</b></h6></span>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
-                                                <div class="p-category">
-                                                    <a href="skills.php?industry=" title="">
-                                                        <i>
-                                                            <img src="images/electrician.png" class="img-responsive img-industy">
-                                                        </i>
-                                                        <span><h6><b>Electrician</b></h6></span>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
-                                                <div class="p-category">
-                                                    <a href="skills.php?industry=" title="">
-                                                        <i>
-                                                            <img src="images/lawyer.png" class="img-responsive img-industy">
-                                                        </i>
-                                                        <span><h6><b>Lawyer</b></h6></span>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-12 col-sm-4 col-xs-12">
-                                                <div class="p-category">
-                                                    <a href="skills.php?industry=" title="">
-                                                        <i>
-                                                            <img src="images/brush.png" class="img-responsive img-industy">
-                                                        </i>
-                                                        <span><h6><b>Painter</b></h6></span>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <!--  </div>-->
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
                 <div class="block">
-                    <div data-velocity="-.1" style="background: url(images/resource/parallax2.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible layer color light"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="heading light">
-                                    <h2>Kind Words From Happy Candidates</h2>
-                                    <span>What other people thought about the service provided by JobHunt</span>
-                                </div><!-- Heading -->
-                                <div class="reviews-sec" id="reviews-carousel">
-                                    <?php
-                                    $FEEDBACK = FeedBack::activeFeedBack();
-                                    if (count($FEEDBACK) > 0) {
-                                        foreach ($FEEDBACK as $key => $feed) {
-                                            if ($key < 8) {
-                                                ?>
-                                                <div class="col-lg-6">
-                                                    <div class="reviews">
-                                                        <img src="upload/feedback/<?php echo $feed['image_name'] ?>" alt="" />
-                                                        <h3><?php echo $feed['name'] ?></h3>
-                                                        <p><?php echo substr($feed['comment'], 0, 200) . "..." ?></p>
-                                                    </div>
-                                                </div>
-                                                <?php
-                                            }
-                                        }
-                                    } else {
-                                        ?> 
-                                        <b>No Comment in here.</b> 
-                                        <?php
-                                    }
-                                    ?> 
-                                </div> 
-                                <div class="simple-text-block ">
-                                    <a href="add-feedback.php" title="">Add Comment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>	
-                </div>
-            </section>
-
-            <section>
-                <div class="block pad-new-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="heading">
-                                    <h2>Companies We've Helped</h2>
-                                    <span>Some of the companies we've helped recruit excellent applicants over the years.</span>
-                                </div><!-- Heading -->
-                                <div class="comp-sec">
-                                    <div class="company-img">
-                                        <a href="#" title=""><img src="images/resource/cc1.jpg" alt="" /></a>
-                                    </div><!-- Client  -->
-                                    <div class="company-img">
-                                        <a href="#" title=""><img src="images/resource/cc2.jpg" alt="" /></a>
-                                    </div><!-- Client  -->
-                                    <div class="company-img">
-                                        <a href="#" title=""><img src="images/resource/cc3.jpg" alt="" /></a>
-                                    </div><!-- Client  -->
-                                    <div class="company-img">
-                                        <a href="#" title=""><img src="images/resource/cc4.jpg" alt="" /></a>
-                                    </div><!-- Client  -->
-                                    <div class="company-img">
-                                        <a href="#" title=""><img src="images/resource/cc5.jpg" alt="" /></a>
-                                    </div><!-- Client  -->
+                                <div class="about-us">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h3>About Jobs </h3>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p class="text-justify">This is an ideal opportunity for those who are willing to utilize their skills for an additional income leisurely in their surroundings.You can even upload the portfolios that show case your skills in the particular job or filled to our website. Though you’re not in a position to reveal in public the job you’d like to anagoge in we certainly promise you to protect your privacy in any case. They need to be registered at privet mode    </p>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img src="images/resource/about.jpg" alt="" />
+                                        </div>
+                                      
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <section>
-                <div class="block no-padding">
-                    <div class="container fluid">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="simple-text pad-new-top-min">
-                                    <h3>Gat a question?</h3>
-                                    <span>We're here to help. Check out our FAQs, send us an email or call us at 0913124477</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <?php
-            include './footer.php';
-            ?>
         </div>
+ 
+   
+    <?php
+    include './footer.php';
+    ?>
+</div>
 
 
-        <div class="account-popup-area category-popup-box">
-            <div class="account-popup1">
-                <span class="close-popup"><i class="la la-close"></i></span>
-                <div class="model-text">Select Your Title</div>
-                <div>
-                    <a id="job-applicant" href=""> 
-                        <input class="model-title" type="submit" value="Job Applicant"/>
-                    </a>
-                    <a id="job-provider" href="">
-                        <input class="model-title" type="submit" value="Job Provider"/>
-                    </a>
-                </div>
-            </div>
+<div class="account-popup-area category-popup-box">
+    <div class="account-popup1">
+        <span class="close-popup"><i class="la la-close"></i></span>
+        <div class="model-text">Select Your Title</div>
+        <div>
+            <a id="job-applicant" href=""> 
+                <input class="model-title" type="submit" value="Job Applicant"/>
+            </a>
+            <a id="job-provider" href="">
+                <input class="model-title" type="submit" value="Job Provider"/>
+            </a>
         </div>
+    </div>
+</div>
 
-        <script src="js/jquery.min.js" type="text/javascript"></script>
-        <script src="js/modernizr.js" type="text/javascript"></script>
-        <script src="js/script.js" type="text/javascript"></script>
-        <script src="js/wow.min.js" type="text/javascript"></script>
-        <script src="js/slick.min.js" type="text/javascript"></script>
-        <script src="js/parallax.js" type="text/javascript"></script>
-        <script src="js/select-chosen.js" type="text/javascript"></script>
-        <div id="google_translate_element"></div>
-        <script type="text/javascript">
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-            }
-        </script>
-        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/modernizr.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+<script src="js/wow.min.js" type="text/javascript"></script>
+<script src="js/slick.min.js" type="text/javascript"></script>
+<script src="js/parallax.js" type="text/javascript"></script>
+<script src="js/select-chosen.js" type="text/javascript"></script>
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
-        <script type="text/javascript">
-            $('.translation-links a').click(function () {
-                var lang = $(this).data('lang');
-                var $frame = $('.goog-te-menu-frame:first');
-                if (!$frame.size()) {
-                    alert("Error: Could not find Google translate frame.");
-                    return false;
-                }
-                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
-                return false;
-            });
-        </script>
+<script type="text/javascript">
+    $('.translation-links a').click(function () {
+        var lang = $(this).data('lang');
+        var $frame = $('.goog-te-menu-frame:first');
+        if (!$frame.size()) {
+            alert("Error: Could not find Google translate frame.");
+            return false;
+        }
+        $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+        return false;
+    });
+</script>
 
-    </body>
+</body>
 </html>
 

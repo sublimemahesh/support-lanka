@@ -25,10 +25,11 @@
                     <div class="widget">
                         <div class="about_widget">
                             <h3 class="footer-title " id="footer-title-res">Contact Us</h3>
-                            <span>Sri Dewamitta RD, Galle.</span>
-                            <span>SRi Lanka</span>
-                            <span>+949 1312 44 77</span>
-                            <span>info@sublime.lk</span>
+                            <span>Sampatha Adurathwila , Poddala, Galle</span>
+                            <span>Sri Lanka</span>
+                            <span>091 224 5333 </span>
+                           <span> 071 724 5333 | 070 229 6679</span>
+                            <span>info@supportlanka.lk</span>
                             <div class="social">
                                 <a href="#" title=""><i class="fa fa-facebook"></i></a>
                                 <a href="#" title=""><i class="fa fa-twitter"></i></a>
@@ -89,9 +90,9 @@
         </div>
     </div>
     <div class="bottom-line">
-        <span>@<?php echo date("Y"); ?> Sri Lanka Cycling Designed by</span>
+        <span>@<?php echo date("Y"); ?> Copy Right by Support Lanka</span>
         <a style="color: #fff;" href="http://www.sublime.lk/">
-            <b>www.sublime.lk</b>
+            <b> Design By :www.sublime.lk</b>
         </a>
     </div>
     <div id="google_translate_element"></div>
