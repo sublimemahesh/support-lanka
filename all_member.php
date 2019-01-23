@@ -16,7 +16,8 @@ $pageLimit = ($page * $setLimit) - $setLimit;
 
 
 $SKILL = Skill::GetSkillsByIndustry($industry);
-$MEMBER = Member::all1($pageLimit, $setLimit);
+$MEMBER = new Member(Null);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -94,7 +95,7 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                             <div class="col-lg-9 col-md-9 hidden-sm hidden-xs column">
                                 <div class="emply-resume-sec row-padding-new">
                                     <?php
-                                    foreach ($MEMBER as $member) {
+                                    foreach ($MEMBER->getActiveMember() as $member) {
                                         ?>
                                         <div class="emply-resume-list square col-md-12 col-sm-12">
                                             <div class="emply-resume-thumb">

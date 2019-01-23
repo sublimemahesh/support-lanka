@@ -24,11 +24,12 @@ class Member {
     public $resetcode;
     public $rank;
     public $status;
+    public $is_active;
 
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`privacy`,`job_type`,`status`,`rank` FROM `member` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`privacy`,`job_type`,`status`,`rank`,`is_active` FROM `member` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -49,6 +50,7 @@ class Member {
             $this->job_type = $result['job_type'];
             $this->rank = $result['rank'];
             $this->status = $result['status'];
+            $this->is_active = $result['is_active'];
 
             return $this;
         }
@@ -56,7 +58,7 @@ class Member {
 
     public function create() {
 
-        $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`password`,`privacy`,`job_type`,`status`,`rank`) VALUES  ('"
+        $query = "INSERT INTO `member` (`name`,`email`,`nic_number`,`date_of_birthday`,`contact_number`,`about_me`,`home_address`,`city`,`profile_picture`,`username`,`password`,`privacy`,`job_type`,`status`,`rank`,`is_active`) VALUES  ('"
                 . $this->name . "','"
                 . $this->email . "','"
                 . $this->nic_number . "','"
@@ -71,7 +73,8 @@ class Member {
                 . $this->privacy . "','"
                 . $this->job_type . "','"
                 . $this->status . "','"
-                . $this->rank . "')";
+                . $this->rank . "','"
+                . $this->is_active . "')";
 
         $db = new Database();
 
@@ -166,8 +169,22 @@ class Member {
         return $array_res;
     }
 
+    public function getActiveMember() {
+
+        $query = "SELECT * FROM `member` WHERE `is_active` = '1'";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
     public function login($nic_number, $password) {
-        
+
         $query = "SELECT * FROM `member` WHERE `nic_number`= '" . $nic_number . "' AND `password`= '" . $password . "' AND `status`= '" . 1 . "'";
 
         $db = new Database();
@@ -180,7 +197,7 @@ class Member {
 
             $this->id = $result['id'];
             $member = $this->__construct($this->id);
-    
+
             if (!isset($_SESSION)) {
                 session_start();
                 session_unset($_SESSION);
@@ -189,7 +206,7 @@ class Member {
             $_SESSION["login"] = TRUE;
 
             $_SESSION["id"] = $member->id;
-            
+
             $_SESSION["name"] = $member->name;
             $_SESSION["email"] = $member->email;
             $_SESSION["nic_number"] = $member->nic_number;
@@ -203,7 +220,7 @@ class Member {
             $_SESSION["status"] = $member->status;
             $_SESSION["rank"] = $member->rank;
 
-         
+
             return TRUE;
         }
     }
@@ -272,6 +289,20 @@ class Member {
         return $array_res;
     }
 
+    public function inActiveMember() {
+
+        $query = "SELECT * FROM `member` WHERE `is_active` = '0'";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
     public function all1($pageLimit, $setLimit) {
 
         $query = "SELECT * FROM `member` where `privacy`= '1' LIMIT " . $pageLimit . " , " . $setLimit . " ";
@@ -302,10 +333,11 @@ class Member {
                 . "`username` ='" . $this->username . "', "
                 . "`status` ='" . $this->status . "', "
                 . "`rank` ='" . $this->rank . "', "
+                . "`is_active` ='" . $this->is_active . "', "
                 . "`job_type` ='" . $this->job_type . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 
-   
+
         $db = new Database();
 
         $result = $db->readQuery($query);

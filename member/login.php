@@ -89,7 +89,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     <input name="email" id="email" placeholder="Email" class="inputbox" type="text">
                                     <input name="contact_number" id="contact_number" placeholder="Contact Number" class="inputbox" type="text">
                                     <input type="password" name="password" id="password" placeholder="Enter Password"  class="inputbox" >
-                                    <div >
+                                    <div>
                                         <select name="privacy" class="inputbox" type="text" >
                                             <option value="0"> - Please Select Your Account Type -</option>
                                             <option value="1" > Public </option>
@@ -99,11 +99,10 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                         <input type="hidden" name="profile_picture" value="member.png"/>
                                         <div class="buttn-bottom"  >
                                             <div class="pull-left text-danger btn-padding" id="message1" ></div>
-
-
                                             <div class=" padding_style btn-padding btn-new-padding" >
                                                 <div class="buttonreg buttn-type " id="btnSubmit">Register Now</div>
                                                 <input type="hidden" name="save" value="save"/>
+                                                <input type="hidden" name="is_active" value="0">
                                             </div>
                                         </div>
                                     </div>

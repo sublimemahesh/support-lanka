@@ -283,7 +283,6 @@ $td = date('Y-m-d');
                                                     <input type="email" id="email" name="email" class="form-control" placeholder="Please Enter Your Mail" required="true">
                                                     <input type="text" id="contact" name="contact" class="form-control" placeholder="Please Enter Your Contact" required="true"> 
                                                     <input type="hidden" id="new-messages" name="new-messages" value="new-messages">
-                                                    <input type="hidden" id="new-messages" name="read" value="read">
                                                     <input type="hidden" id="company" name="member" value="<?php echo $id ?>">
 
                                                     <textarea type="text" id="message" name="message" class="form-control" placeholder="Please Enter Message" required="true"></textarea>
@@ -360,29 +359,8 @@ $td = date('Y-m-d');
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/portfolio.js" type="text/javascript"></script>
         <script src="css/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-        <script src="plugins/sweetalert/sweetalert.min.js"></script>
-
         <script src="js/message-member.js" type="text/javascript"></script>
-        <div id="google_translate_element"></div>
-        <script type="text/javascript">
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-            }
-        </script>
-        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
-        <script type="text/javascript">
-            $('.translation-links a').click(function () {
-                var lang = $(this).data('lang');
-                var $frame = $('.goog-te-menu-frame:first');
-                if (!$frame.size()) {
-                    alert("Error: Could not find Google translate frame.");
-                    return false;
-                }
-                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
-                return false;
-            });
-        </script>
 
     </body>
 </html>

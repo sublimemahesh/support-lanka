@@ -51,6 +51,7 @@ if ($_POST['save']) {
         $MEMBER->status = filter_input(INPUT_POST, 'status');
         $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
         $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
+        $MEMBER->is_active = filter_input(INPUT_POST, 'is_active');
         $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
 
         $MEMBER->create();

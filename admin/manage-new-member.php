@@ -78,13 +78,13 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                                         <th>NIC Number</th>
                                         <th>Name</th> 
                                         <th>Contact Number</th> 
-                                        <td>Skill</td>
+                                        <th>Skill</th>
                                         <th class="text-center">Options</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    foreach ($MEMBER->getActiveMember() as $key => $member) {
+                                    foreach ($MEMBER->inActiveMember() as $key => $member) {
                                         ?>
                                         <tr id="row_<?php echo $member['id']; ?>">
                                             <td><?php echo $member['nic_number']; ?></td> 
