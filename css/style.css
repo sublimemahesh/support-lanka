@@ -662,7 +662,7 @@ label::after {
 
 }
 .sticky .p-pad{
-     margin-right: 110px;
+    margin-right: 110px;
     margin-top: -32px;
 }
 .post-job-btn {
@@ -743,7 +743,7 @@ label::after {
 .menu-sec nav > ul > li {
     float: right;
     position: relative;
-    margin-right: 4px;
+   
 }
 .menu-sec nav > ul > li > a {
     float: left;
@@ -751,7 +751,7 @@ label::after {
     font-size: 15px;
     color: #ffffff;
     position: relative;
-    padding: 14px 20px;
+    padding: 26px 18px;
 }
 .menu-sec nav > ul > li.menu-item-has-children > a::before {
     position: absolute;

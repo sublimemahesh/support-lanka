@@ -64,6 +64,9 @@
                 <li class="">
                     <a href="contact_us.php" title="">Contact</a>
                 </li>
+                <li class="">
+                    <a href="advertisement.php" title="">Advertisement</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -87,9 +90,12 @@
                 <a href="company/register.php" title="" id="post-job-btn1"class=" sticky1 btn2"><i class="la la-plus"></i>Post Vacancy</a>
 
             </div><!-- Btn Extras -->
-           
+
             <nav>
                 <ul>
+                    <li class="">
+                        <a href="advertisement.php" title="">Advertisement</a>
+                    </li>
                     <li class="">
                         <a href="contact_us.php" title="">Contact</a>
                     </li>

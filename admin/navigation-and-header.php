@@ -218,7 +218,7 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                         </li>
                     </ul>
                 </li>
-                 <li>
+                <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">contacts</i>
                         <span>Company</span>
@@ -310,7 +310,7 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                         </li>
                     </ul>
                 </li>
-                
+
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">assistant</i>
@@ -331,9 +331,9 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                         </li>
                     </ul>
                 </li>             
-                
-               
-                
+
+
+
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">question_answer</i>
@@ -358,6 +358,28 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                                 <span>Arrange</span>
                             </a>
                         </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">note</i>
+                        <span>Advertisement</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-advertisment.php">
+                                <i class="material-icons">add</i>
+                                <span>Add New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-advertisement.php">
+                                <i class="material-icons">list</i>
+                                <span>Manage</span>
+                            </a>
+                        </li>
+                         
                     </ul>
                 </li>
             </ul>
