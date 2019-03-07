@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include_once(dirname(__FILE__) . '/class/include.php');
 
 if (isset($_GET["page"])) {
@@ -10,6 +10,7 @@ if (isset($_GET["page"])) {
 $setLimit = 15;
 
 $pageLimit = ($page * $setLimit) - $setLimit;
+
 $industryGet = NULL;
 if (isset($_GET['industry'])) {
     $industryGet = $_GET['industry'];
@@ -51,7 +52,7 @@ if (!empty($industryGet)) {
 
         <div class="theme-layout" id="scrollup">
 
-<?php include './header.php'; ?>
+            <?php include './header.php'; ?>
 
             <section class="overlape">
                 <div class="block no-padding">
@@ -77,59 +78,100 @@ if (!empty($industryGet)) {
                                     <h3 class="sb-title open">Category</h3>
                                     <div class="specialism_widget">
                                         <div class="simple-checkbox">
-<?php
-$industry = Industry::all();
-foreach ($industry as $key => $ind) {
-    $key++;
-    ?>
+                                            <?php
+                                            $industry = Industry::all();
+                                            foreach ($industry as $key => $ind) {
+                                                $key++;
+                                                ?>
                                                 <a href="skills.php?industry=<?php echo $ind['id']; ?>">
 
                                                     <div class="link-line" for="<?php echo $key; ?>"><?php echo $ind['name']; ?></div>
                                                 </a>
-    <?php
-}
-?>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
                             </aside>
-                            <div class="col-lg-9 col-md-12 column">
-                                <div class="emply-resume-sec row-padding-new">
-<?php
-foreach ($SKILLS as $skill) {
-    ?>
-                                        <div class="emply-resume-list square">
-                                            <div class="emply-resume-info">
-                                                <h3><a href="#" title=""><?php echo $skill['name']; ?></a></h3>
-                                                <span><i><?php
-                                    $skill['id'];
-                                    echo $INDUSTRY->name;
-    ?>
-                                                        / <?php echo $skill['name']; ?></i></span>
-
-                                            </div>
-                                            <div class="row">
-                                                <div class="shortlists f-right "  id="shortlists">
-                                                    <a href="members.php?skill=<?php echo $skill['id'] ?>&industry=<?php echo $industryGet; ?>" title="">View More <i class="la la-plus"></i></a>
+                            <div class="col-lg-9 col-md-12 column hidden-sm hidden-xs">
+                                <?php foreach ($SKILLS as $skill) { ?>
+                                    <div class="emply-resume-sec row-padding-new">
+                                        <a href="members.php?skill=<?php echo $skill['id'] ?>&industry=<?php echo $industryGet; ?>" title="">      
+                                            <div class="emply-resume-list square">                                                
+                                                <div class="emply-resume-info">
+                                                    <h3><?php echo $skill['name']; ?></h3>
+                                                    <span>
+                                                        <i><?php
+                                                            $skill['id'];
+                                                            echo $INDUSTRY->name;
+                                                            ?>
+                                                            / <?php echo $skill['name']; ?>
+                                                        </i>
+                                                    </span> 
                                                 </div>
-                                            </div>
-                                        </div>
-    <?php
-}
-?>
+                                                <div class="row">
+                                                    <div class="shortlists f-right div-color div-color-2">
+                                                        View More <i class="la la-plus"></i> 
+                                                    </div>
+                                                </div>
+
+                                            </div>  
+
+                                        </a> 
+                                    </div>
                                     <?php
-                                    Skill::showPagination($setLimit, $page, $industryGet);
-                                    ?>
-                                </div>
+                                }
+                                ?>
+                                <?php
+                                Skill::showPagination($setLimit, $page, $industryGet);
+                                ?>
+                            </div>
+
+                            <div class="col-sm-9 hidden-lg hidden-md column">
+                                <?php foreach ($SKILLS as $skill) { ?>
+                                    <div class="emply-resume-sec row-padding-new" ">
+                                        <a href="members.php?skill=<?php echo $skill['id'] ?>&industry=<?php echo $industryGet; ?>" title="">      
+                                            <div class="emply-resume-list square">                                                
+                                                <div class="row">
+                                                    <div class="emply-resume-info" style="padding-left: 18px;">
+                                                        <h3><?php echo $skill['name']; ?></h3>
+                                                        <span>
+                                                            <i><?php
+                                                                $skill['id'];
+                                                                echo $INDUSTRY->name;
+                                                                ?>
+                                                                / <?php echo $skill['name']; ?>
+                                                            </i>
+                                                        </span> 
+                                                    </div>  
+                                                </div> 
+
+                                                <div class="row" style="margin-top: 10px;">
+                                                    <center>
+                                                        <div class="shortlists f-right div-color-2">
+                                                            View More <i class="la la-plus"></i> 
+                                                        </div> 
+                                                    </center> 
+                                                </div>                                                
+                                            </div> 
+                                        </a> 
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                                <?php
+                                Skill::showPagination($setLimit, $page, $industryGet);
+                                ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-<?php
-include './footer.php';
-?>
+            <?php
+            include './footer.php';
+            ?>
         </div>
 
         <script src="js/jquery.min.js" type="text/javascript"></script>

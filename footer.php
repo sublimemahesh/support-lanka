@@ -92,7 +92,7 @@
     <div class="bottom-line">
         <span>@<?php echo date("Y"); ?> Copy Right by Support Lanka</span>
         <a style="color: #fff;" href="http://www.sublime.lk/">
-            <b> Design By :www.sublime.lk</b>
+            <b> Design By- www.sublime.lk</b>
         </a>
     </div>
     <div id="google_translate_element"></div>

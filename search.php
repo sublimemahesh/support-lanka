@@ -16,7 +16,7 @@ if ($_GET['keyword'] !== '') {
     $INDUSTRY = Search::industry($_GET['keyword'], $pageLimit, $setLimit);
     $MEMBER = Search::members($_GET['keyword'], $pageLimit, $setLimit);
 } else {
-    $MEMBER = Member::all();
+    $MEMBER = Member::getActiveMember();
     $COMPANY = Company::all();
     $INDUSTRY = Industry::all();
 }
@@ -112,54 +112,141 @@ if ($_GET['keyword'] !== '') {
                                                 <?php
                                                 foreach ($MEMBER as $member) {
                                                     ?>
-                                                    <div class="col-lg-6">
-                                                        <div class="job-listing wtabs">
-                                                            <div class="job-title-sec">
-                                                                <div class="c-logo"> 
-                                                                    <img src="upload/member/<?php echo $member['profile_picture']; ?>" alt="" /> 
+                                                    <div class="col-lg-6 hidden-sm hidden-xs">
+                                                        <a href="member.php?member=<?php echo $member['id']; ?>" title="">
+                                                            <div class="emply-resume-list square col-md-12 col-sm-12">
+                                                                <div class="emply-resume-thumb">
+
+                                                                    <?php
+                                                                    if ($member['profile_picture']) {
+                                                                        ?>
+                                                                        <img src = "upload/member/<?php echo $member['profile_picture']; ?>" alt = ""/>
+                                                                    <?php } else { ?>
+                                                                        <img src = "upload/member/member.png" alt = ""/>
+                                                                    <?php } ?>
+
                                                                 </div>
-                                                                <h3>
-                                                                    <a href="#" title=""><?php echo $member['name']; ?></a>
-                                                                </h3>
-                                                                <?php
-                                                                $SKILLDETAILS = SkillDetail::SkilldetailsBySkillDistinct($member['id']);
-                                                                ?>
-                                                                <span>
-                                                                    <i>
-                                                                        <?php
-                                                                        $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
-                                                                        foreach ($SKILLDETAIL as $skill_d) {
-
-                                                                            $SKILL = new Skill($skill_d['skill']);
-
-                                                                            $INDUSTRY = new Industry($SKILL->industry);
-
-                                                                            echo $INDUSTRY->name;
-                                                                            ?> 
-                                                                            /  
+                                                                <div class = "emply-resume-info ">
+                                                                    <h3>  <?php echo $member['name'];
+                                                                    ?> </h3>
+                                                                    <span> 
+                                                                        <i>
                                                                             <?php
-                                                                            $SKIL = new Skill($skill_d['skill']);
-                                                                            echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
-                                                                        }
-                                                                        ?> 
-                                                                    </i>
-                                                                </span>
-                                                                <div class="job-lctn">
-                                                                    <i class="la la-map-marker"></i><?php
-                                                                    $CITY = new City($member['city']);
-                                                                    echo $CITY->name;
-                                                                    ?> 
-                                                                    / 
-                                                                    <?php echo $member['home_address']; ?>
+                                                                            $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
+
+                                                                            foreach ($SKILLDETAIL as $skill_d) {
+
+                                                                                $SKILL = new Skill($skill_d['skill']);
+
+                                                                                $INDUSTRY = new Industry($SKILL->industry);
+
+                                                                                echo $INDUSTRY->name;
+                                                                                ?> 
+                                                                                /  
+                                                                                <?php
+                                                                                $SKIL = new Skill($skill_d['skill']);
+                                                                                echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
+                                                                            }
+                                                                            ?> 
+                                                                        </i> 
+                                                                    </span>
+                                                                    <p><i class="la la-map-marker"></i>
+                                                                        <?php
+                                                                        $CITY = new City($member['city']);
+                                                                        echo $CITY->name;
+                                                                        ?>
+                                                                        , 
+                                                                        <?php echo $member['home_address']; ?>
+                                                                    </p>
                                                                 </div>
-                                                            </div>
-                                                            <div class="job-style-bx">
-                                                                <a href="member.php?member=<?php echo $member['id']; ?>">
-                                                                    <span class="job-is ft fill">View More</span>
-                                                                </a>
+                                                                <div class="shortlists" style="float: right;">
+
+                                                                    <?php
+                                                                    for ($ran = 0; $ran <= 4; $ran++) {
+
+                                                                        if ($member['rank'] > $ran) {
+                                                                            ?>
+                                                                            <span class="fav-job" style="color:yellow; ">
+                                                                                <i class="la la-star"></i>
+                                                                            </span> 
+                                                                            <?php
+                                                                        } else {
+                                                                            ?>
+                                                                            <span class="fav-job"><i class="la la-star"></i></span>
+                                                                            <?php
+                                                                        }
+                                                                    }
+                                                                    ?>
+                                                                    <div class="div-color-2" style="margin-top: 10px;margin-left: -20px;"  >
+                                                                        View Profile <i class="la la-plus"></i>
+                                                                    </div>
+                                                                </div>
+
 
                                                             </div>
-                                                        </div>
+                                                        </a> 
+                                                    </div>
+                                                    <?php
+                                                }
+                                                foreach ($MEMBER as $member) {
+                                                    ?>
+                                                    <div class="col-sm-12 hidden-lg hidden-md ">
+                                                        <a href="member.php?member=<?php echo $member['id']; ?>" title="">
+                                                            <div class="emply-list-sec ">
+                                                                <div class="row" id="masonry">
+
+                                                                    <div class="col-sm-6 col-xs-12 hidden-lg hidden-md">
+                                                                        <div class="emply-list box">
+                                                                            <div class="emply-list-thumb">
+                                                                                <?php
+                                                                                if ($member['profile_picture']) {
+                                                                                    ?>
+                                                                                    <a href="member.php?member=<?php echo $member['id']; ?>" title="">  <img src = "upload/member/<?php echo $member['profile_picture']; ?>" alt = ""/></a>
+                                                                                <?php } else { ?>
+                                                                                    <a href="member.php?member=<?php echo $member['id']; ?>" title="">  <img src = "upload/member/member.png" alt = ""/></a>
+                                                                                <?php } ?>
+                                                                            </div>
+                                                                            <a href="member.php?member=<?php echo $member['id']; ?>" title="">
+                                                                                <div class="emply-list-info">
+                                                                                    <h3>  <?php echo $member['name']; ?> </h3>
+                                                                                    <span><?php
+                                                                                        $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
+
+                                                                                        foreach ($SKILLDETAIL as $skill_d) {
+
+                                                                                            $SKILL = new Skill($skill_d['skill']);
+
+                                                                                            $INDUSTRY = new Industry($SKILL->industry);
+
+                                                                                            echo $INDUSTRY->name;
+                                                                                            ?> 
+                                                                                            /  
+                                                                                            <?php
+                                                                                            $SKIL = new Skill($skill_d['skill']);
+                                                                                            echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
+                                                                                        }
+                                                                                        ?> </span>
+                                                                                    <h6><i class="la la-map-marker"></i> 
+                                                                                        <?php
+                                                                                        $CITY = new City($member['city']);
+                                                                                        echo $CITY->name;
+                                                                                        ?>
+                                                                                        , 
+                                                                                        <?php echo $member['home_address']; ?>
+                                                                                    </h6>
+                                                                                </div>
+                                                                            </a>
+
+                                                                            <div class="shortlists shortlists-p center-block" style="padding-top: 15px;">
+                                                                                <a href="member.php?member=<?php echo $member['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
                                                     </div>
                                                     <?php
                                                 }
@@ -174,59 +261,57 @@ if ($_GET['keyword'] !== '') {
                                                 <?php
                                                 foreach ($COMPANY as $company) {
                                                     ?>
-                                                    <div class="col-lg-6">
-                                                        <div class="job-listing wtabs">
-                                                            <div class="job-title-sec">
-                                                                <div class="c-logo"> 
-                                                                    <img src="upload/company/<?php echo $company['logo_image']; ?>" alt="" /> 
-                                                                </div>
-                                                                <h3>
-                                                                    <a href="#" title="" style="color:black;">
+                                                    <a href="company.php?company=<?php echo $company['id']; ?>">
+                                                        <div class="col-lg-6">
+                                                            <div class="job-listing wtabs">
+                                                                <div class="job-title-sec">
+                                                                    <div class="c-logo"> 
+                                                                        <img src="upload/company/<?php echo $company['logo_image']; ?>" alt="" /> 
+                                                                    </div>
+                                                                    <h3> 
                                                                         <?php echo $company['name'];
-                                                                        ?>  
-                                                                    </a>
-                                                                </h3>
-                                                                <span>
-                                                                    <?php
-                                                                    $INDUSTRY = new Industry($company['industry']);
-                                                                    echo $INDUSTRY->name;
-                                                                    ?>
-                                                                </span>
-                                                                <div class="job-lctn">
-                                                                    <i class="la la-map-marker"></i>
-                                                                    <?php
-                                                                    $CITY = new City($company['city']);
-                                                                    echo $CITY->name;
-                                                                    ?>
-                                                                </div>
-                                                                <div class="emply-pstn">
-                                                                    <?php
-                                                                    for ($ran = 0; $ran <= 4; $ran++) {
+                                                                        ?>   
+                                                                    </h3>
+                                                                    <span>
+                                                                        <?php
+                                                                        $INDUSTRY = new Industry($company['industry']);
+                                                                        echo $INDUSTRY->name;
+                                                                        ?>
+                                                                    </span>
+                                                                    <div class="job-lctn">
+                                                                        <i class="la la-map-marker"></i>
+                                                                        <?php
+                                                                        $CITY = new City($company['city']);
+                                                                        echo $CITY->name;
+                                                                        ?>
+                                                                    </div>
+                                                                    <div class="emply-pstn">
+                                                                        <?php
+                                                                        for ($ran = 0; $ran <= 4; $ran++) {
 
-                                                                        if ($company['rank'] > $ran) {
-                                                                            ?>
-                                                                            <span class="fav-job" style="color:yellow; ">
-                                                                                <i class="la la-star"></i>
-                                                                            </span> 
-                                                                            <?php
-                                                                        } else {
-                                                                            ?>
-                                                                            <span class="fav-job">
-                                                                                <i class="la la-star"></i>
-                                                                            </span>
-                                                                            <?php
+                                                                            if ($company['rank'] > $ran) {
+                                                                                ?>
+                                                                                <span class="fav-job" style="color:yellow; ">
+                                                                                    <i class="la la-star"></i>
+                                                                                </span> 
+                                                                                <?php
+                                                                            } else {
+                                                                                ?>
+                                                                                <span class="fav-job">
+                                                                                    <i class="la la-star"></i>
+                                                                                </span>
+                                                                                <?php
+                                                                            }
                                                                         }
-                                                                    }
-                                                                    ?>
+                                                                        ?>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="job-style-bx">
-                                                                <a href="company.php?company=<?php echo $company['id']; ?>">
+                                                                <div class="job-style-bx">
                                                                     <span class="job-is ft fill">View Profile</span>
-                                                                </a>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                     <?php
                                                 }
                                                 ?>

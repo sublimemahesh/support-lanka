@@ -743,7 +743,7 @@ label::after {
 .menu-sec nav > ul > li {
     float: right;
     position: relative;
-   
+
 }
 .menu-sec nav > ul > li > a {
     float: left;
@@ -7490,7 +7490,7 @@ aside .widget.border:first-child {
     z-index: 2;
 }
 .emply-resume-list:last-child {
-    margin-bottom: 60px;
+    margin-bottom: 15px;
     border-bottom-color: #ffffff;
 }
 .close-contact  {
@@ -11401,7 +11401,7 @@ footer.ft .scrollup {
     background: #0b1b46;
     padding: 0 30px;
     overflow-y: scroll;
-    height: 350px;
+   height: 393px;
 }
 .responsive-opensec .btn-extars {
     float: left;

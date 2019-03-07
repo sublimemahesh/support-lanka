@@ -171,7 +171,7 @@ class Member {
 
     public function getActiveMember() {
 
-        $query = "SELECT * FROM `member` WHERE `is_active` = '1' AND `privacy` = 1";
+        $query = "SELECT * FROM `member` WHERE `is_active` = '1'";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -333,7 +333,6 @@ class Member {
                 . "`username` ='" . $this->username . "', "
                 . "`status` ='" . $this->status . "', "
                 . "`rank` ='" . $this->rank . "', "
-                . "`privacy` ='" . $this->privacy . "', "
                 . "`is_active` ='" . $this->is_active . "', "
                 . "`job_type` ='" . $this->job_type . "' "
                 . "WHERE `id` = '" . $this->id . "'";
@@ -554,7 +553,7 @@ class Member {
     public function showPagination($per_page, $page) {
 
         $page_url = "?";
-        $query = "SELECT COUNT(*) as totalCount FROM `member` WHERE `is_active` = '1' ";
+        $query = "SELECT COUNT(*) as totalCount FROM `member` ";
         $rec = mysql_fetch_array(mysql_query($query));
         $total = $rec['totalCount'];
         $adjacents = "2";
@@ -570,7 +569,6 @@ class Member {
 
         $setPaginate = "";
 
-                
         if ($setLastpage > 1) {
 
             $setPaginate .= "<ul class='setPaginate'>";
@@ -579,11 +577,12 @@ class Member {
             if ($setLastpage < 7 + ($adjacents * 2)) {
 
                 for ($counter = 1; $counter <= $setLastpage; $counter++) {
-                       
                     if ($counter == $page) {
-                        $setPaginate .= "<li><a class='current_page'>$counter</a></li>";
-                    } else {
 
+                        $setPaginate .= "<li><a class='current_page'>$counter</a></li>";
+                       
+                    } else {
+                        
                         $setPaginate .= "<li><a href='{$page_url}page=$counter'>$counter</a></li>";
                     }
                 }
@@ -625,9 +624,8 @@ class Member {
                     }
                 }
             }
- 
+
             if ($page < $counter - 1) {
-               
                 $setPaginate .= "<li><a href='{$page_url}page=$next'>Next</a></li>";
                 $setPaginate .= "<li><a href='{$page_url}page=$setLastpage'>Last</a></li>";
             } else {
@@ -680,7 +678,7 @@ class Member {
                         else
                             $setPaginate .= "<li><a href='{$page_url}page=$counter'&skill=$skill>$counter</a></li>";
                     }
-
+                    
                     $setPaginate .= "<li class='dot'>...</li>";
                     $setPaginate .= "<li><a href='{$page_url}page=$lpm1'&skill=$skill>$lpm1</a></li>";
                     $setPaginate .= "<li><a href='{$page_url}page=$setLastpage'&skill=$skill>$setLastpage</a></li>";
