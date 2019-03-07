@@ -14,7 +14,7 @@ if (isset($_GET["page"])) {
     $page = 1;
 }
 
-$setLimit = 1;
+$setLimit = 15;
 
 $pageLimit = ($page * $setLimit) - $setLimit;
 $MEMBER = Member::all1($pageLimit, $setLimit);
@@ -95,45 +95,101 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                     </div>
                                 </div>
                             </aside>
-                            <div class="col-lg-9 column">
+                            <div class="col-lg-9 hidden-sm hidden-xs column">
                                 <div class="emply-resume-sec row-padding-new">
                                     <?php
                                     $SKILLDETAILS = SkillDetail::SkilldetailsBySkillDistinct($id);
                                     foreach ($SKILLDETAILS as $skill_d) {
                                         $MEMBER = new Member($skill_d['member']);
                                         ?>
-                                        <div class="emply-resume-list square">
-                                            <div class="emply-resume-thumb">
-                                                <a href="member.php?member=<?php echo $MEMBER->id; ?>" title="">
+                                        <a href="member.php?member=<?php echo $MEMBER->id; ?>" title="">
+                                            <div class="emply-resume-list square">
+                                                <div class="emply-resume-thumb">                                               
                                                     <img src="upload/member/<?php echo $MEMBER->profile_picture; ?>" alt=""/> 
-                                                </a>
-                                            </div>
-                                            <div class="emply-resume-info">
-                                                <h3><a href="#" title=""> <?php echo $MEMBER->name; ?></a></h3>
-                                                <span>
-                                                    <i> <?php
-                                                        $SKILL = new Skill($skill_d['skill']);
-                                                        $INDUSTRY = new Industry($SKILL->industry);
-                                                        echo $INDUSTRY->name;
-                                                        ?> 
-                                                        / 
+
+                                                </div>
+                                                <div class="emply-resume-info">
+                                                    <h3>  <?php echo $MEMBER->name; ?> </h3>
+                                                    <span>
+                                                        <i> <?php
+                                                            $SKILL = new Skill($skill_d['skill']);
+                                                            $INDUSTRY = new Industry($SKILL->industry);
+                                                            echo $INDUSTRY->name;
+                                                            ?> 
+                                                            / 
+                                                            <?php
+                                                            echo $SKILL->name;
+                                                            ?>
+                                                        </i>
+                                                    </span>
+                                                    <p><i class="la la-map-marker"></i>
                                                         <?php
-                                                        echo $SKILL->name;
+                                                        $CITY = new City($MEMBER->city);
+                                                        echo $CITY->name;
                                                         ?>
-                                                    </i></span>
-                                                <p><i class="la la-map-marker"></i>
-                                                    <?php
-                                                    $CITY = new City($MEMBER->city);
-                                                    echo $CITY->name;
-                                                    ?>
-                                                    , 
-                                                    <?php echo $MEMBER->home_address; ?>
-                                                </p>
+                                                        , 
+                                                        <?php echo $MEMBER->home_address; ?>
+                                                    </p>
+                                                </div>
+                                                <div class="shortlists div-color-2" style="float: right;margin-top: 28px;">
+                                                    Details <i class="la la-plus"></i> 
+                                                </div>
                                             </div>
-                                            <div class="shortlists" style="float: right;">
-                                                <a href="member.php?member=<?php echo $MEMBER->id; ?>" title="">Details <i class="la la-plus"></i></a>
+                                        </a>
+                                        <?php
+                                    }
+                                    ?>
+                                    <?php Member::showPaginationSkill($setLimit, $page, $skill); ?><!-- Pagination -->
+                                </div>
+                            </div>
+
+                            <div class="hidden-lg hidden-md col-sm-9  col-xs-9 column">
+                                <div class="emply-resume-sec row-padding-new">
+                                    <?php
+                                    $SKILLDETAILS = SkillDetail::SkilldetailsBySkillDistinct($id);
+                                    foreach ($SKILLDETAILS as $skill_d) {
+                                        $MEMBER = new Member($skill_d['member']);
+                                        ?>
+                                        <a href="member.php?member=<?php echo $MEMBER->id; ?>" title="">
+                                            <div class="emply-resume-list square">
+                                                <div class="row" style="margin-left: 10px;">
+                                                    <div class="emply-resume-thumb">                                               
+                                                        <img src="upload/member/<?php echo $MEMBER->profile_picture; ?>" alt=""/> 
+                                                    </div>
+                                                    <div class="emply-resume-info" style="padding-left: 10px;">
+                                                        <h3>  <?php echo $MEMBER->name; ?> </h3>
+                                                        <span>
+                                                            <i> <?php
+                                                                $SKILL = new Skill($skill_d['skill']);
+                                                                $INDUSTRY = new Industry($SKILL->industry);
+                                                                echo $INDUSTRY->name;
+                                                                ?> 
+                                                                / 
+                                                                <?php
+                                                                echo $SKILL->name;
+                                                                ?>
+                                                            </i>
+                                                        </span>
+                                                        <p><i class="la la-map-marker"></i>
+                                                            <?php
+                                                            $CITY = new City($MEMBER->city);
+                                                            echo $CITY->name;
+                                                            ?>
+                                                            , 
+                                                            <?php echo $MEMBER->home_address; ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="shortlists div-color-2" style="float: right;margin-top: 28px;">
+                                                        Details <i class="la la-plus"></i> 
+                                                    </div>
+                                                </div>
+
+
                                             </div>
-                                        </div>
+                                        </a>
                                         <?php
                                     }
                                     ?>

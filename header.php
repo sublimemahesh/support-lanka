@@ -1,5 +1,3 @@
-
-
 <div class="responsive-header">
     <div class="row">
         <div class="res-logo col-md-9">
@@ -33,9 +31,7 @@
             <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn3" ><i class="la la-user"></i>Login Or Register</a>
         </div>
     </div>
-
-
-
+ 
     <div class="responsive-opensec">
         <div class="btn-extars ">
             <a href="company/register.php" title="" id="post-job-btn1"class=" sticky1 btn2"><i class="la la-plus"></i>Post Vacancy</a>
@@ -58,9 +54,7 @@
                 <li class="">
                     <a href="about_us.php" title="">About</a>
                 </li>
-                <li class="">
-                    <a href="all_member.php" title="">Members</a>
-                </li>
+                
                 <li class="">
                     <a href="contact_us.php" title="">Contact</a>
                 </li>

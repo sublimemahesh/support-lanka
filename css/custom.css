@@ -2,6 +2,46 @@
     Created on : 26-Mar-2018, 10:54:45
     Author     : official
 */
+.div-color{
+
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #8b91dd;
+    border: 2px solid #8b91dd;
+    width: 150px;
+    height: 40px;
+    padding-left: 30px;
+    text-align: left;
+    line-height: 35px;
+    padding-right: 20px;
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    -ms-border-radius: 21px;
+    -o-border-radius: 21px;
+    border-radius: 21px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+.div-color-2{
+
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #8b91dd;
+    border: 2px solid #8b91dd;
+    width: 150px;
+    height: 40px;
+    padding-left: 30px;
+    text-align: left;
+    line-height: 35px;
+    padding-right: 20px;
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    -ms-border-radius: 21px;
+    -o-border-radius: 21px;
+    border-radius: 21px;
+    cursor: pointer;
+
+}
 
 @media screen and (min-width: 992px){
     .hei-image{
@@ -455,6 +495,26 @@ ul.setPaginate li a{
     }
     #shortlists > a{
         loat: left;
+        font-family: Open Sans;
+        font-size: 14px;
+        color: #8b91dd;
+        border: 2px solid #8b91dd;
+        width: 120px;
+        height: 40px;
+        padding-left: 17px;
+        text-align: left;
+        line-height: 35px;
+        padding-right: 13px;
+        -webkit-border-radius: 21px;
+        -moz-border-radius: 21px;
+        -ms-border-radius: 21px;
+        -o-border-radius: 21px;
+        border-radius: 21px;
+        cursor: pointer;
+    }
+
+    #div-color-3{
+         loat: left;
         font-family: Open Sans;
         font-size: 14px;
         color: #8b91dd;

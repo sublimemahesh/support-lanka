@@ -4,7 +4,7 @@
 include_once(dirname(__FILE__) . '/../../../class/include.php');
 
 if ($_POST['save']) {
-     
+
     header('Content-Type: application/json; charset=UTF8');
     $response = array();
 
@@ -66,60 +66,58 @@ if ($_POST['save']) {
 //            $response['message'] = "The email address you entered is already in use.";
 //            echo json_encode($response);
 //            exit();
-        } else {
+    } else {
 
-            $MEMBER = new Member(NULL);
+        $MEMBER = new Member(NULL);
 
-            $MEMBER->username = filter_input(INPUT_POST, 'username');
-            $MEMBER->name = filter_input(INPUT_POST, 'name');
-            $MEMBER->email = filter_input(INPUT_POST, 'email');
-            $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
-            $MEMBER->about_me = filter_input(INPUT_POST, 'about_me');
-            $MEMBER->city = filter_input(INPUT_POST, 'city');
-            $MEMBER->rank = filter_input(INPUT_POST, 'rank');
-            $MEMBER->status = filter_input(INPUT_POST, 'status');
-            $MEMBER->date_of_birthday = filter_input(INPUT_POST, 'date_of_birthday');
-            $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
-            $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
-            $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
-            $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
-            $MEMBER->job_type = filter_input(INPUT_POST, 'job_type');
- 
-            $dir_dest = '../../../upload/member/';
+        $MEMBER->username = $_POST['username'];
+        $MEMBER->name = $_POST['name'];
+        $MEMBER->email = $_POST['email'];
+        $MEMBER->contact_number = $_POST['contact_number'];
+        $MEMBER->about_me = $_POST['about_me'];
+        $MEMBER->city = $_POST['city'];
+        $MEMBER->rank = $_POST['rank'];
+        $MEMBER->status = $_POST['status'];
+        $MEMBER->date_of_birthday = $_POST['date_of_birthday'];
+        $MEMBER->home_address = $_POST['home_address'];
+        $MEMBER->nic_number = $_POST['nic_number'];
+        $MEMBER->password = md5($_POST['password']);
+        $MEMBER->privacy = $_POST['privacy'];
+        $MEMBER->job_type = $_POST['job_type'];
+        $dir_dest = '../../../upload/member/';
 
-            $handle = new Upload($_FILES['image']);
+        $handle = new Upload($_FILES['image']);
 
-            $imgName = null;
+        $imgName = null;
 
-            if ($handle->uploaded) {
-                $handle->image_resize = true;
-                $handle->file_new_name_ext = 'jpg';
-                $handle->image_ratio_crop = 'C';
-                $handle->file_new_name_body = Helper::randamId();
-                $handle->image_x = 250;
-                $handle->image_y = 250;
+        if ($handle->uploaded) {
+            $handle->image_resize = true;
+            $handle->file_new_name_ext = 'jpg';
+            $handle->image_ratio_crop = 'C';
+            $handle->file_new_name_body = Helper::randamId();
+            $handle->image_x = 250;
+            $handle->image_y = 250;
 
-                $handle->Process($dir_dest);
+            $handle->Process($dir_dest);
 
-                if ($handle->processed) {
-                    $info = getimagesize($handle->file_dst_pathname);
-                    $imgName = $handle->file_dst_name;
-                }
-            }
-
-            $MEMBER->profile_picture = $imgName;
-            $MEMBER->create();
-
-            if ($MEMBER->id) {
-                $response['status'] = 'success';
-                echo json_encode($response);
-                exit();
-            } else {
-                $response['status'] = 'error';
-                $response['message'] = "Oops. Something went wrong, Please try again.";
-                echo json_encode($response);
-                exit();
+            if ($handle->processed) {
+                $info = getimagesize($handle->file_dst_pathname);
+                $imgName = $handle->file_dst_name;
             }
         }
-    
+
+        $MEMBER->profile_picture = $imgName;
+        $MEMBER->create();
+
+        if ($MEMBER->id) {
+            $response['status'] = 'success';
+            echo json_encode($response);
+            exit();
+        } else {
+            $response['status'] = 'error';
+            $response['message'] = "Oops. Something went wrong, Please try again.";
+            echo json_encode($response);
+            exit();
+        }
+    }
 }

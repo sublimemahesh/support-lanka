@@ -71,12 +71,12 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                         ?>
                                                         <div class="col-lg-3 col-md-3 col-sm-6">
                                                             <div class="p-category">
-                                                                <a href="all_employers.php?industry=<?php echo $industry['id']; ?>" title="">
+                                                                <a href="skills.php?industry=<?php echo $industry['id']; ?>" title="">
                                                                     <i>
                                                                         <img src="upload/industry/thumb/<?php echo $industry['image_name']; ?>" class="img-responsive img-industy">
                                                                     </i>
                                                                     <span><?php echo $industry['name']; ?></span>
-                                                                    <p>(22 open positions)</p>
+
                                                                 </a>
                                                             </div>
                                                         </div>

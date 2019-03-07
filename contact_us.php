@@ -80,7 +80,10 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 <div class="pf-field">
                                                     <input type="text" name="txtFullName" id="txtFullName" class="form-control input-validater">
                                                 </div>
-                                                <span id="spanFullName" ></span>
+                                                <div class="col-md-12">
+                                                    <span id="spanFullName" ></span>
+                                                </div>
+
                                             </div>
                                             <!--Email-->
                                             <div class="row form-group">
@@ -88,7 +91,10 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 <div class="pf-field">
                                                     <input type="email" name="txtEmail" id="txtEmail" class="form-control input-validater">
                                                 </div>
-                                                <span id="spanEmail" ></span>
+                                                <div class="col-md-12">
+                                                    <span id="spanEmail" ></span>
+                                                </div>
+
                                             </div>
                                             <!--Contact Number-->
                                             <div class="row form-group">
@@ -103,14 +109,19 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                 <div class="pf-field">
                                                     <input type="text" name="txtSubject"  id="txtSubject" class="form-control input-validater">
                                                 </div>
-                                                <span id="spanSubject" ></span>
+                                                <div class="col-md-12">
+                                                    <span id="spanSubject" ></span>
+                                                </div>                                             
                                             </div>
                                             <!--Message-->
                                             <div class="row form-group">
                                                 <label class="pf-title1">Message<span id="star">*</span></label>
                                                 <div class="pf-field">
                                                     <textarea name="txtMessage"  id="txtMessage" rows="6" class="form-control" placeholder="write message here"></textarea>
-                                                    <span id="spanMessage" ></span>
+                                                    <div class="col-md-12">
+                                                        <span id="spanMessage" ></span>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -119,7 +130,10 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                                         <label class="labelcon" for="comment">Security Code:</label>
                                                         <span id="star">*</span> 
                                                         <input type="text" name="captchacode" id="captchacode" class="form-control input-validater" placeholder="Enter the security code >> ">
-                                                        <span id="capspan" ></span> 
+                                                        <div class="col-md-12">
+                                                            <span id="capspan" ></span> 
+                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="col-sm-3"> 
                                                         <?php include("./contact-form/captchacode-widget.php"); ?> 

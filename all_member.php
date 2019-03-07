@@ -3,21 +3,18 @@ include_once(dirname(__FILE__) . '/class/include.php');
 $industry = NULL;
 
 
+
 if (isset($_GET["page"])) {
     $page = (int) $_GET["page"];
 } else {
-    $page = 1;
+    $page =3;
 }
 
-$setLimit = 20;
-
+$setLimit = 2;
 $pageLimit = ($page * $setLimit) - $setLimit;
-
-
-
-$SKILL = Skill::GetSkillsByIndustry($industry);
-$MEMBER = new Member(Null);
-
+ 
+ 
+$MEMBER = new Member(NULL);
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,8 +77,7 @@ $MEMBER = new Member(Null);
                                                 foreach ($industry as $key => $ind) {
                                                     $key++;
                                                     ?>
-                                                    <a href="skills.php?industry=<?php echo $ind['id']; ?>">
-
+                                                    <a href="skills.php?industry=<?php echo $ind['id']; ?>"> 
                                                         <div class="link-line" for="<?php echo $key; ?>"><?php echo $ind['name']; ?></div>
                                                     </a>
                                                     <?php
@@ -97,16 +93,23 @@ $MEMBER = new Member(Null);
                                     <?php
                                     foreach ($MEMBER->getActiveMember() as $member) {
                                         ?>
-                                        <div class="emply-resume-list square col-md-12 col-sm-12">
-                                            <div class="emply-resume-thumb">
-                                                <a href="member.php?member=<?php echo $member['id']; ?>" title="">
-                                                    <img src="upload/member/<?php echo $member['profile_picture']; ?>" alt=""/> 
-                                                </a>
-                                            </div>
-                                            <div class="emply-resume-info ">
-                                                <h3><a href="member.php?member=<?php echo $member['id']; ?>" title=""> <?php echo $member['name']; ?></a></h3>
-                                                <span>
-                                                    <a href="member.php?member=<?php echo $member['id']; ?>" >
+                                        <a href="member.php?member=<?php echo $member['id']; ?>" title="">
+                                            <div class="emply-resume-list square col-md-12 col-sm-12">
+                                                <div class="emply-resume-thumb">
+
+                                                    <?php
+                                                    if ($member['profile_picture']) {
+                                                        ?>
+                                                        <img src = "upload/member/<?php echo $member['profile_picture']; ?>" alt = ""/>
+                                                    <?php } else { ?>
+                                                        <img src = "upload/member/member.png" alt = ""/>
+                                                    <?php } ?>
+
+                                                </div>
+                                                <div class = "emply-resume-info ">
+                                                    <h3>  <?php echo $member['name'];
+                                                    ?> </h3>
+                                                    <span> 
                                                         <i>
                                                             <?php
                                                             $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
@@ -125,20 +128,19 @@ $MEMBER = new Member(Null);
                                                                 echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
                                                             }
                                                             ?> 
-                                                        </i>
-                                                    </a>
-                                                </span>
-                                                <p><i class="la la-map-marker"></i>
-                                                    <?php
-                                                    $CITY = new City($member['city']);
-                                                    echo $CITY->name;
-                                                    ?>
-                                                    , 
-                                                    <?php echo $member['home_address']; ?>
-                                                </p>
-                                            </div>
-                                            <div class="shortlists" style="float: right;">
-                                                <div class="">
+                                                        </i> 
+                                                    </span>
+                                                    <p><i class="la la-map-marker"></i>
+                                                        <?php
+                                                        $CITY = new City($member['city']);
+                                                        echo $CITY->name;
+                                                        ?>
+                                                        , 
+                                                        <?php echo $member['home_address']; ?>
+                                                    </p>
+                                                </div>
+                                                <div class="shortlists" style="float: right;">
+
                                                     <?php
                                                     for ($ran = 0; $ran <= 4; $ran++) {
 
@@ -155,18 +157,17 @@ $MEMBER = new Member(Null);
                                                         }
                                                     }
                                                     ?>
-                                                </div>
+                                                    <div class="div-color-2" style="margin-top: 10px;margin-left: -20px;"  >
+                                                        View Profile <i class="la la-plus"></i>
+                                                    </div>
+                                                </div> 
                                             </div>
-                                            <div class="shortlists" id="new-p-element" >
-                                                <a href="member.php?member=<?php echo $member['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
-                                            </div>
-
-                                        </div>
+                                        </a>
                                         <?php
                                     }
                                     ?>
-                                </div>
-                                <?php Member::showPagination($setLimit, $page); ?>
+                                    <?php Member::showPagination($setLimit, $page); ?>
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -181,41 +182,50 @@ $MEMBER = new Member(Null);
                                 <div class="emply-list-sec ">
                                     <div class="row" id="masonry">
                                         <?php
-                                        foreach ($MEMBER as $member) {
+                                        foreach ($MEMBER->getActiveMember() as $member) {
                                             ?>
                                             <div class="col-sm-6 col-xs-12 hidden-lg hidden-md">
                                                 <div class="emply-list box">
                                                     <div class="emply-list-thumb">
-                                                        <a href="#" title=""><img class="img-responsive" src="upload/member/<?php echo $member['profile_picture']; ?>" alt="" /></a>
-                                                    </div>
-                                                    <div class="emply-list-info">
-                                                        <h3><a href="#" title=""><?php echo $member['name']; ?></a></h3>
-                                                        <span><?php
-                                                            $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
-
-                                                            foreach ($SKILLDETAIL as $skill_d) {
-
-                                                                $SKILL = new Skill($skill_d['skill']);
-
-                                                                $INDUSTRY = new Industry($SKILL->industry);
-
-                                                                echo $INDUSTRY->name;
-                                                                ?> 
-                                                                /  
-                                                                <?php
-                                                                $SKIL = new Skill($skill_d['skill']);
-                                                                echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
-                                                            }
-                                                            ?> </span>
-                                                        <h6><i class="la la-map-marker"></i> 
-                                                            <?php
-                                                            $CITY = new City($member['city']);
-                                                            echo $CITY->name;
+                                                        <?php
+                                                        if ($member['profile_picture']) {
                                                             ?>
-                                                            , 
-                                                            <?php echo $member['home_address']; ?>
-                                                        </h6>
+                                                            <a href="member.php?member=<?php echo $member['id']; ?>" title="">  <img src = "upload/member/<?php echo $member['profile_picture']; ?>" alt = ""/></a>
+                                                        <?php } else { ?>
+                                                            <a href="member.php?member=<?php echo $member['id']; ?>" title="">  <img src = "upload/member/member.png" alt = ""/></a>
+                                                        <?php } ?>
                                                     </div>
+                                                    <a href="member.php?member=<?php echo $member['id']; ?>" title="">
+                                                        <div class="emply-list-info">
+                                                            <h3>  <?php echo $member['name']; ?> </h3>
+                                                            <span><?php
+                                                                $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
+
+                                                                foreach ($SKILLDETAIL as $skill_d) {
+
+                                                                    $SKILL = new Skill($skill_d['skill']);
+
+                                                                    $INDUSTRY = new Industry($SKILL->industry);
+
+                                                                    echo $INDUSTRY->name;
+                                                                    ?> 
+                                                                    /  
+                                                                    <?php
+                                                                    $SKIL = new Skill($skill_d['skill']);
+                                                                    echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
+                                                                }
+                                                                ?> </span>
+                                                            <h6><i class="la la-map-marker"></i> 
+                                                                <?php
+                                                                $CITY = new City($member['city']);
+                                                                echo $CITY->name;
+                                                                ?>
+                                                                , 
+                                                                <?php echo $member['home_address']; ?>
+                                                            </h6>
+                                                        </div>
+                                                    </a>
+
                                                     <div class="shortlists shortlists-p center-block" style="padding-top: 15px;">
                                                         <a href="member.php?member=<?php echo $member['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
                                                     </div>
