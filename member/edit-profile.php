@@ -130,14 +130,28 @@ $MEMBER = new Member($_SESSION['id']);
                                                                 </div>
                                                                 <div class="formrow">
                                                                     <select class="form-control" type="text" id="district" autocomplete="off" name="district">
-                                                                        <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please Select Your District --  </option>
-                                                                        <?php foreach (District::all() as $key => $district) {
-                                                                            ?>
-                                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+                                                                        <option value=" " class="active light-c"> -- Please  Select Your District -- </option>
+                                                                        <?php
+                                                                        $CITY = new City(NULL);
+                                                                        $DISTRICT = new District(NULL);
 
-                                                                            <?php
+
+                                                                        foreach ($CITY->getDistrictByCityId($MEMBER->city) as $key => $district) {
+                                                                            foreach ($DISTRICT->all() as $district_all) {                                                                               
+                                                                                if ($district['id'] == $district_all['id']) {
+                                                                                    ?>
+                                                                                    <option value="<?php echo $district_all['id']; ?>" selected=""><?php echo $district_all['name']; ?></option>
+                                                                                    <?php
+                                                                                } else {
+                                                                                    ?>
+                                                                                    <option value="<?php echo $district_all['id']; ?>"><?php echo $district_all['name']; ?></option>
+                                                                                    <?php
+                                                                                }
+                                                                            }
                                                                         }
                                                                         ?>
+
+                           
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -148,7 +162,23 @@ $MEMBER = new Member($_SESSION['id']);
                                                                 </div>
                                                                 <div class="">
                                                                     <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
+
                                                                         <option value=""> -- Please Select a District First -- </option>
+                                                                        <?php
+                                                                        $CITY = new City(NULL);
+                                                                        foreach ($CITY->all() as $key => $city) {
+                                                                            if ($city['id'] == $MEMBER->city) {
+                                                                                ?>
+                                                                                <option value="<?php echo $city['id']; ?>" selected=""><?php echo $city['name']; ?></option>
+                                                                                <?php
+                                                                            } else {
+                                                                                ?>
+                                                                                <option value="<?php echo $city['id']; ?>" ><?php echo $city['name']; ?></option>
+                                                                                <?php
+                                                                            }
+                                                                        }
+                                                                        ?>
+
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -160,34 +190,85 @@ $MEMBER = new Member($_SESSION['id']);
                                                                 <div class="">
                                                                     <select name="job_type" class="form-control">
                                                                         <option>-- Please Select Job Type -- </option>
-                                                                        <option value="Part time">Part Time</option>
-                                                                        <option value="Full time">Full Time</option>
+
+                                                                        <?php
+                                                                        if ($MEMBER->job_type == 1) {
+                                                                            ?>
+                                                                            <option value="1" selected="">Part Time</option>
+                                                                            <option value="2">Full Time</option>
+                                                                            <?php
+                                                                        } else if ($MEMBER->job_type == 2) {
+                                                                            ?>
+                                                                            <option value="2" selected="">Full Time</option> 
+                                                                            <option value="1" >Part Time</option>
+                                                                            <?php
+                                                                        } else {
+                                                                            ?>
+                                                                            <option value="1">Part Time</option>
+                                                                            <option value="2">Full Time</option>
+                                                                            <?php
+                                                                        }
+                                                                        ?>
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                        </div> 
+                                                            <div class="">
+                                                                <div class="bottom-top">
+                                                                    <label for="job type">Privacy</label>
+                                                                </div>
+                                                                <div class="">
+                                                                    <select class="form-control  "  type="text"   name="privacy" >
+                                                                        <option value="0" >-- Please Select the Privacy</option>
+
+                                                                        <?php
+                                                                        if ($MEMBER->privacy == 1) {
+                                                                            ?>
+                                                                            <option value="1" selected="">Public</option>
+
+                                                                            <option value="2">Private</option>
+                                                                            <?php
+                                                                        } else if ($MEMBER->privacy == 2) {
+                                                                            ?>
+                                                                            <option value="2" selected="">Private</option>
+
+                                                                            <option value="1"  >Public</option>
+                                                                            <?php
+                                                                        } else {
+                                                                            ?>
+
+                                                                            <option value = "1">Public</option>
+                                                                            <option value = "2">Private</option>
+                                                                            <?php
+                                                                        }
+                                                                        ?>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>  
+
+
+
                                                         <div class="col-md-4">
                                                             <div>
                                                                 <div class="bottom-top">Change Your Profile Picture</div>
-                                                                <div>
-                                                                    <?php
-                                                                    if (empty($MEMBER->profile_picture)) {
-                                                                        ?>
-                                                                        <img src="../upload/member/member.png" class="img img-responsive img-thumbnail"/> 
-                                                                        <?php
-                                                                    } else {
-                                                                        ?>
-                                                                        <img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>" class="img img-responsive img-thumbnail"/> 
-                                                                        <?php
-                                                                    }
+
+                                                                <?php
+                                                                if (empty($MEMBER->profile_picture)) {
                                                                     ?>
-                                                                </div>
+                                                                    <img src="../upload/member/member.png" class="img img-responsive img-thumbnail"/> 
+                                                                    <?php
+                                                                } else {
+                                                                    ?>
+                                                                    <img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>" class="img img-responsive img-thumbnail"/> 
+                                                                    <?php
+                                                                }
+                                                                ?> 
                                                                 <input type="file" id="profile_picture" class="" name="profile_picture">
                                                                 <input type="hidden" name="profile_picture_name" value="<?php echo $MEMBER->profile_picture; ?>"/> 
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
+                                                    <div class="row  ">
                                                         <div class="top-bott50">
                                                             <div class="bottom-top">
                                                                 <input type="hidden" id="id" value="<?php echo $MEMBER->id; ?>" name="id"/>

@@ -2645,5 +2645,20 @@ img#profil_pic1 {
     padding-left: 50px;
 }
 .M-new{
-    margin-left: 28%;
+    margin-left: 8%;
+}
+
+.btn-facebook {
+    background: #3B5998;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #263961; 
+}
+.btn-facebook:link, .btn-facebook:visited {
+    color: #003162;
+}
+.btn-facebook-btn:hover{
+    background-color:#003162;
 }

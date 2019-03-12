@@ -85,13 +85,12 @@ if (isset($_POST['update'])) {
     $handle = new Upload($_FILES['image']);
 
     $imgName = null;
+
     if ($handle->uploaded) {
         $handle->image_resize = true;
-        $handle->file_new_name_body = TRUE;
-        $handle->file_overwrite = TRUE;
-        $handle->file_new_name_ext = FALSE;
+        $handle->file_new_name_ext = 'jpg';
         $handle->image_ratio_crop = 'C';
-        $handle->file_new_name_body = $_POST ["oldImageName"];
+        $handle->file_new_name_body = Helper::randamId();
         $handle->image_x = 250;
         $handle->image_y = 250;
 
@@ -103,23 +102,25 @@ if (isset($_POST['update'])) {
         }
     }
 
+
     $MEMBER = new Member($_POST['id']);
 
-    
-    $MEMBER->username = $_POST['username'];
-    $MEMBER->name = $_POST['name'];
+    $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
+    $MEMBER->profile_picture = $imgName;
+    $MEMBER->name = filter_input(INPUT_POST, 'name');
+    $MEMBER->password = $password;
     $MEMBER->email = $_POST['email'];
+    $MEMBER->nic_number = $_POST['nic_number'];
+    $MEMBER->date_of_birthday = $_POST['date_of_birthday'];
     $MEMBER->contact_number = $_POST['contact_number'];
     $MEMBER->about_me = $_POST['about_me'];
-    $MEMBER->city = $_POST['city'];
-    $MEMBER->rank = $_POST['rank'];
-    $MEMBER->status = $_POST['status'];
-    $MEMBER->date_of_birthday = $_POST['date_of_birthday'];
     $MEMBER->home_address = $_POST['home_address'];
-    $MEMBER->nic_number = $_POST['nic_number'];
-    $MEMBER->password = md5($_POST['password']);
-    $MEMBER->privacy = $_POST['privacy'];
+    $MEMBER->city = $_POST['city'];
+    $MEMBER->username = $_POST['username'];
+    $MEMBER->rank = $_POST['rank'];
     $MEMBER->job_type = $_POST['job_type'];
+    $MEMBER->privacy = $_POST['privacy'];
+    $MEMBER->is_active = $_POST['active'];
 
     $VALID = new Validator();
     $VALID->check($MEMBER, [

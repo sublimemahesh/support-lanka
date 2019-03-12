@@ -70,9 +70,9 @@ if ($_POST['save']) {
 
         $MEMBER = new Member(NULL);
 
-        $MEMBER->username = $_POST['username'];
-        $MEMBER->name = $_POST['name'];
-        $MEMBER->email = $_POST['email'];
+        $MEMBER->username = $_POST['username'] ;
+        $MEMBER->name = $_POST['name'] ;
+        $MEMBER->email = $_POST['email'] ;
         $MEMBER->contact_number = $_POST['contact_number'];
         $MEMBER->about_me = $_POST['about_me'];
         $MEMBER->city = $_POST['city'];
@@ -80,10 +80,13 @@ if ($_POST['save']) {
         $MEMBER->status = $_POST['status'];
         $MEMBER->date_of_birthday = $_POST['date_of_birthday'];
         $MEMBER->home_address = $_POST['home_address'];
-        $MEMBER->nic_number = $_POST['nic_number'];
+        $MEMBER->nic_number = $_POST['password'];
         $MEMBER->password = md5($_POST['password']);
         $MEMBER->privacy = $_POST['privacy'];
-        $MEMBER->job_type = $_POST['job_type'];
+
+
+        $MEMBER->is_active = $_POST['active'];
+
         $dir_dest = '../../../upload/member/';
 
         $handle = new Upload($_FILES['image']);

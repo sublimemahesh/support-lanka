@@ -47,6 +47,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             <li class="active nav-tabs-active lo-register  ">
                                 <a data-toggle="tab" href="#login" class="color-b">Login</a></li>
                             <li class="nav-tabs-active  lo-register  "><a data-toggle="tab" href="#register1" class="color-b">Register</a></li>
+                            <li><div class="btn btn-facebook btn-lg btn-facebook-btn" id="fb-login"><i class="fa fa-facebook fa-fw"></i> Facebook</div></li>  
+
                         </ul>
                     </div>
                     <div class="tab-content">

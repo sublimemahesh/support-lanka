@@ -1,0 +1,424 @@
+[30-Nov-2018 00:01:00 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:02:04 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:04:51 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:04:51 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 00:05:06 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:05:06 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 00:07:34 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:07:34 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 00:08:17 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:08:17 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 00:09:03 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:09:03 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/portfolio.php on line 16
+[30-Nov-2018 00:22:53 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:23:48 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:24:52 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:27:22 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:27:22 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 00:43:14 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:43:55 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:46:05 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:46:05 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 00:46:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:54:36 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:56:10 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:56:37 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:57:00 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:57:58 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:59:57 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 00:59:57 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 01:00:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 01:00:19 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 01:00:34 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 01:00:34 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 01:00:56 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 01:00:56 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 04:05:44 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 04:05:44 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 04:05:44 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 04:05:45 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[30-Nov-2018 04:41:16 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 04:45:44 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 04:46:30 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[30-Nov-2018 04:46:51 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:21:42 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:23:09 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:25:11 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:25:11 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[01-Dec-2018 00:32:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:33:24 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:36:17 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:37:14 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:37:14 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[01-Dec-2018 00:37:35 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:37:35 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[01-Dec-2018 00:47:22 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:48:08 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:50:52 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:51:38 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:51:38 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[01-Dec-2018 00:57:18 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:58:45 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 00:59:27 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:00:01 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:00:08 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:01:04 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:01:04 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[01-Dec-2018 01:01:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:01:49 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[01-Dec-2018 01:06:21 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:06:50 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:07:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:08:08 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:08:08 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[01-Dec-2018 01:12:30 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:13:59 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:14:46 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:14:46 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[01-Dec-2018 01:19:23 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[01-Dec-2018 01:19:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 01:59:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 02:00:13 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 02:01:26 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 02:01:26 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[03-Dec-2018 02:02:46 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 02:02:46 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/portfolio.php on line 16
+[03-Dec-2018 23:20:25 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:21:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:22:01 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:22:33 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:23:00 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:23:51 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:23:51 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[03-Dec-2018 23:24:32 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:24:32 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[03-Dec-2018 23:29:29 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:30:38 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:35:40 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:37:48 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:37:48 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[03-Dec-2018 23:38:03 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:38:03 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[03-Dec-2018 23:43:32 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:44:24 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:45:20 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[03-Dec-2018 23:45:20 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[03-Dec-2018 23:58:32 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:01:24 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:03:26 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:06:06 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:06:06 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[04-Dec-2018 00:12:24 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:13:07 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:13:48 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:14:12 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:14:12 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[04-Dec-2018 00:18:08 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:18:47 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:33:56 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:35:08 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:35:08 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[04-Dec-2018 00:38:56 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:39:10 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:43:29 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:43:46 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:44:09 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:44:23 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:44:40 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:44:40 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[04-Dec-2018 00:44:57 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 00:44:57 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[04-Dec-2018 09:45:47 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 09:47:16 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 09:50:52 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[04-Dec-2018 09:50:52 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/portfolio.php on line 16
+[05-Dec-2018 01:22:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:23:05 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:23:34 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:25:27 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:25:27 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 01:25:47 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:25:47 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 01:34:33 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:36:55 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:38:54 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:39:55 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:42:41 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:44:23 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:45:12 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:46:33 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:46:42 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:46:46 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:48:34 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:49:53 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:51:08 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:51:08 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 01:52:33 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:52:33 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 01:52:54 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:52:54 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 01:53:13 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 01:53:13 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 02:33:15 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:35:56 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:37:48 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:37:48 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 02:43:21 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:43:40 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:44:34 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:44:55 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:44:55 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 02:45:30 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:45:30 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 02:45:32 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:45:32 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 02:56:54 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:57:53 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:59:25 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 02:59:40 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:00:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:01:23 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:01:23 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 03:01:42 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:01:42 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 03:01:59 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:01:59 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 03:06:29 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:06:48 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:07:00 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:07:26 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:07:26 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 03:07:48 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:07:48 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 03:11:24 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:11:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:12:15 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:13:36 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:13:53 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:14:14 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:14:14 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 03:14:31 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:14:31 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 03:18:03 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:18:44 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:19:20 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:19:32 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:19:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:19:49 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Dec-2018 03:20:01 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Dec-2018 03:20:01 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[07-Dec-2018 23:27:33 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[07-Dec-2018 23:28:22 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[07-Dec-2018 23:28:55 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[07-Dec-2018 23:28:55 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[07-Dec-2018 23:29:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[07-Dec-2018 23:29:49 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/portfolio.php on line 16
+[09-Dec-2018 06:54:51 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[09-Dec-2018 06:57:44 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[09-Dec-2018 06:59:35 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[09-Dec-2018 06:59:36 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[09-Dec-2018 07:02:32 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[09-Dec-2018 07:02:32 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[09-Dec-2018 07:17:31 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[09-Dec-2018 07:17:31 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/award.php on line 16
+[09-Dec-2018 07:29:57 America/New_York] PHP Strict Standards:  Non-static method Member::checkOldPass() should not be called statically in /home/gallnwxt/sites/supportlanka/member/post-and-get/change-password.php on line 7
+[11-Dec-2018 23:39:27 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:39:52 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:40:06 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:40:21 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:40:54 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:40:54 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[11-Dec-2018 23:41:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:41:19 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[11-Dec-2018 23:41:39 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:41:39 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[11-Dec-2018 23:45:18 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:50:40 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:51:04 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:51:23 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Dec-2018 23:51:23 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 00:07:44 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:08:05 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:08:05 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 00:17:15 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:18:37 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:18:56 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:18:56 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 00:26:13 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:26:28 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:26:28 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 00:33:53 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:34:06 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:34:25 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:34:25 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 00:34:59 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:34:59 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 00:43:47 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:44:41 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:45:09 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:45:09 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 00:54:50 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:55:24 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:56:00 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 00:56:00 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:12:57 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:13:31 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:13:31 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:19:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:20:06 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:20:21 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:20:36 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:21:31 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:21:31 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:21:44 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:21:44 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:21:57 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:21:57 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:26:42 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:27:06 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:27:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:27:41 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:27:41 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:27:56 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:27:56 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:31:30 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:34:02 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:35:17 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:35:17 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:44:02 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:44:50 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:46:18 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:46:38 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:47:16 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:47:35 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:47:48 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:48:51 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:48:51 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:49:07 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:49:07 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:49:21 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:49:21 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 01:59:38 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 01:59:39 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:00:11 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:03:19 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:03:19 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 02:08:47 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:09:02 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:09:21 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:09:21 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 02:09:35 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:09:35 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 02:14:05 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:14:34 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:14:50 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:15:04 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:15:04 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 02:15:36 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:15:36 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 02:15:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:15:49 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 02:21:57 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:22:25 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:22:48 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:22:48 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[12-Dec-2018 02:23:10 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[12-Dec-2018 02:23:10 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[14-Dec-2018 08:10:53 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Dec-2018 08:16:21 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Dec-2018 08:22:30 America/New_York] PHP Strict Standards:  Non-static method Helper::randamId() should not be called statically in /home/gallnwxt/sites/supportlanka/member/post-and-get/member.php on line 30
+[14-Dec-2018 08:23:10 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Dec-2018 08:24:17 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Dec-2018 08:26:28 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[13-Jan-2019 02:10:46 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[13-Jan-2019 02:36:16 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[13-Jan-2019 04:09:25 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[13-Jan-2019 04:09:50 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[13-Jan-2019 04:09:50 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Jan-2019 06:53:10 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 06:53:32 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 06:54:09 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 06:58:13 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 06:58:35 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 06:58:53 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 06:59:15 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 06:59:15 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Jan-2019 06:59:25 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 06:59:25 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Jan-2019 07:05:07 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:06:15 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:08:13 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:08:32 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:09:43 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:09:43 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Jan-2019 07:13:40 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:14:12 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:14:38 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:14:38 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Jan-2019 07:15:16 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:17:10 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:22:03 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:23:01 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:23:21 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:24:08 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:24:08 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Jan-2019 07:24:35 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:24:35 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Jan-2019 07:27:29 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:28:07 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:28:07 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Jan-2019 07:29:24 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:31:23 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:31:41 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:32:06 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 07:32:06 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Jan-2019 07:50:52 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 08:06:54 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 08:07:10 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[21-Jan-2019 08:07:10 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[14-Feb-2019 10:43:47 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Feb-2019 10:47:20 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Feb-2019 10:48:44 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Feb-2019 10:50:45 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Feb-2019 10:51:17 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Feb-2019 10:52:55 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[14-Feb-2019 10:52:55 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[16-Feb-2019 06:14:18 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:17:32 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:19:56 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:23:38 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:25:47 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:25:47 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[16-Feb-2019 06:27:12 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:27:12 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[16-Feb-2019 06:28:35 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:30:13 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:30:13 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[16-Feb-2019 06:34:59 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:36:29 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:36:29 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[16-Feb-2019 06:38:08 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[16-Feb-2019 06:38:08 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[21-Feb-2019 00:22:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Mar-2019 01:26:33 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Mar-2019 01:32:09 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Mar-2019 01:32:09 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[05-Mar-2019 01:33:03 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[05-Mar-2019 01:33:03 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[11-Mar-2019 02:44:46 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 02:46:49 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 02:47:51 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 02:47:51 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[11-Mar-2019 05:03:44 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 05:04:00 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 05:04:14 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 05:04:21 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 05:08:50 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 05:31:36 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 05:32:42 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 05:32:42 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[11-Mar-2019 06:14:38 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 06:23:27 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 06:28:07 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
+[11-Mar-2019 06:28:07 America/New_York] PHP Notice:  Undefined index: sort in /home/gallnwxt/sites/supportlanka/member/post-and-get/experience.php on line 16
+[11-Mar-2019 06:32:01 America/New_York] PHP Strict Standards:  Non-static method Member::authenticate() should not be called statically in /home/gallnwxt/sites/supportlanka/member/auth.php on line 7
