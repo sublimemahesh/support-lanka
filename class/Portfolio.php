@@ -8,6 +8,7 @@
 class Portfolio {
 
     public $id;
+    public $member;
     public $skill_detail;
     public $title;
     public $date;
@@ -17,13 +18,14 @@ class Portfolio {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`skill_detail`,`title`,`date`,`description`,`sort` FROM `portfolio` WHERE `id`=" . $id;
+            $query = "SELECT  * FROM `portfolio` WHERE `id`=" . $id;
 
             $db = new Database();
 
             $result = mysql_fetch_array($db->readQuery($query));
 
             $this->id = $result['id'];
+            $this->member = $result['member'];
             $this->skill_detail = $result['skill_detail'];
             $this->title = $result['title'];
             $this->date = $result['date'];
@@ -36,7 +38,8 @@ class Portfolio {
 
     public function create() {
 
-        $query = "INSERT INTO `portfolio` (`skill_detail`, `title`, `date`, `description`, `sort`) VALUES  ('"
+        $query = "INSERT INTO `portfolio` (`member`,`skill_detail`, `title`, `date`, `description`, `sort`) VALUES  ('"
+                . $this->member . "','"
                 . $this->skill_detail . "','"
                 . $this->title . "','"
                 . $this->date . "','"
@@ -143,6 +146,22 @@ class Portfolio {
     public function GetPortfolioById($id) {
 
         $query = "SELECT * FROM `portfolio` WHERE `id` = '" . $id . "' ORDER BY `sort` ASC";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
+    public function GetPortfolioMemberId($id) {
+
+        $query = "SELECT * FROM `portfolio` WHERE `member` = '" . $id . "' ORDER BY `sort` ASC";
 
         $db = new Database();
 

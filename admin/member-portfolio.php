@@ -7,7 +7,6 @@ if ($id = isset($_GET['id'])) {
     $id = $_GET['id'];
 }
 $MEMBER = new Member($id);
-$SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +26,8 @@ $SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
         <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet">
         <link href="css/themes/all-themes.css" rel="stylesheet" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
         <!-- Bootstrap Spinner Css -->
         <link href="plugins/jquery-spinner/css/bootstrap-spinner.css" rel="stylesheet">
     </head>
@@ -82,23 +83,18 @@ $SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
                                                 <div class="form-group">
                                                     <div class="form-line">
 
-                                                        <div class="">
-                                                            <select name="skill-detail" class="form-control">
-                                                                <option value=""> -- Please select your skill -- </option>
-                                                                <?php
-                                                                $SKILLDETAILS = new SkillDetail(Null);
-                                                                foreach ($SKILLDETAILS->GetSkillByMember($_SESSION["id"]) as $skill_d) {
-                                                                    $SKILL = new Skill($skill_d['skill']);
-                                                                    if ($skill_d['id'] == $selectedSkill) {
-                                                                        echo '<option selected value="' . $skill_d['id'] . '">' . $SKILL->name . '</option>';
-                                                                    } else {
-                                                                        echo '<option value="' . $skill_d['id'] . '">' . $SKILL->name . '</option>';
-                                                                    }
-                                                                }
+                                                        <select name="skill-detail" class="form-control">
+                                                            <?php
+                                                            $SKILL_DETAILS = new SkillDetail(NULL);
+                                                            foreach ($SKILL_DETAILS->GetSkillByMember($id) as $skill_d) {
+                                                                $SKILL = new Skill($skill_d['skill']);
                                                                 ?>
-                                                            </select>
-                                                        </div>                                                              
+                                                                <option value="<?php echo $skill_d['id'] ?>"><?php echo $SKILL->name ?> </option>
+                                                                <?php
+                                                            }
+                                                            ?>
 
+                                                        </select> 
                                                     </div>
                                                 </div>
                                             </div>
@@ -110,7 +106,7 @@ $SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
                                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <input type="text"  class="form-control" name="title" />
+                                                        <input type="text"  class="form-control" name="title" placeholder="Title" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -134,7 +130,7 @@ $SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
                                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <input type="date"  class="form-control" name="date" />
+                                                        <input type="text"  class="form-control datepicker" name="date" placeholder="Select the date"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -156,7 +152,7 @@ $SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-12 text-center" style="margin-top: 19px;">
-                                                <input type="hidden" value="<?php echo $SKILL_BY_MEMBER ?>" name="member" id="member">
+                                                <input type="hidden" value="<?php echo $id ?>" name="member" id="member">
                                                 <input type="submit" class="btn btn-info" id="btn-submit" value="ADD" name="add-portfolio">
                                             </div>
                                         </div>
@@ -169,36 +165,73 @@ $SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
                             <div class="body">
                                 <div class="header">
                                     <h2 class="text-center">
-                                       Member Portfolio
+                                        Member Portfolio
                                     </h2> 
-                                </div> 
-                                <div class="row clearfix">
-                                    <?php
-                                    foreach ($PORTFOLIYO = Portfolio::GetPortfolioByMember($MEMBER->id) as $portfolio) {
-                                        ?>
-                                        <div class="col-md-4" id="div_<?php echo $portfolio['id']; ?>">
-
-                                            <div><?php echo $portfolio['title']; ?></div> 
-
-                                            <div class="top-10"> 
-                                                <a href="member-portfolio.php?id=<?php echo $portfolio['id']; ?>" class="op-link btn btn-sm btn-info">
-                                                    <i class="glyphicon glyphicon-pencil"></i>
-                                                </a> 
-
-                                                |  
-                                                <a href="#" class="delete-portfolio btn btn-sm btn-danger" data-id="<?php echo $portfolio['id'];?>" >
-                                                    <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
-                                                </a>
-
-                                            </div>
-                                        </div>
-                                        <?php
-                                    }
-                                    ?> 
-
                                 </div>
 
-                            </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                        <thead>
+                                            <tr>   
+                                                <th>Industry</th> 
+                                                <th>Skill Name</th>
+                                                <th>Percentage</th> 
+                                                <th>Description</th>
+                                                <th class="text-center">Options</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $PORTFILIO = new Portfolio(NULL);
+                                            foreach ($PORTFILIO->GetPortfolioMemberId($id) as $portfolio) {
+                                                ?>
+                                                <tr id="div_<?php echo $portfolio['id']; ?>">
+                                                    <td>
+                                                        <?php
+                                                        $SKILL_2 = new SkillDetail($portfolio['skill_detail']);
+                                                        echo $SKILL_2->skill;
+                                                        ?>
+                                                    </td>          
+
+                                                    <td> 
+
+                                                    </td> 
+
+                                                    <td>
+
+                                                    </td>
+                                                    <td>
+
+                                                    </td>
+
+                                                    <td class="text-center"> 
+                                                        <a href="edit-skill-by-member.php?id=<?php echo $SKILL->id ?>" class="op-link btn btn-sm btn-info">
+                                                            <i class="glyphicon glyphicon-pencil"></i>
+                                                        </a> 
+
+                                                        |  
+                                                        <a href="#" class="delete-member-skill btn btn-sm btn-danger" member-id="<?php echo $MEMBER->id ?>" skill-id="<?php echo $skill_details['id']; ?>">
+                                                            <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <?php
+                                            }
+                                            ?>   
+                                        </tbody>
+
+                                        <tfoot>
+                                            <tr>
+                                                <th>Industry</th> 
+                                                <th>Skill Name</th>
+                                                <th>Percentage</th> 
+                                                <th>Description</th>
+                                                <th class="text-center">Options</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>  
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -213,7 +246,7 @@ $SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
         <script src="plugins/jquery-spinner/js/jquery.spinner.js"></script>
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
-   <script src="plugins/sweetalert/sweetalert.min.js"></script>
+        <script src="plugins/sweetalert/sweetalert.min.js"></script>
         <script src="delete/js/portfoliyo.js" type="text/javascript"></script>
 
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
@@ -243,6 +276,14 @@ $SKILL_BY_MEMBER = SkillDetail::GetSkillByMember($id);
 
             });
         </script>
+
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $(".datepicker").datepicker({dateFormat: 'yy-mm-dd'});
+            });
+        </script> 
     </body>
 
 </html>

@@ -9,6 +9,7 @@ if (isset($_POST['add-portfolio'])) {
     $PORTFILIO = New Portfolio(NULL);
     $VALID = new Validator();
 
+    $PORTFILIO->member = $_POST['member'];
     $PORTFILIO->skill_detail = $_POST['skill-detail'];
     $PORTFILIO->title = $_POST['title'];
     $PORTFILIO->image_name = $_POST['image_name'];

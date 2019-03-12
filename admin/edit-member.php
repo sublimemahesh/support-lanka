@@ -160,14 +160,26 @@ $MEMBER = new Member($id);
                                                 <div class="form-line p-top ">
                                                     <label for="Districts" class="hidden-lg hidden-md">Districts</label>
                                                     <select class="form-control" type="text" id="district" autocomplete="off" name="district">
-                                                        <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please  Select Your District -- </option>
-                                                        <?php foreach (District::all() as $key => $district) {
-                                                            ?>
-                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
 
-                                                            <?php
+                                                        <?php
+                                                        $CITY = new City(NULL);
+                                                        $DISTRICT = new District(NULL);
+                                                         
+                                                        foreach ($CITY->getDistrictByCityId($MEMBER->city) as $key => $district) {
+                                                            
+                                                            foreach ($DISTRICT->all() as $district_all) {
+                                                                if ($district['district'] == $district_all['id']) {
+                                                                    ?>
+                                                                    <option value="<?php echo $district_all['id']; ?>" selected=""><?php echo $district_all['name']; ?></option>
+                                                                    <?php
+                                                                } else {
+                                                                    ?>
+                                                                    <option value="<?php echo $district_all['id']; ?>"><?php echo $district_all['name']; ?></option>
+                                                                    <?php
+                                                                }
+                                                            }
                                                         }
-                                                        ?>
+                                                        ?> 
                                                     </select>
                                                 </div>
                                             </div>
@@ -183,7 +195,20 @@ $MEMBER = new Member($id);
                                                 <div class="form-line">
                                                     <label for="City" class="hidden-lg hidden-md">City</label>
                                                     <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" >
-                                                        <option value=""> -- Please Select a District First -- </option>
+                                                        <?php
+                                                        $CITY = new City(NULL);
+                                                        foreach ($CITY->all() as $key => $city) {
+                                                            if ($city['id'] == $MEMBER->city) {
+                                                                ?>
+                                                                <option value="<?php echo $city['id']; ?>" selected=""><?php echo $city['name']; ?></option>
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <option value="<?php echo $city['id']; ?>" ><?php echo $city['name']; ?></option>
+                                                                <?php
+                                                            }
+                                                        }
+                                                        ?>
                                                     </select>
                                                 </div>
                                             </div>
@@ -210,12 +235,12 @@ $MEMBER = new Member($id);
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
-                                                <div class="form-line p-top ">
+                                                <div class="  p-top ">
                                                     <label for="Profile_image" class="hidden-lg hidden-md">Profile Image</label>
                                                     <input type="file" id="image" class="form-control" name="image" value="<?php echo $MEMBER->profile_picture; ?>">
                                                     <?php if ($MEMBER->profile_picture == NULL) {
                                                         ?>
-                                                        <img src="../upload/member/member.png">
+                                                        <img src="../upload/member/member.png" style="width:15%;" class="img-thumbnail">
                                                         <?php
                                                     } else {
                                                         ?>
@@ -224,7 +249,7 @@ $MEMBER = new Member($id);
                                                         <?php
                                                     }
                                                     ?>
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -295,8 +320,24 @@ $MEMBER = new Member($id);
                                                     <label for="job type" class="hidden-lg hidden-md">job type</label>
                                                     <select class="form-control  "  type="text"   name="job_type" >
                                                         <option value="0" >-- Please Select the job type</option>
-                                                        <option value="PartTime">Part type</option>
-                                                        <option value="FullTime">Full Time</option>
+                                                        <?php
+                                                        if ($MEMBER->job_type == 1) {
+                                                            ?>
+                                                            <option value="1" selected="">Part Time</option>
+                                                            <option value="2">Full Time</option>
+                                                            <?php
+                                                        } else if ($MEMBER->job_type == 2) {
+                                                            ?>
+                                                            <option value="2" selected="">Full Time</option> 
+                                                            <option value="1" >Part Time</option>
+                                                            <?php
+                                                        } else {
+                                                            ?>
+                                                            <option value="1">Part Time</option>
+                                                            <option value="2">Full Time</option>
+                                                            <?php
+                                                        }
+                                                        ?>
                                                     </select>
                                                 </div>
                                             </div>

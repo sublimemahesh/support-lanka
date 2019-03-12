@@ -43,7 +43,7 @@ if (isset($_POST['edit-skill'])) {
 
     $SKILL = New Skill($_POST['id']);
     $VALID = new Validator();
-
+  
     $SKILL->name = $_POST['name'];
 
     $VALID->check($SKILL, [

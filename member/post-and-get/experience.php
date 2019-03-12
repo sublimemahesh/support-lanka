@@ -15,8 +15,7 @@ if (isset($_POST['add-experience'])) {
     $EXPERIENCE->duration = $_POST['duration'];
     $EXPERIENCE->sort = $_POST['sort'];
 
-    $VALID->check($EXPERIENCE, [
-        'description' => ['required' => TRUE],
+    $VALID->check($EXPERIENCE, [ 
         'duration' => ['required' => TRUE],
         'working_place' => ['required' => TRUE],
     ]);

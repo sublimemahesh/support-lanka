@@ -22,6 +22,7 @@ include_once(dirname(__FILE__) . './auth.php');
         <link href="css/themes/all-themes.css" rel="stylesheet" />
         <!-- Bootstrap Spinner Css -->
         <link href="plugins/jquery-spinner/css/bootstrap-spinner.css" rel="stylesheet">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     </head>
 
     <body class="theme-red">
@@ -175,13 +176,13 @@ include_once(dirname(__FILE__) . './auth.php');
                             <!--date_of_birthday-->
                             <div class="row clearfix">
                                 <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
-                                    <label for="date_of_birthday">Date_Of_Birthday</label>
+                                    <label for="date_of_birthday">Date Of Birthday</label>
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 p-bottom">
                                     <div class="form-group">
                                         <div class="form-line">
-                                            <label for="date_of_birthday" class="hidden-lg hidden-md">Date_Of_Birthday</label>
-                                            <input type="date" id="date_of_birthday" class="form-control" placeholder="Enter Date Of Birthday" autocomplete="off" name="date_of_birthday" >
+                                            <label for="date_of_birthday" class="hidden-lg hidden-md">Date Of Birthday</label>
+                                            <input type="text" id="date_of_birthday" class="form-control datepicker" placeholder="Enter Date Of Birthday" autocomplete="off" name="date_of_birthday" >
                                         </div>
                                     </div>
                                 </div>
@@ -291,7 +292,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                     <div class="form-group">
-                                        <input class="filled-in chk-col-pink" type="checkbox"  name="active" value="1" id="rememberme" />
+                                        <input class="filled-in chk-col-pink" type="checkbox"  name="is_active" value="1" id="rememberme" />
                                         <label for="rememberme" style="font-size: 20px;">Active</label>
                                     </div>
                                 </div> 
@@ -302,11 +303,10 @@ include_once(dirname(__FILE__) . './auth.php');
 
                                 </div>  
                                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                    <input type="hidden" name="status" value="1"/>
                                     <div class="btn btn-primary m-t-15 waves-effect  pull-left" id="btnSubmit">Add member</div>
-
-                                    <input type="hidden" name="save" value="save"/>
                                     <div class=" text-danger btn-padding pull-left error-mess" id="message" ></div> 
+                                    <input type="hidden" name="save" value="save"/>
+                                    <input type="hidden" name="status" value="1"/>
                                 </div>
                             </div> 
                         </form> 
@@ -326,7 +326,7 @@ include_once(dirname(__FILE__) . './auth.php');
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script src="js/create-member.js" type="text/javascript"></script>
         <script src="js/city.js" type="text/javascript"></script>
-
+        <script src="plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
         <script>
             tinymce.init({
                 selector: "#about_me",
@@ -352,6 +352,12 @@ include_once(dirname(__FILE__) . './auth.php');
 
             });
         </script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $(".datepicker").datepicker({dateFormat: 'yy-mm-dd'});
+            });
+        </script> 
     </body>
 
 </html>

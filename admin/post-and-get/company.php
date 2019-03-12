@@ -7,22 +7,22 @@ if (isset($_POST['create_company'])) {
     $COMPANY = new Company(NULL);
     $VALID = new Validator();
 
-    $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
+    $password = md5($_POST['password']);
 
-    $COMPANY->name = filter_input(INPUT_POST, 'name');
-    $COMPANY->industry = filter_input(INPUT_POST, 'industry');
-    $COMPANY->city = filter_input(INPUT_POST, 'city');
-    $COMPANY->email = filter_input(INPUT_POST, 'email');
-    $COMPANY->company_register_number = filter_input(INPUT_POST, 'company_register_number');
-    $COMPANY->address = filter_input(INPUT_POST, 'address');
-    $COMPANY->since = filter_input(INPUT_POST, 'since');
-    $COMPANY->team_size = filter_input(INPUT_POST, 'team_size');
-    $COMPANY->about = filter_input(INPUT_POST, 'about');
-    $COMPANY->contact_number = filter_input(INPUT_POST, 'contact_number');
-    $COMPANY->map = filter_input(INPUT_POST, 'map');
-    $COMPANY->status = filter_input(INPUT_POST, 'status');
-    $COMPANY->username = filter_input(INPUT_POST, 'username');
-    $COMPANY->rank = filter_input(INPUT_POST, 'rank');
+    $COMPANY->name = $_POST['name'];
+    $COMPANY->industry = $_POST['industry'];
+    $COMPANY->city = $_POST['city'];
+    $COMPANY->email = $_POST['email'];
+    $COMPANY->company_register_number = $_POST['company_register_number'];
+    $COMPANY->address = $_POST['address'];
+    $COMPANY->since = $_POST['since'];
+    $COMPANY->team_size = $_POST['team_size'];
+    $COMPANY->about = $_POST['about'];
+    $COMPANY->contact_number = $_POST['contact_number'];
+    $COMPANY->map = $_POST['map'];
+    $COMPANY->status = $_POST['status'];
+    $COMPANY->username = $_POST['username'];
+    $COMPANY->rank = $_POST['rank'];
     $COMPANY->password = $password;
 
     $dir_dest = '../../upload/company/';
@@ -139,20 +139,20 @@ if (isset($_POST['update_company'])) {
     $COMPANY = new Company($_POST['id']);
 
     $COMPANY->logo_image = $imgName;
-    $COMPANY->name = mysql_real_escape_string($_POST['name']);
-    $COMPANY->industry = filter_input(INPUT_POST, 'industry');
-    $COMPANY->city = mysql_real_escape_string($_POST['city']);
-    $COMPANY->company_register_number = filter_input(INPUT_POST, 'company_register_number');
-    $COMPANY->address = filter_input(INPUT_POST, 'address');
-    $COMPANY->since = filter_input(INPUT_POST, 'since');
-    $COMPANY->team_size = filter_input(INPUT_POST, 'team_size');
-    $COMPANY->about = filter_input(INPUT_POST, 'about');
-    $COMPANY->contact_number = filter_input(INPUT_POST, 'contact_number');
-    $COMPANY->email = mysql_real_escape_string($_POST['email']);
-    $COMPANY->map = mysql_real_escape_string($_POST['map']);
-    $COMPANY->username = filter_input(INPUT_POST, 'username');
-    $COMPANY->rank = filter_input(INPUT_POST, 'rank');
-    $COMPANY->status = mysql_real_escape_string($_POST['active']);
+    $COMPANY->name = $_POST['name'];
+    $COMPANY->industry = $_POST['industry'];
+    $COMPANY->city = $_POST['city'];
+    $COMPANY->email = $_POST['email'];
+    $COMPANY->company_register_number = $_POST['company_register_number'];
+    $COMPANY->address = $_POST['address'];
+    $COMPANY->since = $_POST['since'];
+    $COMPANY->team_size = $_POST['team_size'];
+    $COMPANY->about = $_POST['about'];
+    $COMPANY->contact_number = $_POST['contact_number'];
+    $COMPANY->map = $_POST['map'];
+    $COMPANY->status = $_POST['active'];
+    $COMPANY->username = $_POST['username'];
+    $COMPANY->rank = $_POST['rank'];
 
     $VALID = new Validator();
 

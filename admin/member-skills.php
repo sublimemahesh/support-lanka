@@ -142,40 +142,78 @@ $MEMBER = new Member($id);
 
                                 </form> 
                             </div>
+
+
                             <div class="body">
                                 <div class="header">
                                     <h2 class="text-center">
-                                       Members Skills
+                                        Members Skills
                                     </h2> 
                                 </div> 
-                                <div class="row clearfix">
-                                    <?php
-                                    foreach (SkillDetail::GetSkillByMember($MEMBER->id) as $key => $skill_details) {
-                                        foreach (Skill::GetSkillById($skill_details["skill"]) as $skill) {
-                                            ?>
-                                            <div class="col-md-4" id="div_<?php echo $skill['id']; ?>">
-
-                                                <div><?php echo $skill['name']; ?></div> 
-
-                                                <div class="top-10"> 
-                                                    <a href="edit-skill.php?id=<?php echo $skill['id']; ?>" class="op-link btn btn-sm btn-info">
-                                                        <i class="glyphicon glyphicon-pencil"></i>
-                                                    </a> 
-
-                                                    |  
-                                                    <a href="#" class="delete-member-skill btn btn-sm btn-danger" member-id="<?php echo $MEMBER->id?>"skill-id="<?php echo $skill['id']; ?>">
-                                                        <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
-                                                    </a>
-
-                                                </div>
-                                            </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                        <thead>
+                                            <tr>   
+                                                <th>Industry</th> 
+                                                <th>Skill Name</th>
+                                                <th>Percentage</th> 
+                                                <th>Description</th>
+                                                <th class="text-center">Options</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
                                             <?php
-                                        }
-                                    }
-                                    ?> 
+                                            foreach (SkillDetail::GetSkillByMember($MEMBER->id) as $key => $skill_details) {
+                                                ?>
+                                                <tr id="div_<?php echo $skill_details['id']; ?>">
+                                                    <td>
+                                                        <?php
+                                                        $SKILL = new Skill($skill_details['skill']);
+                                                        $INDUSTRY = new Industry($SKILL->industry);
+                                                        echo $INDUSTRY->name;
+                                                        ?> 
+                                                    </td>          
 
+                                                    <td> 
+                                                        <?php
+                                                        echo $SKILL->name;
+                                                        ?>
+                                                    </td> 
+
+                                                    <td>
+                                                        <?php echo $skill_details['percentage'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $skill_details['description'] ?>
+                                                    </td>
+
+                                                    <td class="text-center"> 
+                                                        <a href="edit-skill-by-member.php?id=<?php echo $SKILL->id ?>" class="op-link btn btn-sm btn-info">
+                                                            <i class="glyphicon glyphicon-pencil"></i>
+                                                        </a> 
+
+                                                        |  
+                                                        <a href="#" class="delete-member-skill btn btn-sm btn-danger" member-id="<?php echo $MEMBER->id ?>" skill-id="<?php echo $skill_details['id']; ?>">
+                                                            <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <?php
+                                            }
+                                            ?>   
+                                        </tbody>
+
+                                        <tfoot>
+                                            <tr>
+                                                <th>Industry</th> 
+                                                <th>Skill Name</th>
+                                                <th>Percentage</th> 
+                                                <th>Description</th>
+                                                <th class="text-center">Options</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -189,8 +227,8 @@ $MEMBER = new Member($id);
         <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
         <script src="plugins/node-waves/waves.js"></script>
         <script src="plugins/jquery-spinner/js/jquery.spinner.js"></script>
-        
-         <script src="plugins/sweetalert/sweetalert.min.js"></script>
+
+        <script src="plugins/sweetalert/sweetalert.min.js"></script>
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>

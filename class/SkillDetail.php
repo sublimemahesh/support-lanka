@@ -127,7 +127,7 @@ class SkillDetail {
     public function GetSkillByMember($member) {
 
         $query = "SELECT * FROM `skill_details` WHERE `member` = '" . $member . "' ORDER BY `sort` ASC";
-
+        
         $db = new Database();
 
         $result = $db->readQuery($query);

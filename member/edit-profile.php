@@ -138,7 +138,7 @@ $MEMBER = new Member($_SESSION['id']);
 
                                                                         foreach ($CITY->getDistrictByCityId($MEMBER->city) as $key => $district) {
                                                                             foreach ($DISTRICT->all() as $district_all) {                                                                               
-                                                                                if ($district['id'] == $district_all['id']) {
+                                                                                if ($district['district'] == $district_all['id']) {
                                                                                     ?>
                                                                                     <option value="<?php echo $district_all['id']; ?>" selected=""><?php echo $district_all['name']; ?></option>
                                                                                     <?php

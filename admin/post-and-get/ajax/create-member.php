@@ -28,11 +28,11 @@ if ($_POST['save']) {
         $response['message'] = "Please enter your contact number.";
         echo json_encode($response);
         exit();
-//    } else if (empty($_POST['nic_number'])) {
-//        $response['status'] = 'error';
-//        $response['message'] = "Please enter your nic number.";
-//        echo json_encode($response);
-//        exit();
+    } else if (empty($_POST['is_active'])) {
+        $response['status'] = 'error';
+        $response['message'] = "Please member is active.";
+        echo json_encode($response);
+        exit();
 //    } else if (empty($_POST['home_address'])) {
 //        $response['status'] = 'error';
 //        $response['message'] = "Please enter your home address.";
@@ -70,9 +70,9 @@ if ($_POST['save']) {
 
         $MEMBER = new Member(NULL);
 
-        $MEMBER->username = $_POST['username'] ;
-        $MEMBER->name = $_POST['name'] ;
-        $MEMBER->email = $_POST['email'] ;
+        $MEMBER->username = $_POST['username'];
+        $MEMBER->name = $_POST['name'];
+        $MEMBER->email = $_POST['email'];
         $MEMBER->contact_number = $_POST['contact_number'];
         $MEMBER->about_me = $_POST['about_me'];
         $MEMBER->city = $_POST['city'];
@@ -83,9 +83,8 @@ if ($_POST['save']) {
         $MEMBER->nic_number = $_POST['password'];
         $MEMBER->password = md5($_POST['password']);
         $MEMBER->privacy = $_POST['privacy'];
+        $MEMBER->is_active = $_POST['is_active']; 
 
-
-        $MEMBER->is_active = $_POST['active'];
 
         $dir_dest = '../../../upload/member/';
 
