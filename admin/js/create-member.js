@@ -1,6 +1,6 @@
 
 jQuery(document).ready(function () {
-    
+
     $("#btnSubmit").click(function (e) {
         tinymce.triggerSave();
         $('#message').hide();
@@ -18,6 +18,13 @@ jQuery(document).ready(function () {
                     $('#message').show();
                     return false;
                 } else if (result.status === 'success') {
+                    swal({
+                        title: "Success!",
+                        text: "Member has created..!",
+                        type: 'success',
+                        timer: 8000,
+                        showConfirmButton: false
+                    });
                     window.location.replace("create-member.php");
                 }
             },

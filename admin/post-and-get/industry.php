@@ -10,7 +10,7 @@ if (isset($_POST['add-industry'])) {
     $VALID = new Validator();
 
     $INDUSTRY->portfolio = $_POST['id'];
-    $INDUSTRY->name = mysql_real_escape_string($_POST['name']);
+    $INDUSTRY->name = $_POST['name'];
 
     $dir_dest = '../../upload/industry/';
     $dir_dest_thumb = '../../upload/industry/thumb/';
@@ -135,7 +135,7 @@ if (isset($_POST['edit-industry'])) {
     $INDUSTRY = new Industry($_POST['id']);
 
     $INDUSTRY->image_name = $_POST['oldImageName'];
-    $INDUSTRY->name = mysql_real_escape_string($_POST['name']);
+    $INDUSTRY->name = $_POST['name'];
 
     $VALID = new Validator();
     $VALID->check($INDUSTRY, [

@@ -18,7 +18,7 @@ if (isset($_POST['add-award'])) {
     $VALID->check($AWARD, [
         'title' => ['required' => TRUE],
         'duration' => ['required' => TRUE],
-        'description' => ['required' => TRUE],
+       
     ]);
 
     if ($VALID->passed()) {
@@ -54,7 +54,7 @@ if (isset($_POST['edit-award'])) {
 
     $VALID->check($AWARD, [
         'title' => ['required' => TRUE],
-        'description' => ['required' => TRUE],
+        
     ]);
 
     if ($VALID->passed()) {

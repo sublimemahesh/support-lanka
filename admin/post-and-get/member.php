@@ -8,19 +8,22 @@ if (isset($_POST['create'])) {
     $MEMBER = new Member(NULL);
     $VALID = new Validator();
 
-    $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
+    $password = md5($_POST['password']);
 
-    $MEMBER->name = filter_input(INPUT_POST, 'name');
-    $MEMBER->email = filter_input(INPUT_POST, 'email');
-    $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
-    $MEMBER->date_of_birthday = filter_input(INPUT_POST, 'date_of_birthday');
-    $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
-    $MEMBER->about_me = filter_input(INPUT_POST, 'about_me');
-    $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
-    $MEMBER->city = filter_input(INPUT_POST, 'city');
-    $MEMBER->username = filter_input(INPUT_POST, 'username');
-    $MEMBER->status = filter_input(INPUT_POST, 'status');
-    $MEMBER->rank = filter_input(INPUT_POST, 'rank');
+    $MEMBER->name = $_POST['name'];
+    $MEMBER->email = $_POST['email'];
+    $MEMBER->nic_number = $_POST['nic_number'];
+    $MEMBER->date_of_birthday = $_POST['date_of_birthday'];
+    $MEMBER->contact_number = $_POST['contact_number'];
+    $MEMBER->about_me = $_POST['about_me'];
+    $MEMBER->home_address = $_POST['home_address'];
+    $MEMBER->city = $_POST['city'];
+    $MEMBER->privacy = $_POST['privacy'];
+    $MEMBER->job_type = $_POST['job_type'];
+    $MEMBER->contact_number = $_POST['contact_number'];
+    $MEMBER->username = $_POST['username'];
+    $MEMBER->status = $_POST['status'];
+    $MEMBER->rank = $_POST['rank'];
     $MEMBER->password = $password;
 
     $dir_dest = '../../upload/member/';
@@ -105,9 +108,9 @@ if (isset($_POST['update'])) {
 
     $MEMBER = new Member($_POST['id']);
 
-    $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
+    $password = md5($_POST['password']);
     $MEMBER->profile_picture = $imgName;
-    $MEMBER->name = filter_input(INPUT_POST, 'name');
+    $MEMBER->name = $_POST['name'];
     $MEMBER->password = $password;
     $MEMBER->email = $_POST['email'];
     $MEMBER->nic_number = $_POST['nic_number'];

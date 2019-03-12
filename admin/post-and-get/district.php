@@ -9,10 +9,10 @@ if (isset($_POST['add-district'])) {
     $DISTRICT = new District(NULL);
     $VALID = new Validator();
 
-    $DISTRICT->name = filter_input(INPUT_POST, 'name');
+    $DISTRICT->name = $_POST['name'];
 
     $VALID->check($DISTRICT, ['name' =>
-            ['required' => TRUE]
+        ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
@@ -44,7 +44,7 @@ if (isset($_POST['edit-district'])) {
 
     $VALID = new Validator();
     $VALID->check($DISTRICT, ['name' =>
-            ['required' => TRUE]
+        ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {

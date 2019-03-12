@@ -10,9 +10,9 @@ if (isset($_POST['create-comment'])) {
     date_default_timezone_set('Asia/Colombo');
 
     $FEEDBACK->date_time = date("Y-m-d H:i:s");
-    $FEEDBACK->name = filter_input(INPUT_POST, 'name');
-    $FEEDBACK->comment = filter_input(INPUT_POST, 'comment');
-    $FEEDBACK->is_active = filter_input(INPUT_POST, 'active');
+    $FEEDBACK->name = $_POST['name'];
+    $FEEDBACK->comment = $_POST['comment'];
+    $FEEDBACK->is_active = $_POST['active'];
 
     $dir_dest = '../../upload/feedback/';
 
@@ -94,10 +94,11 @@ if (isset($_POST['update'])) {
     $FEEDBACK = new FeedBack($_POST['id']);
 
     $FEEDBACK->image_name = $_POST['oldImageName'];
-    $FEEDBACK->name = filter_input(INPUT_POST, 'name');
-    $FEEDBACK->title = filter_input(INPUT_POST, 'title');
-    $FEEDBACK->comment = filter_input(INPUT_POST, 'comment');
-    $FEEDBACK->is_active = filter_input(INPUT_POST, 'active');
+
+    $FEEDBACK->name = $_POST['name'];
+    $FEEDBACK->title = $_POST['title'];
+    $FEEDBACK->comment = $_POST['comment'];
+    $FEEDBACK->is_active = $_POST['active'];
 
     $VALID = new Validator();
     $VALID->check($FEEDBACK, [

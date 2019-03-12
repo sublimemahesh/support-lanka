@@ -8,7 +8,7 @@ if (isset($_POST['create'])) {
     $VALID = new Validator();
 
     $PORTFILIO_PHOTO->portfolio = $_POST['id'];
-    $PORTFILIO_PHOTO->caption = mysql_real_escape_string($_POST['caption']);
+    $PORTFILIO_PHOTO->caption = $_POST['caption'];
 
     $dir_dest = '../../upload/portfolio/';
     $dir_dest_thumb = '../../upload/portfolio/thumb/';
@@ -136,7 +136,7 @@ if (isset($_POST['update'])) {
     $PORTFILIO_PHOTOS = new PortfolioPhoto($_POST['id']);
 
     $PORTFILIO_PHOTOS->image_name = $_POST['oldImageName'];
-    $PORTFILIO_PHOTOS->caption = mysql_real_escape_string($_POST['caption']);
+    $PORTFILIO_PHOTOS->caption = $_POST['caption'];
 
     $VALID = new Validator();
     $VALID->check($PORTFILIO_PHOTOS, [
