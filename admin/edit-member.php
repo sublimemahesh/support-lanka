@@ -213,7 +213,18 @@ $MEMBER = new Member($id);
                                                 <div class="form-line p-top ">
                                                     <label for="Profile_image" class="hidden-lg hidden-md">Profile Image</label>
                                                     <input type="file" id="image" class="form-control" name="image" value="<?php echo $MEMBER->profile_picture; ?>">
-                                                    <img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+                                                    <?php if ($MEMBER->profile_picture == NULL) {
+                                                        ?>
+                                                        <img src="../upload/member/member.png">
+                                                        <?php
+                                                    } else {
+                                                        ?>
+                                                        <img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -249,6 +260,7 @@ $MEMBER = new Member($id);
                                                 <div class="form-line">
                                                     <label for="Privacy" class="hidden-lg hidden-md">Privacy</label>
                                                     <select class="form-control  "  type="text"   name="privacy" >
+
                                                         <option value="0" >-- Please Select the Privacy</option>
                                                         <?php
                                                         if ($MEMBER->privacy == 1) {
@@ -259,11 +271,14 @@ $MEMBER = new Member($id);
                                                             <?php
                                                         } else if ($MEMBER->privacy == 2) {
                                                             ?>
-                                                            <option value="2" selected="">Private</option> 
+                                                            <option value="2" selected="">Private</option>
+
                                                             <option value="1"  >Public</option>
                                                             <?php
                                                         }
-                                                        ?> 
+                                                        ?>
+
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -280,23 +295,8 @@ $MEMBER = new Member($id);
                                                     <label for="job type" class="hidden-lg hidden-md">job type</label>
                                                     <select class="form-control  "  type="text"   name="job_type" >
                                                         <option value="0" >-- Please Select the job type</option>
-                                                        <?php
-                                                        if ($MEMBER->job_type == 'PartTime') {
-                                                            ?>
-                                                            <option value="PartTime" selected="">Part type</option>
-
-                                                            <option value="FullTime">Full Time</option>
-                                                            <?php
-                                                        } else if ($MEMBER->job_type == 'FullTime') {
-                                                            ?>
-                                                            <option value="FullTime" selected="">Full Time</option>
-
-                                                            <option value="PartTime" >Part type</option>
-                                                            <?php
-                                                        }
-                                                        ?> 
-
-
+                                                        <option value="PartTime">Part type</option>
+                                                        <option value="FullTime">Full Time</option>
                                                     </select>
                                                 </div>
                                             </div>

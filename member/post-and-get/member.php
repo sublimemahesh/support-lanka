@@ -1,12 +1,13 @@
 <?php
+
 include_once(dirname(__FILE__) . '/../../class/include.php');
 
 if (isset($_POST['login'])) {
 
     $MEMBER = new Member(NULL);
 
-    $nic_number = filter_var($_POST['nic_number'], FILTER_SANITIZE_STRING);
-    $password = md5(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
+    $nic_number = $_POST['nic_number'];
+    $password = md5($_POST['password']);
 
     if ($MEMBER->login($nic_number, $password)) {
         header('Location: ../index.php?message=5');
@@ -75,17 +76,17 @@ if (isset($_POST['update'])) {
     $MEMBER = new Member($_POST['id']);
 
     $MEMBER->profile_picture = $imgName;
-    $MEMBER->name = mysql_real_escape_string($_POST['name']);
-    $MEMBER->email = mysql_real_escape_string($_POST['email']);
-    $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
-    $MEMBER->date_of_birthday = filter_input(INPUT_POST, 'date_of_birthday');
-    $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
-    $MEMBER->about_me = filter_input(INPUT_POST, 'about_me');
-    $MEMBER->home_address = filter_input(INPUT_POST, 'home_address');
-    $MEMBER->city = filter_input(INPUT_POST, 'city');
-    $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
-    $MEMBER->job_type = filter_input(INPUT_POST, 'job_type');
-    $MEMBER->contact_number = mysql_real_escape_string($_POST['contact_number']);
+    $MEMBER->name = $_POST['name'];
+    $MEMBER->email = $_POST['email'] ;
+    $MEMBER->nic_number = $_POST['nic_number'] ;
+    $MEMBER->date_of_birthday = $_POST['date_of_birthday'] ;
+    $MEMBER->contact_number =$_POST['contact_number'] ;
+    $MEMBER->about_me =$_POST['about_me'];
+    $MEMBER->home_address =$_POST['home_address'];
+    $MEMBER->city =$_POST['city'];
+    $MEMBER->privacy = $_POST['privacy'];
+    $MEMBER->job_type = $_POST['job_type'];
+    $MEMBER->contact_number =$_POST['contact_number'] ;
 
 
     $VALID = new Validator();

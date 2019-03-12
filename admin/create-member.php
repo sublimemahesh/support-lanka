@@ -27,7 +27,7 @@ include_once(dirname(__FILE__) . './auth.php');
     <body class="theme-red">
         <?php
         include './navigation-and-header.php';
-        ?> 
+        ?>
         <section class="content">
             <div class="container-fluid"> 
                 <?php
@@ -286,6 +286,17 @@ include_once(dirname(__FILE__) . './auth.php');
                                 </div>
                             </div>  
                             <!--Add member-->
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">  
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <input class="filled-in chk-col-pink" type="checkbox"  name="active" value="1" id="rememberme" />
+                                        <label for="rememberme" style="font-size: 20px;">Active</label>
+                                    </div>
+                                </div> 
+
+                            </div> 
                             <div class="row clearfix">
                                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">  
 

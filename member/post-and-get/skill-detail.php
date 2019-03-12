@@ -52,7 +52,7 @@ if (isset($_POST['edit-skill-details'])) {
     $SKILLDETAILS->description = $_POST['description'];
 
     $VALID->check($SKILLDETAILS, [
-        'percentage' => ['required' => TRUE],
+        'sub_skill' => ['required' => TRUE],
     ]);
 
     if ($VALID->passed()) {
