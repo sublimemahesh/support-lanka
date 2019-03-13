@@ -164,9 +164,9 @@ $MEMBER = new Member($id);
                                                         <?php
                                                         $CITY = new City(NULL);
                                                         $DISTRICT = new District(NULL);
-                                                         
+
                                                         foreach ($CITY->getDistrictByCityId($MEMBER->city) as $key => $district) {
-                                                            
+
                                                             foreach ($DISTRICT->all() as $district_all) {
                                                                 if ($district['district'] == $district_all['id']) {
                                                                     ?>
@@ -264,12 +264,55 @@ $MEMBER = new Member($id);
                                                 <div class="form-line p-top ">
                                                     <label for="Rank" class="hidden-lg hidden-md">Rank</label>
                                                     <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" >
-                                                        <option value="<?php echo $MEMBER->rank; ?>"><?php echo $MEMBER->rank; ?></option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
+                                                        <?php
+                                                        if ($MEMBER->rank == 1) {
+                                                            ?>
+                                                            <option value="<?php echo $MEMBER->rank; ?>" selected=""><?php echo $MEMBER->rank; ?></option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <?php
+                                                        } else if ($MEMBER->rank == 2) {
+                                                            ?>
+                                                            <option value="1">1</option>
+                                                            <option value="<?php echo $MEMBER->rank; ?>" selected=""><?php echo $MEMBER->rank; ?></option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+
+                                                            <?php
+                                                        } else if ($MEMBER->rank == 3) {
+                                                            ?>
+                                                            <option value="1">1</option>                                                          
+                                                            <option value="2">2</option>
+                                                            <option value="<?php echo $MEMBER->rank; ?>" selected=""><?php echo $MEMBER->rank; ?></option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+
+                                                            <?php
+                                                        } else if ($MEMBER->rank == 4) {
+                                                            ?>
+                                                            <option value="1">1</option>                                                          
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="<?php echo $MEMBER->rank; ?>" selected=""><?php echo $MEMBER->rank; ?></option>
+                                                            <option value="5">5</option>
+
+                                                            <?php
+                                                        } else if ($MEMBER->rank == 5) {
+                                                            ?>
+                                                            <option value="1">1</option>                                                          
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>                                                          
+                                                            <option value="4">4</option>
+                                                            <option value="<?php echo $MEMBER->rank; ?>" selected=""><?php echo $MEMBER->rank; ?></option>
+
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                         
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -321,6 +364,7 @@ $MEMBER = new Member($id);
                                                     <select class="form-control  "  type="text"   name="job_type" >
                                                         <option value="0" >-- Please Select the job type</option>
                                                         <?php
+                                                                                                                
                                                         if ($MEMBER->job_type == 1) {
                                                             ?>
                                                             <option value="1" selected="">Part Time</option>

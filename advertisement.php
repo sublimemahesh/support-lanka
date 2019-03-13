@@ -23,121 +23,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
         <link href="contact-form/style.css" rel="stylesheet" type="text/css"/>
-        <style>
-            .form-group {
-                margin-bottom: 3px !important;
-            }
-
-
-
-            *, *:before, *:after{
-                margin: 0;
-                padding: 0;
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing:border-box;
-                box-sizing: border-box;
-            }
-
-
-            .main-title{
-                color: #2d2d2d;
-                text-align: center;
-                text-transform: capitalize;
-                padding: 0.7em 0;
-            }
-
-
-            @media screen and (max-width: 640px){
-                .container{
-                    display: block;
-                    width: 100%;
-                }
-            }
-
-
-            .container .title{
-                color: #1a1a1a;
-                text-align: center;
-                margin-bottom: 10px;
-            }
-
-            .content {
-                position: relative;
-                width: 90%;
-                max-width: 400px;
-                margin: auto;
-                overflow: hidden;
-            }
-
-            .content .content-overlay {
-                background: rgba(0,0,0,0.7);
-                position: absolute;
-                height: 99%;
-                width: 100%;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                opacity: 0;
-                -webkit-transition: all 0.4s ease-in-out 0s;
-                -moz-transition: all 0.4s ease-in-out 0s;
-                transition: all 0.4s ease-in-out 0s;
-            }
-
-            .content:hover .content-overlay{
-                opacity: 1;
-            }
-
-            .content-image{
-                width: 100%;
-            }
-
-            .content-details {
-                position: absolute;
-                text-align: center;
-                padding-left: 1em;
-                padding-right: 1em;
-                width: 100%;
-                top: 50%;
-                left: 50%;
-                opacity: 0;
-                -webkit-transform: translate(-50%, -50%);
-                -moz-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                -webkit-transition: all 0.3s ease-in-out 0s;
-                -moz-transition: all 0.3s ease-in-out 0s;
-                transition: all 0.3s ease-in-out 0s;
-            }
-
-            .content:hover .content-details{
-                top: 50%;
-                left: 50%;
-                opacity: 1;
-            }
-
-            .content-details h3{
-                color: #fff;
-                font-weight: 500;
-                letter-spacing: 0.15em;
-                margin-bottom: 0.5em;
-                text-transform: uppercase;
-            }
-
-            .content-details p{
-                color: #fff;
-                font-size: 0.8em;
-            }
-
-
-
-            .fadeIn-left{
-                left: 20%;
-            }
-
-            .fadeIn-right{
-                left: 80%;
-            }
-        </style>
+        <link href="css/slider.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
 
@@ -191,8 +77,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                         ?>
                     </div>
                 </div>
-        </div>
-
+        
 
 
     </section>

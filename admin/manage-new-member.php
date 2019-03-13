@@ -58,7 +58,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                         </h2>
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
-                                <a href="create-new-user.php">
+                                <a href="create-member.php">
                                     <i class="material-icons">add</i>
                                 </a>
                                 <ul class="dropdown-menu pull-right">

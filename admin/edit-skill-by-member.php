@@ -7,8 +7,11 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
 $SKILL = new Skill($id);
+$SKILL_DETAILS = new SkillDetail($id);
+dd();
+
 ?> 
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html> 
     <head>
         <meta charset="UTF-8">
@@ -102,6 +105,31 @@ $SKILL = new Skill($id);
                                                     </select>
 
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="percentage">Percentage</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text"  class="form-control" name="percentage" placeholder="Enter Precentage" value="<?php echo $SKILL_DETAILS->percentage ?>"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="Description ">Description </label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <textarea id="about_me" name="description" class="form-control" rows="5" placeholder="Enter Your Description"><?php echo $SKILL_DETAILS->description?></textarea> 
+                                                </div> 
                                             </div>
                                         </div>
                                     </div>

@@ -111,18 +111,7 @@ $MEMBER = new Member($id);
                                                 </div>
                                             </div>
                                         </div> 
-                                        <div class="row clearfix">
-                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                                <label for="title">Image</label>
-                                            </div>
-                                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                                <div class="form-group">
-                                                    <div class="form-line">
-                                                        <input type="file"  class="form-control" name="image_name" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> 
+
                                         <div class="row clearfix">
                                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                                 <label for="date">Date</label>
@@ -172,10 +161,10 @@ $MEMBER = new Member($id);
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                         <thead>
-                                            <tr>   
-                                                <th>Industry</th> 
+                                            <tr> 
                                                 <th>Skill Name</th>
-                                                <th>Percentage</th> 
+                                                <th>Title</th> 
+                                                <th>Date</th>
                                                 <th>Description</th>
                                                 <th class="text-center">Options</th>
                                             </tr>
@@ -183,36 +172,43 @@ $MEMBER = new Member($id);
                                         <tbody>
                                             <?php
                                             $PORTFILIO = new Portfolio(NULL);
+
                                             foreach ($PORTFILIO->GetPortfolioMemberId($id) as $portfolio) {
                                                 ?>
                                                 <tr id="div_<?php echo $portfolio['id']; ?>">
                                                     <td>
                                                         <?php
-                                                        $SKILL_2 = new SkillDetail($portfolio['skill_detail']);
-                                                        echo $SKILL_2->skill;
+                                                        $SKILL_DETAILS = new SkillDetail($portfolio['skill_detail']);
+                                                        $SKILL = new Skill($SKILL_DETAILS->skill);
+                                                        echo $SKILL->name;
                                                         ?>
-                                                    </td>          
+                                                    </td>       
 
                                                     <td> 
-
+                                                        <?php
+                                                        echo $portfolio['title'];
+                                                        ?>
                                                     </td> 
-
                                                     <td>
-
+                                                        <?php
+                                                        echo $portfolio['date'];
+                                                        ?>
                                                     </td>
                                                     <td>
-
+                                                        <?php
+                                                        echo $portfolio['description'];
+                                                        ?>
                                                     </td>
 
                                                     <td class="text-center"> 
-                                                        <a href="edit-skill-by-member.php?id=<?php echo $SKILL->id ?>" class="op-link btn btn-sm btn-info">
+                                                        <a href="edit-member-portfoliyo.php?id=<?php echo $portfolio['id'] ?>" class="op-link btn btn-sm btn-info">
                                                             <i class="glyphicon glyphicon-pencil"></i>
                                                         </a> 
-
-                                                        |  
-                                                        <a href="#" class="delete-member-skill btn btn-sm btn-danger" member-id="<?php echo $MEMBER->id ?>" skill-id="<?php echo $skill_details['id']; ?>">
+                                                        |    
+                                                        <a href="#" class="delete-portfolio btn btn-sm btn-danger" title="Delete" data-id="<?php echo $portfolio['id']; ?>">
                                                             <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                         </a>
+
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -221,10 +217,10 @@ $MEMBER = new Member($id);
                                         </tbody>
 
                                         <tfoot>
-                                            <tr>
-                                                <th>Industry</th> 
+                                            <tr> 
                                                 <th>Skill Name</th>
-                                                <th>Percentage</th> 
+                                                <th>Title</th> 
+                                                <th>Date</th>
                                                 <th>Description</th>
                                                 <th class="text-center">Options</th>
                                             </tr>
@@ -250,7 +246,8 @@ $MEMBER = new Member($id);
         <script src="delete/js/portfoliyo.js" type="text/javascript"></script>
 
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
-        <script src="js/skill.js" type="text/javascript"></script>
+        <script src="delete/js/portfoliyo.js" type="text/javascript"></script>
+
         <script>
             tinymce.init({
                 selector: "#about_me",

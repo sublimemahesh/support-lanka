@@ -11,7 +11,7 @@ if (isset($_GET["page"])) {
 }
 
 $setLimit = 2;
-$pageLimit = ($page * $setLimit) - $setLimit;
+$pageLimit = ($page * $setLimit) ;
  
  
 $MEMBER = new Member(NULL);

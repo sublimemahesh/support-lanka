@@ -25,6 +25,8 @@ include_once(dirname(__FILE__) . '/class/include.php');
         <link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+        <link href="js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/slider.css" rel="stylesheet" type="text/css"/>
         <style>
             .p-category > a i {
                 font-size: 0px;
@@ -114,6 +116,9 @@ include_once(dirname(__FILE__) . '/class/include.php');
                     </div>	
                 </div>
             </section>
+
+
+
             <!--company-->
             <section>
                 <div class="block">
@@ -131,67 +136,120 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                         <div class="col-lg-5">
                                             <img src="images/resource/about.jpg" alt="" />
                                         </div>
-                                      
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <section>
+                <div class=" ">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="heading">
+                                <h2>Advertisement</h2>
+                                <span>Sri Lanka Supporting Evolution By Business</span>
+                            </div><!-- Heading -->
+                        </div>
+                    </div>
+
+                    <div class="row"  >
+                        <div class="owl-carousel">
+                            <?php
+                            $ADVERTISEMENT = new Advertisement(NULL);
+                            foreach ($ADVERTISEMENT->all() as $advertisement) {
+                                ?>
+
+
+                                <div   style="padding-top: 40px; padding-bottom: 40px;">
+                                    <div class="content">
+                                        <a href="view-advertisement.php?id=<?php echo $advertisement['id']; ?>">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="upload/advertisement/thumb/<?php echo $advertisement['image_name'] ?>">
+                                            <div class="content-details fadeIn-left">
+                                                <h3><?php echo $advertisement['title'] ?></h3>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <?php
+                            }
+                            ?> 
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
- 
-   
-    <?php
-    include './footer.php';
-    ?>
-</div>
 
 
-<div class="account-popup-area category-popup-box">
-    <div class="account-popup1">
-        <span class="close-popup"><i class="la la-close"></i></span>
-        <div class="model-text">Select Your Title</div>
-        <div>
-            <a id="job-applicant" href=""> 
-                <input class="model-title" type="submit" value="Job Applicant"/>
-            </a>
-            <a id="job-provider" href="">
-                <input class="model-title" type="submit" value="Job Provider"/>
-            </a>
+        <?php
+        include './footer.php';
+        ?>
+    </div>
+
+
+    <div class="account-popup-area category-popup-box">
+        <div class="account-popup1">
+            <span class="close-popup"><i class="la la-close"></i></span>
+            <div class="model-text">Select Your Title</div>
+            <div>
+                <a id="job-applicant" href=""> 
+                    <input class="model-title" type="submit" value="Job Applicant"/>
+                </a>
+                <a id="job-provider" href="">
+                    <input class="model-title" type="submit" value="Job Provider"/>
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="js/modernizr.js" type="text/javascript"></script>
-<script src="js/script.js" type="text/javascript"></script>
-<script src="js/wow.min.js" type="text/javascript"></script>
-<script src="js/slick.min.js" type="text/javascript"></script>
-<script src="js/parallax.js" type="text/javascript"></script>
-<script src="js/select-chosen.js" type="text/javascript"></script>
-<div id="google_translate_element"></div>
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-    }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
-
-<script type="text/javascript">
-    $('.translation-links a').click(function () {
-        var lang = $(this).data('lang');
-        var $frame = $('.goog-te-menu-frame:first');
-        if (!$frame.size()) {
-            alert("Error: Could not find Google translate frame.");
-            return false;
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/wow.min.js" type="text/javascript"></script>
+    <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/parallax.js" type="text/javascript"></script>
+    <script src="js/select-chosen.js" type="text/javascript"></script>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
         }
-        $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
-        return false;
-    });
-</script>
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
+    <script type="text/javascript">
+        $('.translation-links a').click(function () {
+            var lang = $(this).data('lang');
+            var $frame = $('.goog-te-menu-frame:first');
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
+            }
+            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+            return false;
+        });
+        $(document).ready(function () {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true
+            });
+        });
+    </script>
+
+    <script src="js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js" type="text/javascript"></script>
 </body>
 </html>
 

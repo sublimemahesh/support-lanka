@@ -162,7 +162,7 @@ class Portfolio {
     public function GetPortfolioMemberId($id) {
 
         $query = "SELECT * FROM `portfolio` WHERE `member` = '" . $id . "' ORDER BY `sort` ASC";
-
+      
         $db = new Database();
 
         $result = $db->readQuery($query);
