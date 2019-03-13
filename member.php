@@ -18,7 +18,7 @@ $td = date('Y-m-d');
         <meta name="keywords" content="">
         <meta name="author" content="CreativeLayers">
 
-        <!-- Styles -->
+
         <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
         <link rel="stylesheet" href="css/icons.css">
         <link rel="stylesheet" href="css/animate.min.css">
@@ -31,6 +31,7 @@ $td = date('Y-m-d');
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
         <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
         <style>
             .forsticky.sticky .menu-sec {
                 margin-top: -74px !important;
@@ -100,7 +101,20 @@ $td = date('Y-m-d');
                                         <a href="#" title="" class="share-google"><i class="la la-google"></i></a><a href="#" title="" class="share-fb"><i class="fa fa-facebook"></i></a><a href="#" title="" class="share-twitter"><i class="fa fa-twitter"></i></a>
                                     </div>
                                     <div class="can-detail-s">
-                                        <div class="cst"><img src="upload/member/<?php echo $MEMBER->profile_picture ?>" alt="" /></div>
+                                        <div class="cst">
+                                            <?php if ($MEMBER->profile_picture == NULL) {
+                                                ?>
+                                                <img src="upload/member/member.png" class="img-thumbnail">
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <img src="upload/member/<?php echo $MEMBER->profile_picture; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+
+                                                <?php
+                                            }
+                                            ?>
+
+                                        </div>
                                         <h3><?php echo $MEMBER->name ?></h3>
                                         <span>
                                             <?PHP
@@ -130,8 +144,36 @@ $td = date('Y-m-d');
                                         <div class="emply-btns res-new-p">
                                             <a class="followus" href="member/register.php" title=""><i class="la la-paper-plane"></i>Register</a>
                                         </div>
+
+                                        <div > 
+                                            <!-- Trigger the modal with a button -->
+                                            <button style="margin-top: 10px; font-size: 18px;font-weight: 650;" type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal"><i class=" fa fa-mobile-phone"></i> <span> Call Me .! </span></button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal" role="dialog" style="background-color: rgba(0, 0, 0, 0.64);">
+                                                <div class="modal-dialog modal-sm">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title" style="font-size: 18px;font-weight: 650;">Mobile Number</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p style="font-size: 18px;font-weight: 650;"> <i class="la la-phone"></i> <?php echo $MEMBER->contact_number ?> </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
                                     </div>
+
+
                                 </div>
+
                                 <ul class="cand-extralink">
                                     <li><a href="#about" title="">About</a></li>
                                     <li><a href="#education" title="">Education</a></li>
@@ -292,56 +334,16 @@ $td = date('Y-m-d');
                                             </div>
 
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section> 
-            <div id="myModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 
-                            <h5 class="modal-title" id="modal-title">
-
-                            </h5>
-                        </div>
-                        <div class="modal-body">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                </ol> 
-                                <div class="carousel-inner" id="slider-images">
-
-                                </div> 
-                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                            <div>
-                                <div id="modal-description">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <?php
             include './footer.php';

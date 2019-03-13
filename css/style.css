@@ -737,7 +737,7 @@ label::after {
 .menu-sec nav > ul {
     float: left;
     margin: 0;
-    margin-left: 15px;
+     
 
 }
 .menu-sec nav > ul > li {
@@ -751,7 +751,7 @@ label::after {
     font-size: 15px;
     color: #ffffff;
     position: relative;
-    padding: 26px 18px;
+   padding: 18px 12px;
 }
 .menu-sec nav > ul > li.menu-item-has-children > a::before {
     position: absolute;

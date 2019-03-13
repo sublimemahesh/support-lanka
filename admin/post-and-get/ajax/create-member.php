@@ -83,6 +83,7 @@ if ($_POST['save']) {
         $MEMBER->nic_number = $_POST['password'];
         $MEMBER->password = md5($_POST['password']);
         $MEMBER->privacy = $_POST['privacy'];
+        $MEMBER->job_type = $_POST['job_type'];
         $MEMBER->is_active = $_POST['is_active']; 
 
 
@@ -109,6 +110,7 @@ if ($_POST['save']) {
         }
 
         $MEMBER->profile_picture = $imgName;
+      
         $MEMBER->create();
 
         if ($MEMBER->id) {

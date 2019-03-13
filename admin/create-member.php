@@ -265,8 +265,8 @@ include_once(dirname(__FILE__) . './auth.php');
                                             <label for="job type" class="hidden-lg hidden-md">job type</label>
                                             <select class="form-control  "  type="text"   name="job_type" >
                                                 <option value="0" >-- Please Select the job type</option>
-                                                <option value="PartTime">Part type</option>
-                                                <option value="FullTime">Full Time</option>
+                                                <option value="1">Part type</option>
+                                                <option value="2">Full Time</option>
                                             </select>
                                         </div>
                                     </div>

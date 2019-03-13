@@ -75,7 +75,7 @@ class Member {
                 . $this->status . "','"
                 . $this->rank . "','"
                 . $this->is_active . "')";
-
+        
         $db = new Database();
 
         $result = $db->readQuery($query);

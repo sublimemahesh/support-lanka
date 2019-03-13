@@ -45,7 +45,7 @@ class SkillDetail {
                 . $this->percentage . "', '"
                 . $this->description . "', '"
                 . $this->sort . "')";
-
+        dd($query);
         $db = new Database();
 
         $result = $db->readQuery($query);
@@ -199,7 +199,7 @@ class SkillDetail {
     public function deleteSkilldetailsByMemberAndSkill($member,$skill) {
 
         $query = "DELETE FROM `skill_details` WHERE `member`= '" . $member . "' AND `skill`='" . $skill . "'";
-
+       
         $db = new Database();
         $result = $db->readQuery($query);
 

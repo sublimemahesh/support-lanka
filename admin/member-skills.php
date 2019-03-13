@@ -193,7 +193,7 @@ $MEMBER = new Member($id);
                                                         </a> 
 
                                                         |  
-                                                        <a href="#" class="delete-member-skill btn btn-sm btn-danger" member-id="<?php echo $MEMBER->id ?>" skill-id="<?php echo $skill_details['id']; ?>">
+                                                        <a href="#" class="delete-member-skill btn btn-sm btn-danger" member-id="<?php echo $MEMBER->id ?>" skill-id="<?php echo $skill_details['skill']; ?>">
                                                             <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                         </a>
                                                     </td>

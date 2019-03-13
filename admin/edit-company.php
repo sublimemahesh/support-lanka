@@ -129,14 +129,25 @@ $COMPANY = new Company($id);
                                                 <div class="form-line">
                                                     <label for="Districts" class="hidden-lg hidden-md">Districts</label>
                                                     <select class="form-control" type="text" id="district" autocomplete="off" name="district">
-                                                        <option value="<?php $MEMBER->city ?>" class="active light-c"> -- Please  Select Your District -- </option>
-                                                        <?php foreach (District::all() as $key => $district) {
-                                                            ?>
-                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+                                                        <?php
+                                                        $CITY = new City(NULL);
+                                                        $DISTRICT = new District(NULL);
 
-                                                            <?php
+                                                        foreach ($CITY->getDistrictByCityId($COMPANY->city) as $key => $district) {
+
+                                                            foreach ($DISTRICT->all() as $district_all) {
+                                                                if ($district['district'] == $district_all['id']) {
+                                                                    ?>
+                                                                    <option value="<?php echo $district_all['id']; ?>" selected=""><?php echo $district_all['name']; ?></option>
+                                                                    <?php
+                                                                } else {
+                                                                    ?>
+                                                                    <option value="<?php echo $district_all['id']; ?>"><?php echo $district_all['name']; ?></option>
+                                                                    <?php
+                                                                }
+                                                            }
                                                         }
-                                                        ?>
+                                                        ?> 
                                                     </select>
                                                 </div>
                                             </div>
@@ -152,7 +163,20 @@ $COMPANY = new Company($id);
                                                 <div class="form-line">
                                                     <label for="City" class="hidden-lg hidden-md">City</label>
                                                     <select class="form-control" autocomplete="off" type="text" id="city-bar" autocomplete="off" name="city" required="TRUE">
-                                                        <option value=""> -- Please Select a District First -- </option>
+                                                        <?php
+                                                        $CITY = new City(NULL);
+                                                        foreach ($CITY->all() as $key => $city) {
+                                                            if ($city['id'] == $COMPANY->city) {
+                                                                ?>
+                                                                <option value="<?php echo $city['id']; ?>" selected=""><?php echo $city['name']; ?></option>
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <option value="<?php echo $city['id']; ?>" ><?php echo $city['name']; ?></option>
+                                                                <?php
+                                                            }
+                                                        }
+                                                        ?>
                                                     </select>
                                                 </div>
                                             </div>
@@ -239,8 +263,22 @@ $COMPANY = new Company($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for=" Company Logo Image" class="hidden-lg hidden-md"> Company Logo Image</label>
-                                                    <input type="file" id="logo_image" class="form-control" name="logo_image" value="<?php echo $COMPANY->logo_image; ?>">
-                                                    <img src="../upload/company/<?php echo $COMPANY->logo_image; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+
+                                                    <?php
+                                                    if ($COMPANY->logo_image == NULL) {
+                                                        ?>
+                                                        <img src="../upload/member/member.png" style="width:15%;" class="img-thumbnail">
+                                                        <?php
+                                                    } else {
+                                                        ?>
+                                                        <input type="file" id="logo_image" class="form-control" name="logo_image" value="<?php echo $COMPANY->logo_image; ?>">
+                                                        <img src="../upload/company/<?php echo $COMPANY->logo_image; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+
+                                                        <?php
+                                                    }
+                                                    ?>
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -255,12 +293,52 @@ $COMPANY = new Company($id);
                                                 <div class="form-line p-top ">
                                                     <label for="Rank" class="hidden-lg hidden-md"> Rank</label>
                                                     <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="rank" autocomplete="off" name="rank" required="TRUE">
-                                                        <option value="<?php echo $COMPANY->rank; ?>"><?php echo $COMPANY->rank; ?></option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
+                                                        <option value="<?php echo $COMPANY->rank; ?>" selected=""><?php echo $COMPANY->rank; ?></option>
+
+                                                        <?php
+                                                        if ($COMPANY->rank == 1) {
+                                                            ?>
+
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <?php
+                                                        } else if ($COMPANY->rank == 2) {
+                                                            ?>
+                                                            <option value="1">1</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+
+                                                            <?php
+                                                        } else if ($COMPANY->rank == 3) {
+                                                            ?>
+                                                            <option value="1">1</option>                                                          
+                                                            <option value="2">2</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+
+                                                            <?php
+                                                        } else if ($COMPANY->rank == 4) {
+                                                            ?>
+                                                            <option value="1">1</option>                                                          
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                             <option value="5">5</option>
+
+                                                            <?php
+                                                        } else if ($COMPANY->rank == 5) {
+                                                            ?>
+                                                             
+                                                            <option value="1">1</option>                                                          
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>                                                          
+                                                            <option value="4">4</option>
+                                                          
+                                                            <?php
+                                                        }  
+                                                        ?>
                                                     </select>
                                                 </div>
                                             </div>

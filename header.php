@@ -88,6 +88,9 @@
             <nav>
                 <ul>
                     <li class="">
+                        <a href="comment.php" title="">Comment</a>
+                    </li>
+                    <li class="">
                         <a href="advertisement.php" title="">Advertisement</a>
                     </li>
                     <li class="">
