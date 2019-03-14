@@ -1,6 +1,6 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
-include_once(dirname(__FILE__) . './auth.php');
+include_once(dirname(__FILE__) . '/auth.php');
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ include_once(dirname(__FILE__) . './auth.php');
     </head>
 
     <body class="theme-red">
-        <?php
+      <?php
         include './navigation-and-header.php';
         ?>
         <section class="content">

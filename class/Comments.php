@@ -14,9 +14,10 @@
 class Comments {
 
     public $id;
+    public $member;
     public $name;
     public $email;
-    public $mobile; 
+    public $mobile;
     public $comment;
     public $is_active;
     public $queue;
@@ -31,9 +32,10 @@ class Comments {
             $result = mysql_fetch_array($db->readQuery($query));
 
             $this->id = $result['id'];
+            $this->member = $result['member'];
             $this->name = $result['name'];
             $this->email = $result['email'];
-            $this->mobile = $result['mobile']; 
+            $this->mobile = $result['mobile'];
             $this->comment = $result['comment'];
             $this->is_active = $result['is_active'];
             $this->queue = $result['queue'];
@@ -44,10 +46,11 @@ class Comments {
 
     public function create() {
 
-        $query = "INSERT INTO `comments` (`name`,`email`,`mobile`, `comment`,`is_active`,`queue`) VALUES  ('"
+        $query = "INSERT INTO `comments` (`member`,`name`,`email`,`mobile`, `comment`,`is_active`,`queue`) VALUES  ('"
+                . $this->member . "','"
                 . $this->name . "','"
                 . $this->email . "','"
-                . $this->mobile . "','" 
+                . $this->mobile . "','"
                 . $this->comment . "', '"
                 . $this->is_active . "', '"
                 . $this->queue . "')";
@@ -68,6 +71,20 @@ class Comments {
     public function all() {
 
         $query = "SELECT * FROM `comments` ORDER BY queue ASC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
+    public function getCommentByMember($member) {
+
+        $query = "SELECT * FROM `comments` WHERE `member` = '" . $member . "' AND `is_active` = 0";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -101,8 +118,8 @@ class Comments {
             return FALSE;
         }
     }
-    
-        public function delete() {
+
+    public function delete() {
 
         $query = 'DELETE FROM `comments` WHERE id="' . $this->id . '"';
 
@@ -110,8 +127,8 @@ class Comments {
 
         return $db->readQuery($query);
     }
-    
-        public function activeComments() {
+
+    public function activeComments() {
 
         $query = "SELECT * FROM `comments` WHERE is_active = '1'";
         $db = new Database();
@@ -124,8 +141,8 @@ class Comments {
 
         return $array_res;
     }
-    
-          public function pendingComments() {
+
+    public function pendingComments() {
 
         $query = "SELECT * FROM `comments` WHERE is_active = '0'";
         $db = new Database();
@@ -138,12 +155,12 @@ class Comments {
 
         return $array_res;
     }
-    
-    
-     public function arrange($key, $img) {
+
+    public function arrange($key, $img) {
         $query = "UPDATE `comments` SET `queue` = '" . $key . "'  WHERE id = '" . $img . "'";
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
     }
+
 }

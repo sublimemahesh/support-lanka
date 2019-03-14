@@ -7,13 +7,20 @@ $industry = NULL;
 if (isset($_GET["page"])) {
     $page = (int) $_GET["page"];
 } else {
-    $page =3;
+    $page = 1;
 }
 
+ 
 $setLimit = 2;
 $pageLimit = ($page * $setLimit) ;
  
  
+ 
+$setLimit = 20;
+
+$pageLimit = ($page * $setLimit) - $setLimit;
+
+  
 $MEMBER = new Member(NULL);
 ?>
 <!DOCTYPE html>
@@ -91,7 +98,7 @@ $MEMBER = new Member(NULL);
                             <div class="col-lg-9 col-md-9 hidden-sm hidden-xs column">
                                 <div class="emply-resume-sec row-padding-new">
                                     <?php
-                                    foreach ($MEMBER->getActiveMember() as $member) {
+                                    foreach ($MEMBER->getActiveMember($pageLimit,$setLimit) as $member) {
                                         ?>
                                         <a href="member.php?member=<?php echo $member['id']; ?>" title="">
                                             <div class="emply-resume-list square col-md-12 col-sm-12">
@@ -182,7 +189,7 @@ $MEMBER = new Member(NULL);
                                 <div class="emply-list-sec ">
                                     <div class="row" id="masonry">
                                         <?php
-                                        foreach ($MEMBER->getActiveMember() as $member) {
+                                       foreach ($MEMBER->getActiveMember($pageLimit,$setLimit) as $member) {
                                             ?>
                                             <div class="col-sm-6 col-xs-12 hidden-lg hidden-md">
                                                 <div class="emply-list box">

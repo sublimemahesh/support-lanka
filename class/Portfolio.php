@@ -7,8 +7,7 @@
  */
 class Portfolio {
 
-    public $id;
-    public $member;
+    public $id; 
     public $skill_detail;
     public $title;
     public $date;
@@ -24,8 +23,7 @@ class Portfolio {
 
             $result = mysql_fetch_array($db->readQuery($query));
 
-            $this->id = $result['id'];
-            $this->member = $result['member'];
+            $this->id = $result['id']; 
             $this->skill_detail = $result['skill_detail'];
             $this->title = $result['title'];
             $this->date = $result['date'];
@@ -38,8 +36,7 @@ class Portfolio {
 
     public function create() {
 
-        $query = "INSERT INTO `portfolio` (`member`,`skill_detail`, `title`, `date`, `description`, `sort`) VALUES  ('"
-                . $this->member . "','"
+        $query = "INSERT INTO `portfolio` (`skill_detail`, `title`, `date`, `description`, `sort`) VALUES  ('"               
                 . $this->skill_detail . "','"
                 . $this->title . "','"
                 . $this->date . "','"

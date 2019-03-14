@@ -104,8 +104,16 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                         ?>
                                         <a href="member.php?member=<?php echo $MEMBER->id; ?>" title="">
                                             <div class="emply-resume-list square">
-                                                <div class="emply-resume-thumb">                                               
-                                                    <img src="upload/member/<?php echo $MEMBER->profile_picture; ?>" alt=""/> 
+                                                <div class="emply-resume-thumb">   
+                                                    <?php
+                                                    if ($MEMBER->profile_picture) {
+                                                        ?>
+                                                        <img src="upload/member/<?php echo $MEMBER->profile_picture; ?>" alt=""/> 
+
+                                                    <?php } else { ?>
+                                                        <img src = "upload/member/member.png" alt = ""/>
+                                                    <?php } ?>
+
 
                                                 </div>
                                                 <div class="emply-resume-info">

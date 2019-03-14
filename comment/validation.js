@@ -77,7 +77,7 @@ $(document).ready(function () {
                             showConfirmButton: false
                         }, function () {
                             setTimeout(function () {
-                                window.location.replace("comment.php");
+                                window.location.replace("all_member.php");
                             }, 2000);
                         });
                     }

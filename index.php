@@ -45,10 +45,49 @@ include_once(dirname(__FILE__) . '/class/include.php');
             <!--Industry-->
             <section id="scroll-here">
                 <div class="block pad-new-top">
-                    <div class="container">
+                    <div class="container">                    
+
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="heading">
+                                    <h2>Advertisement</h2>
+                                    <span>Sri Lanka Supporting Evolution By Business</span>
+                                </div><!-- Heading -->
+                            </div>
+                        </div>
+
+                        <div class="row"  >
+                            <div class="owl-carousel">
+                                <?php
+                                $ADVERTISEMENT = new Advertisement(NULL);
+                                foreach ($ADVERTISEMENT->all() as $advertisement) {
+                                    ?>
+                                    <div   style="padding-top: 40px; padding-bottom: 40px;">
+                                        <div class="content">
+                                            <a href="view-advertisement.php?id=<?php echo $advertisement['id']; ?>">
+                                                <div class="content-overlay"></div>
+                                                <img class="content-image" src="upload/advertisement/thumb/<?php echo $advertisement['image_name'] ?>">
+                                                <div class="content-details fadeIn-left">
+                                                    <h3><?php echo $advertisement['title'] ?></h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                                ?> 
+
+                            </div>
+                        </div>                           
+                    </div>
+                </div>
+            </section>
+            <section id="scroll-here">
+                <div class="block pad-new-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="heading" style="margin-top: -30px;">
                                     <h2>Select Your Category</h2>
                                     <span>Sri Lanka Supporting Evolution By Business</span>
                                 </div><!-- Heading -->
@@ -106,7 +145,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                                     <img src="images/logo11.png" alt=""/>
                                 </center>
                                 <div class="simple-text-block">
-                                    <h3>A Paradise for part time job seekers                 </h3>
+                                    <h3>A Paradise for part time job seekers </h3>
                                     <h4 class="text-color"><b>Looking for part time jobs?</b> </h4>
                                     <h5 class="text-color"><b>Support Lanka.</b> </h5>
                                     <a href="member/register.php" title="" id="bttn">Create an Account</a>
@@ -117,8 +156,7 @@ include_once(dirname(__FILE__) . '/class/include.php');
                 </div>
             </section>
 
-
-
+  
             <!--company-->
             <section>
                 <div class="block">
@@ -126,24 +164,34 @@ include_once(dirname(__FILE__) . '/class/include.php');
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="about-us">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <h3>About Jobs </h3>
+                                    <div class="row" style="margin-bottom: 10px;margin-top: 10px;">
+                                        <div class="heading">
+                                            <h2>About Jobs</h2>
+                                            <span>Sri Lanka Supporting Evolution By Business</span>
                                         </div>
+                                    </div>
+
+
+                                    <div class="row">
                                         <div class="col-lg-7">
                                             <p class="text-justify">This is an ideal opportunity for those who are willing to utilize their skills for an additional income leisurely in their surroundings.You can even upload the portfolios that show case your skills in the particular job or filled to our website. Though you’re not in a position to reveal in public the job you’d like to anagoge in we certainly promise you to protect your privacy in any case. They need to be registered at privet mode    </p>
                                         </div>
                                         <div class="col-lg-5">
-                                            <img src="images/resource/about.jpg" alt="" />
+                                            <img src="images/resource/about.jpg" alt=""  style="border-radius: 9px;"/>
                                         </div>
+ 
 
                                     </div>
 
+ 
+                                    </div>
+  
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+ 
             </section>
             <section>
                 <div class=" ">
@@ -189,6 +237,9 @@ include_once(dirname(__FILE__) . '/class/include.php');
         </div>
 
 
+           </section> 
+        </div>
+  
         <?php
         include './footer.php';
         ?>

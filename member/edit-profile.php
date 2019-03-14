@@ -135,23 +135,30 @@ $MEMBER = new Member($_SESSION['id']);
                                                                         $CITY = new City(NULL);
                                                                         $DISTRICT = new District(NULL);
 
-
-                                                                        foreach ($CITY->getDistrictByCityId($MEMBER->city) as $key => $district) {
-                                                                            foreach ($DISTRICT->all() as $district_all) {                                                                               
-                                                                                if ($district['district'] == $district_all['id']) {
-                                                                                    ?>
-                                                                                    <option value="<?php echo $district_all['id']; ?>" selected=""><?php echo $district_all['name']; ?></option>
-                                                                                    <?php
-                                                                                } else {
-                                                                                    ?>
-                                                                                    <option value="<?php echo $district_all['id']; ?>"><?php echo $district_all['name']; ?></option>
-                                                                                    <?php
+                                                                        if ($MEMBER->city == 0) {
+                                                                            foreach ($DISTRICT->all() as $district_all) {
+                                                                                ?>
+                                                                                <option value="<?php echo $district_all['id']; ?>"  ><?php echo $district_all['name']; ?></option>
+                                                                                <?php
+                                                                            }
+                                                                        } else {
+                                                                            foreach ($CITY->getDistrictByCityId($MEMBER->city) as $key => $district) {
+                                                                                foreach ($DISTRICT->all() as $district_all) {
+                                                                                    if ($district['district'] == $district_all['id']) {
+                                                                                        ?>
+                                                                                        <option value="<?php echo $district_all['id']; ?>" selected=""><?php echo $district_all['name']; ?></option>
+                                                                                        <?php
+                                                                                    } else {
+                                                                                        ?>
+                                                                                        <option value="<?php echo $district_all['id']; ?>"><?php echo $district_all['name']; ?></option>
+                                                                                        <?php
+                                                                                    }
                                                                                 }
                                                                             }
                                                                         }
                                                                         ?>
 
-                           
+
                                                                     </select>
                                                                 </div>
                                                             </div>

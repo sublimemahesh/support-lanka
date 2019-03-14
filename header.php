@@ -7,7 +7,7 @@
             <div class=" pull-left translation-links new-style">
 
                 <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > 
-                    <img src="images/Word_Sinhala_in_Yasarath_font.svg.png" alt="" width="60px" class="pull-leftss"/> </a>
+                    <img src="upload/english.png" alt="" width="60px" class="pull-leftss"/> </a>
                 <img src="images/line.png" alt="" width="10px"/>
 
                 <a href=""  class="English notranslate" data-lang="English" >
@@ -31,7 +31,7 @@
             <a href="member/login.php" title="" id="post-job-btn1"class=" sticky1 btn3" ><i class="la la-user"></i>Login Or Register</a>
         </div>
     </div>
- 
+
     <div class="responsive-opensec">
         <div class="btn-extars ">
             <a href="company/register.php" title="" id="post-job-btn1"class=" sticky1 btn2"><i class="la la-plus"></i>Post Vacancy</a>
@@ -54,7 +54,7 @@
                 <li class="">
                     <a href="about_us.php" title="">About</a>
                 </li>
-                
+
                 <li class="">
                     <a href="contact_us.php" title="">Contact</a>
                 </li>
@@ -69,9 +69,9 @@
 <header class="stick-top forsticky">
     <div class="menu-sec new-height">
         <div class="pull-right translation-links p-pad"> 
-            <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > <img src="images/Word_Sinhala_in_Yasarath_font.svg.png" alt="" width="60px" class="pull-leftss"/> </a>
+            <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > <img src="upload/sinhala.jpg" alt=""   style="  padding-bottom: 2px;"class="pull-leftss"/> </a>
             <img src="images/line.png" alt="" width="10px"/>
-            <a href=""  class="English notranslate" data-lang="English" ><img src="images/english.png" alt="" width="60px"/></a>
+            <a href=""  class="English notranslate" data-lang="English" ><img src="upload/english.png" alt="" style=" padding-bottom: 2px;" /></a>
         </div>
         <div class="container new-height " >
             <div class="logo">
@@ -87,6 +87,7 @@
 
             <nav>
                 <ul>
+
                     <li class="">
                         <a href="comment.php" title="">Comment</a>
                     </li>

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include_once(dirname(__FILE__) . '/class/include.php');
 $id = $_GET["member"];
 $MEMBER = new Member($id);
@@ -7,6 +7,7 @@ $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
 $AWARD = Award::GetAwardByMember($MEMBER->id);
 date_default_timezone_set('Asia/Colombo');
 $td = date('Y-m-d');
+ 
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,8 +32,11 @@ $td = date('Y-m-d');
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
         <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+ 
 
-        <style>
+ 
+        <link href="admin/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+         <style>
             .forsticky.sticky .menu-sec {
                 margin-top: -74px !important;
             }
@@ -41,6 +45,9 @@ $td = date('Y-m-d');
             }
             .stick-top.forsticky.sticky {
                 height: 0px !important;
+            }
+            .padd-text-input{
+                padding: 10px 28px !important;
             }
         </style>
     </head>
@@ -145,7 +152,11 @@ $td = date('Y-m-d');
                                             <a class="followus" href="member/register.php" title=""><i class="la la-paper-plane"></i>Register</a>
                                         </div>
 
+ 
                                         <div > 
+ 
+                                        <div class="row" style="margin-right: 0px;"> 
+   
                                             <!-- Trigger the modal with a button -->
                                             <button style="margin-top: 10px; font-size: 18px;font-weight: 650;" type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal"><i class=" fa fa-mobile-phone"></i> <span> Call Me .! </span></button>
 
@@ -154,8 +165,11 @@ $td = date('Y-m-d');
                                                 <div class="modal-dialog modal-sm">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
+ 
                                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title" style="font-size: 18px;font-weight: 650;">Mobile Number</h4>
+ 
+
+                                                             <h4 class="modal-title" style="font-size: 18px;font-weight: 650;">Mobile Number</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <p style="font-size: 18px;font-weight: 650;"> <i class="la la-phone"></i> <?php echo $MEMBER->contact_number ?> </p>
@@ -166,8 +180,80 @@ $td = date('Y-m-d');
                                                     </div>
                                                 </div>
                                             </div>
+ 
+ 
+                                        </div> 
+
+                                        <div class="row" style="margin-right: 0px;"> 
+                                            <!-- Trigger the modal with a button -->
+                                            <button style="margin-top: 10px; font-size: 18px;font-weight: 650;" type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal_2"><i class=" fa fa-pencil-square-o"></i> <span> Add Comment </span></button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal_2" role="dialog" style="background-color: rgba(0, 0, 0, 0.64);">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header text-center">
+                                                            <h4 class="modal-title w-100 font-weight-bold" style="margin-top: 10px; font-size: 18px;font-weight: 650;">Write Your Comment.!</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <form   method="post" id="form-data" >
+                                                            <div class="modal-body mx-3">
+
+                                                                <div class="md-form mb-5">
+                                                                    <i class="fa fa-user  "></i>
+                                                                    <input type="text"  name="name" id="name" class="form-control validate padd-text-input"  >
+                                                                    <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                                                                </div>
+
+                                                                <div class="md-form mb-5">
+                                                                    <i class="fa fa-envelope prefix grey-text"></i>
+                                                                    <input type="email" name="email" id="email" class="form-control validate padd-text-input">
+                                                                    <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                                                                </div>
+
+                                                                <div class="md-form mb-5">
+                                                                    <i class="fa fa-mobile prefix grey-text"></i>
+                                                                    <input type="text" name="mobile" id="mobile" class="form-control padd-text-input validate">
+                                                                    <label data-error="wrong" data-success="right" for="form32">Contact number</label>
+                                                                </div>
+
+                                                                <div class="md-form">
+                                                                    <i class="fa fa-pencil prefix grey-text"></i>
+                                                                    <textarea type="text"  name="comment"  id="comment" class="md-textarea form-control" rows="2"></textarea>
+                                                                    <label data-error="wrong" data-success="right" for="form8">Your comment</label>
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-5">
+                                                                            <label class="labelcon" for="comment">Security Code:</label>
+                                                                            <span id="star">*</span> 
+                                                                            <input type="text" name="captchacode" id="captchacode" class="padd-text-input form-control input-validater" placeholder="Enter the security code >> ">
+                                                                            <div class="col-md-12">
+                                                                                <span id="capspan" ></span> 
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-3"> 
+                                                                            <?php include("./contact-form/captchacode-widget.php"); ?> 
+                                                                        </div>  
+                                                                    </div>
+                                                                </div> 
 
 
+                                                            </div>
+                                                            <div class="modal-footer  ustify-content-center"  >
+                                                                   
+                                                                <button type="submit" id="create" class="btn  " >Send <i class="fa fa-paper-plane-o ml-1"></i></button> 
+                                                               <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-right: 15px;">Close</button>
+                                                                <input type="hidden" name="id" value="<?php echo $id ?>"/>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+ 
                                         </div>
                                     </div>
 
@@ -338,11 +424,50 @@ $td = date('Y-m-d');
                                     </div>
                                 </div>
                             </div>
+ 
                         </div>
                     </div>
                 </div>
 
-            </section> 
+ 
+                        </div
+                        <div class="row">
+                            <section>
+                                <div class="row">
+                                    <div class="container">
+                                        <div class="row" style="margin-bottom:  50px;">
+                                            <div class="col-sm-12 text-center">
+                                                <h3 style="font-size:24px; font-weight: 650"> All Comments  </h3>
+                                            </div><!-- /col-sm-12 -->
+                                        </div><!-- /row -->
+                                        <div class="row"> 
+                                            <?php
+                                            $COMMENT = new Comments(NULL);
+                                            foreach ($COMMENT->getCommentByMember($id) as $commnt) {
+                                                ?>
+
+                                                <div class="col-sm-12 ">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <strong><?php echo $commnt['name'] ?></strong> <span class="text-muted"><?php echo $commnt['email'] ?></span>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <?php echo $commnt['comment'] ?>
+                                                        </div><!-- /panel-body -->
+                                                    </div><!-- /panel panel-default -->
+                                                </div><!-- /col-sm-5 -->
+                                            <?php } ?>
+                                        </div><!-- /row -->
+
+                                    </div><!-- /container -->
+                                </div>  
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+
+             </section> 
 
 
             <?php
@@ -362,7 +487,8 @@ $td = date('Y-m-d');
         <script src="js/portfolio.js" type="text/javascript"></script>
         <script src="css/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
         <script src="js/message-member.js" type="text/javascript"></script>
-
+        <script src="admin/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <script src="comment/validation.js" type="text/javascript"></script>
 
     </body>
 </html>
