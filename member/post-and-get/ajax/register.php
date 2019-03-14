@@ -44,15 +44,15 @@ if ($_POST['save']) {
     } else {
 
         $MEMBER = new Member(NULL);
-        $MEMBER->nic_number = filter_input(INPUT_POST, 'nic_number');
-        $MEMBER->name = filter_input(INPUT_POST, 'name');
-        $MEMBER->email = filter_input(INPUT_POST, 'email');
-        $MEMBER->profile_picture = filter_input(INPUT_POST, 'profile_picture');
-        $MEMBER->status = filter_input(INPUT_POST, 'status');
-        $MEMBER->contact_number = filter_input(INPUT_POST, 'contact_number');
-        $MEMBER->privacy = filter_input(INPUT_POST, 'privacy');
-        $MEMBER->is_active = filter_input(INPUT_POST, 'is_active');
-        $MEMBER->password = md5(filter_input(INPUT_POST, 'password'));
+        $MEMBER->nic_number =  $_POST['nic_number'];
+        $MEMBER->name = $_POST['name'];
+        $MEMBER->email =$_POST['email'];
+        $MEMBER->profile_picture =$_POST['profile_picture'];
+        $MEMBER->status =$_POST['status'];
+        $MEMBER->contact_number = $_POST['contact_number'];
+        $MEMBER->privacy = $_POST['privacy'];
+        $MEMBER->is_active = $_POST['is_active'];
+        $MEMBER->password = md5($_POST['password']);
 
         $MEMBER->create();
 

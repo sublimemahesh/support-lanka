@@ -139,7 +139,7 @@ ini_set('display_errors', 1);
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-3"> 
-                                                        <?php include("comment/captchacode-widget.php"); ?> 
+                                                        <?php include("./contact-form/captchacode-widget.php"); ?> 
                                                     </div>  
                                                 </div>
                                             </div> 

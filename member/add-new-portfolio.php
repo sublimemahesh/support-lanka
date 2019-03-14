@@ -29,6 +29,8 @@ if (isset($_GET['skill'])) {
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/style-responsive.css" rel="stylesheet">
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
         <style>
             .img-thumbnail {
                 max-width: 50% !important;
@@ -100,7 +102,7 @@ if (isset($_GET['skill'])) {
                                                                             <label for="date">Date</label>
                                                                         </div>
                                                                         <div class="">
-                                                                            <input type="date" id="date" name="date" class="form-control" placeholder="Please Enter Date">
+                                                                            <input type="text" id="date" name="date" class="form-control datepicker" placeholder="Please Enter Date">
                                                                         </div>
                                                                     </div>
 
@@ -171,7 +173,12 @@ if (isset($_GET['skill'])) {
         <script src="js/post-transport-image.js" type="text/javascript"></script>
         <script src="assets/js/form-component.js"></script>    
         <a href="post-and-get/ajax/skill.php"></a>
-
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $(".datepicker").datepicker({dateFormat: 'yy-mm-dd'});
+            });
+        </script> 
         <script>
             //custom select box
 
@@ -181,7 +188,7 @@ if (isset($_GET['skill'])) {
 
         </script>
         <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
-      
+
 
     </body>
 

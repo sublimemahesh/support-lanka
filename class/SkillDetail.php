@@ -45,7 +45,7 @@ class SkillDetail {
                 . $this->percentage . "', '"
                 . $this->description . "', '"
                 . $this->sort . "')";
-        dd($query);
+        
         $db = new Database();
 
         $result = $db->readQuery($query);

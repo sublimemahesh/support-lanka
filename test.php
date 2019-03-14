@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,3 +41,70 @@
 
 </body>
 </html>
+
+<div class="emply-resume-list square col-md-12 col-sm-12">
+                                            <div class="emply-resume-thumb">
+                                                <a href="member.php?member=<?php echo $member['id']; ?>" title="">
+                                                    <img src="upload/member/<?php echo $member['profile_picture']; ?>" alt=""/> 
+                                                </a>
+                                            </div>
+                                            <div class="emply-resume-info ">
+                                                <h3><a href="member.php?member=<?php echo $member['id']; ?>" title=""> <?php echo $member['name']; ?></a></h3>
+                                                <span>
+                                                    <a href="member.php?member=<?php echo $member['id']; ?>" >
+                                                        <i>
+                                                            <?php
+                                                            $SKILLDETAIL = SkillDetail::GetSkillByMember($member['id']);
+
+                                                            foreach ($SKILLDETAIL as $skill_d) {
+
+                                                                $SKILL = new Skill($skill_d['skill']);
+
+                                                                $INDUSTRY = new Industry($SKILL->industry);
+
+                                                                echo $INDUSTRY->name;
+                                                                ?> 
+                                                                /  
+                                                                <?php
+                                                                $SKIL = new Skill($skill_d['skill']);
+                                                                echo $SKIL->name . '&nbsp;' . '&nbsp;' . '&nbsp;';
+                                                            }
+                                                            ?> 
+                                                        </i>
+                                                    </a>
+                                                </span>
+                                                <p><i class="la la-map-marker"></i>
+                                                    <?php
+                                                    $CITY = new City($member['city']);
+                                                    echo $CITY->name;
+                                                    ?>
+                                                    , 
+                                                    <?php echo $member['home_address']; ?>
+                                                </p>
+                                            </div>
+                                            <div class="shortlists" style="float: right;">
+                                                <div class="">
+                                                    <?php
+                                                    for ($ran = 0; $ran <= 4; $ran++) {
+
+                                                        if ($member['rank'] > $ran) {
+                                                            ?>
+                                                            <span class="fav-job" style="color:yellow; ">
+                                                                <i class="la la-star"></i>
+                                                            </span> 
+                                                            <?php
+                                                        } else {
+                                                            ?>
+                                                            <span class="fav-job"><i class="la la-star"></i></span>
+                                                            <?php
+                                                        }
+                                                    }
+                                                    ?>
+                                                </div>
+                                            </div>
+                                            <div class="shortlists" id="new-p-element" >
+                                                <a href="member.php?member=<?php echo $member['id']; ?>" title="">View Profile <i class="la la-plus"></i></a>
+                                            </div>
+
+                                        </div>
+>>>>>>> #262 Member re correction in admin re correction

@@ -93,28 +93,28 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                             <div class="">
                                                                 <div class="bottom-top">Contact No</div>
                                                                 <div class="">
-                                                                    <input type="text" name="contact_number" class="form-control" placeholder="Please Enter Your Contact Number" required="TRUE" value="<?php echo $COMPANY->contact_number; ?>">
+                                                                    <input type="text" name="contact_number" class="form-control" placeholder="Please Enter Your Contact Number"  value="<?php echo $COMPANY->contact_number; ?>">
                                                                 </div>
                                                             </div> 
                                                             <!--Company Register No-->
                                                             <div class="">
                                                                 <div class="bottom-top">Company Register No</div>
                                                                 <div class="">
-                                                                    <input type="text" name="company_register_number" class="form-control" placeholder="Please Enter Company Register No" required="TRUE" value="<?php echo $COMPANY->company_register_number; ?>">
+                                                                    <input type="text" name="company_register_number" class="form-control" placeholder="Please Enter Company Register No"   value="<?php echo $COMPANY->company_register_number; ?>">
                                                                 </div>
                                                             </div> 
                                                             <!--Since-->
                                                             <div class="">
                                                                 <div class="bottom-top">Since</div>
                                                                 <div class="">
-                                                                    <input type="text" id="since" name="since" class="form-control" placeholder="When is company start" required="TRUE" value="<?php echo $COMPANY->since; ?>">
+                                                                    <input type="text" id="since" name="since" class="form-control" placeholder="When is company start"  value="<?php echo $COMPANY->since; ?>">
                                                                 </div>
                                                             </div> 
                                                             <!--Team size-->
                                                             <div class="">
                                                                 <div class="bottom-top">No Of Employees In your Company</div>
                                                                 <div class="">
-                                                                    <input type="text" name="team_size" class="form-control" placeholder="No Of Employees" required="TRUE" value="<?php echo $COMPANY->team_size; ?>">
+                                                                    <input type="text" name="team_size" class="form-control" placeholder="No Of Employees"  value="<?php echo $COMPANY->team_size; ?>">
                                                                 </div>
                                                             </div> 
                                                             <!--Map-->
@@ -138,7 +138,7 @@ $COMPANY = new Company($_SESSION['id_com']);
                                                             <div class="">
                                                                 <div class="bottom-top">Company Address</div>
                                                                 <div class="">
-                                                                    <input type="text" name="address" class="form-control" placeholder="Please Enter Company Address" required="TRUE" value="<?php echo $COMPANY->address; ?>">
+                                                                    <input type="text" name="address" class="form-control" placeholder="Please Enter Company Address"   value="<?php echo $COMPANY->address; ?>">
                                                                 </div>
                                                             </div>
 

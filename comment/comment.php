@@ -10,11 +10,10 @@ if ($_SESSION['CAPTCHACODE'] != $_POST['captchacode']) {
     echo json_encode($result);
     exit();
 } else {
-
-
-
+  
     $COMMENT = new Comments(NULL);
 
+    $COMMENT->member = $_POST['id'];
     $COMMENT->name = $_POST['name'];
     $COMMENT->email = $_POST['email'];
     $COMMENT->mobile = $_POST['mobile'];

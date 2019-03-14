@@ -180,7 +180,7 @@ header {
 }
 .block {
     float: left;
-    padding: 60px 0;
+    padding: 20px 0;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -191,10 +191,10 @@ section{
     width:100%;
 }
 .double-gap-top {
-    padding-top: 120px;
+    padding-bottom: 60px;
 }
 .double-gap-bottom {
-    padding-bottom: 120px;
+    padding-bottom: 50px;
 }
 .less-top {
     padding-top: 30px;
@@ -735,10 +735,14 @@ label::after {
     margin-right: 67px;
 }
 .menu-sec nav > ul {
-    float: left;
+    float: right;
     margin: 0;
+ 
      
+ 
+    padding-right: 20px;
 
+ 
 }
 .menu-sec nav > ul > li {
     float: right;
@@ -751,7 +755,7 @@ label::after {
     font-size: 15px;
     color: #ffffff;
     position: relative;
-   padding: 18px 12px;
+    padding: 18px 12px;
 }
 .menu-sec nav > ul > li.menu-item-has-children > a::before {
     position: absolute;
@@ -1354,8 +1358,8 @@ label::after {
     float: left;
     width: 100%;
     margin: 0;
-    font-family: Quicksand;
-    font-weight: bold;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 650;
     font-size: 30px;
     color: #202020;
     line-height: 23px;
@@ -1445,7 +1449,7 @@ label::after {
     float: left;
     width: 100%;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 10px;
 }
 .browse-all-cat a {
     float: none;
@@ -11401,7 +11405,7 @@ footer.ft .scrollup {
     background: #0b1b46;
     padding: 0 30px;
     overflow-y: scroll;
-   height: 393px;
+    height: 393px;
 }
 .responsive-opensec .btn-extars {
     float: left;

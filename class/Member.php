@@ -169,9 +169,24 @@ class Member {
         return $array_res;
     }
 
-    public function getActiveMember() {
+    public function getActiveMember($pageLimit, $setLimit) {
+        
+        $query = "SELECT * FROM `member` where `is_active` = '1' AND `privacy` ='1' LIMIT " . $pageLimit . " , " . $setLimit . " ";
+        
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
 
-        $query = "SELECT * FROM `member` WHERE `is_active` = '1' AND `privacy` = 1";
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+    public function getActiveMemberAll( ) {
+        
+        $query = "SELECT * FROM `member` where `is_active` = '1' AND `privacy` ='1'   ";
+        
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -305,7 +320,7 @@ class Member {
 
     public function all1($pageLimit, $setLimit) {
 
-        $query = "SELECT * FROM `member` where `privacy`= '1' LIMIT " . $pageLimit . " , " . $setLimit . " ";
+        $query = "SELECT * FROM `member` where `is_active` = '1' AND `privacy` ='1' LIMIT " . $pageLimit . " , " . $setLimit . " ";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -337,7 +352,7 @@ class Member {
                 . "`is_active` ='" . $this->is_active . "', "
                 . "`job_type` ='" . $this->job_type . "' "
                 . "WHERE `id` = '" . $this->id . "'";
-     
+
 
         $db = new Database();
 
@@ -559,12 +574,15 @@ class Member {
         $total = $rec['totalCount'];
         $adjacents = "2";
 
+
         $page = ($page == 0 ? 1 : $page);
         $start = ($page - 1) * $per_page;
 
         $prev = $page - 1;
         $next = $page + 1;
+
         $setLastpage = ceil($total / $per_page);
+
         $lpm1 = $setLastpage - 1;
 
         $setPaginate = "";
@@ -580,8 +598,10 @@ class Member {
                 }
             }
             elseif ($setLastpage > 5 + ($adjacents * 2)) {
-                if ($page < 1 + ($adjacents * 2)) {
-                    for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++) {
+
+                if ($page <= 1 + ((int) $adjacents * 2)) {
+
+                    for ($counter = 1; $counter < 4 + ((int) $adjacents * 2); $counter++) {
                         if ($counter == $page)
                             $setPaginate .= "<li><a class='current_page'>$counter</a></li>";
                         else
@@ -592,6 +612,7 @@ class Member {
                     $setPaginate .= "<li><a href='{$page_url}page=$setLastpage'>$setLastpage</a></li>";
                 }
                 elseif ($setLastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2)) {
+                    dd($setLastpage);
                     $setPaginate .= "<li><a href='{$page_url}page=1'>1</a></li>";
                     $setPaginate .= "<li><a href='{$page_url}page=2'>2</a></li>";
                     $setPaginate .= "<li class='dot'>...</li>";

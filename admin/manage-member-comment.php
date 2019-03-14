@@ -2,8 +2,11 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 $MEMBER = new Member(NULL);
-$SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
- 
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+$MEMBER = new Member($id);
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +14,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Manage User || Admin || Support Lanka</title>
+        <title>Manage Comment  || Admin || Support Lanka</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -55,20 +58,8 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                 <div class="card">
                     <div class="header">
                         <h2>
-                            Manage User
+                            Manage Comments - <?php echo $MEMBER->name ?>
                         </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="create-member.php">
-                                    <i class="material-icons">add</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
                     </div>
 
                     <div class="body">
@@ -76,43 +67,26 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                 <thead>
                                     <tr>
-                                        <th>NIC Number</th>
                                         <th>Name</th> 
+                                        <th>Email</th>                                       
                                         <th>Contact Number</th> 
-                                        <td>Skill</td>
+                                        <th>Comment</th>
                                         <th class="text-center">Options</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    foreach ($MEMBER->getActiveMemberAll() as $key => $member) {
+                                    $COMMENT = new Comments(NULL);
+                                    foreach ($COMMENT->getCommentByMember($id) as $commnt) {
                                         ?>
-                                        <tr id="row_<?php echo $member['id']; ?>">
-                                            <td><?php echo $member['nic_number']; ?></td> 
-                                            <td><?php echo substr($member['name'], 0, 20); ?></td> 
-                                            <td><?php echo $member['contact_number']; ?></td> 
-
-                                            <td>
-                                                <?php
-                                                $skills = SkillDetail::GetSkillByMember($member['id']);
-
-                                                foreach ($skills as $key => $skill) {
-                                                    if ($key == 1) {
-                                                        break;
-                                                    }
-
-                                                    $SKILL = new Skill($skill["skill"]);
-                                                    echo $SKILL->name;
-                                                }
-                                                ?> 
-                                            </td>
-
+                                        <tr id="div<?php echo $commnt['id']; ?>">
+                                            <td><?php echo substr($commnt['name'], 0, 20); ?></td>                                             
+                                            <td><?php echo $commnt['email']; ?></td> 
+                                            <td><?php echo $commnt['mobile']; ?></td>  
+                                            <td><?php echo $commnt['comment']; ?></td>  
                                             <td class="text-center"> 
-                                                <a href="member-skills.php?id=<?php echo $member['id']; ?> " title="Skills" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-star-empty"></i></a>&nbsp;&nbsp;|&nbsp;
-                                                <a href="member-portfolio.php?id=<?php echo $member['id']; ?>" title="Portfolio"class="op-link btn btn-sm btn btn-warning"><i class="  glyphicon glyphicon-briefcase  "></i></a>&nbsp;&nbsp;|&nbsp;
-                                                <a href="edit-member.php?id=<?php echo $member['id']; ?>" title="Edit"class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;|&nbsp;
-                                                <a href="manage-member-comment.php?id=<?php echo $member['id']; ?>" title="Comment"class="op-link btn btn-sm btn-success"><i class="glyphicon glyphicon-paste"></i></a>&nbsp;&nbsp;|&nbsp;
-                                                <a href="#" class="delete-member btn btn-sm btn-danger" title="Delete" data-id="<?php echo $member['id']; ?>">
+<!--                                                <a href="edit-member.php?id=<?php echo $commnt['id']; ?>" title="Edit"class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a> | -->
+                                                <a href="#" class="delete-comment btn btn-sm btn-danger" title="Delete" data-id="<?php echo $commnt['id']; ?>">
                                                     <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                 </a>
                                             </td>
@@ -124,10 +98,10 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
 
                                 <tfoot>
                                     <tr>
-                                        <th>NIC Number</th>
                                         <th>Name</th> 
-                                        <th>Contact Number</th>
-                                        <th>Skill</th>
+                                        <th>Email</th>                                       
+                                        <th>Contact Number</th> 
+                                        <th>Comment</th>
                                         <th class="text-center">Options</th>
                                     </tr>
                                 </tfoot>
@@ -157,7 +131,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
         <script src="js/admin.js"></script>
         <script src="js/pages/tables/jquery-datatable.js"></script>
         <script src="js/demo.js"></script>
-        <script src="delete/js/member.js" type="text/javascript"></script>
+        <script src="delete/js/comment.js" type="text/javascript"></script>
     </body>
 
 </html> 
