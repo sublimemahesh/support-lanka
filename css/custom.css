@@ -43,11 +43,32 @@
 
 }
 
-@media screen and (min-width: 992px){
+
+@media (min-width: 768px) and (max-width: 1024px) {
     .hei-image{
         height: 632px;
     }
+    .menu-sec nav > ul > li > a {
+        float: left;
+        font-family: Open Sans;
+        font-size: 15px;
+        color: #ffffff;
+        position: relative;
+        padding: 15px 10px;
+    }
+    
+    
+    
 }
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .hei-image{
+        height: 665px;
+    } 
+
+}
+
 @media screen and (max-width: 520px){
     .text-c{
         text-align: center;
@@ -514,7 +535,7 @@ ul.setPaginate li a{
     }
 
     #div-color-3{
-         loat: left;
+        loat: left;
         font-family: Open Sans;
         font-size: 14px;
         color: #8b91dd;
