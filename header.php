@@ -1,11 +1,10 @@
 <div class="responsive-header">
     <div class="row">
-        <div class="res-logo col-md-9">
+        <div class="res-logo col-xs-9">
             <a href="index.php">
                 <img src="images/resource/logo11.png" alt=""  class="img-new"/>
             </a>
-            <div class="  translation-links new-style">
-
+            <div class="translation-links new-style pull-right">
                 <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > 
                     <img src="upload/sinhala.jpg" alt=""   class="pull-leftss"/> </a>
                 <img src="images/line.png" alt="" width="10px"/>
@@ -16,9 +15,9 @@
             </div>
         </div> 
 
-        <div class="menu-resaction col-md-3">
+        <div class="menu-resaction col-xs-3">
             <div class="res-openmenu">
-                <i class="la la-list nav-icon"></i>
+                <i class="la la-list nav-icon" style="margin-top: 37px;"></i>
             </div>
             <a href="index.php"> <div class="res-closemenu">
                     <img src="images/icon2.png" alt="" />
@@ -87,10 +86,7 @@
 
             <nav>
                 <ul>
-
-                    <li class="">
-                        <a href="comment.php" title="">Comment</a>
-                    </li>
+ 
                     <li class="">
                         <a href="advertisement.php" title="">Advertisement</a>
                     </li>

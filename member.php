@@ -7,7 +7,6 @@ $PORTFILIO_PHOTO = new PortfolioPhoto(NULL);
 $AWARD = Award::GetAwardByMember($MEMBER->id);
 date_default_timezone_set('Asia/Colombo');
 $td = date('Y-m-d');
- 
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,11 +31,8 @@ $td = date('Y-m-d');
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
         <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
- 
-
- 
         <link href="admin/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
-         <style>
+        <style>
             .forsticky.sticky .menu-sec {
                 margin-top: -74px !important;
             }
@@ -142,9 +138,9 @@ $td = date('Y-m-d');
                                             </i> 
                                         </span>
                                         <p><i class="la la-map-marker"></i><?php
-                                            $CITY = new City($MEMBER->city);
-                                            echo $CITY->name;
-                                            ?> / 
+                                                $CITY = new City($MEMBER->city);
+                                                echo $CITY->name;
+                                                ?> / 
                                             <?php echo $MEMBER->home_address ?></p></p>
                                     </div>
                                     <div class="col-lg-2 mem-reg">
@@ -152,11 +148,7 @@ $td = date('Y-m-d');
                                             <a class="followus" href="member/register.php" title=""><i class="la la-paper-plane"></i>Register</a>
                                         </div>
 
- 
-                                        <div > 
- 
                                         <div class="row" style="margin-right: 0px;"> 
-   
                                             <!-- Trigger the modal with a button -->
                                             <button style="margin-top: 10px; font-size: 18px;font-weight: 650;" type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal"><i class=" fa fa-mobile-phone"></i> <span> Call Me .! </span></button>
 
@@ -165,11 +157,8 @@ $td = date('Y-m-d');
                                                 <div class="modal-dialog modal-sm">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
- 
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
- 
 
-                                                             <h4 class="modal-title" style="font-size: 18px;font-weight: 650;">Mobile Number</h4>
+                                                            <h4 class="modal-title" style="font-size: 18px;font-weight: 650;">Mobile Number</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <p style="font-size: 18px;font-weight: 650;"> <i class="la la-phone"></i> <?php echo $MEMBER->contact_number ?> </p>
@@ -180,8 +169,6 @@ $td = date('Y-m-d');
                                                     </div>
                                                 </div>
                                             </div>
- 
- 
                                         </div> 
 
                                         <div class="row" style="margin-right: 0px;"> 
@@ -193,10 +180,8 @@ $td = date('Y-m-d');
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header text-center">
-                                                            <h4 class="modal-title w-100 font-weight-bold" style="margin-top: 10px; font-size: 18px;font-weight: 650;">Write Your Comment.!</h4>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
+                                                            <h4 class="modal-title w-100 font-weight-bold" style="margin-top: 10px; font-size:24px;font-weight: 650;">Write Your Comment.!</h4>
+
                                                         </div>
                                                         <form   method="post" id="form-data" >
                                                             <div class="modal-body mx-3">
@@ -244,16 +229,15 @@ $td = date('Y-m-d');
 
                                                             </div>
                                                             <div class="modal-footer  ustify-content-center"  >
-                                                                   
+
                                                                 <button type="submit" id="create" class="btn  " >Send <i class="fa fa-paper-plane-o ml-1"></i></button> 
-                                                               <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-right: 15px;">Close</button>
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-right: 15px;">Close</button>
                                                                 <input type="hidden" name="id" value="<?php echo $id ?>"/>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </div>
                                             </div>
- 
                                         </div>
                                     </div>
 
@@ -412,24 +396,16 @@ $td = date('Y-m-d');
                                                     <input type="text" id="contact" name="contact" class="form-control" placeholder="Please Enter Your Contact" required="true"> 
                                                     <input type="hidden" id="new-messages" name="new-messages" value="new-messages">
                                                     <input type="hidden" id="company" name="member" value="<?php echo $id ?>">
-
                                                     <textarea type="text" id="message" name="message" class="form-control" placeholder="Please Enter Message" required="true"></textarea>
-
                                                     <button name="add-massage-request" type="submit" class="submit">Send Message</button>
                                                 </form>
                                             </div>
-
+                                            <button style="margin-top: 10px; font-size: 18px;font-weight: 650;" type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal_2"><i class=" fa fa-pencil-square-o"></i> <span> Add Comment </span></button>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
- 
-                        </div>
-                    </div>
-                </div>
-
- 
                         </div
                         <div class="row">
                             <section>
@@ -467,7 +443,7 @@ $td = date('Y-m-d');
                     </div>
                 </div>
 
-             </section> 
+            </section> 
 
 
             <?php

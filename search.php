@@ -16,7 +16,7 @@ if ($_GET['keyword'] !== '') {
     $INDUSTRY = Search::industry($_GET['keyword'], $pageLimit, $setLimit);
     $MEMBER = Search::members($_GET['keyword'], $pageLimit, $setLimit);
 } else {
-    $MEMBER = Member::getActiveMember();
+    $MEMBER = Member::getActiveMemberAll();
     $COMPANY = Company::all();
     $INDUSTRY = Industry::all();
 }

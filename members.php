@@ -162,7 +162,14 @@ $MEMBER = Member::all1($pageLimit, $setLimit);
                                             <div class="emply-resume-list square">
                                                 <div class="row" style="margin-left: 10px;">
                                                     <div class="emply-resume-thumb">                                               
-                                                        <img src="upload/member/<?php echo $MEMBER->profile_picture; ?>" alt=""/> 
+                                                        <?php
+                                                        if ($MEMBER->profile_picture) {
+                                                            ?>
+                                                            <img src="upload/member/<?php echo $MEMBER->profile_picture; ?>" alt=""/> 
+
+                                                        <?php } else { ?>
+                                                            <img src = "upload/member/member.png" alt = ""/>
+                                                        <?php } ?>
                                                     </div>
                                                     <div class="emply-resume-info" style="padding-left: 10px;">
                                                         <h3>  <?php echo $MEMBER->name; ?> </h3>

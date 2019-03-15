@@ -16,7 +16,7 @@ class Skill {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`industry`,`name`,`sort` FROM `skill` WHERE `id`=" . $id;
+            $query = "SELECT * FROM `skill` WHERE `id`=" . $id;
 
             $db = new Database();
 

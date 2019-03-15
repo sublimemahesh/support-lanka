@@ -735,7 +735,7 @@ label::after {
     margin-right: 67px;
 }
 .menu-sec nav > ul {
-    float: left;
+    float: right;
     margin: 0;  
     padding-right: 9px;
 

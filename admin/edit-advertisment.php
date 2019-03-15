@@ -45,7 +45,7 @@ $ADVERTISEMENT = new Advertisement($id);
                                 <h2>Create Advertisement</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
-                                        <a href="manage-feedback.php">
+                                        <a href="manage-advertisement.php">
                                             <i class="material-icons">list</i> 
                                         </a>
                                     </li>

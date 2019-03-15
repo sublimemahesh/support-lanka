@@ -144,10 +144,11 @@ $INDUSTRY = new Industry($id);
                                                 $SKILL = $SKILL_OBJ->GetSkillsByIndustry($INDUSTRY->id);
 
 
-                                                foreach ($SKILL as $skill) {
+                                                foreach ($SKILL as $key => $skill) {
+                                                    $key++;
                                                     ?>
                                                     <tr id="row_<?php echo $skill['id']; ?>">
-                                                        <td><?php echo $INDUSTRY->id ?></td> 
+                                                        <td><?php echo $key?></td> 
                                                         <td><?php echo $INDUSTRY->name ?></td>
                                                         <td><?php echo $skill['name'] ?></td>
 
