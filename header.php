@@ -4,14 +4,14 @@
             <a href="index.php">
                 <img src="images/resource/logo11.png" alt=""  class="img-new"/>
             </a>
-            <div class=" pull-left translation-links new-style">
+            <div class="  translation-links new-style">
 
                 <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > 
-                    <img src="upload/english.png" alt="" width="60px" class="pull-leftss"/> </a>
+                    <img src="upload/sinhala.jpg" alt=""   class="pull-leftss"/> </a>
                 <img src="images/line.png" alt="" width="10px"/>
 
                 <a href=""  class="English notranslate" data-lang="English" >
-                    <img src="images/english.png" alt="" width="60px"/>
+                    <img src="upload/english.png" alt=""  />
                 </a>
             </div>
         </div> 
@@ -69,9 +69,9 @@
 <header class="stick-top forsticky">
     <div class="menu-sec new-height">
         <div class="pull-right translation-links p-pad"> 
-            <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > <img src="upload/sinhala.jpg" alt=""   style="  padding-bottom: 2px;"class="pull-leftss"/> </a>
+            <a href=""  class="Sinhala notranslate" data-lang="Sinhala" > <img src="upload/sinhala.jpg" alt=""   style="  padding-bottom: 2px;margin-left: 56px;"class="pull-leftss"/> </a>
             <img src="images/line.png" alt="" width="10px"/>
-            <a href=""  class="English notranslate" data-lang="English" ><img src="upload/english.png" alt="" style=" padding-bottom: 2px;" /></a>
+            <a href=""  class="English notranslate" data-lang="English" ><img src="upload/english.png" alt="" style="padding-bottom: 2px;" /></a>
         </div>
         <div class="container new-height " >
             <div class="logo">
