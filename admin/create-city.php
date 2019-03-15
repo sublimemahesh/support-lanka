@@ -107,9 +107,10 @@ $DISTRICT = new District($id)
                                         $CITY = City::GetCitiesByDistrict($id);
                                         if (count($CITY) > 0) {
                                             foreach ($CITY as $key => $city) {
+                                                $key++;
                                                 ?>
                                                 <tr id="row_<?php echo $city['id']; ?>">
-                                                    <td><?php echo $city['sort']; ?></td> 
+                                                    <td><?php echo $key; ?></td> 
 
                                                     <td><?php echo $city['name']; ?></td>
 

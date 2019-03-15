@@ -1,14 +1,24 @@
-﻿<?php
+<?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
+
+$MEMBERS = new Member(NULL);
+$COMPANY = new Company(NULL);
+$INDUSTRY = new Industry(NULL);
+$SKILL = new Skill(NULL);
+
+$COUNT_ACTIVE_MEMBERS = count($MEMBERS->getActiveMemberAll());
+$COUNT_COMPANY = count($COMPANY->all());
+$COUNT_INDUSTRY = count($INDUSTRY->all());
+$COUNT_SKILL = count($SKILL->all());
+
+
 
 //$COUNT_COMMENT = count(Comments::pendingComments());
 //$COUNT_ACTIVITY = count(Activities::all());
 //$COUNT_ATTRACTION = count(Attraction::all());
 //$COUNT_ROOM = count(Room::all());
-//$SLIDER_IMAGES = count(Slider::all());
-//$COUNT_TOUR = count(TourPackage::all());
-//$COUNT_GALLERY = count(AlbumPhoto::getAlbumPhotosById(6));
+//$SLIDER_IMAGES = count(Slider::all()); 
 ?> 
 <!DOCTYPE html>
 <html> 
@@ -117,8 +127,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                         <div class="card">
                             <div class="header bg-blue-grey">
                                 <h2>
-                                    MEMBER <small>   
-
+                                    MEMBER 
+                                    <small style="float: right">   
+                                        <?php echo $COUNT_ACTIVE_MEMBERS ?>
                                     </small>
                                 </h2>
 
@@ -136,7 +147,10 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="header bg-blue-grey">
                                 <h2>
                                     Company
-                                    <small>  </small>
+
+                                    <small style="float: right">   
+                                        <?php echo $COUNT_COMPANY ?>
+                                    </small> 
                                 </h2>
 
                             </div>
@@ -154,6 +168,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="header bg-blue-grey">
                                 <h2>
                                     Category
+                                    <small style="float: right">   
+                                        <?php echo $COUNT_INDUSTRY ?>
+                                    </small> 
                                 </h2>
 
                             </div>
@@ -173,7 +190,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="header bg-blue-grey">
                                 <h2>
                                     Skill
-                                    <small></small>
+                                    <small style="float: right">   
+                                        <?php echo $COUNT_SKILL ?>
+                                    </small> 
                                 </h2>
 
                             </div>

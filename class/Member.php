@@ -171,7 +171,7 @@ class Member {
 
     public function getActiveMember($pageLimit, $setLimit) {
         
-        $query = "SELECT * FROM `member` where `is_active` = '1' AND `privacy` ='1' LIMIT " . $pageLimit . " , " . $setLimit . " ";
+        $query = "SELECT * FROM `member` where `is_active` = '1' AND `privacy` ='1'  ORDER BY `rank` DESC LIMIT " . $pageLimit . " , " . $setLimit . "  ";
         
         $db = new Database();
         $result = $db->readQuery($query);

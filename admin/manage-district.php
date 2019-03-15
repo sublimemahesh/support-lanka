@@ -1,17 +1,17 @@
-﻿<?php
+<?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 
 
 $DISTRICT = new District(NULL);
 ?>
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Manage User || Admin || hurryuptaxi.lk</title>
+        <title>Manage District || Admin  Admin || Support Lanka</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -71,9 +71,10 @@ $DISTRICT = new District(NULL);
                                             <tbody>
                                                 <?php
                                                 foreach ($DISTRICT->all() as $key => $district) {
+                                                    $key++;
                                                     ?>
                                                     <tr id="row_<?php echo $district['id']; ?>">
-                                                        <td><?php echo $district['sort']; ?></td> 
+                                                        <td><?php echo $key; ?></td> 
                                                         <td><?php echo $district['name']; ?></td> 
                                                         <td> 
                                                             <a href="edit-district.php?id=<?php echo $district['id']; ?>" class="op-link btn btn-sm btn-success">

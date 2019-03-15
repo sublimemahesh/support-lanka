@@ -2,6 +2,13 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 
+$MEMBERS = new Member(NULL);
+$COUNT_ACTIVE_MEMBERS = count($MEMBERS->getActiveMemberAll());
+
+
+
+
+
 $MESSAGEMEMBER = count(MessageRequest::getOnlyMemberMessage());
 $MESSAGECOMPANY = count(MessageRequest::getOnlyCompanyMessage());
 $MESSAGEACANCY = count(MessageRequest::getOnlyVacancyMessage());
@@ -195,7 +202,7 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">supervisor_account</i>
-                        <span>Member</span>
+                        <span>Member </span>
                     </a>
                     <ul class="ml-menu">
                         <li>
@@ -379,7 +386,7 @@ $TOTALFEEDBACK = $ACTIVEFEEDBACK + $INACTIVEFEEDBACK;
                                 <span>Manage</span>
                             </a>
                         </li>
-                         
+
                     </ul>
                 </li>
             </ul>

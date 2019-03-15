@@ -10,12 +10,17 @@
                         <div class="job-search-sec">
                             <div class="job-search">
                                 <span>Find Jobs, Employment & Career Opportunities</span>
-                                <form class="searchbar" method="get" action="search.php">
+                                <form class="searchbar" method="get" action="search.php" autocomplete="off"> 
                                     <div class="row">
                                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                                             <div class="job-field">
-                                                <input type="text" name="keyword" class="form-control" placeholder="What are you looking for"/>
-                                                <i class="la la-keyboard-o"></i>
+                                                <input type="text" name="keyword" id="search-box"class="form-control" placeholder="What are you looking for"/>
+                                                <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10"  id="suggesstion-box-bar" style="padding: 0px">
+                                                    <select class="form-control " autocomplete="off" id="suggesstion-box" name="collector_id"  required="TRUE">
+                                                     
+                                                    </select> 
+                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">

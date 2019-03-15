@@ -56,9 +56,16 @@
         position: relative;
         padding: 15px 10px;
     }
-    
-    
-    
+
+    .showsticky {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 22px;
+    }
+
+
+
 }
 
 
@@ -66,7 +73,11 @@
     .hei-image{
         height: 665px;
     } 
-
+    .menu-sec nav > ul {
+        float: right;
+        margin: 0;
+        margin-right: 32px;
+    }
 }
 
 @media screen and (max-width: 520px){
@@ -459,6 +470,10 @@ ul.setPaginate li a{
 } 
 
 @media screen and (min-width: 320px)and (max-width: 568px){
+
+    .font-resize-mobile{
+        font-size: 13px;
+    }
     .menu-resaction{
 
         margin-top: -114px;

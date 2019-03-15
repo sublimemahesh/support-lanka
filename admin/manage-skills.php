@@ -72,9 +72,10 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 <?php
                                                 $SKILL = new Skill(NULL);
                                                 foreach ($SKILL->all() as $key => $industry) {
+                                                    $key++;
                                                     ?>
                                                     <tr id="row_<?php echo $industry['id']; ?>">
-                                                        <td><?php echo $industry['sort']; ?></td> 
+                                                        <td><?php echo $key; ?></td> 
                                                         <td>
                                                             <?php
                                                             $INDUSTRY = new Industry($industry['industry']);
