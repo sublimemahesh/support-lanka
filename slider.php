@@ -16,9 +16,10 @@
                                             <div class="job-field">
                                                 <input type="text" name="keyword" id="search-box"class="form-control" placeholder="What are you looking for"/>
                                                 <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10"  id="suggesstion-box-bar" style="padding: 0px">
-                                                    <select class="form-control " autocomplete="off" id="suggesstion-box" name="collector_id"  required="TRUE">
-                                                     
-                                                    </select> 
+
+                                                    <ul id="suggesstion-box" name="collector_id"  style="background-color: white;border-radius: 6px;">
+
+                                                    </ul>
                                                 </div>
 
                                             </div>

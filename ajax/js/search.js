@@ -16,9 +16,11 @@ $(document).ready(function () {
             success: function (jsonStr) {
                 var html = '';
                 $.each(jsonStr.data, function (i, data) {
-                    html += '<option value="' + data.id + '">';
+                     
+                    html += '<li value="' + data.id + '" style="padding: 5px;"> ';
                     html += data.name;
-                    html += '</option>';
+                    html += '</li>';
+                    
                 });
                 $("#suggesstion-box-bar").show();
                 $("#suggesstion-box").append(html);

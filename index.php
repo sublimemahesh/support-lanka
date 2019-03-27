@@ -207,7 +207,9 @@ include_once(dirname(__FILE__) . '/class/include.php');
         </div>
 
         <script src="js/jquery.min.js" type="text/javascript"></script>
-        <script src="ajax/js/search.js" type="text/javascript"></script> 
+        
+        <script src="ajax/js/search.js" type="text/javascript"></script>
+        
         <script src="js/modernizr.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
         <script src="js/wow.min.js" type="text/javascript"></script>
