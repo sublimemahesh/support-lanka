@@ -10,7 +10,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Manage User || Admin || hurryuptaxi.lk</title>
+        <title>Manage Members || Admin || Support Lanka.lk</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -54,7 +54,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                 <div class="card">
                     <div class="header">
                         <h2>
-                            Manage User
+                            Manage Members
                         </h2>
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">

@@ -25,6 +25,7 @@ $MEMBER = new Member($id);
         <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet">
         <link href="css/themes/all-themes.css" rel="stylesheet" />
+          <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     </head>
 
     <body class="theme-red">
@@ -61,7 +62,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="Password" class="hidden-lg hidden-md">Password</label>
-                                                    <input type="password" id="name" class="form-control"  autocomplete="off" name="password"  placeholder="Enter the password" >
+                                                    <input type="password" id="password" class="form-control"  autocomplete="off" name="password"  placeholder="Enter the password" value="<?php echo $MEMBER->password; ?>" >
                                                 </div>
                                             </div>
                                         </div>
@@ -223,7 +224,7 @@ $MEMBER = new Member($id);
                                             <div class="form-group">
                                                 <div class="form-line p-top ">
                                                     <label for="date_of_birth" class="hidden-lg hidden-md">Date of Birth</label>
-                                                    <input type="date" id="date_of_birthday" class="form-control" value="<?php echo $MEMBER->date_of_birthday; ?>" autocomplete="off" name="date_of_birthday" >
+                                                    <input type="text" id="date_of_birthday" class="form-control datepicker" value="<?php echo $MEMBER->date_of_birthday; ?>" autocomplete="off" name="date_of_birthday" >
                                                 </div>
                                             </div>
                                         </div>
@@ -232,27 +233,21 @@ $MEMBER = new Member($id);
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                             <label for="Profile_image">Profile Image</label>
-                                        </div>
+                                        </div> 
                                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padd-bottom">
                                             <div class="form-group">
                                                 <div class="  p-top ">
                                                     <label for="Profile_image" class="hidden-lg hidden-md">Profile Image</label>
-                                                    <input type="file" id="image" class="form-control" name="image" value="<?php echo $MEMBER->profile_picture; ?>">
-                                                    <?php if ($MEMBER->profile_picture == NULL) {
-                                                        ?>
+                                                    <input type="file" id="image" class="form-control" value="<?php echo $MEMBER->profile_picture; ?>"  name="image">
+                                                    <?php if (empty($MEMBER->profile_picture)) { ?>
                                                         <img src="../upload/member/member.png" style="width:15%;" class="img-thumbnail">
-                                                        <?php
-                                                    } else {
-                                                        ?>
-                                                        <img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
 
-                                                        <?php
-                                                    }
-                                                    ?>
-
+                                                    <?php } else { ?>
+                                                        <img src="../upload/member/<?php echo $MEMBER->profile_picture; ?>"   class="view-edit-img img img-responsive img-thumbnail"  alt="old image">
+                                                    <?php } ?>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> 
                                     </div>
                                     <!--Rank-->
                                     <div class="row clearfix">
@@ -309,9 +304,17 @@ $MEMBER = new Member($id);
                                                             <option value="<?php echo $MEMBER->rank; ?>" selected=""><?php echo $MEMBER->rank; ?></option>
 
                                                             <?php
+                                                        } else {
+                                                            ?>
+                                                            <option value="1">1</option>                                                          
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>                                                          
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <?php
                                                         }
                                                         ?>
-                                                         
+
 
                                                     </select>
                                                 </div>
@@ -364,7 +367,6 @@ $MEMBER = new Member($id);
                                                     <select class="form-control  "  type="text"   name="job_type" >
                                                         <option value="0" >-- Please Select the job type</option>
                                                         <?php
-                                                                                                                
                                                         if ($MEMBER->job_type == 1) {
                                                             ?>
                                                             <option value="1" selected="">Part Time</option>
@@ -449,6 +451,13 @@ $MEMBER = new Member($id);
 
             });
         </script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $(".datepicker").datepicker({dateFormat: 'yy-mm-dd'});
+            });
+        </script> 
     </body>
 
 </html>

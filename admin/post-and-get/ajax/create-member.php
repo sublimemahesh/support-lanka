@@ -28,11 +28,18 @@ if ($_POST['save']) {
         $response['message'] = "Please enter your contact number.";
         echo json_encode($response);
         exit();
-    } else if (empty($_POST['is_active'])) {
+    } else if (empty($_POST['password'])) {
+        $response['status'] = 'error';
+        $response['message'] = "Please enter your password.";
+        echo json_encode($response);
+        exit();
+    }else if (empty($_POST['is_active'])) {
         $response['status'] = 'error';
         $response['message'] = "Please member is active.";
         echo json_encode($response);
         exit();
+     
+
 //    } else if (empty($_POST['home_address'])) {
 //        $response['status'] = 'error';
 //        $response['message'] = "Please enter your home address.";
@@ -84,7 +91,7 @@ if ($_POST['save']) {
         $MEMBER->password = md5($_POST['password']);
         $MEMBER->privacy = $_POST['privacy'];
         $MEMBER->job_type = $_POST['job_type'];
-        $MEMBER->is_active = $_POST['is_active']; 
+        $MEMBER->is_active = $_POST['is_active'];
 
 
         $dir_dest = '../../../upload/member/';
@@ -110,7 +117,7 @@ if ($_POST['save']) {
         }
 
         $MEMBER->profile_picture = $imgName;
-      
+
         $MEMBER->create();
 
         if ($MEMBER->id) {
