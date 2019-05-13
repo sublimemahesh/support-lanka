@@ -185,7 +185,7 @@ class Member {
     }
     public function getActiveMemberAll( ) {
         
-        $query = "SELECT * FROM `member` where `is_active` = '1' AND `privacy` ='1'   ";
+        $query = "SELECT * FROM `member` where `is_active` = '1' AND `is_active` ='1'   ";
         
         $db = new Database();
         $result = $db->readQuery($query);
@@ -352,7 +352,7 @@ class Member {
                 . "`is_active` ='" . $this->is_active . "', "
                 . "`job_type` ='" . $this->job_type . "' "
                 . "WHERE `id` = '" . $this->id . "'";
-
+       
 
         $db = new Database();
 
@@ -612,7 +612,7 @@ class Member {
                     $setPaginate .= "<li><a href='{$page_url}page=$setLastpage'>$setLastpage</a></li>";
                 }
                 elseif ($setLastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2)) {
-                    dd($setLastpage);
+                    
                     $setPaginate .= "<li><a href='{$page_url}page=1'>1</a></li>";
                     $setPaginate .= "<li><a href='{$page_url}page=2'>2</a></li>";
                     $setPaginate .= "<li class='dot'>...</li>";

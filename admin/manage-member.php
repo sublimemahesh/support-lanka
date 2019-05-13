@@ -11,7 +11,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Manage User || Admin || Support Lanka</title>
+        <title>Manage Members || Admin || Support Lanka</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -55,7 +55,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                 <div class="card">
                     <div class="header">
                         <h2>
-                            Manage User
+                            Manage Members
                         </h2>
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
@@ -79,7 +79,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                                         <th>NIC Number</th>
                                         <th>Name</th> 
                                         <th>Contact Number</th> 
-                                        <td>Skill</td>
+                                        <th>Skill</th>
                                         <th class="text-center">Options</th>
                                     </tr>
                                 </thead>
@@ -111,7 +111,7 @@ $SKILL = SkillDetail::GetSkillByMember($MEMBER->id);
                                                 <a href="member-skills.php?id=<?php echo $member['id']; ?> " title="Skills" class="op-link btn btn-sm btn-info"><i class="glyphicon glyphicon-star-empty"></i></a>&nbsp;&nbsp;|&nbsp;
                                                 <a href="member-portfolio.php?id=<?php echo $member['id']; ?>" title="Portfolio"class="op-link btn btn-sm btn btn-warning"><i class="  glyphicon glyphicon-briefcase  "></i></a>&nbsp;&nbsp;|&nbsp;
                                                 <a href="edit-member.php?id=<?php echo $member['id']; ?>" title="Edit"class="op-link btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;|&nbsp;
-                                                <a href="manage-member-comment.php?id=<?php echo $member['id']; ?>" title="Comment"class="op-link btn btn-sm btn-success"><i class="glyphicon glyphicon-paste"></i></a>&nbsp;&nbsp;|&nbsp;
+                                                <a href="manage-member-comment.php?id=<?php echo $member['id']; ?>" title="Comments"class="op-link btn btn-sm btn-success"><i class="glyphicon glyphicon-envelope"></i></a>&nbsp;&nbsp;|&nbsp;
                                                 <a href="#" class="delete-member btn btn-sm btn-danger" title="Delete" data-id="<?php echo $member['id']; ?>">
                                                     <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                 </a>
